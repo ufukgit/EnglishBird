@@ -25,8 +25,8 @@ kararların tek kaynaklı özetidir. Doküman ile bu dosya çelişirse **bu dosy
 | Barındırma | Cloudflare Pages (gizli repoyu ücretsiz yayınlar). |
 | Ara katman | Cloudflare Worker (ücretsiz): API anahtarlarını saklar, LLM sağlayıcı zinciri, günlük yedek (KV), bildirim zamanlayıcısı. Tek bir kişisel gizli anahtarla korunur. |
 | Yerel veri | IndexedDB, internet yokken de çalışır. Her oturum sonunda Worker KV'ye yedek. |
-| Ses tanıma | Safari `webkitSpeechRecognition`. **B planı:** Groq Whisper (ücretsiz). Karar, iPhone ses testi sonrası verilir. Mimari, ses tanımayı değiştirilebilir parça olarak tutar. |
-| Seslendirme | iOS `speechSynthesis` sesleri (en-US, en-GB, en-AU, en-IN). |
+| Ses tanıma | **Karma (iPhone testi sonrası, 24.11.2026):** Sohbet turlarında Safari `webkitSpeechRecognition`, sürekli modda bas-konuş; düğme bırakılınca son sonuç alınır. Telaffuz odaklı egzersizlerde (shadowing, hedef cümle, minimal çiftler) ve Safari hata verdiğinde Groq Whisper (ücretsiz). |
+| Seslendirme | iOS `speechSynthesis`: Samantha (en-US), Daniel (en-GB), Karen (en-AU), Rishi (en-IN), ek olarak Moira (en-IE), Tessa (en-ZA). Eğlence sesleri (Bahh, Bells, Zarvox…) filtrelenir. Kelime sınırı olayları çalışıyor, yani etkileşimli transkript vurgusu mümkün. |
 | Ses analizi | Web Audio API: duraksama, perde eğrisi, arka plan sesi, telefon filtresi (300–3400 Hz). |
 | Mikrofon | Varsayılan bas-konuş; otomatik dinleme ayarlardan açılır. |
 | Uygulama adı | EnglishBird |
@@ -123,7 +123,7 @@ senaryo iskeletleri, dinleme metinleri ve soruları.
 | Beklenmedik olay kütüphanesi | ✅ `content/twists.json` |
 | Sistem talimatları (tur, yardım, daha doğal, analiz, seviye kuralları) | ✅ `content/prompts/` |
 | 30 günlük varsayılan müfredat | ✅ `content/curriculum.json` |
-| iPhone ses testi sonucu | ⏳ kullanıcıdan bekleniyor |
+| iPhone ses testi sonucu | ✅ bkz. §8 |
 
 ## 6. Kullanıcının yapacakları (hepsi ücretsiz, kart istemez)
 
@@ -143,3 +143,17 @@ Anahtarlar sohbete yapıştırılmaz; Worker'a `wrangler secret put` ile eklenir
 - Ses tanıma telaffuzu "düzeltebilir" → alternatif sonuçlar, güven puanı, Whisper kelime güveni.
 - Free tier limitleri değişebilir → 4 sağlayıcılı zincir, kısa sistem talimatları, önceden üretilmiş içerik.
 - iOS veri silme → ana ekrana kurulum zorunlu + KV yedeği.
+
+## 8. iPhone ses testi sonuçları (24.11.2026, iOS 18.7, ana ekrandan PWA)
+
+| Ölçüm | Sonuç | Sonuç için anlamı |
+|---|---|---|
+| Ses tanıma PWA modunda | Çalışıyor | Safari ile devam edilebilir |
+| Kelime doğruluğu (başarılı denemeler) | 3/3 cümlede %100 | Sohbet için yeterli |
+| Güven puanı | Geliyor (0.81–0.985) | Düşük güven, telaffuz sinyali olarak kullanılabilir |
+| Alternatif sonuçlar | En fazla 4, ama hepsi aynı güven ve sadece büyük/küçük harf farkı | Telaffuz analizi için işe yaramaz → Whisper |
+| "No speech detected" ile kesilme | 6 denemenin 3'ünde (biri 1,8 sn'de) | Tek seferlik mod güvenilmez → sürekli mod + bas-konuş + otomatik yeniden deneme + Whisper yedeği |
+| Mikrofon ölçümü + ses tanıma birlikte | 3 denemenin 1'inde başarılı | Duraksama ölçümü ses tanımayla aynı anda riskli; Aşama 1'de ayrıca test edilecek |
+| Sürekli modda nihai sonuç | Konuşma bitmeden geliyor | Bas-konuş bırakıldığı an sonuç hazır → gecikme ~0 |
+| Seslendirme | 4 hedef aksanın hepsi var, kelime sınırı olayları çalışıyor | Dinleme ve etkileşimli transkript planı geçerli |
+| Kalıcı depolama | `persisted: false` | Uygulama açılışta `navigator.storage.persist()` ister; KV yedeği şart |
