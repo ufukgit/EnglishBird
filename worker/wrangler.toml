@@ -9,7 +9,7 @@ crons = ["0 17-22 * * *"]
 # `npx wrangler kv namespace create STORE` çıktısındaki id buraya yazılır.
 [[kv_namespaces]]
 binding = "STORE"
-id = "REPLACE_WITH_KV_ID"
+id = "4d95eac633f74e07a3eea1e3c0ada31a"
 
 [ai]
 binding = "AI"
