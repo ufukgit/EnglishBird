@@ -161,6 +161,10 @@ function SettingsPanel({ initial }: { initial: Settings }) {
         </button>
       </div>
 
+      <p className="muted small">
+        Mikrofon izni her seferinde soruluyorsa: iPhone Ayarlar → Uygulamalar → Safari → Mikrofon → İzin Ver.
+      </p>
+
       <h2>Ana ses</h2>
       <div className="segmented">
         {(['en-US', 'en-GB', 'en-AU', 'en-IN'] as Accent[]).map((a) => (

@@ -14,6 +14,7 @@ interface Props {
 export default function TalkButton({ mode, onResult, disabled, label, lang }: Props) {
   const [listening, setListening] = useState(false);
   const [interim, setInterim] = useState('');
+  const [denied, setDenied] = useState(false);
   const listener = useRef<Listener | null>(null);
 
   useEffect(() => () => listener.current?.abort(), []);
@@ -35,6 +36,10 @@ export default function TalkButton({ mode, onResult, disabled, label, lang }: Pr
     setListening(false);
     const r = await listener.current.stop();
     listener.current = null;
+    if (r.error === 'not-allowed' || r.error === 'service-not-allowed') {
+      setDenied(true);
+      return;
+    }
     onResult(r);
   };
 
@@ -56,6 +61,11 @@ export default function TalkButton({ mode, onResult, disabled, label, lang }: Pr
       <button className={`talk-btn${listening ? ' on' : ''}`} disabled={disabled} aria-label={label ?? 'Konuş'} {...handlers}>
         <Icon name="mic" size={52} stroke={2.2} />
       </button>
+      {denied && (
+        <p className="help-card small">
+          Mikrofon izni yok. iPhone Ayarlar → Uygulamalar → Safari → Mikrofon → <b>İzin Ver</b>. Sonra tekrar dene.
+        </p>
+      )}
       <span className="talk-label">
         {listening ? (mode === 'hold' ? 'Bırak' : 'Bitir') : (label ?? (mode === 'hold' ? 'Basılı tut' : 'Dokun'))}
       </span>
