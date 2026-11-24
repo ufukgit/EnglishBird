@@ -156,4 +156,5 @@ Anahtarlar sohbete yapıştırılmaz; Worker'a `wrangler secret put` ile eklenir
 | Mikrofon ölçümü + ses tanıma birlikte | 3 denemenin 1'inde başarılı | Duraksama ölçümü ses tanımayla aynı anda riskli; Aşama 1'de ayrıca test edilecek |
 | Sürekli modda nihai sonuç | Konuşma bitmeden geliyor | Bas-konuş bırakıldığı an sonuç hazır → gecikme ~0 |
 | Seslendirme | 4 hedef aksanın hepsi var, kelime sınırı olayları çalışıyor | Dinleme ve etkileşimli transkript planı geçerli |
+| Seslendirme ve sessiz mod | iOS `speechSynthesis` sessiz düğmesi açıkken **ses vermez**; Web Audio ve `<audio>` ise çalar | Uygulama ilk açılışta ve sesli adımlarda "Ses gelmiyorsa sessiz modu kapat" ipucu gösterir. Gerekirse B planı: Workers AI Aura-1 ile sunucuda ses üretip Web Audio ile çalmak (ücretsiz günlük kota) |
 | Kalıcı depolama | `persisted: false` | Uygulama açılışta `navigator.storage.persist()` ister; KV yedeği şart |
