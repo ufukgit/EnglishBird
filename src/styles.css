@@ -95,3 +95,4 @@ pre {
 .big { font-size: 20px; font-weight: 600; }
 a { color: var(--accent); }
 button[aria-pressed="true"] { border-color: var(--accent); font-weight: 600; }
+button:active { transform: scale(0.97); opacity: 0.8; }

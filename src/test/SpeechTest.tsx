@@ -71,9 +71,11 @@ function getAudioSession(): AudioSessionLike | null {
   return (navigator as Navigator & { audioSession?: AudioSessionLike }).audioSession ?? null;
 }
 
-function beep() {
+async function beep(): Promise<string> {
   const Ctx = window.AudioContext ?? (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
   const ctx = new Ctx();
+  const before = ctx.state;
+  if (ctx.state !== 'running') await ctx.resume().catch(() => undefined);
   const osc = ctx.createOscillator();
   const gain = ctx.createGain();
   osc.frequency.value = 660;
@@ -82,6 +84,7 @@ function beep() {
   osc.start();
   osc.stop(ctx.currentTime + 0.4);
   osc.onended = () => void ctx.close();
+  return `durum ${before} → ${ctx.state}`;
 }
 
 // <audio> öğesiyle çalınan bip (Web Audio'dan farklı yol). 16-bit mono WAV üretir.
@@ -113,6 +116,8 @@ export default function SpeechTest() {
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [sessionType, setSessionType] = useState<string>(() => getAudioSession()?.type ?? 'desteklenmiyor');
   const [beeps, setBeeps] = useState<string[]>([]);
+  const [log, setLog] = useState<string[]>([]);
+  const addLog = (m: string) => setLog((l) => [`${new Date().toLocaleTimeString()} ${m}`, ...l].slice(0, 12));
 
   const recRef = useRef<Recognition | null>(null);
   const micRef = useRef<{ stop: () => void } | null>(null);
@@ -290,11 +295,23 @@ export default function SpeechTest() {
     u.lang = voice.lang;
     u.rate = rate;
     const r: TtsResult = { voice: voice.name, lang: voice.lang, rate, started: false, boundaryEvents: 0, error: null, session: getAudioSession()?.type ?? 'yok' };
-    u.onstart = () => (r.started = true);
+    u.volume = 1;
+    u.onstart = () => {
+      r.started = true;
+      addLog(`Seslendirme başladı: ${voice.name} ${rate}×`);
+    };
     u.onboundary = () => r.boundaryEvents++;
-    u.onerror = (e) => (r.error = e.error);
-    u.onend = () => setTts((t) => [...t, { ...r }]);
-    speechSynthesis.cancel();
+    u.onerror = (e) => {
+      r.error = e.error;
+      addLog(`Seslendirme hatası: ${e.error}`);
+    };
+    u.onend = () => {
+      setTts((t) => [...t, { ...r }]);
+      addLog(`Seslendirme bitti (${r.boundaryEvents} kelime olayı)`);
+    };
+    addLog(`Seslendirme basıldı: ${voice.name} ${rate}× (konuşuyor=${speechSynthesis.speaking}, duraklatılmış=${speechSynthesis.paused})`);
+    if (speechSynthesis.speaking || speechSynthesis.pending) speechSynthesis.cancel();
+    if (speechSynthesis.paused) speechSynthesis.resume();
     speechSynthesis.speak(u);
   }
 
@@ -398,16 +415,20 @@ export default function SpeechTest() {
         <p className="muted">Ses gelmezse telefonu kulağına götür: mikrofondan sonra iOS sesi ahizeye verebilir.</p>
         <div className="row" style={{ marginBottom: 10 }}>
           <button
-            onClick={() => {
-              beep();
-              setBeeps((b) => [...b, getAudioSession()?.type ?? 'yok']);
+            onClick={async () => {
+              addLog('Bip (Web Audio) basıldı…');
+              const r = await beep().catch((e) => `hata: ${String(e)}`);
+              addLog(`Bip (Web Audio): ${r}, oturum ${getAudioSession()?.type ?? 'yok'}`);
+              setBeeps((b) => [...b, `webaudio:${getAudioSession()?.type ?? 'yok'}:${r}`]);
             }}
           >
             Bip (Web Audio)
           </button>
           <button
             onClick={async () => {
+              addLog('Bip (medya) basıldı…');
               const r = await mediaBeep();
+              addLog(`Bip (medya): ${r}`);
               setBeeps((b) => [...b, `medya:${getAudioSession()?.type ?? 'yok'}:${r}`]);
             }}
           >
@@ -427,6 +448,7 @@ export default function SpeechTest() {
                     /* desteklenmeyen tür */
                   }
                   setSessionType(a.type);
+                  addLog(`Ses oturumu: ${a.type}`);
                 }}
               >
                 {t === sessionType ? '✓ ' : ''}
@@ -434,6 +456,9 @@ export default function SpeechTest() {
               </button>
             ))}
         </div>
+        {log.length > 0 && (
+          <pre style={{ maxHeight: 160 }}>{log.join('\n')}</pre>
+        )}
         {voiceList.length === 0 && <p className="muted">İngilizce ses bulunamadı.</p>}
         {voiceList.map((v) => (
           <div key={v.name} className="row" style={{ marginBottom: 6 }}>
