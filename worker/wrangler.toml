@@ -1,0 +1,29 @@
+name = "englishbird"
+main = "src/index.ts"
+compatibility_date = "2026-11-01"
+
+# Günlük hatırlatma: İstanbul 20:00–01:00 saat başı (UTC+3 → 17:00–22:00 UTC)
+[triggers]
+crons = ["0 17-22 * * *"]
+
+# `npx wrangler kv namespace create STORE` çıktısındaki id buraya yazılır.
+[[kv_namespaces]]
+binding = "STORE"
+id = "REPLACE_WITH_KV_ID"
+
+[ai]
+binding = "AI"
+
+[vars]
+# Uygulamanın Cloudflare Pages adresi (CORS ve VAPID için)
+APP_ORIGIN = "https://englishbird.pages.dev"
+GROQ_MODEL = "openai/gpt-oss-120b"
+GEMINI_MODEL = "gemini-flash-latest"
+GEMINI_LITE_MODEL = "gemini-flash-lite-latest"
+OPENROUTER_MODEL = "openai/gpt-oss-120b:free"
+WORKERS_AI_MODEL = "@cf/openai/gpt-oss-120b"
+WHISPER_MODEL = "whisper-large-v3-turbo"
+
+# Gizli değerler (wrangler secret put ile eklenir, buraya yazılmaz):
+#   APP_SECRET, GROQ_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY,
+#   VAPID_PUBLIC_KEY, VAPID_PRIVATE_JWK
