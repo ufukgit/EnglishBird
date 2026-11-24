@@ -81,40 +81,6 @@ export interface HeardResult {
   error: string | null;
 }
 
-// Uygulama boyunca paylaşılan tek ses tanıma nesnesi (dile göre).
-const shared: { rec: Recognition | null; lang: string; running: boolean } = { rec: null, lang: '', running: false };
-
-function sharedRecognition(Ctor: NonNullable<ReturnType<typeof getRecognitionCtor>>, lang: string): Recognition {
-  if (!shared.rec || shared.lang !== lang) {
-    if (shared.rec && shared.running) {
-      try {
-        shared.rec.abort();
-      } catch {
-        /* yok say */
-      }
-    }
-    const rec = new Ctor();
-    rec.lang = lang;
-    rec.continuous = true;
-    rec.interimResults = true;
-    rec.maxAlternatives = 1;
-    shared.rec = rec;
-    shared.lang = lang;
-    shared.running = false;
-  }
-  return shared.rec;
-}
-
-function safeStart(rec: Recognition): boolean {
-  try {
-    rec.start();
-    shared.running = true;
-    return true;
-  } catch {
-    return false;
-  }
-}
-
 export class Listener {
   private rec: Recognition | null = null;
   private finals: string[] = [];
@@ -150,9 +116,11 @@ export class Listener {
   }
 
   private spawn(Ctor: NonNullable<ReturnType<typeof getRecognitionCtor>>) {
-    // Tek bir ses tanıma nesnesi uygulama boyunca yeniden kullanılır: iOS her yeni nesnede
-    // mikrofon iznini yeniden sorabiliyor.
-    const rec = sharedRecognition(Ctor, this.lang);
+    const rec = new Ctor();
+    rec.lang = this.lang;
+    rec.continuous = true;
+    rec.interimResults = true;
+    rec.maxAlternatives = 1;
     rec.onresult = (e: RecognitionEvent) => {
       let interim = '';
       for (let i = e.resultIndex; i < e.results.length; i++) {
@@ -169,34 +137,25 @@ export class Listener {
       this.lastError = e.error;
     };
     rec.onend = () => {
-      shared.running = false;
-      // Safari sessizlikte kendiliğinden kapanabilir; basılı tutuluyorsa aynı nesneyle yeniden başlat.
+      // Safari sessizlikte kendiliğinden kapanabilir; basılı tutuluyorsa yeniden başlat.
       if (this.active && this.restarts < 5) {
         this.restarts++;
         if (this.interim) {
           this.finals.push(this.interim);
           this.interim = '';
         }
-        if (safeStart(rec)) return;
+        try {
+          this.spawn(Ctor);
+          return;
+        } catch {
+          /* aşağıda bitir */
+        }
       }
       this.rec = null;
       this.endWaiter?.();
     };
     this.rec = rec;
-    if (shared.running) {
-      // Önceki dinleme hâlâ kapanıyor: bitince başlat.
-      const prevEnd = rec.onend;
-      rec.onend = () => {
-        shared.running = false;
-        rec.onend = prevEnd;
-        if (this.active) safeStart(rec);
-      };
-      try {
-        rec.abort();
-      } catch {
-        /* yok say */
-      }
-    } else safeStart(rec);
+    rec.start();
   }
 
   private text() {
@@ -229,7 +188,7 @@ export class Listener {
   abort() {
     this.active = false;
     try {
-      if (shared.running) this.rec?.abort();
+      this.rec?.abort();
     } catch {
       /* yok say */
     }
