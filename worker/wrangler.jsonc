@@ -1,0 +1,22 @@
+// EnglishBird API Worker. (Dosya .jsonc: üst klasördeki uygulama ayarıyla karışmasın diye.)
+// Gizli değerler Cloudflare panelinde: Settings → Variables and Secrets (türü Secret):
+//   APP_SECRET, GROQ_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY
+// VAPID (bildirim) anahtarları ilk kullanımda otomatik üretilip KV'de saklanır.
+{
+  "name": "englishbird-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  // Günlük hatırlatma: İstanbul 20:00–01:00 saat başı (UTC+3 → 17:00–22:00 UTC)
+  "triggers": { "crons": ["0 17-22 * * *"] },
+  "kv_namespaces": [{ "binding": "STORE", "id": "4d95eac633f74e07a3eea1e3c0ada31a" }],
+  "ai": { "binding": "AI" },
+  "vars": {
+    "APP_ORIGIN": "https://englishbird.mentesufuk344.workers.dev",
+    "GROQ_MODEL": "openai/gpt-oss-120b",
+    "GEMINI_MODEL": "gemini-flash-latest",
+    "GEMINI_LITE_MODEL": "gemini-flash-lite-latest",
+    "OPENROUTER_MODEL": "openai/gpt-oss-120b:free",
+    "WORKERS_AI_MODEL": "@cf/openai/gpt-oss-120b",
+    "WHISPER_MODEL": "whisper-large-v3-turbo"
+  }
+}

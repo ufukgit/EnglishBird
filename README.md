@@ -26,14 +26,14 @@ npm run build
 ### 1. Uygulama — Cloudflare Pages
 1. dash.cloudflare.com → Workers & Pages → Create → Pages → Connect to Git → `EnglishBird` reposu.
 2. Build command: `npm run build` · Output directory: `dist`.
-3. Yayınlanan adres (ör. `https://englishbird.pages.dev`) `worker/wrangler.toml` içindeki `APP_ORIGIN` ile aynı olmalı.
+3. Yayınlanan adres (ör. `https://englishbird.pages.dev`) `worker/wrangler.jsonc` içindeki `APP_ORIGIN` ile aynı olmalı.
 
 ### 2. Worker
 ```bash
 cd worker
 npm install
 npx wrangler login
-npx wrangler kv namespace create STORE     # çıkan id'yi wrangler.toml'a yaz
+npx wrangler kv namespace create STORE     # çıkan id'yi wrangler.jsonc'a yaz
 npm run vapid                              # iki değer üretir
 npx wrangler secret put APP_SECRET         # uzun rastgele bir parola uydur
 npx wrangler secret put GROQ_API_KEY
