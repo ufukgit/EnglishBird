@@ -84,6 +84,21 @@ function beep() {
   osc.onended = () => void ctx.close();
 }
 
+// <audio> öğesiyle çalınan bip (Web Audio'dan farklı yol). 16-bit mono WAV üretir.
+function mediaBeep(): Promise<string> {
+  const rate = 22050, secs = 0.4, n = Math.floor(rate * secs);
+  const buf = new ArrayBuffer(44 + n * 2);
+  const v = new DataView(buf);
+  const str = (o: number, t: string) => [...t].forEach((c, i) => v.setUint8(o + i, c.charCodeAt(0)));
+  str(0, 'RIFF'); v.setUint32(4, 36 + n * 2, true); str(8, 'WAVE'); str(12, 'fmt ');
+  v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+  v.setUint32(24, rate, true); v.setUint32(28, rate * 2, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true);
+  str(36, 'data'); v.setUint32(40, n * 2, true);
+  for (let i = 0; i < n; i++) v.setInt16(44 + i * 2, Math.sin((2 * Math.PI * 440 * i) / rate) * 0.3 * 32767, true);
+  const audio = new Audio(URL.createObjectURL(new Blob([buf], { type: 'audio/wav' })));
+  return audio.play().then(() => 'çaldı', (e) => `hata: ${(e as Error).name}`);
+}
+
 export default function SpeechTest() {
   const [env, setEnv] = useState<Env | null>(null);
   const [sentence, setSentence] = useState(0);
@@ -380,7 +395,7 @@ export default function SpeechTest() {
 
       <h2>3. Seslendirme</h2>
       <div className="card">
-        <p className="muted">Önce iPhone'un sessiz modda olmadığından emin ol.</p>
+        <p className="muted">Ses gelmezse telefonu kulağına götür: mikrofondan sonra iOS sesi ahizeye verebilir.</p>
         <div className="row" style={{ marginBottom: 10 }}>
           <button
             onClick={() => {
@@ -388,7 +403,15 @@ export default function SpeechTest() {
               setBeeps((b) => [...b, getAudioSession()?.type ?? 'yok']);
             }}
           >
-            Bip sesi çal
+            Bip (Web Audio)
+          </button>
+          <button
+            onClick={async () => {
+              const r = await mediaBeep();
+              setBeeps((b) => [...b, `medya:${getAudioSession()?.type ?? 'yok'}:${r}`]);
+            }}
+          >
+            Bip (medya)
           </button>
           {getAudioSession() &&
             ['auto', 'playback', 'play-and-record'].map((t) => (

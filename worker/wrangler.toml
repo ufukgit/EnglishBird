@@ -16,7 +16,7 @@ binding = "AI"
 
 [vars]
 # Uygulamanın Cloudflare Pages adresi (CORS ve VAPID için)
-APP_ORIGIN = "https://englishbird.pages.dev"
+APP_ORIGIN = "https://englishbird.mentesufuk344.workers.dev"
 GROQ_MODEL = "openai/gpt-oss-120b"
 GEMINI_MODEL = "gemini-flash-latest"
 GEMINI_LITE_MODEL = "gemini-flash-lite-latest"
