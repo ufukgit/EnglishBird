@@ -289,11 +289,13 @@ export default function SpeechTest() {
   }
 
   // ---------- Seslendirme ----------
-  function speak(voice: SpeechSynthesisVoice, rate: number) {
+  // voice === null: ses nesnesi atanmaz, yalnızca dil verilir (iOS'ta bazı ses nesneleri sessiz kalabiliyor).
+  function speak(voice: SpeechSynthesisVoice | null, rate: number) {
     const u = new SpeechSynthesisUtterance(SENTENCES[sentence]);
-    u.voice = voice;
-    u.lang = voice.lang;
+    if (voice) u.voice = voice;
+    u.lang = voice?.lang ?? 'en-US';
     u.rate = rate;
+    if (!voice) voice = { name: 'varsayılan', lang: 'en-US' } as SpeechSynthesisVoice;
     const r: TtsResult = { voice: voice.name, lang: voice.lang, rate, started: false, boundaryEvents: 0, error: null, session: getAudioSession()?.type ?? 'yok' };
     u.volume = 1;
     u.onstart = () => {
@@ -460,6 +462,12 @@ export default function SpeechTest() {
           <pre style={{ maxHeight: 160 }}>{log.join('\n')}</pre>
         )}
         {voiceList.length === 0 && <p className="muted">İngilizce ses bulunamadı.</p>}
+        <div className="row" style={{ marginBottom: 6 }}>
+          <span style={{ minWidth: 120 }}>
+            en-US <span className="muted">varsayılan (ses seçmeden)</span>
+          </span>
+          <button onClick={() => speak(null, 1)}>1×</button>
+        </div>
         {voiceList.map((v) => (
           <div key={v.name} className="row" style={{ marginBottom: 6 }}>
             <span style={{ minWidth: 120 }}>
