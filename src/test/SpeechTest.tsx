@@ -36,6 +36,7 @@ interface TtsResult {
   started: boolean;
   boundaryEvents: number;
   error: string | null;
+  session: string;
 }
 
 interface Env {
@@ -64,6 +65,25 @@ function wordAccuracy(target: string, heard: string) {
   return Math.round((t.filter((w) => h.has(w)).length / t.length) * 100);
 }
 
+// Safari 16.4+ Audio Session API: "playback" sesin sessiz modda da çalmasını sağlar.
+type AudioSessionLike = { type: string };
+function getAudioSession(): AudioSessionLike | null {
+  return (navigator as Navigator & { audioSession?: AudioSessionLike }).audioSession ?? null;
+}
+
+function beep() {
+  const Ctx = window.AudioContext ?? (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+  const ctx = new Ctx();
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.frequency.value = 660;
+  gain.gain.value = 0.2;
+  osc.connect(gain).connect(ctx.destination);
+  osc.start();
+  osc.stop(ctx.currentTime + 0.4);
+  osc.onended = () => void ctx.close();
+}
+
 export default function SpeechTest() {
   const [env, setEnv] = useState<Env | null>(null);
   const [sentence, setSentence] = useState(0);
@@ -76,6 +96,8 @@ export default function SpeechTest() {
   const [micError, setMicError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [sessionType, setSessionType] = useState<string>(() => getAudioSession()?.type ?? 'desteklenmiyor');
+  const [beeps, setBeeps] = useState<string[]>([]);
 
   const recRef = useRef<Recognition | null>(null);
   const micRef = useRef<{ stop: () => void } | null>(null);
@@ -252,7 +274,7 @@ export default function SpeechTest() {
     u.voice = voice;
     u.lang = voice.lang;
     u.rate = rate;
-    const r: TtsResult = { voice: voice.name, lang: voice.lang, rate, started: false, boundaryEvents: 0, error: null };
+    const r: TtsResult = { voice: voice.name, lang: voice.lang, rate, started: false, boundaryEvents: 0, error: null, session: getAudioSession()?.type ?? 'yok' };
     u.onstart = () => (r.started = true);
     u.onboundary = () => r.boundaryEvents++;
     u.onerror = (e) => (r.error = e.error);
@@ -262,7 +284,7 @@ export default function SpeechTest() {
   }
 
   async function copyReport() {
-    const report = { tarih: new Date().toISOString(), ortam: env, tanima: attempts, seslendirme: tts, duraksamalarMs: pauses, mikrofonHatasi: micError };
+    const report = { tarih: new Date().toISOString(), ortam: env, tanima: attempts, seslendirme: tts, bip: beeps, duraksamalarMs: pauses, mikrofonHatasi: micError };
     const text = JSON.stringify(report, null, 2);
     try {
       await navigator.clipboard.writeText(text);
@@ -358,6 +380,37 @@ export default function SpeechTest() {
 
       <h2>3. Seslendirme</h2>
       <div className="card">
+        <p className="muted">Önce iPhone'un sessiz modda olmadığından emin ol.</p>
+        <div className="row" style={{ marginBottom: 10 }}>
+          <button
+            onClick={() => {
+              beep();
+              setBeeps((b) => [...b, getAudioSession()?.type ?? 'yok']);
+            }}
+          >
+            Bip sesi çal
+          </button>
+          {getAudioSession() &&
+            ['auto', 'playback', 'play-and-record'].map((t) => (
+              <button
+                key={t}
+                aria-pressed={sessionType === t}
+                onClick={() => {
+                  const a = getAudioSession();
+                  if (!a) return;
+                  try {
+                    a.type = t;
+                  } catch {
+                    /* desteklenmeyen tür */
+                  }
+                  setSessionType(a.type);
+                }}
+              >
+                {t === sessionType ? '✓ ' : ''}
+                {t}
+              </button>
+            ))}
+        </div>
         {voiceList.length === 0 && <p className="muted">İngilizce ses bulunamadı.</p>}
         {voiceList.map((v) => (
           <div key={v.name} className="row" style={{ marginBottom: 6 }}>
