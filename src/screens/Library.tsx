@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { getPattern, getWord } from '../lib/content';
 import { allItems, exportAll, getSettings, importAll, setMeta, type ItemState, type Settings } from '../lib/db';
-import { backupToCloud, restoreFromCloud, testWorker } from '../lib/api';
+import { backupToCloud, enableReminders, restoreFromCloud, testReminder, testWorker } from '../lib/api';
+import { setSfxEnabled } from '../lib/sfx';
 import { speak, type Accent } from '../lib/voice';
 import { RUNG_NAMES } from '../lib/types';
 
@@ -119,6 +120,28 @@ function SettingsPanel({ initial }: { initial: Settings }) {
 
   return (
     <div>
+      <h2>Seviye</h2>
+      <div className="segmented">
+        {(['A1', 'A2', 'B1', 'B2', 'C1'] as const).map((l) => (
+          <button key={l} aria-pressed={s.level === l} onClick={() => save({ ...s, level: l })}>
+            {l}
+          </button>
+        ))}
+      </div>
+      <p className="muted small">Senaryoların zorluğu. Seviye testi gelene kadar elle seçilir.</p>
+
+      <h2>Hatırlatma</h2>
+      <div className="row">
+        <button onClick={async () => setMsg(await enableReminders())}>Hatırlatmaları aç</button>
+        <button onClick={async () => setMsg(await testReminder())}>Test bildirimi</button>
+      </div>
+
+      <h2>Ses efektleri</h2>
+      <div className="segmented">
+        <button aria-pressed={s.sfx} onClick={() => { setSfxEnabled(true); void save({ ...s, sfx: true }); }}>Açık</button>
+        <button aria-pressed={!s.sfx} onClick={() => { setSfxEnabled(false); void save({ ...s, sfx: false }); }}>Kapalı</button>
+      </div>
+
       <h2>Mikrofon</h2>
       <div className="segmented">
         <button aria-pressed={s.micMode === 'hold'} onClick={() => save({ ...s, micMode: 'hold' })}>

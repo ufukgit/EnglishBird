@@ -22,7 +22,7 @@ export const NEW_PER_DAY = 10;
 export const REDUCED_NEW_PER_DAY = 5;
 export const REVIEW_OVERLOAD = 80;
 
-export function newItemState(id: string, type: 'word' | 'pattern'): ItemState {
+export function newItemState(id: string, type: ItemState['type']): ItemState {
   const today = sessionDay();
   return { id, type, rung: 0, card: null, introducedOn: today, lastSeen: today, spontaneousUses: 0, attempts: [] };
 }
@@ -122,7 +122,7 @@ export async function markDayDone() {
   if (!done.includes(today)) await setMeta('doneDays', [...done, today].slice(-400));
 }
 
-export async function ensureItem(id: string, type: 'word' | 'pattern') {
+export async function ensureItem(id: string, type: ItemState['type']) {
   return (await getItem(id)) ?? newItemState(id, type);
 }
 

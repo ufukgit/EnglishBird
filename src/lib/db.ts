@@ -22,9 +22,18 @@ export interface Attempt {
   heard?: string;
 }
 
+export interface ErrorData {
+  quote: string; // söylediğin
+  better: string; // doğal hali
+  whyTr: string;
+  kind: string;
+  tag?: string;
+}
+
 export interface ItemState {
   id: string;
-  type: 'word' | 'pattern';
+  type: 'word' | 'pattern' | 'error';
+  error?: ErrorData;
   rung: Rung;
   card: Card | null; // ilk gün sonunda oluşturulur
   introducedOn: string;
@@ -46,18 +55,23 @@ export interface SessionRecord {
   recallTotal: number;
   rungUps: number;
   scenarioSkipped: boolean;
+  scenarioId?: string;
+  scenarioSuccess?: boolean;
+  spontaneous?: string[];
   helpUsed: number;
   reportLines: string[];
 }
 
 export interface Settings {
+  level: 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
+  sfx: boolean;
   micMode: 'hold' | 'tap';
   accent: 'en-US' | 'en-GB' | 'en-AU' | 'en-IN';
   workerUrl: string;
   secret: string;
 }
 
-export const DEFAULT_SETTINGS: Settings = { micMode: 'hold', accent: 'en-US', workerUrl: '', secret: '' };
+export const DEFAULT_SETTINGS: Settings = { level: 'A2', sfx: true, micMode: 'hold', accent: 'en-US', workerUrl: '', secret: '' };
 
 export interface DayPlan {
   day: string;
@@ -75,6 +89,7 @@ interface MetaMap {
   curriculumNext: number; // sıradaki müfredat günü (0'dan)
   dayCount: number;
   doneDays: string[];
+  scenarioHistory: { id: string; base: string; day: string; success: boolean }[];
 }
 
 interface EBSchema extends DBSchema {

@@ -7,10 +7,11 @@ interface Props {
   onResult: (r: HeardResult) => void;
   disabled?: boolean;
   label?: string;
+  lang?: string;
 }
 
 /** Bas-konuş düğmesi. "hold": basılı tut, bırakınca biter. "tap": dokun başlat, dokun bitir. */
-export default function TalkButton({ mode, onResult, disabled, label }: Props) {
+export default function TalkButton({ mode, onResult, disabled, label, lang }: Props) {
   const [listening, setListening] = useState(false);
   const [interim, setInterim] = useState('');
   const listener = useRef<Listener | null>(null);
@@ -24,7 +25,7 @@ export default function TalkButton({ mode, onResult, disabled, label }: Props) {
   const start = () => {
     if (disabled || listening) return;
     setInterim('');
-    listener.current = new Listener(setInterim);
+    listener.current = new Listener(setInterim, lang);
     listener.current.start();
     setListening(true);
   };

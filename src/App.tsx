@@ -5,6 +5,8 @@ import Session from './screens/Session';
 import Report from './screens/Report';
 import Library from './screens/Library';
 import Icon from './components/Icon';
+import { getSettings } from './lib/db';
+import { setSfxEnabled } from './lib/sfx';
 
 function useHash() {
   const [hash, setHash] = useState(location.hash || '#/');
@@ -24,6 +26,7 @@ export default function App() {
   useEffect(() => {
     // iOS'un verileri silmemesi için kalıcı depolama iste (ana ekrandan açıldığında genelde verilir).
     void navigator.storage?.persist?.().catch(() => undefined);
+    void getSettings().then((st) => setSfxEnabled(st.sfx));
   }, []);
 
   if (hash === '#/test') return <SpeechTest />;

@@ -355,3 +355,39 @@ pre {
 .meter { height: 12px; border-radius: 999px; background: var(--line); overflow: hidden; }
 .meter > div { height: 100%; background: var(--primary); transition: width 60ms linear; }
 .talk-btn-text { font-size: 15px; }
+
+/* ---------- Senaryo ---------- */
+.scenario-card {
+  display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: center;
+  background: var(--surface); border: 2px solid var(--line); border-bottom-width: 5px; border-radius: 24px; padding: 16px;
+}
+.scenario-card .label, .chat-goal .label, .help-card .label {
+  display: block; font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-top: 6px;
+}
+.scenario-card .value { margin: 2px 0; font-weight: 600; }
+.scenario-card .goal { font-size: 18px; font-weight: 800; color: var(--primary); }
+.chat { gap: 8px; }
+.chat-head { display: flex; gap: 10px; align-items: center; }
+.chat-goal { background: var(--primary-soft); border-radius: 16px; padding: 8px 12px; font-weight: 700; font-size: 15px; flex: 1; }
+.chat-goal .label { margin-top: 0; }
+.chat-log { display: flex; flex-direction: column; gap: 8px; }
+.msg { display: flex; flex-direction: column; max-width: 88%; animation: pop 0.2s ease-out; }
+.msg.ai { align-self: flex-start; }
+.msg.me { align-self: flex-end; align-items: flex-end; }
+.msg .bubble { position: relative; font-size: 17px; font-weight: 600; }
+.msg.me .bubble { background: var(--primary); border-color: var(--primary-dark); color: #fff; }
+.msg.old { opacity: 0.45; }
+.err-dot { position: absolute; top: -4px; right: -4px; width: 12px; height: 12px; border-radius: 50%; background: var(--coral); border: 2px solid var(--surface); }
+.msg-tools { margin-top: 4px; }
+button.chip.tiny { min-height: 30px; padding: 2px 10px; font-size: 13px; border-bottom-width: 3px; }
+.natural { background: var(--surface); border: 2px solid var(--line); border-radius: 14px; padding: 6px 10px; font-size: 15px; max-width: 100%; }
+.natural p { margin: 2px 0; }
+.help-card { background: #fff8e1; color: #5c4300; border: 2px solid var(--sun); border-radius: 18px; padding: 10px 14px; font-weight: 700; font-size: 17px; }
+@media (prefers-color-scheme: dark) { .help-card { background: #3a2f12; color: #ffe39a; } }
+.fix-card { background: var(--surface); border: 2px solid var(--line); border-bottom-width: 5px; border-radius: 20px; padding: 12px 16px; }
+.fix-card .was { text-decoration: line-through; color: var(--coral-dark); font-weight: 700; margin: 0; }
+.fix-card .now { color: var(--mint-dark); font-weight: 800; font-size: 18px; margin: 4px 0; }
+.step.chat { height: calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 70px); min-height: 0; }
+.chat-log { flex: 1; min-height: 0; overflow-y: auto; padding: 4px 2px; -webkit-overflow-scrolling: touch; }
+.step.chat .footer { margin-top: 0; padding-top: 4px; }
+.step.chat .talk-btn { width: 96px; height: 96px; }

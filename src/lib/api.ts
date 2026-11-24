@@ -47,3 +47,36 @@ export async function testWorker(): Promise<string> {
     return `Ulaşılamadı: ${(e as Error).message}`;
   }
 }
+
+// ---------- Günlük hatırlatma (Web Push) ----------
+
+function b64ToBytes(b64: string): Uint8Array {
+  const pad = '='.repeat((4 - (b64.length % 4)) % 4);
+  const s = atob((b64 + pad).replace(/-/g, '+').replace(/_/g, '/'));
+  return Uint8Array.from(s, (c) => c.charCodeAt(0));
+}
+
+export async function enableReminders(): Promise<string> {
+  if (!('serviceWorker' in navigator) || !('PushManager' in window) || !('Notification' in window)) {
+    return 'Bildirim yalnızca ana ekrandan açılan uygulamada çalışır.';
+  }
+  const perm = await Notification.requestPermission();
+  if (perm !== 'granted') return 'Bildirim izni verilmedi. Ayarlar → Bildirimler → EnglishBird.';
+  const keyRes = await call('/api/push/key');
+  if (!keyRes?.ok) return 'Önce Worker bağlantısını kur.';
+  const { key } = (await keyRes.json()) as { key: string };
+  const reg = await navigator.serviceWorker.ready;
+  const old = await reg.pushManager.getSubscription();
+  if (old) await old.unsubscribe();
+  const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToBytes(key) as BufferSource });
+  const res = await call('/api/push/subscribe', { method: 'POST', body: JSON.stringify(sub) });
+  return res?.ok ? 'Hatırlatmalar açık: 20:00–01:00 saat başı, oturum bitince durur.' : 'Abonelik kaydedilemedi.';
+}
+
+export async function testReminder(): Promise<string> {
+  const res = await call('/api/push/test', { method: 'POST' });
+  if (!res) return 'Worker bağlı değil.';
+  const j = (await res.json().catch(() => ({}))) as { status?: number; error?: string };
+  if (j.error) return 'Önce hatırlatmaları aç.';
+  return j.status && j.status < 300 ? 'Test bildirimi gönderildi.' : `Gönderilemedi (${j.status}).`;
+}

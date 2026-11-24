@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import TalkButton from '../components/TalkButton';
 import Bird, { type BirdMood } from '../components/Bird';
-import Character, { propForRole } from '../components/Character';
+import Character from '../components/Character';
 import Icon from '../components/Icon';
 import { getPattern, getWord } from '../lib/content';
 import { containsTarget, wordDiff } from '../lib/match';
@@ -421,15 +421,39 @@ export function PatternUseStep({ patternId, situation, micMode, onDone }: { patt
 
 // ---------------------------------------------------------------------------
 
-export function ScenarioPlaceholderStep({ onDone }: Common) {
+// Senaryodan gelen hata kartı: yanlış hâli gör, doğal hâlini söyle
+
+export function FixStep({ id, micMode, accent, onDone }: { id: string } & Common) {
+  const [err, setErr] = useState<import('../lib/db').ErrorData | null>(null);
+  const [heard, setHeard] = useState<HeardResult | null>(null);
+  useEffect(() => {
+    void import('../lib/db').then(async (m) => setErr((await m.getItem(id))?.error ?? null));
+  }, [id]);
+  if (!err) return null;
+  const ok = heard ? containsTarget(heard.transcript, err.better).ok : false;
   return (
     <div className="step">
-      <Coach mood="think" say="Senaryo yakında!" />
-      <div className="scene-stage" style={{ justifyContent: 'center', gap: 24 }}>
-        <Character seed="placeholder-barista" prop={propForRole('barista')} size={96} />
+      <Coach mood={!heard ? 'think' : ok ? 'happy' : 'sad'} say="Düzelt ve söyle!" />
+      <div className="fix-card">
+        <p className="was">{err.quote}</p>
+        {heard && <p className="now">{err.better}</p>}
+        {heard && <p className="muted small">{err.whyTr}</p>}
       </div>
-      <p className="muted center">Yapay zekâ ile sesli sohbet, kurulum bitince açılacak.</p>
-      <Continue onClick={() => onDone({})} />
+      {!heard ? (
+        <TalkButton mode={micMode} onResult={setHeard} />
+      ) : (
+        <>
+          <Feedback good={ok} title={ok ? 'Düzelttin!' : 'Tam değil'}>
+            <span className="you">Sen: {heard.transcript || '—'}</span>
+          </Feedback>
+          <div className="row center">
+            <button className="round small soft" aria-label="Dinle" onClick={() => void speak(err.better, { accent })}>
+              <Icon name="speaker" size={24} />
+            </button>
+          </div>
+          <Continue good={ok} onClick={() => onDone({ correct: ok, speakingMs: heard.durationMs })} />
+        </>
+      )}
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { getPattern, getWord, PATTERNS, WORDS } from '../lib/content';
-import { allSessions, getSettings, putSession, type ExerciseKind, type ItemState, type SessionRecord, type Settings } from '../lib/db';
+import { allItems, allSessions, getSettings, putSession, type ExerciseKind, type ItemState, type SessionRecord, type Settings } from '../lib/db';
 import { formatDuration, sessionDay, shuffle } from '../lib/day';
 import { applyReview, dueItems, dueTomorrowCount, ensureItem, nextDueDate, getTodayPlan, markDayDone, markIntroduced, putItem, recordAttempt, scheduleFirstDay } from '../lib/srs';
 import { notifySessionDone } from '../lib/api';
 import { sfx } from '../lib/sfx';
 import Bird from '../components/Bird';
 import Icon from '../components/Icon';
+import ScenarioPlay, { type ScenarioOutcome } from './ScenarioPlay';
 import {
   CatchStep,
   IntroStep,
@@ -15,7 +16,7 @@ import {
   PatternUseStep,
   RecallStep,
   RecognizeStep,
-  ScenarioPlaceholderStep,
+  FixStep,
   UseStep,
   type StepResult,
 } from './steps';
@@ -32,12 +33,15 @@ type Step =
   | { t: 'recall'; id: string }
   | { t: 'catch'; id: string; distractors: string[] }
   | { t: 'use'; id: string }
+  | { t: 'fix'; id: string }
   | { t: 'scenario' };
 
 interface Built {
   steps: Step[];
   newIds: string[];
   patternId: string;
+  domains: string[];
+  todayIds: string[];
 }
 
 async function buildSession(kind: Kind): Promise<Built> {
@@ -47,6 +51,7 @@ async function buildSession(kind: Kind): Promise<Built> {
   const newIds = remaining.slice(0, deep ? 10 : 4);
   const due = await dueItems();
   const reviews = due.filter((i) => i.type === 'word').slice(0, deep ? 5 : 3);
+  const fixes = due.filter((i) => i.type === 'error' && i.error).slice(0, deep ? 3 : 2);
 
   const pool = (exclude: string) => {
     const same = plan.newIds.filter((x) => x !== exclude);
@@ -67,6 +72,8 @@ async function buildSession(kind: Kind): Promise<Built> {
     const as = nextRung === 1 ? 'recall' : nextRung === 3 ? 'use' : (plan.dayNumber + i) % 2 === 0 ? 'recall' : 'use';
     steps.push({ t: 'review', id: r.id, as });
   });
+  // Geçmiş senaryolardaki hatalar: doğru hâlini söyle
+  fixes.forEach((f) => steps.push({ t: 'fix', id: f.id }));
 
   // 2. Günün kalıbı (gün içindeki ilk oturumda tam, sonrakilerde yalnızca bir kullanım)
   const p = getPattern(plan.patternId)!;
@@ -94,9 +101,10 @@ async function buildSession(kind: Kind): Promise<Built> {
     shuffle(plan.introduced).slice(0, 6).forEach((id) => steps.push({ t: 'review', id, as: 'recall' }));
   }
 
-  // 4. Senaryo (Worker kurulunca)
+  // 4. Senaryo: bugünün kelimeleriyle aynı alandan
   steps.push({ t: 'scenario' });
-  return { steps, newIds, patternId: p.id };
+  const domains = [...new Set(plan.newIds.flatMap((id) => getWord(id)?.domains ?? []))];
+  return { steps, newIds, patternId: p.id, domains, todayIds: plan.newIds };
 }
 
 interface Stats {
@@ -109,6 +117,7 @@ interface Stats {
   reviewed: number;
   firstRecall: Record<string, boolean>; // yeni öğe → yardımsız hatırladı mı
   patternUsed: boolean;
+  scenario: ScenarioOutcome | null;
 }
 
 export default function Session({ kind, onExit }: { kind: Kind; onExit: () => void }) {
@@ -116,7 +125,7 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
   const [built, setBuilt] = useState<Built | null>(null);
   const [index, setIndex] = useState(0);
   const [report, setReport] = useState<{ lines: string[]; talk: string; recall: string; up: number } | null>(null);
-  const stats = useRef<Stats>({ speakingMs: 0, recallCorrect: 0, recallTotal: 0, rungUps: 0, helpUsed: 0, answered: 0, reviewed: 0, firstRecall: {}, patternUsed: false });
+  const stats = useRef<Stats>({ speakingMs: 0, recallCorrect: 0, recallTotal: 0, rungUps: 0, helpUsed: 0, answered: 0, reviewed: 0, firstRecall: {}, patternUsed: false, scenario: null });
   const items = useRef(new Map<string, ItemState>());
   const startedAt = useRef(new Date().toISOString());
 
@@ -136,7 +145,7 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
 
   const step = built.steps[index];
 
-  async function item(id: string, type: 'word' | 'pattern') {
+  async function item(id: string, type: ItemState['type']) {
     const cached = items.current.get(id);
     if (cached) return cached;
     const it = await ensureItem(id, type);
@@ -144,7 +153,7 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
     return it;
   }
 
-  async function record(id: string, type: 'word' | 'pattern', kindOf: ExerciseKind, r: StepResult) {
+  async function record(id: string, type: ItemState['type'], kindOf: ExerciseKind, r: StepResult) {
     const it = await item(id, type);
     if (recordAttempt(it, { kind: kindOf, correct: !!r.correct, helped: !!r.helped })) stats.current.rungUps++;
     stats.current.answered++;
@@ -186,6 +195,13 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
       case 'use':
         await record(step.id, 'word', 'use', r);
         break;
+      case 'fix': {
+        const it = await item(step.id, 'error');
+        applyReview(it, !!r.correct, !!r.helped);
+        await record(step.id, 'error', 'review', r);
+        s.reviewed++;
+        break;
+      }
       default:
         break;
     }
@@ -203,6 +219,11 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
     const pat = await item(built!.patternId, 'pattern');
     if (!pat.card) scheduleFirstDay(pat, s.patternUsed);
     for (const it of items.current.values()) await putItem(it);
+    // Senaryodan gelen yeni hata kartları ertesi gün tekrar
+    for (const e of (await allItems()).filter((x) => x.type === 'error' && !x.card)) {
+      scheduleFirstDay(e, false);
+      await putItem(e);
+    }
     await markIntroduced([...built!.newIds]);
 
     const day = sessionDay();
@@ -213,11 +234,14 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
     const todayMs = sessions.filter((x) => x.day === day).reduce((n, x) => n + x.speakingMs, 0) + s.speakingMs;
     const dueTomorrow = await dueTomorrowCount();
 
+    const sc = s.scenario;
     const lines: string[] = [];
     lines.push(`Bugün ${formatDuration(todayMs)} konuştun${prevDay ? ` (önceki gün ${formatDuration(prevMs)})` : ''}.`);
     if (s.recallTotal) lines.push(`${s.recallTotal} öğenin ${s.recallCorrect} tanesini yardımsız söyledin.`);
-    if (s.answered && s.helpUsed / s.answered > 0.4) lines.push(`Cevapların çoğunda ipucu kullandın (%${Math.round((s.helpUsed / s.answered) * 100)}).`);
-    else lines.push('Bugün serbest sohbet yok (senaryo yakında).');
+    if (!sc?.played) lines.push('Bugün konuşmadın: senaryo yapılmadı.');
+    else if (sc.spontaneous.length) lines.push(`Senaryoda kendiliğinden: ${sc.spontaneous.slice(0, 3).join(', ')}.`);
+    else if (sc.userTurns && sc.helpTurns / sc.userTurns > 0.4) lines.push(`Senaryoda çoğu turda yardım aldın (${sc.helpTurns}/${sc.userTurns}).`);
+    else lines.push(sc.success ? 'Senaryonun amacına ulaştın.' : 'Senaryonun amacına ulaşamadın.');
     const missed = built!.newIds.filter((id) => s.firstRecall[id] === false).map((id) => getWord(id)?.text);
     const nextDue = await nextDueDate();
     lines.push(
@@ -239,8 +263,11 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
       reviewed: s.reviewed,
       recallCorrect: s.recallCorrect,
       recallTotal: s.recallTotal,
-      rungUps: s.rungUps,
-      scenarioSkipped: true,
+      rungUps: s.rungUps + (sc?.rungUps ?? 0),
+      scenarioSkipped: !sc?.played,
+      scenarioId: sc?.scenarioId,
+      scenarioSuccess: sc?.success,
+      spontaneous: sc?.spontaneous,
       helpUsed: s.helpUsed,
       reportLines: lines.slice(0, 4),
     };
@@ -252,7 +279,7 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
       lines: lines.slice(2, 4),
       talk: formatDuration(todayMs),
       recall: s.recallTotal ? `${s.recallCorrect}/${s.recallTotal}` : '—',
-      up: s.rungUps,
+      up: s.rungUps + (sc?.rungUps ?? 0),
     });
   }
 
@@ -316,7 +343,23 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
       {step.t === 'recall' && <RecallStep key={key} id={step.id} {...common} />}
       {step.t === 'catch' && <CatchStep key={key} id={step.id} distractors={step.distractors} {...common} />}
       {step.t === 'use' && <UseStep key={key} id={step.id} {...common} />}
-      {step.t === 'scenario' && <ScenarioPlaceholderStep key={key} {...common} />}
+      {step.t === 'fix' && <FixStep key={key} id={step.id} {...common} />}
+      {step.t === 'scenario' && (
+        <ScenarioPlay
+          key={key}
+          level={settings.level}
+          micMode={settings.micMode}
+          domains={built.domains}
+          todayIds={built.todayIds}
+          patternId={built.patternId}
+          length={kind === 'deep' ? 'deep' : 'quick'}
+          onDone={(o) => {
+            stats.current.scenario = o;
+            stats.current.speakingMs += o.speakingMs;
+            void finish();
+          }}
+        />
+      )}
     </main>
   );
 }

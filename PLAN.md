@@ -139,8 +139,10 @@ senaryo iskeletleri, dinleme metinleri ve soruları.
 | Akış: ısınma (seçeneksiz sesli) → günün kalıbı (sahne, anlam, kart, kullanım) → 10 kelime (tanıt, tanı, hatırla, hızlıda yakala, kullan) → senaryo → kapanış | ✅ (senaryo yer tutucu) |
 | Takılan öğeye eksik basamağın egzersizi | ✅ |
 | Ana, Rapor, Kütüphane (+Ayarlar) ekranları | ✅ |
-| Sesli roleplay (LLM), düzeltme kartları, yardım merdiveni | ⏳ Worker kurulumu gerekli |
-| Günlük hatırlatma aboneliği, otomatik bulut yedeği | ⏳ Worker kurulumu gerekli |
+| Sesli roleplay: seçici (alan, seviye, 14 gün kuralı), akışlı cevap + cümle cümle seslendirme, 4 kademeli yardım (3. kademe Türkçe ses tanıma), "Daha doğal?", sohbette hata noktası, en fazla 3 düzeltme kartı, ikinci tur ve karşılaştırma | ✅ kod; gerçek anahtarlarla deneme bekliyor |
+| 5. basamak (kendiliğinden kullanım) analizden; düzeltmeler hata kartı olarak tekrar kuyruğunda | ✅ |
+| Günlük hatırlatma (VAPID anahtarı Worker'da otomatik), otomatik bulut yedeği | ✅ kod; kurulum bekliyor |
+| Haftalık habersiz test (Aşama 1 kapısı için) | ⏳ |
 
 ## 6. Kullanıcının yapacakları (hepsi ücretsiz, kart istemez)
 

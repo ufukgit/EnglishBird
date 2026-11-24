@@ -92,7 +92,10 @@ export class Listener {
   private lastError: string | null = null;
   private endWaiter: (() => void) | null = null;
 
-  constructor(private onInterim: (text: string) => void) {}
+  constructor(
+    private onInterim: (text: string) => void,
+    private lang = 'en-US',
+  ) {}
 
   static supported() {
     return !!getRecognitionCtor();
@@ -114,7 +117,7 @@ export class Listener {
 
   private spawn(Ctor: NonNullable<ReturnType<typeof getRecognitionCtor>>) {
     const rec = new Ctor();
-    rec.lang = 'en-US';
+    rec.lang = this.lang;
     rec.continuous = true;
     rec.interimResults = true;
     rec.maxAlternatives = 1;
