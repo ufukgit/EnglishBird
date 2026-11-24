@@ -245,22 +245,54 @@ async function chat(env: Env, req: ChatRequest): Promise<Response> {
   return json({ error: 'all providers failed', details: errors }, 502);
 }
 
+// Ses → metin. Önce Groq Whisper, olmazsa Workers AI Whisper. Sade bir JSON döner:
+// { text, words: [{word, start, end}], noSpeech: 0..1, provider }
 async function transcribe(env: Env, request: Request): Promise<Response> {
-  if (!env.GROQ_API_KEY) return json({ error: 'GROQ_API_KEY missing' }, 500);
   const form = await request.formData();
-  const out = new FormData();
-  out.set('file', form.get('file') as File);
-  out.set('model', env.WHISPER_MODEL);
-  out.set('language', 'en');
-  out.set('response_format', 'verbose_json');
-  out.append('timestamp_granularities[]', 'word');
-  out.append('timestamp_granularities[]', 'segment');
-  const res = await fetch('https://api.groq.com/openai/v1/audio/transcriptions', {
-    method: 'POST',
-    headers: { authorization: `Bearer ${env.GROQ_API_KEY}` },
-    body: out,
-  });
-  return new Response(res.body, { status: res.status, headers: { 'content-type': 'application/json' } });
+  const file = form.get('file') as File | null;
+  if (!file) return json({ error: 'file missing' }, 400);
+  const language = (form.get('language') as string) || 'en';
+  const errors: string[] = [];
+
+  if (env.GROQ_API_KEY) {
+    const out = new FormData();
+    out.set('file', file);
+    out.set('model', env.WHISPER_MODEL);
+    out.set('language', language);
+    out.set('response_format', 'verbose_json');
+    out.set('temperature', '0');
+    out.append('timestamp_granularities[]', 'word');
+    out.append('timestamp_granularities[]', 'segment');
+    const res = await fetch('https://api.groq.com/openai/v1/audio/transcriptions', {
+      method: 'POST',
+      headers: { authorization: `Bearer ${env.GROQ_API_KEY}` },
+      body: out,
+    });
+    if (res.ok) {
+      const j = (await res.json()) as {
+        text?: string;
+        words?: { word: string; start: number; end: number }[];
+        segments?: { no_speech_prob?: number }[];
+      };
+      const probs = (j.segments ?? []).map((x) => x.no_speech_prob ?? 0);
+      return json({ text: (j.text ?? '').trim(), words: j.words ?? [], noSpeech: probs.length ? Math.min(...probs) : 1, provider: 'groq' });
+    }
+    errors.push(`groq: ${res.status} ${(await res.text()).slice(0, 150)}`);
+  }
+
+  try {
+    const bytes = new Uint8Array(await file.arrayBuffer());
+    let bin = '';
+    for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+    const out = (await env.AI.run('@cf/openai/whisper-large-v3-turbo' as keyof AiModels, {
+      audio: btoa(bin),
+      language,
+    } as never)) as { text?: string; words?: { word: string; start: number; end: number }[] };
+    return json({ text: (out.text ?? '').trim(), words: out.words ?? [], noSpeech: 0, provider: 'workers-ai' });
+  } catch (e) {
+    errors.push(`workers-ai: ${String(e)}`);
+  }
+  return json({ error: 'transcription failed', details: errors }, 502);
 }
 
 // ---------------------------------------------------------------------------

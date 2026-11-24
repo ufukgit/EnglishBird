@@ -65,13 +65,14 @@ export interface SessionRecord {
 export interface Settings {
   level: 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
   sfx: boolean;
+  asr: 'whisper' | 'safari';
   micMode: 'hold' | 'tap';
   accent: 'en-US' | 'en-GB' | 'en-AU' | 'en-IN';
   workerUrl: string;
   secret: string;
 }
 
-export const DEFAULT_SETTINGS: Settings = { level: 'A2', sfx: true, micMode: 'hold', accent: 'en-US', workerUrl: '', secret: '' };
+export const DEFAULT_SETTINGS: Settings = { level: 'A2', sfx: true, asr: 'whisper', micMode: 'hold', accent: 'en-US', workerUrl: '', secret: '' };
 
 export interface DayPlan {
   day: string;

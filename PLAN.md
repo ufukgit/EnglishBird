@@ -25,7 +25,7 @@ kararların tek kaynaklı özetidir. Doküman ile bu dosya çelişirse **bu dosy
 | Barındırma | Cloudflare Pages (gizli repoyu ücretsiz yayınlar). |
 | Ara katman | Cloudflare Worker (ücretsiz): API anahtarlarını saklar, LLM sağlayıcı zinciri, günlük yedek (KV), bildirim zamanlayıcısı. Tek bir kişisel gizli anahtarla korunur. |
 | Yerel veri | IndexedDB, internet yokken de çalışır. Her oturum sonunda Worker KV'ye yedek. |
-| Ses tanıma | **Karma (iPhone testi sonrası, 24.11.2026):** Sohbet turlarında Safari `webkitSpeechRecognition`, sürekli modda bas-konuş; düğme bırakılınca son sonuç alınır. Telaffuz odaklı egzersizlerde (shadowing, hedef cümle, minimal çiftler) ve Safari hata verdiğinde Groq Whisper (ücretsiz). |
+| Ses tanıma | **25.11.2026 güncellemesi: Whisper asıl yöntem.** Uygulamada Safari ses tanıması ilk kullanımdan sonra (uygulama ses çaldıktan sonra) sonuç vermedi. Ses MediaRecorder ile kaydedilip Worker → Groq Whisper (yedek: Workers AI Whisper) ile yazıya dökülür; Safari ayarlardan seçilebilir yedek. Önceki karar: **Karma (iPhone testi sonrası, 24.11.2026):** Sohbet turlarında Safari `webkitSpeechRecognition`, sürekli modda bas-konuş; düğme bırakılınca son sonuç alınır. Telaffuz odaklı egzersizlerde (shadowing, hedef cümle, minimal çiftler) ve Safari hata verdiğinde Groq Whisper (ücretsiz). |
 | Seslendirme | iOS `speechSynthesis`: Samantha (en-US), Daniel (en-GB), Karen (en-AU), Rishi (en-IN), ek olarak Moira (en-IE), Tessa (en-ZA). Eğlence sesleri (Bahh, Bells, Zarvox…) filtrelenir. Kelime sınırı olayları çalışıyor, yani etkileşimli transkript vurgusu mümkün. |
 | Ses analizi | Web Audio API: duraksama, perde eğrisi, arka plan sesi, telefon filtresi (300–3400 Hz). |
 | Mikrofon | Varsayılan bas-konuş; otomatik dinleme ayarlardan açılır. |

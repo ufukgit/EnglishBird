@@ -40,7 +40,10 @@ function tone(freq: number, start: number, dur: number, type: OscillatorType = '
 let suspendTimer: ReturnType<typeof setTimeout> | null = null;
 function scheduleSuspend() {
   if (suspendTimer) clearTimeout(suspendTimer);
-  suspendTimer = setTimeout(() => void ctx?.suspend(), 1500);
+  suspendTimer = setTimeout(() => {
+    void ctx?.close();
+    ctx = null;
+  }, 1500);
 }
 
 export const sfx = {

@@ -13,8 +13,8 @@ function sse(obj) {
 }
 
 (async () => {
-  const b = await chromium.launch();
-  const ctx = await b.newContext({ ...devices['iPhone 13'] });
+  const b = await chromium.launch({ args: ['--use-fake-ui-for-media-stream', '--use-fake-device-for-media-stream'] });
+  const ctx = await b.newContext({ ...devices['iPhone 13'], permissions: ['microphone'] });
   const all = words.map((w) => w.text).join(' . ');
   await ctx.addInitScript((say) => {
     window.__say = say;
@@ -23,12 +23,13 @@ function sse(obj) {
     window.webkitSpeechRecognition = FakeRec; window.SpeechRecognition = FakeRec;
     window.speechSynthesis.speak = (u) => setTimeout(() => { u.onstart && u.onstart(); u.onend && u.onend(); }, 10);
   }, all);
-  let turn = 0; const calls = [];
+  let turn = 0; const calls = []; let nodeSay = all; let transcribes = 0;
   await ctx.route(W + '/**', async (route) => {
     const req = route.request(); const url = new URL(req.url());
     const body = req.postDataJSON ? (() => { try { return req.postDataJSON(); } catch { return null; } })() : null;
     calls.push(url.pathname + (body?.purpose ? ':' + body.purpose : '') + (body?.stream ? ':stream' : ''));
     const h = { 'access-control-allow-origin': '*', 'content-type': 'application/json' };
+    if (url.pathname === '/api/transcribe') { transcribes++; return route.fulfill({ status: 200, headers: h, body: JSON.stringify({ text: nodeSay, noSpeech: 0.01, words: [] }) }); }
     if (url.pathname === '/api/chat') {
       if (body.stream) {
         turn++;
@@ -55,14 +56,14 @@ function sse(obj) {
   await p.goto('http://localhost:4173/'); await p.waitForTimeout(600);
   await p.getByRole('button', { name: /Hızlı/ }).click();
   const chatSay = 'I have a reservation and I would like to order a quiet room';
-  const press = async () => { const t = p.locator('.talk-btn').first(); const box = await t.boundingBox(); await p.mouse.move(box.x + 20, box.y + 20); await p.mouse.down(); await p.waitForTimeout(120); await p.mouse.up(); await p.waitForTimeout(500); };
+  const press = async () => { const t = p.locator('.talk-btn').first(); const box = await t.boundingBox(); await p.mouse.move(box.x + 20, box.y + 20); await p.mouse.down(); await p.waitForTimeout(900); await p.mouse.up(); await p.waitForTimeout(900); };
   let shots = 0;
   for (let i = 0; i < 120; i++) {
     await p.waitForTimeout(120);
     if (await p.locator('.stats').count()) break;
     if (await p.getByRole('button', { name: 'Başla' }).count()) { await p.screenshot({ path: SHOT + 'card.png' }); await p.getByRole('button', { name: 'Başla' }).click(); await p.waitForTimeout(600); continue; }
     if (await p.locator('.chat-log').count()) {
-      await p.evaluate((t) => { window.__say = t; }, chatSay);
+      await p.evaluate((t) => { window.__say = t; }, chatSay); nodeSay = chatSay;
       if (turn === 1 && !(await p.locator('.help-card').count())) { await p.getByRole('button', { name: /İpucu/ }).click(); await p.waitForTimeout(400); }
       if (await p.getByRole('button', { name: 'Sonucu gör' }).count()) { await p.screenshot({ path: SHOT + 'chat.png' }); await p.getByRole('button', { name: /Daha doğal/ }).first().click(); await p.waitForTimeout(400); await p.screenshot({ path: SHOT + 'chat2.png' }); await p.getByRole('button', { name: 'Sonucu gör' }).click(); await p.waitForTimeout(800); await p.screenshot({ path: SHOT + 'result.png' }); continue; }
       if (await p.locator('.talk-btn').count()) await press();
@@ -78,7 +79,7 @@ function sse(obj) {
   await p.screenshot({ path: SHOT + 'closing.png' });
   await p.screenshot({ path: SHOT + 'end.png' });
   console.log('closing:', (await p.locator('.stats').textContent().catch(() => 'NO')) + ' | ' + (await p.locator('.report').textContent().catch(() => '')));
-  console.log('calls:', calls.join(', '));
+  console.log('calls:', calls.join(', ')); console.log('transcribe calls:', transcribes);
   await p.getByRole('button', { name: 'Tamam' }).click().catch(() => {});
   await p.clock?.install?.({ time: new Date(Date.now() + 2 * 86400000) }).catch(() => {});
   console.log('errors:', errs);

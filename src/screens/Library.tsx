@@ -3,6 +3,7 @@ import { getPattern, getWord } from '../lib/content';
 import { allItems, exportAll, getSettings, importAll, setMeta, type ItemState, type Settings } from '../lib/db';
 import { backupToCloud, enableReminders, restoreFromCloud, testReminder, testWorker } from '../lib/api';
 import { setSfxEnabled } from '../lib/sfx';
+import { setAsrEngine } from '../lib/asr';
 import { speak, type Accent } from '../lib/voice';
 import { RUNG_NAMES } from '../lib/types';
 
@@ -92,6 +93,7 @@ function SettingsPanel({ initial }: { initial: Settings }) {
   const save = async (next: Settings) => {
     setS(next);
     await setMeta('settings', next);
+    setAsrEngine(next.asr === 'whisper' && next.workerUrl && next.secret ? 'whisper' : 'safari');
   };
 
   const download = async () => {
@@ -150,6 +152,17 @@ function SettingsPanel({ initial }: { initial: Settings }) {
         <button aria-pressed={s.sfx} onClick={() => { setSfxEnabled(true); void save({ ...s, sfx: true }); }}>Açık</button>
         <button aria-pressed={!s.sfx} onClick={() => { setSfxEnabled(false); void save({ ...s, sfx: false }); }}>Kapalı</button>
       </div>
+
+      <h2>Ses tanıma</h2>
+      <div className="segmented">
+        <button aria-pressed={s.asr === 'whisper'} onClick={() => { setAsrEngine(s.workerUrl && s.secret ? 'whisper' : 'safari'); void save({ ...s, asr: 'whisper' }); }}>
+          Whisper (önerilen)
+        </button>
+        <button aria-pressed={s.asr === 'safari'} onClick={() => { setAsrEngine('safari'); void save({ ...s, asr: 'safari' }); }}>
+          Safari
+        </button>
+      </div>
+      <p className="muted small">Whisper daha güvenilir; Worker bağlantısı gerekir. Safari anlık yazı gösterir ama iOS'ta takılabilir.</p>
 
       <h2>Mikrofon</h2>
       <div className="segmented">

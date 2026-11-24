@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { Listener, type HeardResult } from '../lib/voice';
+import type { HeardResult } from '../lib/voice';
+import { asrSupported, createListener, currentAsrEngine, type ListenerLike } from '../lib/asr';
 import Icon from './Icon';
 
 interface Props {
@@ -16,19 +17,20 @@ export default function TalkButton({ mode, onResult, disabled, label, lang }: Pr
   const [interim, setInterim] = useState('');
   const [denied, setDenied] = useState(false);
   const [empty, setEmpty] = useState(false);
-  const listener = useRef<Listener | null>(null);
+  const listener = useRef<ListenerLike | null>(null);
+  const [busy, setBusy] = useState(false);
 
   useEffect(() => () => listener.current?.abort(), []);
 
-  if (!Listener.supported()) {
+  if (!asrSupported()) {
     return <p className="bad">Bu tarayıcıda ses tanıma yok. Safari kullan.</p>;
   }
 
   const start = () => {
-    if (disabled || listening) return;
+    if (disabled || listening || busy) return;
     setInterim('');
     setEmpty(false);
-    listener.current = new Listener(setInterim, lang);
+    listener.current = createListener(setInterim, lang);
     listener.current.start();
     setListening(true);
   };
@@ -36,7 +38,9 @@ export default function TalkButton({ mode, onResult, disabled, label, lang }: Pr
   const stop = async () => {
     if (!listening || !listener.current) return;
     setListening(false);
+    setBusy(true);
     const r = await listener.current.stop();
+    setBusy(false);
     listener.current = null;
     if (r.error === 'not-allowed' || r.error === 'service-not-allowed') {
       setDenied(true);
@@ -65,8 +69,9 @@ export default function TalkButton({ mode, onResult, disabled, label, lang }: Pr
 
   return (
     <div className="talk">
-      {listening && <p className="interim">{interim || '…'}</p>}
-      <button className={`talk-btn${listening ? ' on' : ''}`} disabled={disabled} aria-label={label ?? 'Konuş'} {...handlers}>
+      {listening && <p className="interim">{interim || (currentAsrEngine() === 'whisper' ? '● kaydediliyor' : '…')}</p>}
+      {busy && <p className="interim">…</p>}
+      <button className={`talk-btn${listening ? ' on' : ''}`} disabled={disabled || busy} aria-label={label ?? 'Konuş'} {...handlers}>
         <Icon name="mic" size={52} stroke={2.2} />
       </button>
       {empty && !listening && <p className="hint">Duyamadım, tekrar dene.</p>}

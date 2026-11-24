@@ -7,6 +7,7 @@ import Library from './screens/Library';
 import Icon from './components/Icon';
 import { getSettings } from './lib/db';
 import { setSfxEnabled } from './lib/sfx';
+import { setAsrEngine } from './lib/asr';
 
 function useHash() {
   const [hash, setHash] = useState(location.hash || '#/');
@@ -26,7 +27,11 @@ export default function App() {
   useEffect(() => {
     // iOS'un verileri silmemesi için kalıcı depolama iste (ana ekrandan açıldığında genelde verilir).
     void navigator.storage?.persist?.().catch(() => undefined);
-    void getSettings().then((st) => setSfxEnabled(st.sfx));
+    void getSettings().then((st) => {
+      setSfxEnabled(st.sfx);
+      // Whisper Worker gerektirir; bağlı değilse Safari'ye düş.
+      setAsrEngine(st.asr === 'whisper' && st.workerUrl && st.secret ? 'whisper' : 'safari');
+    });
   }, []);
 
   if (hash === '#/test') return <SpeechTest />;
