@@ -1,0 +1,6302 @@
+[
+ {
+  "id": "w-order",
+  "text": "order",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "food"
+  ],
+  "tr": "sipariş vermek",
+  "examples": [
+   "Are you ready to order?",
+   "I ordered the soup, not the salad."
+  ],
+  "sayIt": [
+   {
+    "tr": "Garsona sipariş vermeye hazır olduğunuzu söyle.",
+    "en": "We're ready to order."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-bill",
+  "text": "bill",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "food"
+  ],
+  "tr": "hesap",
+  "examples": [
+   "Could we get the bill, please?",
+   "The bill came to forty dollars."
+  ],
+  "sayIt": [
+   {
+    "tr": "Garsondan hesabı iste.",
+    "en": "Could we get the bill, please?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-split",
+  "text": "split",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "food"
+  ],
+  "tr": "bölüşmek",
+  "examples": [
+   "Let's split the bill.",
+   "Do you want to split a dessert?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşına hesabı bölüşmeyi öner.",
+    "en": "Shall we split the bill?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-recommend",
+  "text": "recommend",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "tavsiye etmek",
+  "examples": [
+   "What do you recommend?",
+   "I'd recommend the fish."
+  ],
+  "sayIt": [
+   {
+    "tr": "Garsona ne tavsiye ettiğini sor.",
+    "en": "What would you recommend?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-allergic",
+  "text": "allergic",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "alerjisi olan",
+  "examples": [
+   "I'm allergic to nuts.",
+   "Is anyone here allergic to anything?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Fıstığa alerjin olduğunu söyle.",
+    "en": "I'm allergic to peanuts."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-spicy",
+  "text": "spicy",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "acı, baharatlı",
+  "examples": [
+   "Is this dish spicy?",
+   "I can't handle very spicy food."
+  ],
+  "sayIt": [
+   {
+    "tr": "Yemeğin acı olup olmadığını sor.",
+    "en": "Is this very spicy?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-to-go",
+  "text": "to go",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "food"
+  ],
+  "tr": "paket (götürmek üzere)",
+  "examples": [
+   "For here or to go?",
+   "Can I get it to go?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Kahveni paket istediğini söyle.",
+    "en": "Can I get that to go?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-refill",
+  "text": "refill",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "tekrar doldurma",
+  "examples": [
+   "Can I get a refill?",
+   "Refills are free here."
+  ],
+  "sayIt": [
+   {
+    "tr": "İçeceğinin yeniden doldurulmasını iste.",
+    "en": "Could I get a refill, please?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-tip",
+  "text": "tip",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "food"
+  ],
+  "tr": "bahşiş",
+  "examples": [
+   "Is the tip included?",
+   "We left a good tip."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bahşişin hesaba dahil olup olmadığını sor.",
+    "en": "Is the tip included?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-book-a-table",
+  "text": "book a table",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "food"
+  ],
+  "tr": "masa ayırtmak",
+  "examples": [
+   "I'd like to book a table for four.",
+   "Did you book a table?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Saat sekize iki kişilik masa ayırt.",
+    "en": "I'd like to book a table for two at eight."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-starving",
+  "text": "starving",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "çok aç, açlıktan ölüyor",
+  "examples": [
+   "I'm starving, let's eat.",
+   "You must be starving after that flight."
+  ],
+  "sayIt": [
+   {
+    "tr": "Çok aç olduğunu söyle.",
+    "en": "I'm starving."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-leftovers",
+  "text": "leftovers",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "artan yemek",
+  "examples": [
+   "We had leftovers for lunch.",
+   "Can I take the leftovers home?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Artanları eve götürmek istediğini söyle.",
+    "en": "Could I get a box for the leftovers?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-craving",
+  "text": "craving",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "food"
+  ],
+  "tr": "canının çekmesi",
+  "examples": [
+   "I'm craving something sweet.",
+   "I've been craving pizza all day."
+  ],
+  "sayIt": [
+   {
+    "tr": "Canının tatlı bir şey çektiğini söyle.",
+    "en": "I'm craving something sweet."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-portion",
+  "text": "portion",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "food"
+  ],
+  "tr": "porsiyon",
+  "examples": [
+   "The portions here are huge.",
+   "Can I get a half portion?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Yarım porsiyon iste.",
+    "en": "Can I get a half portion?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-option",
+  "text": "option",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "seçenek",
+  "examples": [
+   "Do you have any vegetarian options?",
+   "Waiting isn't really an option."
+  ],
+  "sayIt": [
+   {
+    "tr": "Vejetaryen seçenek olup olmadığını sor.",
+    "en": "Do you have any vegetarian options?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-ill-have",
+  "text": "I'll have",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "food"
+  ],
+  "tr": "... alayım",
+  "examples": [
+   "I'll have the chicken, please.",
+   "I'll have what she's having."
+  ],
+  "sayIt": [
+   {
+    "tr": "Tavuklu yemeği sipariş et.",
+    "en": "I'll have the chicken, please."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-were-out-of",
+  "text": "we're out of",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "... kalmadı",
+  "examples": [
+   "Sorry, we're out of salmon.",
+   "We're out of milk again."
+  ],
+  "sayIt": [
+   {
+    "tr": "Somonun kalmadığını söyle (garson olarak).",
+    "en": "Sorry, we're out of salmon."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-bland",
+  "text": "bland",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "food"
+  ],
+  "tr": "tatsız, yavan",
+  "examples": [
+   "The soup is a bit bland.",
+   "Hospital food is always bland."
+  ],
+  "sayIt": [
+   {
+    "tr": "Çorbanın biraz tatsız olduğunu söyle.",
+    "en": "The soup is a bit bland."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-overcooked",
+  "text": "overcooked",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "food"
+  ],
+  "tr": "fazla pişmiş",
+  "examples": [
+   "The steak is overcooked.",
+   "Sorry, the pasta is a little overcooked."
+  ],
+  "sayIt": [
+   {
+    "tr": "Etin fazla pişmiş olduğunu kibarca söyle.",
+    "en": "I think the steak is a bit overcooked."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-its-on-me",
+  "text": "it's on me",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "benden, ben ödüyorum",
+  "examples": [
+   "Put your wallet away, it's on me.",
+   "Lunch is on me today."
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşına yemeğin senden olduğunu söyle.",
+    "en": "Don't worry, it's on me."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-grab-a-bite",
+  "text": "grab a bite",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "bir şeyler atıştırmak",
+  "examples": [
+   "Do you want to grab a bite?",
+   "Let's grab a bite before the movie."
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşına bir şeyler yemeyi teklif et.",
+    "en": "Do you want to grab a bite?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-dessert",
+  "text": "dessert",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "food"
+  ],
+  "tr": "tatlı",
+  "examples": [
+   "Are you having dessert?",
+   "I'm too full for dessert."
+  ],
+  "sayIt": [
+   {
+    "tr": "Tatlı yiyemeyecek kadar tok olduğunu söyle.",
+    "en": "I'm too full for dessert."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-full",
+  "text": "full",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "food"
+  ],
+  "tr": "tok",
+  "examples": [
+   "I'm full, thanks.",
+   "I'm so full I can't move."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ev sahibine tok olduğunu kibarca söyle.",
+    "en": "I'm full, thank you. It was delicious."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-help-yourself",
+  "text": "help yourself",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "food"
+  ],
+  "tr": "buyrun, kendiniz alın",
+  "examples": [
+   "Help yourself to some salad.",
+   "There's coffee in the kitchen, help yourself."
+  ],
+  "sayIt": [
+   {
+    "tr": "Misafirine istediğini alabileceğini söyle.",
+    "en": "Please, help yourself."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-server",
+  "text": "server",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "food"
+  ],
+  "tr": "garson",
+  "examples": [
+   "Let me ask our server.",
+   "Our server was really friendly."
+  ],
+  "sayIt": [
+   {
+    "tr": "Garsona soracağını söyle.",
+    "en": "Let me ask our server."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-receipt",
+  "text": "receipt",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "fiş",
+  "examples": [
+   "Do you need the receipt?",
+   "I lost the receipt."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kasiyerden fişi iste.",
+    "en": "Could I have the receipt, please?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-refund",
+  "text": "refund",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "para iadesi",
+  "examples": [
+   "I'd like a refund.",
+   "They gave me a full refund."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ürünü iade edip paranı geri istediğini söyle.",
+    "en": "I'd like to return this and get a refund."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-exchange",
+  "text": "exchange",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "değiştirmek",
+  "examples": [
+   "Can I exchange this for a smaller size?",
+   "We don't do exchanges on sale items."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kazağı bir beden küçüğüyle değiştirmek iste.",
+    "en": "Can I exchange this for a smaller size?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-try-on",
+  "text": "try on",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "denemek (giysi)",
+  "examples": [
+   "Can I try this on?",
+   "Try it on, it'll look great."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ceketi denemek istediğini söyle.",
+    "en": "Can I try this jacket on?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-fitting-room",
+  "text": "fitting room",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "deneme kabini",
+  "examples": [
+   "Where's the fitting room?",
+   "The fitting rooms are at the back."
+  ],
+  "sayIt": [
+   {
+    "tr": "Deneme kabininin nerede olduğunu sor.",
+    "en": "Where are the fitting rooms?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-fit",
+  "text": "fit",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "uymak, olmak (beden)",
+  "examples": [
+   "These jeans don't fit.",
+   "Does it fit you?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Pantolonun olmadığını söyle.",
+    "en": "These trousers don't fit me."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-on-sale",
+  "text": "on sale",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "indirimde",
+  "examples": [
+   "Is this on sale?",
+   "Everything's on sale this week."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bu ürünün indirimde olup olmadığını sor.",
+    "en": "Is this on sale?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-discount",
+  "text": "discount",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "indirim",
+  "examples": [
+   "Is there a student discount?",
+   "Can you give me a discount?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Öğrenci indirimi olup olmadığını sor.",
+    "en": "Do you have a student discount?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-just-looking",
+  "text": "just looking",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "sadece bakıyorum",
+  "examples": [
+   "I'm just looking, thanks.",
+   "No, I'm just looking around."
+  ],
+  "sayIt": [
+   {
+    "tr": "Satıcıya sadece baktığını söyle.",
+    "en": "I'm just looking, thanks."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-out-of-stock",
+  "text": "out of stock",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "stokta yok",
+  "examples": [
+   "Sorry, that model is out of stock.",
+   "When will it be back in stock?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Ürünün ne zaman stoğa gireceğini sor.",
+    "en": "When will it be back in stock?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-afford",
+  "text": "afford",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "parası yetmek",
+  "examples": [
+   "I can't afford it right now.",
+   "Can we afford a new car?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Şu an buna paranın yetmediğini söyle.",
+    "en": "I can't afford it right now."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-worth-it",
+  "text": "worth it",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "değer, buna değer",
+  "examples": [
+   "Is it worth it?",
+   "It was expensive, but totally worth it."
+  ],
+  "sayIt": [
+   {
+    "tr": "Pahalı ama değdiğini söyle.",
+    "en": "It was expensive, but it was worth it."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-warranty",
+  "text": "warranty",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "garanti",
+  "examples": [
+   "Does it come with a warranty?",
+   "The warranty covers two years."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ürünün garantisi olup olmadığını sor.",
+    "en": "Does it come with a warranty?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-come-with",
+  "text": "come with",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "ile birlikte gelmek",
+  "examples": [
+   "Does it come with a charger?",
+   "The phone comes with a case."
+  ],
+  "sayIt": [
+   {
+    "tr": "Telefonun şarj aletiyle gelip gelmediğini sor.",
+    "en": "Does it come with a charger?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-installments",
+  "text": "installments",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "taksit",
+  "examples": [
+   "Can I pay in installments?",
+   "I paid for it in six installments."
+  ],
+  "sayIt": [
+   {
+    "tr": "Taksitle ödeyip ödeyemeyeceğini sor.",
+    "en": "Can I pay in installments?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-cash-or-card",
+  "text": "cash or card",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "nakit mi kart mı",
+  "examples": [
+   "Cash or card?",
+   "Do you take cards?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Kart kabul edip etmediklerini sor.",
+    "en": "Do you take cards?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-bargain",
+  "text": "bargain",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "kelepir, pazarlık etmek",
+  "examples": [
+   "That's a real bargain.",
+   "You can bargain at the market."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunun kelepir olduğunu söyle.",
+    "en": "That's a real bargain."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-rip-off",
+  "text": "rip-off",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "kazık, fahiş fiyat",
+  "examples": [
+   "Twenty dollars for a coffee? That's a rip-off.",
+   "Don't buy it there, it's a rip-off."
+  ],
+  "sayIt": [
+   {
+    "tr": "Fiyatın kazık olduğunu söyle.",
+    "en": "That's a total rip-off."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-deal",
+  "text": "deal",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "fırsat, anlaşma",
+  "examples": [
+   "That's a good deal.",
+   "It's a deal!"
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunun iyi bir fırsat olduğunu söyle.",
+    "en": "That's a really good deal."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-checkout",
+  "text": "checkout",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "kasa, ödeme yeri",
+  "examples": [
+   "Where's the checkout?",
+   "There's a long line at the checkout."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kasanın nerede olduğunu sor.",
+    "en": "Where's the checkout?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-bag",
+  "text": "bag",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "poşet, çanta",
+  "examples": [
+   "Do you need a bag?",
+   "No bag, thanks."
+  ],
+  "sayIt": [
+   {
+    "tr": "Poşete ihtiyacın olmadığını söyle.",
+    "en": "No bag, thanks."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-size",
+  "text": "size",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "beden",
+  "examples": [
+   "Do you have this in a medium?",
+   "What size are you?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Bu ürünün M bedeninin olup olmadığını sor.",
+    "en": "Do you have this in a medium?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-cheaper",
+  "text": "cheaper",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "daha ucuz",
+  "examples": [
+   "Do you have anything cheaper?",
+   "It's cheaper online."
+  ],
+  "sayIt": [
+   {
+    "tr": "Daha ucuz bir şey olup olmadığını sor.",
+    "en": "Do you have anything a bit cheaper?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-in-stock",
+  "text": "in stock",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "stokta",
+  "examples": [
+   "Do you have this in stock?",
+   "We only have two left in stock."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ürünün stokta olup olmadığını sor.",
+    "en": "Do you have this in stock?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-browse",
+  "text": "browse",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "shopping"
+  ],
+  "tr": "göz gezdirmek",
+  "examples": [
+   "I'm just browsing.",
+   "I spent an hour browsing online."
+  ],
+  "sayIt": [
+   {
+    "tr": "Satıcıya göz gezdirdiğini söyle.",
+    "en": "I'm just browsing, thanks."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-fare",
+  "text": "fare",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "bilet ücreti",
+  "examples": [
+   "How much is the fare?",
+   "Bus fares went up again."
+  ],
+  "sayIt": [
+   {
+    "tr": "Taksiciye ücretin ne kadar olduğunu sor.",
+    "en": "How much is the fare to the airport?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-stuck-in-traffic",
+  "text": "stuck in traffic",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "trafiğe sıkışmak",
+  "examples": [
+   "Sorry, I'm stuck in traffic.",
+   "We were stuck in traffic for an hour."
+  ],
+  "sayIt": [
+   {
+    "tr": "Trafikte sıkıştığın için geç kalacağını söyle.",
+    "en": "Sorry, I'm stuck in traffic. I'll be late."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-pick-up",
+  "text": "pick up",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "(birini) almak",
+  "examples": [
+   "I'll pick you up at seven.",
+   "Can you pick me up from the station?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşından seni istasyondan almasını iste.",
+    "en": "Can you pick me up from the station?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-drop-off",
+  "text": "drop off",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "bırakmak",
+  "examples": [
+   "Can you drop me off here?",
+   "I'll drop the kids off at school."
+  ],
+  "sayIt": [
+   {
+    "tr": "Taksiciye seni burada bırakmasını söyle.",
+    "en": "Could you drop me off here?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-miss",
+  "text": "miss",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "kaçırmak",
+  "examples": [
+   "I missed the bus.",
+   "Hurry, or we'll miss the train."
+  ],
+  "sayIt": [
+   {
+    "tr": "Otobüsü kaçırdığını söyle.",
+    "en": "I just missed the bus."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-change-trains",
+  "text": "change trains",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "aktarma yapmak",
+  "examples": [
+   "You have to change trains at Victoria.",
+   "Do I need to change trains?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Aktarma yapman gerekip gerekmediğini sor.",
+    "en": "Do I need to change trains?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-platform",
+  "text": "platform",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "peron",
+  "examples": [
+   "Which platform does it leave from?",
+   "The train is on platform four."
+  ],
+  "sayIt": [
+   {
+    "tr": "Trenin hangi perondan kalktığını sor.",
+    "en": "Which platform does the train leave from?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-delayed",
+  "text": "delayed",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "rötarlı, gecikmeli",
+  "examples": [
+   "The flight is delayed.",
+   "Our train was delayed by an hour."
+  ],
+  "sayIt": [
+   {
+    "tr": "Trenin gecikmeli olduğunu söyle.",
+    "en": "The train is delayed by twenty minutes."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-get-off",
+  "text": "get off",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "inmek",
+  "examples": [
+   "Where should I get off?",
+   "Get off at the next stop."
+  ],
+  "sayIt": [
+   {
+    "tr": "Nerede inmen gerektiğini sor.",
+    "en": "Where should I get off?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-give-someone-a-lift",
+  "text": "give someone a lift",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "birini arabayla bırakmak",
+  "examples": [
+   "Can you give me a lift?",
+   "Do you need a lift home?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşından seni eve bırakmasını iste.",
+    "en": "Could you give me a lift home?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-rush-hour",
+  "text": "rush hour",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "trafiğin yoğun olduğu saat",
+  "examples": [
+   "Avoid the metro at rush hour.",
+   "It's rush hour, it'll take ages."
+  ],
+  "sayIt": [
+   {
+    "tr": "Yoğun saat olduğu için uzun süreceğini söyle.",
+    "en": "It's rush hour, so it'll take a while."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-commute",
+  "text": "commute",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "işe gidip gelmek",
+  "examples": [
+   "My commute takes an hour.",
+   "How long is your commute?"
+  ],
+  "sayIt": [
+   {
+    "tr": "İşe gidip gelmenin bir saat sürdüğünü söyle.",
+    "en": "My commute takes about an hour."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-directions",
+  "text": "directions",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "yol tarifi",
+  "examples": [
+   "Can you give me directions?",
+   "I'm terrible with directions."
+  ],
+  "sayIt": [
+   {
+    "tr": "Birinden yol tarifi iste.",
+    "en": "Could you give me directions to the museum?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-how-far",
+  "text": "how far",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "ne kadar uzak",
+  "examples": [
+   "How far is it from here?",
+   "How far is the station?"
+  ],
+  "sayIt": [
+   {
+    "tr": "İstasyonun ne kadar uzak olduğunu sor.",
+    "en": "How far is the station from here?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-blocks-away",
+  "text": "blocks away",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "... sokak ötede",
+  "examples": [
+   "It's two blocks away.",
+   "The hotel is a few blocks away."
+  ],
+  "sayIt": [
+   {
+    "tr": "Yerin iki sokak ötede olduğunu söyle.",
+    "en": "It's just two blocks away."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-turn-left",
+  "text": "turn left",
+  "kind": "chunk",
+  "cefr": "A1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "sola dönmek",
+  "examples": [
+   "Turn left at the lights.",
+   "Should I turn left here?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Işıklardan sola dönmesini söyle.",
+    "en": "Turn left at the traffic lights."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-it-takes",
+  "text": "it takes",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "sürer",
+  "examples": [
+   "It takes twenty minutes by bus.",
+   "How long does it take?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Otobüsle ne kadar sürdüğünü sor.",
+    "en": "How long does it take by bus?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-parking",
+  "text": "parking",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "park yeri",
+  "examples": [
+   "Is there parking nearby?",
+   "Parking is a nightmare here."
+  ],
+  "sayIt": [
+   {
+    "tr": "Yakında park yeri olup olmadığını sor.",
+    "en": "Is there any parking nearby?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-rent-a-car",
+  "text": "rent a car",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "araba kiralamak",
+  "examples": [
+   "We rented a car for the weekend.",
+   "Where can I rent a car?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Nerede araba kiralayabileceğini sor.",
+    "en": "Where can I rent a car around here?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-fill-up",
+  "text": "fill up",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "depoyu doldurmak",
+  "examples": [
+   "I need to fill up the tank.",
+   "Fill it up, please."
+  ],
+  "sayIt": [
+   {
+    "tr": "Depoyu doldurman gerektiğini söyle.",
+    "en": "I need to fill up the tank."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-flat-tire",
+  "text": "flat tire",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "patlak lastik",
+  "examples": [
+   "We got a flat tire on the highway.",
+   "I have a flat tire."
+  ],
+  "sayIt": [
+   {
+    "tr": "Lastiğinin patladığını söyle.",
+    "en": "I've got a flat tire."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-shortcut",
+  "text": "shortcut",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "kestirme yol",
+  "examples": [
+   "I know a shortcut.",
+   "Is there a shortcut?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Kestirme bir yol bildiğini söyle.",
+    "en": "I know a shortcut."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-route",
+  "text": "route",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "güzergâh",
+  "examples": [
+   "Which route is faster?",
+   "The bus changed its route."
+  ],
+  "sayIt": [
+   {
+    "tr": "Hangi güzergâhın daha hızlı olduğunu sor.",
+    "en": "Which route is faster?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-on-the-way",
+  "text": "on the way",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "transport"
+  ],
+  "tr": "yolda",
+  "examples": [
+   "I'm on the way.",
+   "Can we stop for coffee on the way?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşına yolda olduğunu söyle.",
+    "en": "I'm on my way."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-stop",
+  "text": "stop",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "transport"
+  ],
+  "tr": "durak",
+  "examples": [
+   "Is this the right stop?",
+   "It's three stops from here."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunun doğru durak olup olmadığını sor.",
+    "en": "Is this the right stop for the museum?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-check-in",
+  "text": "check in",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "giriş yapmak (otel, havalimanı)",
+  "examples": [
+   "I'd like to check in.",
+   "What time can we check in?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Resepsiyonda giriş yapmak istediğini söyle.",
+    "en": "Hi, I'd like to check in."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-check-out",
+  "text": "check out",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "çıkış yapmak (otel)",
+  "examples": [
+   "What time is check-out?",
+   "We need to check out by eleven."
+  ],
+  "sayIt": [
+   {
+    "tr": "Çıkış saatinin kaçta olduğunu sor.",
+    "en": "What time is check-out?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-reservation",
+  "text": "reservation",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "travel"
+  ],
+  "tr": "rezervasyon",
+  "examples": [
+   "I have a reservation under Yilmaz.",
+   "I can't find your reservation."
+  ],
+  "sayIt": [
+   {
+    "tr": "Rezervasyonunun kendi adına olduğunu söyle.",
+    "en": "I have a reservation under the name Yilmaz."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-available",
+  "text": "available",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "travel"
+  ],
+  "tr": "müsait, boş",
+  "examples": [
+   "Do you have any rooms available?",
+   "Is this seat available?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Boş oda olup olmadığını sor.",
+    "en": "Do you have any rooms available tonight?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-luggage",
+  "text": "luggage",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "travel"
+  ],
+  "tr": "bagaj",
+  "examples": [
+   "Can I leave my luggage here?",
+   "My luggage didn't arrive."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bagajını burada bırakıp bırakamayacağını sor.",
+    "en": "Can I leave my luggage here until this afternoon?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-carry-on",
+  "text": "carry-on",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "travel"
+  ],
+  "tr": "kabin bagajı",
+  "examples": [
+   "Is this okay as a carry-on?",
+   "You can bring one carry-on bag."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunun kabin bagajı olarak uygun olup olmadığını sor.",
+    "en": "Is this okay as a carry-on?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-boarding-pass",
+  "text": "boarding pass",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "biniş kartı",
+  "examples": [
+   "Can I see your boarding pass?",
+   "I printed my boarding pass."
+  ],
+  "sayIt": [
+   {
+    "tr": "Biniş kartını kaybettiğini söyle.",
+    "en": "I think I've lost my boarding pass."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-gate",
+  "text": "gate",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "kapı (havalimanı)",
+  "examples": [
+   "Our flight leaves from gate twelve.",
+   "The gate has changed."
+  ],
+  "sayIt": [
+   {
+    "tr": "Uçağın hangi kapıdan kalktığını sor.",
+    "en": "Which gate does the flight leave from?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-layover",
+  "text": "layover",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "aktarma bekleme süresi",
+  "examples": [
+   "We have a three-hour layover in Doha.",
+   "How long is the layover?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Doha'da üç saat aktarman olduğunu söyle.",
+    "en": "I have a three-hour layover in Doha."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-jet-lag",
+  "text": "jet lag",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "saat farkı yorgunluğu",
+  "examples": [
+   "I'm still jet-lagged.",
+   "How do you deal with jet lag?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Hâlâ saat farkı yorgunluğu yaşadığını söyle.",
+    "en": "I'm still a bit jet-lagged."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-sightseeing",
+  "text": "sightseeing",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "travel"
+  ],
+  "tr": "gezip görmek",
+  "examples": [
+   "We went sightseeing all day.",
+   "Any sightseeing tips?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Görülecek yerler için tavsiye iste.",
+    "en": "Do you have any sightseeing tips?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-aisle-seat",
+  "text": "aisle seat",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "travel"
+  ],
+  "tr": "koridor koltuğu",
+  "examples": [
+   "Can I get an aisle seat?",
+   "I always ask for an aisle seat."
+  ],
+  "sayIt": [
+   {
+    "tr": "Koridor koltuğu iste.",
+    "en": "Could I get an aisle seat, please?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-window-seat",
+  "text": "window seat",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "cam kenarı",
+  "examples": [
+   "Is there a window seat available?",
+   "I prefer a window seat."
+  ],
+  "sayIt": [
+   {
+    "tr": "Cam kenarı tercih ettiğini söyle.",
+    "en": "I'd prefer a window seat."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-overbooked",
+  "text": "overbooked",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "fazla satılmış (bilet, oda)",
+  "examples": [
+   "The flight is overbooked.",
+   "The hotel was overbooked, so they moved us."
+  ],
+  "sayIt": [
+   {
+    "tr": "Otelin fazla rezervasyon aldığını söyle.",
+    "en": "They overbooked the hotel."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-cancellation-fee",
+  "text": "cancellation fee",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "iptal ücreti",
+  "examples": [
+   "Is there a cancellation fee?",
+   "The cancellation fee is fifty euros."
+  ],
+  "sayIt": [
+   {
+    "tr": "İptal ücreti olup olmadığını sor.",
+    "en": "Is there a cancellation fee?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-lost-and-found",
+  "text": "lost and found",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "travel"
+  ],
+  "tr": "kayıp eşya bürosu",
+  "examples": [
+   "Have you checked the lost and found?",
+   "Where's the lost and found?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Kayıp eşya bürosunun nerede olduğunu sor.",
+    "en": "Where's the lost and found?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-view",
+  "text": "view",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "manzara",
+  "examples": [
+   "Can we get a room with a view?",
+   "The view is amazing."
+  ],
+  "sayIt": [
+   {
+    "tr": "Manzaralı oda iste.",
+    "en": "Could we get a room with a view?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-noisy",
+  "text": "noisy",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "gürültülü",
+  "examples": [
+   "My room is too noisy.",
+   "It's a noisy street."
+  ],
+  "sayIt": [
+   {
+    "tr": "Odanın çok gürültülü olduğunu söyle.",
+    "en": "My room is really noisy. Could I change rooms?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-quiet",
+  "text": "quiet",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "travel"
+  ],
+  "tr": "sessiz",
+  "examples": [
+   "Do you have a quieter room?",
+   "It's a quiet neighborhood."
+  ],
+  "sayIt": [
+   {
+    "tr": "Daha sessiz bir oda iste.",
+    "en": "Do you have a quieter room?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-wi-fi-password",
+  "text": "Wi-Fi password",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "Wi-Fi şifresi",
+  "examples": [
+   "What's the Wi-Fi password?",
+   "The Wi-Fi password is on the card."
+  ],
+  "sayIt": [
+   {
+    "tr": "Wi-Fi şifresini sor.",
+    "en": "What's the Wi-Fi password?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-passport-control",
+  "text": "passport control",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "travel"
+  ],
+  "tr": "pasaport kontrolü",
+  "examples": [
+   "The line at passport control was huge.",
+   "Go through passport control first."
+  ],
+  "sayIt": [
+   {
+    "tr": "Pasaport kontrolünün nerede olduğunu sor.",
+    "en": "Where's passport control?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-declare",
+  "text": "declare",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "(gümrükte) beyan etmek",
+  "examples": [
+   "Do you have anything to declare?",
+   "Nothing to declare."
+  ],
+  "sayIt": [
+   {
+    "tr": "Beyan edecek bir şeyin olmadığını söyle.",
+    "en": "No, I have nothing to declare."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-itinerary",
+  "text": "itinerary",
+  "kind": "word",
+  "cefr": "C1",
+  "domains": [
+   "travel"
+  ],
+  "tr": "seyahat planı",
+  "examples": [
+   "Can you send me the itinerary?",
+   "Our itinerary is pretty full."
+  ],
+  "sayIt": [
+   {
+    "tr": "Seyahat planını göndermelerini iste.",
+    "en": "Could you send me the itinerary?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-upgrade",
+  "text": "upgrade",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "daha üst sınıfa geçirmek",
+  "examples": [
+   "Can I upgrade to a bigger room?",
+   "They upgraded us for free."
+  ],
+  "sayIt": [
+   {
+    "tr": "Daha büyük bir odaya geçip geçemeyeceğini sor.",
+    "en": "Is it possible to upgrade to a bigger room?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-local",
+  "text": "local",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "travel"
+  ],
+  "tr": "yerel, oralı",
+  "examples": [
+   "Where do the locals eat?",
+   "Try the local food."
+  ],
+  "sayIt": [
+   {
+    "tr": "Yerlilerin nerede yemek yediğini sor.",
+    "en": "Where do the locals usually eat?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-prescription",
+  "text": "prescription",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "reçete",
+  "examples": [
+   "Do you need a prescription for this?",
+   "The doctor gave me a prescription."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunun için reçete gerekip gerekmediğini sor.",
+    "en": "Do I need a prescription for this?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-painkiller",
+  "text": "painkiller",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "ağrı kesici",
+  "examples": [
+   "Can I get some painkillers?",
+   "Take a painkiller and rest."
+  ],
+  "sayIt": [
+   {
+    "tr": "Eczacıdan ağrı kesici iste.",
+    "en": "Could I get something for a headache?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-symptoms",
+  "text": "symptoms",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "belirtiler",
+  "examples": [
+   "What are your symptoms?",
+   "The symptoms started yesterday."
+  ],
+  "sayIt": [
+   {
+    "tr": "Belirtilerin dün başladığını söyle.",
+    "en": "The symptoms started yesterday."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-fever",
+  "text": "fever",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "health"
+  ],
+  "tr": "ateş",
+  "examples": [
+   "I have a fever.",
+   "Her fever went down."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ateşin olduğunu söyle.",
+    "en": "I think I have a fever."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-sore-throat",
+  "text": "sore throat",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "health"
+  ],
+  "tr": "boğaz ağrısı",
+  "examples": [
+   "I've got a sore throat.",
+   "Hot tea helps a sore throat."
+  ],
+  "sayIt": [
+   {
+    "tr": "Boğazının ağrıdığını söyle.",
+    "en": "I've got a sore throat."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-cough",
+  "text": "cough",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "öksürük, öksürmek",
+  "examples": [
+   "I can't stop coughing.",
+   "That's a bad cough."
+  ],
+  "sayIt": [
+   {
+    "tr": "Öksürüğünün geçmediğini söyle.",
+    "en": "I've had this cough for a week."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-dizzy",
+  "text": "dizzy",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "health"
+  ],
+  "tr": "başı dönen",
+  "examples": [
+   "I feel a bit dizzy.",
+   "Do you feel dizzy when you stand up?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Başının döndüğünü söyle.",
+    "en": "I feel a bit dizzy."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-appointment",
+  "text": "appointment",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "health"
+  ],
+  "tr": "randevu",
+  "examples": [
+   "I'd like to make an appointment.",
+   "I have a doctor's appointment at three."
+  ],
+  "sayIt": [
+   {
+    "tr": "Doktordan randevu almak istediğini söyle.",
+    "en": "I'd like to make an appointment with a doctor."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-under-the-weather",
+  "text": "under the weather",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "health"
+  ],
+  "tr": "keyifsiz, biraz hasta",
+  "examples": [
+   "I'm feeling a bit under the weather.",
+   "She's under the weather today."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kendini biraz hasta hissettiğini söyle.",
+    "en": "I'm feeling a bit under the weather."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-it-hurts",
+  "text": "it hurts",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "health"
+  ],
+  "tr": "acıyor",
+  "examples": [
+   "It hurts when I walk.",
+   "Where does it hurt?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Yürürken acıdığını söyle.",
+    "en": "It hurts when I walk."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-sprain",
+  "text": "sprain",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "health"
+  ],
+  "tr": "burkmak",
+  "examples": [
+   "I think I sprained my ankle.",
+   "It's just a sprain."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bileğini burktuğunu söyle.",
+    "en": "I think I sprained my ankle."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-rash",
+  "text": "rash",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "health"
+  ],
+  "tr": "kızarıklık, döküntü",
+  "examples": [
+   "I've got a rash on my arm.",
+   "The rash is itchy."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kolunda kızarıklık olduğunu söyle.",
+    "en": "I've got a rash on my arm."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-swollen",
+  "text": "swollen",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "şişmiş",
+  "examples": [
+   "My knee is swollen.",
+   "Her eyes were swollen."
+  ],
+  "sayIt": [
+   {
+    "tr": "Dizinin şiştiğini söyle.",
+    "en": "My knee is really swollen."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-side-effects",
+  "text": "side effects",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "health"
+  ],
+  "tr": "yan etkiler",
+  "examples": [
+   "Are there any side effects?",
+   "It has some side effects."
+  ],
+  "sayIt": [
+   {
+    "tr": "İlacın yan etkisi olup olmadığını sor.",
+    "en": "Are there any side effects?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-insurance",
+  "text": "insurance",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "sigorta",
+  "examples": [
+   "Do you have health insurance?",
+   "Is this covered by insurance?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunun sigortadan karşılanıp karşılanmadığını sor.",
+    "en": "Is this covered by my insurance?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-emergency",
+  "text": "emergency",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "health"
+  ],
+  "tr": "acil durum",
+  "examples": [
+   "It's an emergency!",
+   "Where's the emergency room?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Acil durum olduğunu söyle.",
+    "en": "It's an emergency. We need an ambulance."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-get-better",
+  "text": "get better",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "health"
+  ],
+  "tr": "iyileşmek",
+  "examples": [
+   "I hope you get better soon.",
+   "Is it getting better?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşına geçmiş olsun de.",
+    "en": "I hope you get better soon."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-take-it-easy",
+  "text": "take it easy",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "dinlenmek, kendini yormamak",
+  "examples": [
+   "Take it easy for a few days.",
+   "I'm going to take it easy this weekend."
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşına birkaç gün dinlenmesini söyle.",
+    "en": "Take it easy for a few days."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-check-up",
+  "text": "check-up",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "kontrol muayenesi",
+  "examples": [
+   "I go for a check-up every year.",
+   "It's just a routine check-up."
+  ],
+  "sayIt": [
+   {
+    "tr": "Rutin kontrol için geldiğini söyle.",
+    "en": "I'm here for a routine check-up."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-runny-nose",
+  "text": "runny nose",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "burun akıntısı",
+  "examples": [
+   "I've got a runny nose.",
+   "Kids always have runny noses in winter."
+  ],
+  "sayIt": [
+   {
+    "tr": "Burnunun aktığını söyle.",
+    "en": "I've got a runny nose."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-throw-up",
+  "text": "throw up",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "kusmak",
+  "examples": [
+   "I threw up last night.",
+   "I feel like I'm going to throw up."
+  ],
+  "sayIt": [
+   {
+    "tr": "Dün gece kustuğunu söyle.",
+    "en": "I threw up last night."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-headache",
+  "text": "headache",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "health"
+  ],
+  "tr": "baş ağrısı",
+  "examples": [
+   "I have a terrible headache.",
+   "Do you get headaches often?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Başının çok ağrıdığını söyle.",
+    "en": "I've got a terrible headache."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-pharmacy",
+  "text": "pharmacy",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "eczane",
+  "examples": [
+   "Is there a pharmacy nearby?",
+   "The pharmacy closes at nine."
+  ],
+  "sayIt": [
+   {
+    "tr": "Yakında eczane olup olmadığını sor.",
+    "en": "Is there a pharmacy near here?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-injury",
+  "text": "injury",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "yaralanma",
+  "examples": [
+   "Was it a serious injury?",
+   "He's recovering from an injury."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ciddi bir yaralanma olmadığını söyle.",
+    "en": "It's not a serious injury."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-allergy",
+  "text": "allergy",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "health"
+  ],
+  "tr": "alerji",
+  "examples": [
+   "Do you have any allergies?",
+   "I have a pollen allergy."
+  ],
+  "sayIt": [
+   {
+    "tr": "Polen alerjin olduğunu söyle.",
+    "en": "I have a pollen allergy."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-landlord",
+  "text": "landlord",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "home"
+  ],
+  "tr": "ev sahibi",
+  "examples": [
+   "I need to call my landlord.",
+   "Our landlord is really nice."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ev sahibini araman gerektiğini söyle.",
+    "en": "I need to call my landlord."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-rent",
+  "text": "rent",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "home"
+  ],
+  "tr": "kira",
+  "examples": [
+   "The rent is due on the first.",
+   "Rent is so expensive here."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kiranın ayın birinde ödendiğini söyle.",
+    "en": "The rent is due on the first of the month."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-leak",
+  "text": "leak",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "home"
+  ],
+  "tr": "sızıntı, akıtmak",
+  "examples": [
+   "There's a leak in the bathroom.",
+   "The roof is leaking."
+  ],
+  "sayIt": [
+   {
+    "tr": "Banyoda su sızıntısı olduğunu söyle.",
+    "en": "There's a leak in the bathroom."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-broken",
+  "text": "broken",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "home"
+  ],
+  "tr": "bozuk, kırık",
+  "examples": [
+   "The heating is broken.",
+   "My phone screen is broken."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kaloriferin bozuk olduğunu söyle.",
+    "en": "The heating is broken."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-fix",
+  "text": "fix",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "home"
+  ],
+  "tr": "tamir etmek",
+  "examples": [
+   "Can you fix it today?",
+   "Someone's coming to fix the sink."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bugün tamir edip edemeyeceğini sor.",
+    "en": "Can you fix it today?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-plumber",
+  "text": "plumber",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "home"
+  ],
+  "tr": "tesisatçı",
+  "examples": [
+   "We need a plumber.",
+   "The plumber is coming tomorrow."
+  ],
+  "sayIt": [
+   {
+    "tr": "Tesisatçıya ihtiyacınız olduğunu söyle.",
+    "en": "I think we need a plumber."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-keep-it-down",
+  "text": "keep it down",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "home"
+  ],
+  "tr": "sesini kısmak",
+  "examples": [
+   "Could you keep it down, please?",
+   "Keep it down, the baby's sleeping."
+  ],
+  "sayIt": [
+   {
+    "tr": "Komşundan sesini kısmasını kibarca iste.",
+    "en": "Sorry, could you keep it down a bit?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-take-out-the-trash",
+  "text": "take out the trash",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "home"
+  ],
+  "tr": "çöpü çıkarmak",
+  "examples": [
+   "Can you take out the trash?",
+   "It's your turn to take out the trash."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ev arkadaşına çöpü çıkarma sırasının onda olduğunu söyle.",
+    "en": "It's your turn to take out the trash."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-utilities",
+  "text": "utilities",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "home"
+  ],
+  "tr": "faturalar (su, elektrik, gaz)",
+  "examples": [
+   "Are utilities included in the rent?",
+   "Utilities are about a hundred a month."
+  ],
+  "sayIt": [
+   {
+    "tr": "Faturaların kiraya dahil olup olmadığını sor.",
+    "en": "Are utilities included in the rent?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-run-out-of",
+  "text": "run out of",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "home"
+  ],
+  "tr": "tükenmek, bitmek",
+  "examples": [
+   "We've run out of coffee.",
+   "I'm running out of time."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kahvenin bittiğini söyle.",
+    "en": "We've run out of coffee."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-move-in",
+  "text": "move in",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "home"
+  ],
+  "tr": "taşınmak (bir eve)",
+  "examples": [
+   "When can I move in?",
+   "We moved in last month."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ne zaman taşınabileceğini sor.",
+    "en": "When can I move in?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-move-out",
+  "text": "move out",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "home"
+  ],
+  "tr": "evden çıkmak",
+  "examples": [
+   "I'm moving out next month.",
+   "When did they move out?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Gelecek ay taşınacağını söyle.",
+    "en": "I'm moving out next month."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-lease",
+  "text": "lease",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "home"
+  ],
+  "tr": "kira sözleşmesi",
+  "examples": [
+   "The lease is for one year.",
+   "Can I see the lease?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Kira sözleşmesini görmek istediğini söyle.",
+    "en": "Could I take a look at the lease first?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-deposit",
+  "text": "deposit",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "home"
+  ],
+  "tr": "depozito",
+  "examples": [
+   "Do I get my deposit back?",
+   "The deposit is two months' rent."
+  ],
+  "sayIt": [
+   {
+    "tr": "Depozitonu geri alıp almayacağını sor.",
+    "en": "Will I get my deposit back?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-drop-by",
+  "text": "drop by",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "home"
+  ],
+  "tr": "uğramak",
+  "examples": [
+   "Feel free to drop by.",
+   "I'll drop by after work."
+  ],
+  "sayIt": [
+   {
+    "tr": "İşten sonra uğrayacağını söyle.",
+    "en": "I'll drop by after work."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-borrow",
+  "text": "borrow",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "home"
+  ],
+  "tr": "ödünç almak",
+  "examples": [
+   "Can I borrow your ladder?",
+   "I borrowed some sugar from the neighbors."
+  ],
+  "sayIt": [
+   {
+    "tr": "Komşundan merdiveni ödünç iste.",
+    "en": "Could I borrow your ladder for a minute?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-lend",
+  "text": "lend",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "home"
+  ],
+  "tr": "ödünç vermek",
+  "examples": [
+   "Can you lend me some money?",
+   "I lent him my car."
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşından biraz para ödünç vermesini iste.",
+    "en": "Could you lend me twenty dollars?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-mess",
+  "text": "mess",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "home"
+  ],
+  "tr": "dağınıklık",
+  "examples": [
+   "Sorry about the mess.",
+   "The kitchen is a mess."
+  ],
+  "sayIt": [
+   {
+    "tr": "Misafire dağınıklık için özür dile.",
+    "en": "Sorry about the mess."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-tidy-up",
+  "text": "tidy up",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "home"
+  ],
+  "tr": "toplamak, derlemek",
+  "examples": [
+   "Let's tidy up before they arrive.",
+   "I need to tidy up my room."
+  ],
+  "sayIt": [
+   {
+    "tr": "Onlar gelmeden ortalığı toplamayı öner.",
+    "en": "Let's tidy up before they get here."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-spare-key",
+  "text": "spare key",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "home"
+  ],
+  "tr": "yedek anahtar",
+  "examples": [
+   "Do you have a spare key?",
+   "I left a spare key with my neighbor."
+  ],
+  "sayIt": [
+   {
+    "tr": "Yedek anahtarı olup olmadığını sor.",
+    "en": "Do you have a spare key?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-locked-myself-out",
+  "text": "locked myself out",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "home"
+  ],
+  "tr": "kapıda kalmak (anahtarı içeride unutmak)",
+  "examples": [
+   "I locked myself out again.",
+   "Have you ever locked yourself out?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Kapıda kaldığını söyle.",
+    "en": "I've locked myself out."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-do-the-dishes",
+  "text": "do the dishes",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "home"
+  ],
+  "tr": "bulaşık yıkamak",
+  "examples": [
+   "I'll do the dishes.",
+   "Who's doing the dishes tonight?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Bulaşıkları senin yıkayacağını söyle.",
+    "en": "Don't worry, I'll do the dishes."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-laundry",
+  "text": "laundry",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "home"
+  ],
+  "tr": "çamaşır",
+  "examples": [
+   "I need to do laundry.",
+   "Is there a laundry room?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Çamaşır odası olup olmadığını sor.",
+    "en": "Is there a laundry room in the building?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-heating",
+  "text": "heating",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "home"
+  ],
+  "tr": "ısıtma, kalorifer",
+  "examples": [
+   "The heating isn't working.",
+   "Can you turn up the heating?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Kaloriferin çalışmadığını söyle.",
+    "en": "The heating isn't working."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-neighbor",
+  "text": "neighbor",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "home"
+  ],
+  "tr": "komşu",
+  "examples": [
+   "Our new neighbors are friendly.",
+   "I haven't met my neighbors yet."
+  ],
+  "sayIt": [
+   {
+    "tr": "Komşunla henüz tanışmadığını söyle.",
+    "en": "I haven't met my neighbors yet."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-account",
+  "text": "account",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "services"
+  ],
+  "tr": "hesap",
+  "examples": [
+   "I'd like to open an account.",
+   "I can't log in to my account."
+  ],
+  "sayIt": [
+   {
+    "tr": "Banka hesabı açmak istediğini söyle.",
+    "en": "I'd like to open a bank account."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-withdraw",
+  "text": "withdraw",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "services"
+  ],
+  "tr": "(para) çekmek",
+  "examples": [
+   "I need to withdraw some cash.",
+   "How much can I withdraw per day?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Günde ne kadar para çekebileceğini sor.",
+    "en": "How much can I withdraw per day?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-transfer",
+  "text": "transfer",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "havale, transfer",
+  "examples": [
+   "I'd like to make a transfer.",
+   "The transfer takes two days."
+  ],
+  "sayIt": [
+   {
+    "tr": "Havalenin ne kadar sürdüğünü sor.",
+    "en": "How long does the transfer take?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-fee",
+  "text": "fee",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "services"
+  ],
+  "tr": "ücret, masraf",
+  "examples": [
+   "Is there a fee for this?",
+   "There's a small service fee."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunun için ücret olup olmadığını sor.",
+    "en": "Is there a fee for that?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-charged-twice",
+  "text": "charged twice",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "iki kez ücret alınmak",
+  "examples": [
+   "I was charged twice.",
+   "They charged me twice for the same order."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kartından iki kez ücret alındığını söyle.",
+    "en": "I was charged twice for the same order."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-package",
+  "text": "package",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "paket, koli",
+  "examples": [
+   "I'm here to pick up a package.",
+   "My package never arrived."
+  ],
+  "sayIt": [
+   {
+    "tr": "Paketinin hiç gelmediğini söyle.",
+    "en": "My package never arrived."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-deliver",
+  "text": "deliver",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "teslim etmek",
+  "examples": [
+   "When will it be delivered?",
+   "They delivered it to the wrong address."
+  ],
+  "sayIt": [
+   {
+    "tr": "Paketin ne zaman teslim edileceğini sor.",
+    "en": "When will it be delivered?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-tracking-number",
+  "text": "tracking number",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "takip numarası",
+  "examples": [
+   "Do you have a tracking number?",
+   "Here's my tracking number."
+  ],
+  "sayIt": [
+   {
+    "tr": "Takip numaranı verdiğini söyle.",
+    "en": "Here's my tracking number."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-on-hold",
+  "text": "on hold",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "services"
+  ],
+  "tr": "hatta bekletilmek",
+  "examples": [
+   "I've been on hold for twenty minutes.",
+   "Can I put you on hold?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Yirmi dakikadır hatta beklediğini söyle.",
+    "en": "I've been on hold for twenty minutes."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-customer-service",
+  "text": "customer service",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "müşteri hizmetleri",
+  "examples": [
+   "I called customer service.",
+   "Their customer service is terrible."
+  ],
+  "sayIt": [
+   {
+    "tr": "Müşteri hizmetlerini aradığını söyle.",
+    "en": "I've already called customer service twice."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-complaint",
+  "text": "complaint",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "services"
+  ],
+  "tr": "şikâyet",
+  "examples": [
+   "I'd like to make a complaint.",
+   "We received your complaint."
+  ],
+  "sayIt": [
+   {
+    "tr": "Şikâyette bulunmak istediğini söyle.",
+    "en": "I'd like to make a complaint."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-speak-to-a-manager",
+  "text": "speak to a manager",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "yöneticiyle görüşmek",
+  "examples": [
+   "Can I speak to a manager?",
+   "I'd like to speak to the manager."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kibarca yöneticiyle görüşmek iste.",
+    "en": "Could I speak to a manager, please?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-subscription",
+  "text": "subscription",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "services"
+  ],
+  "tr": "abonelik",
+  "examples": [
+   "I want to cancel my subscription.",
+   "The subscription renews every month."
+  ],
+  "sayIt": [
+   {
+    "tr": "Aboneliğini iptal etmek istediğini söyle.",
+    "en": "I'd like to cancel my subscription."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-fill-out",
+  "text": "fill out",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "(form) doldurmak",
+  "examples": [
+   "Please fill out this form.",
+   "I already filled it out online."
+  ],
+  "sayIt": [
+   {
+    "tr": "Formu zaten doldurduğunu söyle.",
+    "en": "I already filled it out online."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-id",
+  "text": "ID",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "services"
+  ],
+  "tr": "kimlik",
+  "examples": [
+   "Can I see some ID?",
+   "I forgot my ID."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kimliğini unuttuğunu söyle.",
+    "en": "Sorry, I left my ID at home."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-wait-in-line",
+  "text": "wait in line",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "services"
+  ],
+  "tr": "sırada beklemek",
+  "examples": [
+   "We waited in line for an hour.",
+   "Please wait in line."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bir saat sırada beklediğini söyle.",
+    "en": "I've been waiting in line for an hour."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-sign",
+  "text": "sign",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "services"
+  ],
+  "tr": "imzalamak",
+  "examples": [
+   "Sign here, please.",
+   "Do I need to sign anything?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Bir şey imzalaman gerekip gerekmediğini sor.",
+    "en": "Do I need to sign anything?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-contract",
+  "text": "contract",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "services"
+  ],
+  "tr": "sözleşme",
+  "examples": [
+   "How long is the contract?",
+   "I signed a two-year contract."
+  ],
+  "sayIt": [
+   {
+    "tr": "Sözleşmenin ne kadar sürdüğünü sor.",
+    "en": "How long is the contract?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-switch-to",
+  "text": "switch to",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "-e geçmek",
+  "examples": [
+   "I'd like to switch to a cheaper plan.",
+   "We switched to a new provider."
+  ],
+  "sayIt": [
+   {
+    "tr": "Daha ucuz bir pakete geçmek istediğini söyle.",
+    "en": "I'd like to switch to a cheaper plan."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-reference-number",
+  "text": "reference number",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "services"
+  ],
+  "tr": "referans numarası",
+  "examples": [
+   "Do you have a reference number?",
+   "Your reference number is on the email."
+  ],
+  "sayIt": [
+   {
+    "tr": "Referans numarasını nerede bulacağını sor.",
+    "en": "Where can I find my reference number?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-out-of-order",
+  "text": "out of order",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "bozuk, çalışmıyor",
+  "examples": [
+   "The machine is out of order.",
+   "Both elevators are out of order."
+  ],
+  "sayIt": [
+   {
+    "tr": "Makinenin çalışmadığını söyle.",
+    "en": "This machine is out of order."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-opening-hours",
+  "text": "opening hours",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "services"
+  ],
+  "tr": "çalışma saatleri",
+  "examples": [
+   "What are your opening hours?",
+   "The opening hours changed."
+  ],
+  "sayIt": [
+   {
+    "tr": "Çalışma saatlerini sor.",
+    "en": "What are your opening hours?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-form",
+  "text": "form",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "services"
+  ],
+  "tr": "form",
+  "examples": [
+   "Which form do I need?",
+   "The form is online."
+  ],
+  "sayIt": [
+   {
+    "tr": "Hangi formun gerektiğini sor.",
+    "en": "Which form do I need to fill out?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-appointment-slot",
+  "text": "appointment slot",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "services"
+  ],
+  "tr": "randevu saati",
+  "examples": [
+   "Is there an earlier slot?",
+   "All the slots are taken."
+  ],
+  "sayIt": [
+   {
+    "tr": "Daha erken bir randevu saati olup olmadığını sor.",
+    "en": "Do you have an earlier slot?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-cash-machine",
+  "text": "cash machine",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "services"
+  ],
+  "tr": "bankamatik",
+  "examples": [
+   "Is there a cash machine nearby?",
+   "The cash machine ate my card."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bankamatiğin kartını yuttuğunu söyle.",
+    "en": "The cash machine just swallowed my card."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-deadline",
+  "text": "deadline",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "son teslim tarihi",
+  "examples": [
+   "When's the deadline?",
+   "We missed the deadline."
+  ],
+  "sayIt": [
+   {
+    "tr": "Son teslim tarihinin ne zaman olduğunu sor.",
+    "en": "When's the deadline for this?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-follow-up",
+  "text": "follow up",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "work"
+  ],
+  "tr": "takip etmek, dönüş yapmak",
+  "examples": [
+   "I'll follow up by email.",
+   "Did you follow up with the client?"
+  ],
+  "sayIt": [
+   {
+    "tr": "E-postayla dönüş yapacağını söyle.",
+    "en": "I'll follow up by email."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-catch-up",
+  "text": "catch up",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "(gündemi) yakalamak, hasret gidermek",
+  "examples": [
+   "Let's catch up later.",
+   "I need to catch up on my emails."
+  ],
+  "sayIt": [
+   {
+    "tr": "E-postalarına yetişmen gerektiğini söyle.",
+    "en": "I need to catch up on my emails."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-on-the-same-page",
+  "text": "on the same page",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "work"
+  ],
+  "tr": "aynı fikirde, aynı noktada",
+  "examples": [
+   "Let's make sure we're on the same page.",
+   "Are we all on the same page?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Herkesin aynı noktada olup olmadığını sor.",
+    "en": "Are we all on the same page?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-agenda",
+  "text": "agenda",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "gündem",
+  "examples": [
+   "What's on the agenda today?",
+   "Let's stick to the agenda."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bugün gündemde ne olduğunu sor.",
+    "en": "What's on the agenda today?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-reschedule",
+  "text": "reschedule",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "work"
+  ],
+  "tr": "ertelemek, yeniden planlamak",
+  "examples": [
+   "Can we reschedule?",
+   "The meeting was rescheduled to Friday."
+  ],
+  "sayIt": [
+   {
+    "tr": "Toplantıyı başka güne almayı iste.",
+    "en": "Could we reschedule for Thursday?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-colleague",
+  "text": "colleague",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "work"
+  ],
+  "tr": "iş arkadaşı",
+  "examples": [
+   "This is my colleague, Sarah.",
+   "I get on well with my colleagues."
+  ],
+  "sayIt": [
+   {
+    "tr": "İş arkadaşını tanıştır.",
+    "en": "This is my colleague, Sarah."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-raise",
+  "text": "raise",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "maaş artışı",
+  "examples": [
+   "I asked for a raise.",
+   "Did you get a raise this year?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Maaş artışı istediğini söyle.",
+    "en": "I'd like to talk about a raise."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-workload",
+  "text": "workload",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "work"
+  ],
+  "tr": "iş yükü",
+  "examples": [
+   "My workload is crazy this week.",
+   "Can we share the workload?"
+  ],
+  "sayIt": [
+   {
+    "tr": "İş yükünün bu hafta çok fazla olduğunu söyle.",
+    "en": "My workload is crazy this week."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-overtime",
+  "text": "overtime",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "fazla mesai",
+  "examples": [
+   "I worked overtime all week.",
+   "Do you get paid for overtime?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Bütün hafta fazla mesai yaptığını söyle.",
+    "en": "I've been working overtime all week."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-remote",
+  "text": "remote",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "work"
+  ],
+  "tr": "uzaktan",
+  "examples": [
+   "I work remotely on Fridays.",
+   "Is this a remote position?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Cuma günleri uzaktan çalıştığını söyle.",
+    "en": "I work remotely on Fridays."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-feedback",
+  "text": "feedback",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "work"
+  ],
+  "tr": "geri bildirim",
+  "examples": [
+   "Can I get some feedback?",
+   "Thanks for the feedback."
+  ],
+  "sayIt": [
+   {
+    "tr": "Geri bildirim iste.",
+    "en": "Could you give me some feedback on this?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-update",
+  "text": "update",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "güncel bilgi",
+  "examples": [
+   "Any updates on the project?",
+   "I'll give you an update tomorrow."
+  ],
+  "sayIt": [
+   {
+    "tr": "Projede gelişme olup olmadığını sor.",
+    "en": "Any updates on the project?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-assign",
+  "text": "assign",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "görevlendirmek",
+  "examples": [
+   "Who's assigned to this task?",
+   "They assigned me to the new team."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bu işe kimin atandığını sor.",
+    "en": "Who's assigned to this?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-priority",
+  "text": "priority",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "work"
+  ],
+  "tr": "öncelik",
+  "examples": [
+   "What's the top priority?",
+   "This isn't a priority right now."
+  ],
+  "sayIt": [
+   {
+    "tr": "En önemli önceliğin ne olduğunu sor.",
+    "en": "What's the top priority right now?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-deal-with",
+  "text": "deal with",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "ilgilenmek, halletmek",
+  "examples": [
+   "I'll deal with it.",
+   "How do you deal with stress?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Bu konuyla senin ilgileneceğini söyle.",
+    "en": "Leave it to me, I'll deal with it."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-figure-out",
+  "text": "figure out",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "çözmek, anlamak",
+  "examples": [
+   "I'll figure it out.",
+   "We need to figure out what went wrong."
+  ],
+  "sayIt": [
+   {
+    "tr": "Sorunu çözeceğini söyle.",
+    "en": "Don't worry, I'll figure it out."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-behind-schedule",
+  "text": "behind schedule",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "work"
+  ],
+  "tr": "programın gerisinde",
+  "examples": [
+   "We're behind schedule.",
+   "The project is two weeks behind schedule."
+  ],
+  "sayIt": [
+   {
+    "tr": "Projenin programın gerisinde olduğunu söyle.",
+    "en": "We're about two weeks behind schedule."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-day-off",
+  "text": "day off",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "work"
+  ],
+  "tr": "izin günü",
+  "examples": [
+   "I'm taking a day off tomorrow.",
+   "It's my day off."
+  ],
+  "sayIt": [
+   {
+    "tr": "Yarın izin alacağını söyle.",
+    "en": "I'm taking a day off tomorrow."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-point-out",
+  "text": "point out",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "belirtmek, dikkat çekmek",
+  "examples": [
+   "I just want to point out one thing.",
+   "She pointed out a mistake."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bir şeye dikkat çekmek istediğini söyle.",
+    "en": "I just want to point out one thing."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-in-charge-of",
+  "text": "in charge of",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "work"
+  ],
+  "tr": "sorumlu",
+  "examples": [
+   "Who's in charge of this?",
+   "I'm in charge of the budget."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bundan kimin sorumlu olduğunu sor.",
+    "en": "Who's in charge of this?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-handle",
+  "text": "handle",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "work"
+  ],
+  "tr": "halletmek, idare etmek",
+  "examples": [
+   "Can you handle it?",
+   "She handled the situation well."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunu halledebileceğini söyle.",
+    "en": "I can handle it."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-interview",
+  "text": "interview",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "work"
+  ],
+  "tr": "mülakat, görüşme",
+  "examples": [
+   "I have a job interview tomorrow.",
+   "How did the interview go?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Yarın iş görüşmen olduğunu söyle.",
+    "en": "I've got a job interview tomorrow."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-experience",
+  "text": "experience",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "work"
+  ],
+  "tr": "deneyim",
+  "examples": [
+   "I have five years of experience.",
+   "Do you have any experience with this?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Beş yıllık deneyimin olduğunu söyle.",
+    "en": "I have about five years of experience in this field."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-skills",
+  "text": "skills",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "work"
+  ],
+  "tr": "beceriler",
+  "examples": [
+   "What skills do you need?",
+   "I want to improve my skills."
+  ],
+  "sayIt": [
+   {
+    "tr": "Becerilerini geliştirmek istediğini söyle.",
+    "en": "I want to improve my skills."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-hang-out",
+  "text": "hang out",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "takılmak, vakit geçirmek",
+  "examples": [
+   "Do you want to hang out this weekend?",
+   "We used to hang out a lot."
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşına hafta sonu takılmayı öner.",
+    "en": "Do you want to hang out this weekend?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-keep-in-touch",
+  "text": "keep in touch",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "iletişimi koparmamak",
+  "examples": [
+   "Let's keep in touch.",
+   "Do you still keep in touch with him?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Vedalaşırken iletişimi koparmamayı söyle.",
+    "en": "Let's keep in touch."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-make-it",
+  "text": "make it",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "gelebilmek, yetişebilmek",
+  "examples": [
+   "Sorry, I can't make it tonight.",
+   "Did you make it on time?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Bu akşam gelemeyeceğini söyle.",
+    "en": "Sorry, I can't make it tonight."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-show-up",
+  "text": "show up",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "gelmek, ortaya çıkmak",
+  "examples": [
+   "He didn't show up.",
+   "Only five people showed up."
+  ],
+  "sayIt": [
+   {
+    "tr": "Onun gelmediğini söyle.",
+    "en": "He never showed up."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-run-into",
+  "text": "run into",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "rastlamak",
+  "examples": [
+   "I ran into an old friend.",
+   "Guess who I ran into today?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Eski bir arkadaşa rastladığını söyle.",
+    "en": "I ran into an old friend today."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-get-along",
+  "text": "get along",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "iyi geçinmek",
+  "examples": [
+   "Do you get along with your roommate?",
+   "We get along really well."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ev arkadaşınla iyi geçindiğini söyle.",
+    "en": "We get along really well."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-come-over",
+  "text": "come over",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "social"
+  ],
+  "tr": "(eve) gelmek",
+  "examples": [
+   "Do you want to come over for dinner?",
+   "Come over whenever you like."
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşını yemeğe çağır.",
+    "en": "Do you want to come over for dinner on Saturday?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-plans",
+  "text": "plans",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "social"
+  ],
+  "tr": "planlar",
+  "examples": [
+   "Do you have any plans for the weekend?",
+   "Sorry, I already have plans."
+  ],
+  "sayIt": [
+   {
+    "tr": "Hafta sonu planı olup olmadığını sor.",
+    "en": "Do you have any plans this weekend?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-awkward",
+  "text": "awkward",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "garip, tuhaf, rahatsız edici",
+  "examples": [
+   "That was awkward.",
+   "There was an awkward silence."
+  ],
+  "sayIt": [
+   {
+    "tr": "Durumun tuhaf olduğunu söyle.",
+    "en": "Well, that was a bit awkward."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-into",
+  "text": "into",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "-e meraklı, -den hoşlanan",
+  "examples": [
+   "I'm really into hiking.",
+   "What kind of music are you into?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Ne tür müzik sevdiğini sor.",
+    "en": "What kind of music are you into?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-by-the-way",
+  "text": "by the way",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "social"
+  ],
+  "tr": "bu arada",
+  "examples": [
+   "By the way, did you call her?",
+   "Oh, by the way, I loved your photos."
+  ],
+  "sayIt": [
+   {
+    "tr": "Konuyu değiştirip bu arada fotoğrafları beğendiğini söyle.",
+    "en": "By the way, I loved your photos."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-how-come",
+  "text": "how come",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "social"
+  ],
+  "tr": "nasıl oldu da, neden",
+  "examples": [
+   "How come you're still here?",
+   "How come you didn't call?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşına neden aramadığını sor.",
+    "en": "How come you didn't call me?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-no-way",
+  "text": "no way",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "olamaz, yok artık",
+  "examples": [
+   "No way! Really?",
+   "There's no way I'm doing that."
+  ],
+  "sayIt": [
+   {
+    "tr": "Şaşkınlığını göster.",
+    "en": "No way! Are you serious?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-fair-enough",
+  "text": "fair enough",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "social"
+  ],
+  "tr": "haklısın, makul",
+  "examples": [
+   "Fair enough, let's do it your way.",
+   "\"I'm too tired.\" \"Fair enough.\""
+  ],
+  "sayIt": [
+   {
+    "tr": "Karşındakinin gerekçesini kabul et.",
+    "en": "Fair enough."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-hometown",
+  "text": "hometown",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "social"
+  ],
+  "tr": "memleket",
+  "examples": [
+   "Where's your hometown?",
+   "I go back to my hometown every summer."
+  ],
+  "sayIt": [
+   {
+    "tr": "Memleketinin İzmir olduğunu söyle.",
+    "en": "My hometown is Izmir."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-what-do-you-do",
+  "text": "what do you do",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "social"
+  ],
+  "tr": "ne iş yapıyorsun",
+  "examples": [
+   "So, what do you do?",
+   "What do you do for a living?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Birine ne iş yaptığını sor.",
+    "en": "So, what do you do?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-get-to-know",
+  "text": "get to know",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "tanımak",
+  "examples": [
+   "I'd love to get to know you better.",
+   "It takes time to get to know people."
+  ],
+  "sayIt": [
+   {
+    "tr": "Birini daha iyi tanımak istediğini söyle.",
+    "en": "I'd love to get to know you better."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-invite",
+  "text": "invite",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "social"
+  ],
+  "tr": "davet etmek",
+  "examples": [
+   "Thanks for inviting me.",
+   "Who did you invite?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Davet için teşekkür et.",
+    "en": "Thanks for inviting me."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-host",
+  "text": "host",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "social"
+  ],
+  "tr": "ev sahibi (davette)",
+  "examples": [
+   "Thank the host before you leave.",
+   "She's a great host."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ev sahibine teşekkür et.",
+    "en": "Thanks for having me. You're a great host."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-small-talk",
+  "text": "small talk",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "social"
+  ],
+  "tr": "havadan sudan sohbet",
+  "examples": [
+   "I'm not great at small talk.",
+   "We made some small talk."
+  ],
+  "sayIt": [
+   {
+    "tr": "Havadan sudan sohbette iyi olmadığını söyle.",
+    "en": "I'm not great at small talk."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-anyway",
+  "text": "anyway",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "social"
+  ],
+  "tr": "neyse",
+  "examples": [
+   "Anyway, how was your trip?",
+   "Anyway, I should go."
+  ],
+  "sayIt": [
+   {
+    "tr": "Konuyu kapatıp gitmen gerektiğini söyle.",
+    "en": "Anyway, I should get going."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-catch-you-later",
+  "text": "catch you later",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "sonra görüşürüz",
+  "examples": [
+   "Catch you later!",
+   "I've got to run, catch you later."
+  ],
+  "sayIt": [
+   {
+    "tr": "Gitmen gerektiğini söyleyip vedalaş.",
+    "en": "I've got to run. Catch you later!"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-cheers",
+  "text": "cheers",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "şerefe, sağ ol",
+  "examples": [
+   "Cheers, mate.",
+   "Cheers for the help."
+  ],
+  "sayIt": [
+   {
+    "tr": "Yardım için samimi şekilde teşekkür et.",
+    "en": "Cheers for the help."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-congratulations",
+  "text": "congratulations",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "tebrikler",
+  "examples": [
+   "Congratulations on the new job!",
+   "Congrats!"
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşını yeni işi için tebrik et.",
+    "en": "Congratulations on the new job!"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-ive-heard-a-lot-about-you",
+  "text": "I've heard a lot about you",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "social"
+  ],
+  "tr": "hakkında çok şey duydum",
+  "examples": [
+   "Nice to finally meet you, I've heard a lot about you.",
+   "I hope you've heard good things."
+  ],
+  "sayIt": [
+   {
+    "tr": "Biriyle ilk kez tanışırken onun hakkında çok şey duyduğunu söyle.",
+    "en": "Nice to finally meet you. I've heard a lot about you."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-call-back",
+  "text": "call back",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "geri aramak",
+  "examples": [
+   "Can I call you back?",
+   "She didn't call me back."
+  ],
+  "sayIt": [
+   {
+    "tr": "Daha sonra geri arayabileceğini söyle.",
+    "en": "Can I call you back in ten minutes?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-hang-up",
+  "text": "hang up",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "telefonu kapatmak",
+  "examples": [
+   "Don't hang up!",
+   "He hung up on me."
+  ],
+  "sayIt": [
+   {
+    "tr": "Karşı tarafın yüzüne kapattığını söyle.",
+    "en": "He just hung up on me."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-voicemail",
+  "text": "voicemail",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "sesli mesaj",
+  "examples": [
+   "I left you a voicemail.",
+   "It went straight to voicemail."
+  ],
+  "sayIt": [
+   {
+    "tr": "Doğrudan sesli mesaja düştüğünü söyle.",
+    "en": "It went straight to voicemail."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-leave-a-message",
+  "text": "leave a message",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "mesaj bırakmak",
+  "examples": [
+   "Can I leave a message?",
+   "Please leave a message after the beep."
+  ],
+  "sayIt": [
+   {
+    "tr": "Mesaj bırakmak istediğini söyle.",
+    "en": "Could I leave a message for him?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-breaking-up",
+  "text": "breaking up",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "sesin kesik kesik gelmesi",
+  "examples": [
+   "Sorry, you're breaking up.",
+   "The line keeps breaking up."
+  ],
+  "sayIt": [
+   {
+    "tr": "Karşı tarafın sesinin kesik geldiğini söyle.",
+    "en": "Sorry, you're breaking up."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-bad-connection",
+  "text": "bad connection",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "kötü bağlantı",
+  "examples": [
+   "We have a bad connection.",
+   "Sorry, bad connection."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bağlantının kötü olduğunu söyle.",
+    "en": "I think we have a bad connection."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-on-mute",
+  "text": "on mute",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "sesi kapalı",
+  "examples": [
+   "You're on mute.",
+   "Sorry, I was on mute."
+  ],
+  "sayIt": [
+   {
+    "tr": "Toplantıda birine sesinin kapalı olduğunu söyle.",
+    "en": "I think you're on mute."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-text",
+  "text": "text",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "mesaj atmak",
+  "examples": [
+   "Text me when you get there.",
+   "I'll text you the address."
+  ],
+  "sayIt": [
+   {
+    "tr": "Oraya varınca mesaj atmasını söyle.",
+    "en": "Text me when you get there."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-my-phone-died",
+  "text": "my phone died",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "telefonumun şarjı bitti",
+  "examples": [
+   "Sorry, my phone died.",
+   "My phone's about to die."
+  ],
+  "sayIt": [
+   {
+    "tr": "Telefonunun şarjı bittiği için aramadığını söyle.",
+    "en": "Sorry, my phone died."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-charger",
+  "text": "charger",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "şarj aleti",
+  "examples": [
+   "Do you have a charger?",
+   "I forgot my charger."
+  ],
+  "sayIt": [
+   {
+    "tr": "Şarj aleti olup olmadığını sor.",
+    "en": "Do you have a phone charger I could borrow?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-spell",
+  "text": "spell",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "hecelemek",
+  "examples": [
+   "Could you spell that, please?",
+   "How do you spell your name?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Söylediği ismi hecelemesini iste.",
+    "en": "Sorry, could you spell that for me?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-hold-on",
+  "text": "hold on",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "bekle, hatta kal",
+  "examples": [
+   "Hold on a second.",
+   "Can you hold on?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Bir saniye beklemesini söyle.",
+    "en": "Hold on a second, please."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-wrong-number",
+  "text": "wrong number",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "yanlış numara",
+  "examples": [
+   "Sorry, wrong number.",
+   "I think you have the wrong number."
+  ],
+  "sayIt": [
+   {
+    "tr": "Arayana yanlış numara olduğunu söyle.",
+    "en": "Sorry, I think you have the wrong number."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-whos-calling",
+  "text": "who's calling",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "kim arıyor",
+  "examples": [
+   "May I ask who's calling?",
+   "Who's calling, please?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Telefonda kimin aradığını sor.",
+    "en": "May I ask who's calling?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-put-through",
+  "text": "put through",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "bağlamak (telefonda)",
+  "examples": [
+   "Could you put me through to sales?",
+   "I'll put you through."
+  ],
+  "sayIt": [
+   {
+    "tr": "Satış bölümüne bağlanmak iste.",
+    "en": "Could you put me through to the sales department?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-share-my-screen",
+  "text": "share my screen",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "ekranımı paylaşmak",
+  "examples": [
+   "Let me share my screen.",
+   "Can you see my screen?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Ekranını paylaşacağını söyle.",
+    "en": "Let me share my screen."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-frozen",
+  "text": "frozen",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "donmuş (görüntü)",
+  "examples": [
+   "You're frozen.",
+   "My screen froze."
+  ],
+  "sayIt": [
+   {
+    "tr": "Karşı tarafın görüntüsünün donduğunu söyle.",
+    "en": "I think you're frozen."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-log-in",
+  "text": "log in",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "giriş yapmak",
+  "examples": [
+   "I can't log in.",
+   "Log in with your email."
+  ],
+  "sayIt": [
+   {
+    "tr": "Giriş yapamadığını söyle.",
+    "en": "I can't log in to my account."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-password",
+  "text": "password",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "şifre",
+  "examples": [
+   "I forgot my password.",
+   "Change your password regularly."
+  ],
+  "sayIt": [
+   {
+    "tr": "Şifreni unuttuğunu söyle.",
+    "en": "I forgot my password."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-app",
+  "text": "app",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "uygulama",
+  "examples": [
+   "Did you download the app?",
+   "The app keeps crashing."
+  ],
+  "sayIt": [
+   {
+    "tr": "Uygulamanın sürekli çöktüğünü söyle.",
+    "en": "The app keeps crashing."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-notification",
+  "text": "notification",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "bildirim",
+  "examples": [
+   "Turn off notifications.",
+   "I got a notification from the bank."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bankadan bildirim geldiğini söyle.",
+    "en": "I just got a notification from my bank."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-speaker",
+  "text": "speaker",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "phone"
+  ],
+  "tr": "hoparlör",
+  "examples": [
+   "I'll put you on speaker.",
+   "Can you take me off speaker?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Telefonu hoparlöre alacağını söyle.",
+    "en": "Hold on, I'll put you on speaker."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-reception",
+  "text": "reception",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "çekim, sinyal",
+  "examples": [
+   "There's no reception here.",
+   "The reception is bad in the elevator."
+  ],
+  "sayIt": [
+   {
+    "tr": "Burada telefonun çekmediğini söyle.",
+    "en": "There's no reception here."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-call",
+  "text": "call",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "arama, aramak",
+  "examples": [
+   "I missed your call.",
+   "Give me a call later."
+  ],
+  "sayIt": [
+   {
+    "tr": "Aramasını kaçırdığını söyle.",
+    "en": "Sorry, I missed your call."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-speak-up",
+  "text": "speak up",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "phone"
+  ],
+  "tr": "daha yüksek sesle konuşmak",
+  "examples": [
+   "Could you speak up a bit?",
+   "Speak up, I can't hear you."
+  ],
+  "sayIt": [
+   {
+    "tr": "Biraz daha yüksek sesle konuşmasını iste.",
+    "en": "Could you speak up a bit?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-complain",
+  "text": "complain",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "şikâyet etmek",
+  "examples": [
+   "I don't want to complain, but...",
+   "She's always complaining."
+  ],
+  "sayIt": [
+   {
+    "tr": "Şikâyet etmek istemediğini ama bir sorun olduğunu söyle.",
+    "en": "I don't want to complain, but there's a problem."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-apologize",
+  "text": "apologize",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "özür dilemek",
+  "examples": [
+   "I apologize for the delay.",
+   "You should apologize to her."
+  ],
+  "sayIt": [
+   {
+    "tr": "Gecikme için özür dile.",
+    "en": "I apologize for the delay."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-my-fault",
+  "text": "my fault",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "benim hatam",
+  "examples": [
+   "It's my fault.",
+   "It wasn't your fault."
+  ],
+  "sayIt": [
+   {
+    "tr": "Hatanın sende olduğunu kabul et.",
+    "en": "Sorry, that's my fault."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-misunderstanding",
+  "text": "misunderstanding",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "yanlış anlaşılma",
+  "examples": [
+   "I think there's been a misunderstanding.",
+   "It was just a misunderstanding."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bir yanlış anlaşılma olduğunu söyle.",
+    "en": "I think there's been a misunderstanding."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-mix-up",
+  "text": "mix-up",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "karışıklık",
+  "examples": [
+   "Sorry for the mix-up.",
+   "There was a mix-up with the dates."
+  ],
+  "sayIt": [
+   {
+    "tr": "Tarihlerde karışıklık olduğunu söyle.",
+    "en": "There was a mix-up with the dates."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-sort-out",
+  "text": "sort out",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "çözmek, halletmek",
+  "examples": [
+   "Let's sort this out.",
+   "Did you sort out the problem?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Sorunu birlikte çözmeyi öner.",
+    "en": "Let's sort this out together."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-im-afraid",
+  "text": "I'm afraid",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "maalesef",
+  "examples": [
+   "I'm afraid that's not possible.",
+   "I'm afraid I can't help you."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunun mümkün olmadığını kibarca söyle.",
+    "en": "I'm afraid that's not possible."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-to-be-honest",
+  "text": "to be honest",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "açıkçası",
+  "examples": [
+   "To be honest, I'm not happy with this.",
+   "To be honest, I forgot."
+  ],
+  "sayIt": [
+   {
+    "tr": "Açıkçası unuttuğunu söyle.",
+    "en": "To be honest, I completely forgot."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-frustrated",
+  "text": "frustrated",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "sinirli, bıkmış",
+  "examples": [
+   "I'm really frustrated.",
+   "It's frustrating when nobody listens."
+  ],
+  "sayIt": [
+   {
+    "tr": "Çok bıktığını söyle.",
+    "en": "I'm getting really frustrated."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-annoyed",
+  "text": "annoyed",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "sinirlenmiş",
+  "examples": [
+   "Are you annoyed with me?",
+   "I was a bit annoyed."
+  ],
+  "sayIt": [
+   {
+    "tr": "Biraz sinirlendiğini söyle.",
+    "en": "I was a bit annoyed, to be honest."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-unfair",
+  "text": "unfair",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "haksız",
+  "examples": [
+   "That's unfair.",
+   "It's unfair to blame him."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunun haksızlık olduğunu söyle.",
+    "en": "That's really unfair."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-make-up-for",
+  "text": "make up for",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "telafi etmek",
+  "examples": [
+   "How can I make up for it?",
+   "Let me make it up to you."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunu telafi etmek istediğini söyle.",
+    "en": "Let me make it up to you."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-compensation",
+  "text": "compensation",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "tazminat",
+  "examples": [
+   "Can I get compensation?",
+   "They offered us compensation."
+  ],
+  "sayIt": [
+   {
+    "tr": "Tazminat alıp alamayacağını sor.",
+    "en": "Am I entitled to any compensation?"
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-insist",
+  "text": "insist",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "ısrar etmek",
+  "examples": [
+   "I insist.",
+   "He insisted on paying."
+  ],
+  "sayIt": [
+   {
+    "tr": "Ödemekte ısrar ettiğini söyle.",
+    "en": "No, I insist. Let me pay."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-no-offense",
+  "text": "no offense",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "alınma ama",
+  "examples": [
+   "No offense, but I disagree.",
+   "None taken."
+  ],
+  "sayIt": [
+   {
+    "tr": "Alınmamasını isteyip katılmadığını söyle.",
+    "en": "No offense, but I don't agree."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-thats-not-the-point",
+  "text": "that's not the point",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "mesele bu değil",
+  "examples": [
+   "That's not the point.",
+   "The point is, we need more time."
+  ],
+  "sayIt": [
+   {
+    "tr": "Asıl meselenin bu olmadığını söyle.",
+    "en": "That's not the point."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-blame",
+  "text": "blame",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "suçlamak",
+  "examples": [
+   "Don't blame me.",
+   "Who's to blame?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Seni suçlamamasını söyle.",
+    "en": "Don't blame me, it wasn't my idea."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-upset",
+  "text": "upset",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "üzgün, kırgın",
+  "examples": [
+   "Are you upset with me?",
+   "She was really upset."
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşına sana kırgın olup olmadığını sor.",
+    "en": "Are you upset with me?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-let-it-go",
+  "text": "let it go",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "boş vermek",
+  "examples": [
+   "Just let it go.",
+   "I can't let it go."
+  ],
+  "sayIt": [
+   {
+    "tr": "Arkadaşına boş vermesini söyle.",
+    "en": "Just let it go. It's not worth it."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-overcharged",
+  "text": "overcharged",
+  "kind": "word",
+  "cefr": "B2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "fazla ücret alınmış",
+  "examples": [
+   "I think I was overcharged.",
+   "They overcharged us."
+  ],
+  "sayIt": [
+   {
+    "tr": "Fazla ücret alındığını düşündüğünü söyle.",
+    "en": "I think I've been overcharged."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-disappointed",
+  "text": "disappointed",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "hayal kırıklığına uğramış",
+  "examples": [
+   "I'm a bit disappointed.",
+   "Don't be disappointed."
+  ],
+  "sayIt": [
+   {
+    "tr": "Biraz hayal kırıklığına uğradığını söyle.",
+    "en": "I'm a bit disappointed, to be honest."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-i-see-where-youre-coming-from",
+  "text": "I see where you're coming from",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "ne demek istediğini anlıyorum",
+  "examples": [
+   "I see where you're coming from, but...",
+   "I can see where she's coming from."
+  ],
+  "sayIt": [
+   {
+    "tr": "Karşı tarafı anladığını ama katılmadığını söyle.",
+    "en": "I see where you're coming from, but I don't agree."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-calm",
+  "text": "calm",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "sakin",
+  "examples": [
+   "Let's stay calm.",
+   "He was surprisingly calm."
+  ],
+  "sayIt": [
+   {
+    "tr": "Sakin kalmayı öner.",
+    "en": "Let's all stay calm."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-excuse",
+  "text": "excuse",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "bahane",
+  "examples": [
+   "That's no excuse.",
+   "Stop making excuses."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunun bahane olamayacağını söyle.",
+    "en": "That's no excuse."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-its-not-a-big-deal",
+  "text": "it's not a big deal",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "conflict"
+  ],
+  "tr": "önemli değil",
+  "examples": [
+   "Don't worry, it's not a big deal.",
+   "Why is this such a big deal?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Özür dileyen birine önemli olmadığını söyle.",
+    "en": "Don't worry, it's not a big deal."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-agree",
+  "text": "agree",
+  "kind": "word",
+  "cefr": "A1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "katılmak",
+  "examples": [
+   "I totally agree.",
+   "I don't agree with that."
+  ],
+  "sayIt": [
+   {
+    "tr": "Tamamen katıldığını söyle.",
+    "en": "I totally agree."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-disagree",
+  "text": "disagree",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "katılmamak",
+  "examples": [
+   "I'm sorry, but I disagree.",
+   "We disagree on this."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kibarca katılmadığını söyle.",
+    "en": "I'm sorry, but I see it differently."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-point-of-view",
+  "text": "point of view",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "bakış açısı",
+  "examples": [
+   "From my point of view, it's too risky.",
+   "I understand your point of view."
+  ],
+  "sayIt": [
+   {
+    "tr": "Senin bakış açına göre bunun riskli olduğunu söyle.",
+    "en": "From my point of view, it's too risky."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-pros-and-cons",
+  "text": "pros and cons",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "artıları ve eksileri",
+  "examples": [
+   "Let's look at the pros and cons.",
+   "What are the pros and cons?"
+  ],
+  "sayIt": [
+   {
+    "tr": "Artılarına ve eksilerine bakmayı öner.",
+    "en": "Let's weigh up the pros and cons."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-convince",
+  "text": "convince",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "ikna etmek",
+  "examples": [
+   "You've convinced me.",
+   "I'm not convinced."
+  ],
+  "sayIt": [
+   {
+    "tr": "İkna olmadığını söyle.",
+    "en": "I'm still not convinced."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-it-depends",
+  "text": "it depends",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "duruma bağlı",
+  "examples": [
+   "It depends on the price.",
+   "\"Will you come?\" \"It depends.\""
+  ],
+  "sayIt": [
+   {
+    "tr": "Fiyata bağlı olduğunu söyle.",
+    "en": "It depends on the price."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-i-suppose",
+  "text": "I suppose",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "sanırım, herhalde",
+  "examples": [
+   "I suppose you're right.",
+   "I suppose we could try."
+  ],
+  "sayIt": [
+   {
+    "tr": "Karşındakinin haklı olabileceğini isteksizce kabul et.",
+    "en": "I suppose you're right."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-actually",
+  "text": "actually",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "aslında",
+  "examples": [
+   "Actually, I think it's a good idea.",
+   "I'm actually from Ankara."
+  ],
+  "sayIt": [
+   {
+    "tr": "Aslında fikrin iyi olduğunu söyle.",
+    "en": "Actually, I think that's a good idea."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-make-sense",
+  "text": "make sense",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "mantıklı olmak",
+  "examples": [
+   "That makes sense.",
+   "It doesn't make sense."
+  ],
+  "sayIt": [
+   {
+    "tr": "Söylenenin mantıklı olduğunu söyle.",
+    "en": "That makes sense."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-on-the-other-hand",
+  "text": "on the other hand",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "öte yandan",
+  "examples": [
+   "On the other hand, it's cheaper.",
+   "It's fast. On the other hand, it's expensive."
+  ],
+  "sayIt": [
+   {
+    "tr": "Öte yandan daha ucuz olduğunu söyle.",
+    "en": "On the other hand, it's much cheaper."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-exactly",
+  "text": "exactly",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "kesinlikle, aynen",
+  "examples": [
+   "Exactly!",
+   "That's exactly what I meant."
+  ],
+  "sayIt": [
+   {
+    "tr": "Tam olarak bunu kastettiğini söyle.",
+    "en": "That's exactly what I meant."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-to-some-extent",
+  "text": "to some extent",
+  "kind": "chunk",
+  "cefr": "B2",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "bir dereceye kadar",
+  "examples": [
+   "I agree to some extent.",
+   "To some extent, it's true."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bir dereceye kadar katıldığını söyle.",
+    "en": "I agree with you to some extent."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-compromise",
+  "text": "compromise",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "uzlaşma, orta yol",
+  "examples": [
+   "Let's find a compromise.",
+   "We reached a compromise."
+  ],
+  "sayIt": [
+   {
+    "tr": "Orta yol bulmayı öner.",
+    "en": "Can we find a compromise?"
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-persuade",
+  "text": "persuade",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "ikna etmek",
+  "examples": [
+   "She persuaded me to come.",
+   "Try to persuade him."
+  ],
+  "sayIt": [
+   {
+    "tr": "Seni gelmeye ikna ettiğini söyle.",
+    "en": "She persuaded me to come."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-assume",
+  "text": "assume",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "varsaymak",
+  "examples": [
+   "Don't assume anything.",
+   "I assumed you knew."
+  ],
+  "sayIt": [
+   {
+    "tr": "Onun bildiğini varsaydığını söyle.",
+    "en": "Sorry, I assumed you knew."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-id-rather",
+  "text": "I'd rather",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "tercih ederim",
+  "examples": [
+   "I'd rather stay home.",
+   "I'd rather not talk about it."
+  ],
+  "sayIt": [
+   {
+    "tr": "Evde kalmayı tercih ettiğini söyle.",
+    "en": "I'd rather stay home tonight."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-obviously",
+  "text": "obviously",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "açıkçası, belli ki",
+  "examples": [
+   "Obviously, it's not ideal.",
+   "He was obviously tired."
+  ],
+  "sayIt": [
+   {
+    "tr": "Durumun ideal olmadığının belli olduğunu söyle.",
+    "en": "Obviously, it's not ideal."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-issue",
+  "text": "issue",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "mesele, sorun",
+  "examples": [
+   "The main issue is time.",
+   "That's a separate issue."
+  ],
+  "sayIt": [
+   {
+    "tr": "Asıl sorunun zaman olduğunu söyle.",
+    "en": "The main issue is time."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-approach",
+  "text": "approach",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "yaklaşım",
+  "examples": [
+   "I like your approach.",
+   "Let's try a different approach."
+  ],
+  "sayIt": [
+   {
+    "tr": "Farklı bir yaklaşım denemeyi öner.",
+    "en": "Let's try a different approach."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-consider",
+  "text": "consider",
+  "kind": "word",
+  "cefr": "A2",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "düşünmek, göz önünde bulundurmak",
+  "examples": [
+   "Have you considered moving?",
+   "We should consider the cost."
+  ],
+  "sayIt": [
+   {
+    "tr": "Maliyeti de düşünmek gerektiğini söyle.",
+    "en": "We should also consider the cost."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-honestly",
+  "text": "honestly",
+  "kind": "word",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "dürüst olmak gerekirse",
+  "examples": [
+   "Honestly, I don't know.",
+   "Honestly, it was great."
+  ],
+  "sayIt": [
+   {
+    "tr": "Dürüst olmak gerekirse bilmediğini söyle.",
+    "en": "Honestly, I have no idea."
+   }
+  ],
+  "source": "cefr-j"
+ },
+ {
+  "id": "w-good-point",
+  "text": "good point",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "haklı bir nokta",
+  "examples": [
+   "That's a good point.",
+   "Good point, I hadn't thought of that."
+  ],
+  "sayIt": [
+   {
+    "tr": "Bunu düşünmediğini ve haklı olduğunu söyle.",
+    "en": "Good point. I hadn't thought of that."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-im-not-sure-about-that",
+  "text": "I'm not sure about that",
+  "kind": "chunk",
+  "cefr": "A2",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "bundan emin değilim",
+  "examples": [
+   "Hmm, I'm not sure about that.",
+   "I'm not so sure."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kibarca şüpheni belirt.",
+    "en": "Hmm, I'm not so sure about that."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-the-thing-is",
+  "text": "the thing is",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "mesele şu ki",
+  "examples": [
+   "The thing is, we don't have time.",
+   "The thing is, I already promised."
+  ],
+  "sayIt": [
+   {
+    "tr": "Meselenin zaman olmadığını söyle.",
+    "en": "The thing is, we just don't have time."
+   }
+  ],
+  "source": "project"
+ },
+ {
+  "id": "w-whatever-you-think",
+  "text": "whatever you think",
+  "kind": "chunk",
+  "cefr": "B1",
+  "domains": [
+   "opinion"
+  ],
+  "tr": "sen nasıl istersen",
+  "examples": [
+   "Whatever you think is best.",
+   "It's up to you."
+  ],
+  "sayIt": [
+   {
+    "tr": "Kararı karşı tarafa bırak.",
+    "en": "It's up to you. Whatever you think is best."
+   }
+  ],
+  "source": "project"
+ }
+]

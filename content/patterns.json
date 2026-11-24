@@ -1,0 +1,2146 @@
+[
+ {
+  "id": "p-i-was-wondering-if",
+  "text": "I was wondering if…",
+  "function": "kibar rica",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "I was wondering whether…",
+   "I was just wondering if…",
+   "I wonder if you could…"
+  ],
+  "turkishMistake": {
+   "wrong": "I wonder can you help me?",
+   "right": "I was wondering if you could help me.",
+   "why": "\"if\"ten sonra soru sırası değil, düz cümle sırası gelir."
+  },
+  "situations": [
+   "Resepsiyondan geç çıkış istiyorsun",
+   "Komşundan arabasını ödünç istiyorsun",
+   "Yöneticinden bir gün izin istiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "I was wondering if I could leave my bags here for a few hours."
+   },
+   {
+    "speaker": "B",
+    "line": "Of course. I'll give you a tag."
+   }
+  ]
+ },
+ {
+  "id": "p-would-you-mind",
+  "text": "Would you mind…?",
+  "function": "kibar rica",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "Would you mind if I…",
+   "Do you mind -ing…",
+   "Would you mind not -ing…"
+  ],
+  "turkishMistake": {
+   "wrong": "Would you mind to close the window?",
+   "right": "Would you mind closing the window?",
+   "why": "\"mind\"dan sonra fiil -ing alır."
+  },
+  "situations": [
+   "Yan koltuktakinden yer değiştirmesini istiyorsun",
+   "Kafedeki adamdan çantasını çekmesini istiyorsun",
+   "İş arkadaşından raporu kontrol etmesini istiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Would you mind swapping seats with me? I'd like to sit next to my friend."
+   },
+   {
+    "speaker": "B",
+    "line": "Not at all. Go ahead."
+   }
+  ]
+ },
+ {
+  "id": "p-do-you-happen-to-know",
+  "text": "Do you happen to know…?",
+  "function": "kibar soru",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "You don't happen to know… do you?",
+   "Do you happen to have…",
+   "Would you happen to know…"
+  ],
+  "turkishMistake": {
+   "wrong": "Do you happen to know where is the station?",
+   "right": "Do you happen to know where the station is?",
+   "why": "İç içe soruda fiil sona gider."
+  },
+  "situations": [
+   "Sokakta birine eczane soruyorsun",
+   "Garsona Wi-Fi şifresini soruyorsun",
+   "İş arkadaşına toplantı saatini soruyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Do you happen to know if there's a pharmacy around here?"
+   },
+   {
+    "speaker": "B",
+    "line": "Yeah, there's one just around the corner."
+   }
+  ]
+ },
+ {
+  "id": "p-is-it-okay-if-i",
+  "text": "Is it okay if I…?",
+  "function": "izin isteme",
+  "register": "casual",
+  "cefr": "A2",
+  "variations": [
+   "Is it all right if I…",
+   "Is it okay to…",
+   "Would it be okay if I…"
+  ],
+  "turkishMistake": {
+   "wrong": "Is it okay if I will sit here?",
+   "right": "Is it okay if I sit here?",
+   "why": "\"if\"ten sonra gelecek zaman için bile geniş zaman kullanılır."
+  },
+  "situations": [
+   "Kafede boş sandalyeye oturmak istiyorsun",
+   "Arkadaşının evinde duş almak istiyorsun",
+   "Toplantıdan erken çıkmak istiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Is it okay if I charge my phone here?"
+   },
+   {
+    "speaker": "B",
+    "line": "Sure, the socket's under the table."
+   }
+  ]
+ },
+ {
+  "id": "p-could-you-possibly",
+  "text": "Could you possibly…?",
+  "function": "çok kibar rica",
+  "register": "formal",
+  "cefr": "B1",
+  "variations": [
+   "Could I possibly…",
+   "Is there any chance you could…",
+   "Could you maybe…"
+  ],
+  "turkishMistake": {
+   "wrong": "Can you possibly to send it today?",
+   "right": "Could you possibly send it today?",
+   "why": "\"could\"dan sonra \"to\" gelmez; \"could\" daha kibardır."
+  },
+  "situations": [
+   "Kargo firmasından paketi bugün getirmesini istiyorsun",
+   "Doktordan daha erken randevu istiyorsun",
+   "Hocandan teslim tarihini uzatmasını istiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Could you possibly move my appointment to the morning?"
+   },
+   {
+    "speaker": "B",
+    "line": "Let me check. Yes, there's a slot at nine."
+   }
+  ]
+ },
+ {
+  "id": "p-id-like-to",
+  "text": "I'd like to…",
+  "function": "kibar istek",
+  "register": "neutral",
+  "cefr": "A2",
+  "variations": [
+   "I'd like a…",
+   "I'd like you to…",
+   "I'd love to…"
+  ],
+  "turkishMistake": {
+   "wrong": "I want a coffee.",
+   "right": "I'd like a coffee, please.",
+   "why": "\"I want\" İngilizcede hizmet ortamında kaba duyulabilir."
+  },
+  "situations": [
+   "Kafede sipariş veriyorsun",
+   "Bankada hesap açıyorsun",
+   "Otelde oda değiştirmek istiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Hi, I'd like to return this jacket."
+   },
+   {
+    "speaker": "B",
+    "line": "Sure. Do you have the receipt?"
+   }
+  ]
+ },
+ {
+  "id": "p-is-there-any-way",
+  "text": "Is there any way…?",
+  "function": "istisna isteme",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "Is there any way I could…",
+   "Is there any chance…",
+   "Is there anything you can do…"
+  ],
+  "turkishMistake": {
+   "wrong": "Is there any way for change it?",
+   "right": "Is there any way I could change it?",
+   "why": "\"way\"den sonra tam cümle ya da \"to\" + fiil gelir."
+  },
+  "situations": [
+   "Kaçırdığın uçuşu ücretsiz değiştirmek istiyorsun",
+   "Dolu restoranda masa istiyorsun",
+   "Kapanmış başvuruya hâlâ başvurmak istiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Is there any way I could get on the next flight without paying a fee?"
+   },
+   {
+    "speaker": "B",
+    "line": "Let me see what I can do."
+   }
+  ]
+ },
+ {
+  "id": "p-its-not-that-its-just-that",
+  "text": "It's not that…, it's just that…",
+  "function": "yumuşak itiraz",
+  "register": "neutral",
+  "cefr": "B2",
+  "variations": [
+   "It's not that I don't…, it's just…",
+   "It's not like…, it's just…",
+   "I don't mean…, it's just that…"
+  ],
+  "turkishMistake": {
+   "wrong": "It's not that I don't like it, only it is expensive.",
+   "right": "It's not that I don't like it, it's just that it's expensive.",
+   "why": "İkinci kısım \"it's just that\" ile bağlanır."
+  },
+  "situations": [
+   "Arkadaşının yemek önerisini geri çeviriyorsun",
+   "Patronun ek işini kabul etmiyorsun",
+   "Sevgilinin film seçimine itiraz ediyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "You don't like my idea?"
+   },
+   {
+    "speaker": "B",
+    "line": "It's not that I don't like it, it's just that we don't have the budget."
+   }
+  ]
+ },
+ {
+  "id": "p-i-see-what-you-mean-but",
+  "text": "I see what you mean, but…",
+  "function": "kibar karşı çıkma",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "I see your point, but…",
+   "I know what you mean, but…",
+   "I get that, but…"
+  ],
+  "turkishMistake": {
+   "wrong": "I understand you but I am not agree.",
+   "right": "I see what you mean, but I don't agree.",
+   "why": "\"agree\" fiildir; \"am agree\" denmez."
+  },
+  "situations": [
+   "Toplantıda bir fikre katılmıyorsun",
+   "Ev arkadaşınla temizlik planını tartışıyorsun",
+   "Satıcının önerisini istemiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "We should launch next week."
+   },
+   {
+    "speaker": "B",
+    "line": "I see what you mean, but I think we need more testing first."
+   }
+  ]
+ },
+ {
+  "id": "p-im-not-sure-thats",
+  "text": "I'm not sure that's…",
+  "function": "yumuşak katılmama",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "I'm not sure that's a good idea.",
+   "I'm not so sure about that.",
+   "I'm not convinced that…"
+  ],
+  "turkishMistake": {
+   "wrong": "I think it is not good idea.",
+   "right": "I'm not sure that's a good idea.",
+   "why": "İngilizcede olumsuz fikir \"I don't think…\" ya da yumuşak \"I'm not sure…\" ile kurulur."
+  },
+  "situations": [
+   "Arkadaşın gece yarısı yola çıkmayı öneriyor",
+   "İş arkadaşın müşteriye indirim vermek istiyor",
+   "Kardeşin pahalı bir telefon almak istiyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Let's just drive there tonight."
+   },
+   {
+    "speaker": "B",
+    "line": "I'm not sure that's a good idea. It's a six-hour drive."
+   }
+  ]
+ },
+ {
+  "id": "p-thats-a-good-point-but",
+  "text": "That's a good point, but…",
+  "function": "kısmen katılma",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "Fair point, but…",
+   "You've got a point, but…",
+   "True, but…"
+  ],
+  "turkishMistake": {
+   "wrong": "You are right but also…",
+   "right": "That's a good point, but…",
+   "why": "\"You are right but\" kabadır ve çelişkili duyulur."
+  },
+  "situations": [
+   "Fiyat-kalite tartışması yapıyorsun",
+   "Tatil yeri seçiyorsunuz",
+   "Toplantıda zaman çizelgesini konuşuyorsunuz"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "The hotel downtown is closer to everything."
+   },
+   {
+    "speaker": "B",
+    "line": "That's a good point, but it's twice the price."
+   }
+  ]
+ },
+ {
+  "id": "p-to-be-fair",
+  "text": "To be fair,…",
+  "function": "adil olmak gerekirse",
+  "register": "neutral",
+  "cefr": "B2",
+  "variations": [
+   "To be fair to him,…",
+   "In fairness,…",
+   "Fair enough, but…"
+  ],
+  "turkishMistake": {
+   "wrong": "For being fair…",
+   "right": "To be fair,…",
+   "why": "Sabit kalıptır, \"to\" ile başlar."
+  },
+  "situations": [
+   "Arkadaşın birini eleştiriyor ama sen onu savunuyorsun",
+   "Kötü bir restoranı kısmen savunuyorsun",
+   "Geç kalan iş arkadaşını savunuyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "He's always late for meetings."
+   },
+   {
+    "speaker": "B",
+    "line": "To be fair, he lives really far away."
+   }
+  ]
+ },
+ {
+  "id": "p-no-wonder",
+  "text": "No wonder…",
+  "function": "tabii ya, belli",
+  "register": "casual",
+  "cefr": "B2",
+  "variations": [
+   "No wonder you're tired.",
+   "That's why…",
+   "That explains it."
+  ],
+  "turkishMistake": {
+   "wrong": "It is no surprise you are tired.",
+   "right": "No wonder you're tired.",
+   "why": "Kısa ve doğal olan \"No wonder\" kalıbıdır."
+  },
+  "situations": [
+   "Arkadaşın üç saat uyuduğunu söylüyor",
+   "Restoranın neden boş olduğunu anlıyorsun",
+   "Telefonun neden şarj olmadığını buluyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "I only slept three hours last night."
+   },
+   {
+    "speaker": "B",
+    "line": "No wonder you look exhausted."
+   }
+  ]
+ },
+ {
+  "id": "p-i-was-going-to-but",
+  "text": "I was going to…, but…",
+  "function": "değişen plan",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "I was planning to…, but…",
+   "I was about to…",
+   "I meant to…, but…"
+  ],
+  "turkishMistake": {
+   "wrong": "I will call you but I forgot.",
+   "right": "I was going to call you, but I forgot.",
+   "why": "Geçmişteki niyet \"was going to\" ile söylenir."
+  },
+  "situations": [
+   "Arkadaşını neden aramadığını açıklıyorsun",
+   "Spor salonuna neden gitmediğini anlatıyorsun",
+   "Raporu neden göndermediğini açıklıyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Did you send the report?"
+   },
+   {
+    "speaker": "B",
+    "line": "I was going to, but the system crashed."
+   }
+  ]
+ },
+ {
+  "id": "p-ive-been-meaning-to",
+  "text": "I've been meaning to…",
+  "function": "uzun süredir niyet",
+  "register": "casual",
+  "cefr": "B2",
+  "variations": [
+   "I've been meaning to ask you…",
+   "I've been wanting to…",
+   "I keep meaning to…"
+  ],
+  "turkishMistake": {
+   "wrong": "Since long time I want to call you.",
+   "right": "I've been meaning to call you.",
+   "why": "Süregelen niyet present perfect continuous ile kurulur."
+  },
+  "situations": [
+   "Eski bir arkadaşa sonunda yazıyorsun",
+   "Komşuna bir şey sormak istiyorsun",
+   "Doktora gitmeyi erteliyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Hey, long time no see!"
+   },
+   {
+    "speaker": "B",
+    "line": "I know! I've been meaning to call you for weeks."
+   }
+  ]
+ },
+ {
+  "id": "p-i-ended-up",
+  "text": "I ended up…",
+  "function": "sonunda (planlanmadan)",
+  "register": "casual",
+  "cefr": "B1",
+  "variations": [
+   "We ended up -ing…",
+   "It ended up being…",
+   "I ended up with…"
+  ],
+  "turkishMistake": {
+   "wrong": "At the end I stayed at home.",
+   "right": "I ended up staying at home.",
+   "why": "\"ended up\"tan sonra fiil -ing alır; \"at the end\" yer bildirir."
+  },
+  "situations": [
+   "Hafta sonunu anlatıyorsun",
+   "Alışverişte planladığından fazlasını aldığını anlatıyorsun",
+   "Yanlış otobüse binip nereye vardığını anlatıyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "How was the party?"
+   },
+   {
+    "speaker": "B",
+    "line": "I ended up staying until two."
+   }
+  ]
+ },
+ {
+  "id": "p-it-turns-out-that",
+  "text": "It turns out (that)…",
+  "function": "meğerse",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "It turned out that…",
+   "As it turns out,…",
+   "Turns out…"
+  ],
+  "turkishMistake": {
+   "wrong": "I learned that it was closed before.",
+   "right": "It turns out it was closed.",
+   "why": "Sonradan öğrenilen şey \"it turns out\" ile söylenir."
+  },
+  "situations": [
+   "Kayıp sandığın cüzdanı bulduğunu anlatıyorsun",
+   "Rezervasyonun yanlış güne yapıldığını öğreniyorsun",
+   "İş arkadaşının aslında Türk olduğunu öğreniyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Did you find your keys?"
+   },
+   {
+    "speaker": "B",
+    "line": "Yeah, it turns out they were in my jacket the whole time."
+   }
+  ]
+ },
+ {
+  "id": "p-im-thinking-of",
+  "text": "I'm thinking of…",
+  "function": "düşünüyorum, planlıyorum",
+  "register": "casual",
+  "cefr": "A2",
+  "variations": [
+   "I'm thinking about -ing…",
+   "I'm planning to…",
+   "I might…"
+  ],
+  "turkishMistake": {
+   "wrong": "I think to change my job.",
+   "right": "I'm thinking of changing my job.",
+   "why": "\"think of/about\" + -ing kullanılır."
+  },
+  "situations": [
+   "Arkadaşına iş değiştirmeyi düşündüğünü söylüyorsun",
+   "Tatil planını anlatıyorsun",
+   "Spor salonuna yazılmayı düşünüyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Any plans for the summer?"
+   },
+   {
+    "speaker": "B",
+    "line": "I'm thinking of going to Portugal."
+   }
+  ]
+ },
+ {
+  "id": "p-are-you-up-for",
+  "text": "Are you up for…?",
+  "function": "var mısın?",
+  "register": "casual",
+  "cefr": "B2",
+  "variations": [
+   "Are you up for it?",
+   "Do you fancy…",
+   "Are you in?"
+  ],
+  "turkishMistake": {
+   "wrong": "Are you available for coffee?",
+   "right": "Are you up for a coffee?",
+   "why": "Arkadaşlar arasında \"available\" fazla resmidir."
+  },
+  "situations": [
+   "Arkadaşını akşam yemeğine çağırıyorsun",
+   "İş çıkışı bir şeyler içmeyi öneriyorsun",
+   "Hafta sonu yürüyüş teklif ediyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Are you up for a walk after work?"
+   },
+   {
+    "speaker": "B",
+    "line": "Sure, why not?"
+   }
+  ]
+ },
+ {
+  "id": "p-how-about",
+  "text": "How about…?",
+  "function": "öneri",
+  "register": "casual",
+  "cefr": "A2",
+  "variations": [
+   "What about…",
+   "How about we…",
+   "How does … sound?"
+  ],
+  "turkishMistake": {
+   "wrong": "How about to go to the cinema?",
+   "right": "How about going to the cinema?",
+   "why": "\"How about\"tan sonra fiil -ing alır."
+  },
+  "situations": [
+   "Buluşma saati öneriyorsun",
+   "Yemek yeri öneriyorsun",
+   "Toplantı için gün öneriyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "When should we meet?"
+   },
+   {
+    "speaker": "B",
+    "line": "How about Thursday at six?"
+   }
+  ]
+ },
+ {
+  "id": "p-why-dont-we",
+  "text": "Why don't we…?",
+  "function": "öneri",
+  "register": "casual",
+  "cefr": "A2",
+  "variations": [
+   "Why don't you…",
+   "Shall we…",
+   "Let's…"
+  ],
+  "turkishMistake": {
+   "wrong": "Why we don't go?",
+   "right": "Why don't we go?",
+   "why": "Soru sırası: Why + don't + we."
+  },
+  "situations": [
+   "Arkadaşına taksi yerine yürümeyi öneriyorsun",
+   "Ekibe ara vermeyi öneriyorsun",
+   "Sıkılan arkadaşına film öneriyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "I'm so bored."
+   },
+   {
+    "speaker": "B",
+    "line": "Why don't we go to the cinema?"
+   }
+  ]
+ },
+ {
+  "id": "p-do-you-feel-like",
+  "text": "Do you feel like…?",
+  "function": "canın ister mi",
+  "register": "casual",
+  "cefr": "B1",
+  "variations": [
+   "I don't feel like -ing…",
+   "Do you feel like going out?",
+   "I feel like…"
+  ],
+  "turkishMistake": {
+   "wrong": "Do you want to go out? (her zaman)",
+   "right": "Do you feel like going out?",
+   "why": "\"feel like\" o anki isteği sorar ve daha doğaldır."
+  },
+  "situations": [
+   "Arkadaşına akşam ne yapmak istediğini soruyorsun",
+   "Yorgun olduğun için dışarı çıkmak istemediğini söylüyorsun",
+   "Canının çektiği yemeği söylüyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Do you feel like going out tonight?"
+   },
+   {
+    "speaker": "B",
+    "line": "Honestly, I don't feel like doing anything."
+   }
+  ]
+ },
+ {
+  "id": "p-id-rather-than",
+  "text": "I'd rather… than…",
+  "function": "tercih",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "I'd rather not…",
+   "I'd rather you didn't…",
+   "Would you rather…?"
+  ],
+  "turkishMistake": {
+   "wrong": "I prefer stay home than go out.",
+   "right": "I'd rather stay home than go out.",
+   "why": "\"I'd rather\"dan sonra yalın fiil gelir."
+  },
+  "situations": [
+   "Taksi ile metro arasında seçim yapıyorsun",
+   "Ev arkadaşına odanda sigara içilmemesini istiyorsun",
+   "Arkadaşına iki film arasında seçim soruyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Shall we take a taxi?"
+   },
+   {
+    "speaker": "B",
+    "line": "I'd rather walk than sit in traffic."
+   }
+  ]
+ },
+ {
+  "id": "p-if-i-were-you-id",
+  "text": "If I were you, I'd…",
+  "function": "tavsiye",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "If I were in your shoes…",
+   "I'd probably…",
+   "If it were me, I'd…"
+  ],
+  "turkishMistake": {
+   "wrong": "If I am you, I will…",
+   "right": "If I were you, I'd…",
+   "why": "Hayali durumda \"were\" ve \"would\" kullanılır."
+  },
+  "situations": [
+   "Arkadaşın iş teklifi alıp kararsız",
+   "Kardeşin pahalı bir kurs düşünüyor",
+   "İş arkadaşın patronuyla sorun yaşıyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Should I take the job?"
+   },
+   {
+    "speaker": "B",
+    "line": "If I were you, I'd ask for more money first."
+   }
+  ]
+ },
+ {
+  "id": "p-you-might-want-to",
+  "text": "You might want to…",
+  "function": "yumuşak tavsiye",
+  "register": "neutral",
+  "cefr": "B2",
+  "variations": [
+   "You may want to…",
+   "It might be a good idea to…",
+   "You might consider -ing…"
+  ],
+  "turkishMistake": {
+   "wrong": "You must check it.",
+   "right": "You might want to check it.",
+   "why": "\"must\" emir gibi duyulur; tavsiye için yumuşatılır."
+  },
+  "situations": [
+   "Turiste şemsiye almasını öneriyorsun",
+   "Yeni iş arkadaşına bir uyarı yapıyorsun",
+   "Müşteriye rezervasyon yaptırmasını öneriyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "I'm going to the market tomorrow."
+   },
+   {
+    "speaker": "B",
+    "line": "You might want to go early. It gets really busy."
+   }
+  ]
+ },
+ {
+  "id": "p-i-could-be-wrong-but",
+  "text": "I could be wrong, but…",
+  "function": "çekinerek fikir",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "Correct me if I'm wrong, but…",
+   "I might be wrong, but…",
+   "I'm not a hundred percent sure, but…"
+  ],
+  "turkishMistake": {
+   "wrong": "Maybe I am wrong but…",
+   "right": "I could be wrong, but…",
+   "why": "Kalıp halinde daha doğal ve kibar duyulur."
+  },
+  "situations": [
+   "Toplantıda rakamların yanlış olduğunu düşünüyorsun",
+   "Arkadaşına yanlış yolda olduklarını söylüyorsun",
+   "Garsona hesapta hata olduğunu söylüyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "The meeting's at three, right?"
+   },
+   {
+    "speaker": "B",
+    "line": "I could be wrong, but I think it was moved to four."
+   }
+  ]
+ },
+ {
+  "id": "p-it-looks-like",
+  "text": "It looks like…",
+  "function": "görünüşe göre",
+  "register": "neutral",
+  "cefr": "A2",
+  "variations": [
+   "It seems like…",
+   "Looks like…",
+   "It sounds like…"
+  ],
+  "turkishMistake": {
+   "wrong": "It looks like that it will rain.",
+   "right": "It looks like it's going to rain.",
+   "why": "\"like\"tan sonra \"that\" gelmez."
+  },
+  "situations": [
+   "Havanın yağmurlu olacağını söylüyorsun",
+   "Uçuşun gecikeceğini tahmin ediyorsun",
+   "Arkadaşın üzgün görünüyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Should we sit outside?"
+   },
+   {
+    "speaker": "B",
+    "line": "It looks like it's going to rain. Let's stay in."
+   }
+  ]
+ },
+ {
+  "id": "p-i-cant-help",
+  "text": "I can't help…",
+  "function": "elimde değil",
+  "register": "neutral",
+  "cefr": "B2",
+  "variations": [
+   "I can't help thinking…",
+   "I couldn't help it.",
+   "I can't help feeling…"
+  ],
+  "turkishMistake": {
+   "wrong": "I can't help to laugh.",
+   "right": "I can't help laughing.",
+   "why": "\"can't help\"ten sonra -ing gelir."
+  },
+  "situations": [
+   "Toplantıda gülmeden duramadığını anlatıyorsun",
+   "Bir şeyden şüphelendiğini söylüyorsun",
+   "Tatlıya dayanamadığını söylüyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Why do you keep checking your phone?"
+   },
+   {
+    "speaker": "B",
+    "line": "Sorry, I can't help worrying about the results."
+   }
+  ]
+ },
+ {
+  "id": "p-im-used-to",
+  "text": "I'm used to…",
+  "function": "alışkın olmak",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "I'm getting used to…",
+   "I'm not used to…",
+   "I used to… (eskiden)"
+  ],
+  "turkishMistake": {
+   "wrong": "I am used to wake up early.",
+   "right": "I'm used to waking up early.",
+   "why": "\"be used to\"dan sonra -ing gelir."
+  },
+  "situations": [
+   "Yeni şehirde trafiğe alışmaya çalışıyorsun",
+   "Soğuk havaya alışık olmadığını söylüyorsun",
+   "Erken kalkmaya alışkın olduğunu söylüyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "How's the new job?"
+   },
+   {
+    "speaker": "B",
+    "line": "Good, but I'm still getting used to the early mornings."
+   }
+  ]
+ },
+ {
+  "id": "p-its-been-ages-since",
+  "text": "It's been ages since…",
+  "function": "çok zaman oldu",
+  "register": "casual",
+  "cefr": "B1",
+  "variations": [
+   "It's been ages!",
+   "I haven't … in ages.",
+   "It's been a while since…"
+  ],
+  "turkishMistake": {
+   "wrong": "Since long time I didn't see you.",
+   "right": "It's been ages since I last saw you.",
+   "why": "Süre \"It's been … since\" ile kurulur."
+  },
+  "situations": [
+   "Eski arkadaşınla karşılaşıyorsun",
+   "Uzun zamandır sinemaya gitmediğini söylüyorsun",
+   "Memleketine gitmeyeli çok olduğunu anlatıyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Mehmet! It's been ages!"
+   },
+   {
+    "speaker": "B",
+    "line": "I know! I haven't seen you since university."
+   }
+  ]
+ },
+ {
+  "id": "p-do-you-mind-if-i",
+  "text": "Do you mind if I…?",
+  "function": "izin isteme",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "Do you mind if we…",
+   "Mind if I…",
+   "Would you mind if I…"
+  ],
+  "turkishMistake": {
+   "wrong": "Do you mind if I open the window? — Yes. (izin veriyorum anlamında)",
+   "right": "No, not at all.",
+   "why": "Cevap \"No\" = sorun yok, demektir."
+  },
+  "situations": [
+   "Trende pencere açmak istiyorsun",
+   "Arkadaşının evinde telefonla görüşmek istiyorsun",
+   "Toplantıda bir soru sormak istiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Do you mind if I open the window?"
+   },
+   {
+    "speaker": "B",
+    "line": "No, go ahead."
+   }
+  ]
+ },
+ {
+  "id": "p-sorry-to-bother-you-but",
+  "text": "Sorry to bother you, but…",
+  "function": "rahatsız ederek söze girme",
+  "register": "neutral",
+  "cefr": "A2",
+  "variations": [
+   "Sorry to interrupt, but…",
+   "Excuse me, I hate to bother you, but…",
+   "Sorry, do you have a second?"
+  ],
+  "turkishMistake": {
+   "wrong": "Excuse me for disturbing.",
+   "right": "Sorry to bother you, but…",
+   "why": "Günlük dilde \"bother\" çok daha doğaldır."
+  },
+  "situations": [
+   "Komşunun kapısını gece çalıyorsun",
+   "Meşgul bir çalışana soru soruyorsun",
+   "Toplantıya acil bir haberle giriyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Sorry to bother you, but I think your car lights are on."
+   },
+   {
+    "speaker": "B",
+    "line": "Oh no, thank you so much!"
+   }
+  ]
+ },
+ {
+  "id": "p-sorry-i-didnt-catch-that",
+  "text": "Sorry, I didn't catch that.",
+  "function": "anlamadım, tekrar",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "Sorry, could you say that again?",
+   "Sorry, what was that?",
+   "I didn't quite catch your name."
+  ],
+  "turkishMistake": {
+   "wrong": "Sorry, I didn't understand you. (her durumda)",
+   "right": "Sorry, I didn't catch that.",
+   "why": "\"Catch\" duyamadığını söyler, karşı tarafı suçlamaz."
+  },
+  "situations": [
+   "Telefonda adı duyamadın",
+   "Gürültülü kafede garsonun sorusunu kaçırdın",
+   "Hızlı konuşan birinin numarasını kaçırdın"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "It's Siobhan, S-I-O…"
+   },
+   {
+    "speaker": "B",
+    "line": "Sorry, I didn't catch that. Could you spell it again?"
+   }
+  ]
+ },
+ {
+  "id": "p-what-do-you-mean-by",
+  "text": "What do you mean by…?",
+  "function": "açıklama isteme",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "What do you mean?",
+   "What exactly do you mean by…",
+   "When you say…, do you mean…?"
+  ],
+  "turkishMistake": {
+   "wrong": "What is the meaning of 'soon'?",
+   "right": "What do you mean by 'soon'?",
+   "why": "Kişinin kastını sormak için \"What do you mean by\" kullanılır."
+  },
+  "situations": [
+   "Kargo şirketi \"yakında\" diyor",
+   "Yöneticin \"biraz değişiklik\" istiyor",
+   "Satıcı \"küçük bir ücret\" diyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Your package will arrive soon."
+   },
+   {
+    "speaker": "B",
+    "line": "What do you mean by soon? Today or next week?"
+   }
+  ]
+ },
+ {
+  "id": "p-so-what-youre-saying-is",
+  "text": "So what you're saying is…",
+  "function": "özetleyerek doğrulama",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "So you're saying that…",
+   "If I understand correctly,…",
+   "So basically,…"
+  ],
+  "turkishMistake": {
+   "wrong": "You mean that I must pay again?",
+   "right": "So what you're saying is I have to pay again?",
+   "why": "Özetle doğrulama, itiraz etmeden netleştirir."
+  },
+  "situations": [
+   "Müşteri hizmetleriyle sorunu netleştiriyorsun",
+   "Ev sahibinin kuralını özetliyorsun",
+   "Toplantıda kararları özetliyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "The refund takes up to thirty days."
+   },
+   {
+    "speaker": "B",
+    "line": "So what you're saying is I won't get my money this month?"
+   }
+  ]
+ },
+ {
+  "id": "p-let-me-get-this-straight",
+  "text": "Let me get this straight…",
+  "function": "netleştirme (hafif itiraz)",
+  "register": "casual",
+  "cefr": "B2",
+  "variations": [
+   "Just so I understand…",
+   "Wait, so…",
+   "Hold on, are you saying…"
+  ],
+  "turkishMistake": {
+   "wrong": "Let me understand correct.",
+   "right": "Let me get this straight.",
+   "why": "Sabit kalıptır; şaşkınlık ve itiraz tonu taşır."
+  },
+  "situations": [
+   "Ev sahibi depozitoyu geri vermeyeceğini söylüyor",
+   "Şirket iki kez ücret aldığını kabul etmiyor",
+   "Arkadaşın planı son anda değiştiriyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "You'll need to pay for the repairs."
+   },
+   {
+    "speaker": "B",
+    "line": "Let me get this straight. The heater broke on its own, and I have to pay?"
+   }
+  ]
+ },
+ {
+  "id": "p-just-to-be-clear",
+  "text": "Just to be clear,…",
+  "function": "netlik sağlama",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "Just to clarify,…",
+   "To be clear,…",
+   "Just so we're on the same page,…"
+  ],
+  "turkishMistake": {
+   "wrong": "For be clear…",
+   "right": "Just to be clear,…",
+   "why": "\"to be clear\" kalıbı \"just\" ile yumuşatılır."
+  },
+  "situations": [
+   "Toplantının sonunda görev dağılımını netleştiriyorsun",
+   "Rezervasyon detaylarını teyit ediyorsun",
+   "Taksiciyle fiyatı netleştiriyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "So I'll send the slides tomorrow."
+   },
+   {
+    "speaker": "B",
+    "line": "Just to be clear, tomorrow morning or tomorrow evening?"
+   }
+  ]
+ },
+ {
+  "id": "p-im-afraid",
+  "text": "I'm afraid…",
+  "function": "kibar kötü haber",
+  "register": "neutral",
+  "cefr": "A2",
+  "variations": [
+   "I'm afraid not.",
+   "I'm afraid so.",
+   "I'm afraid I can't…"
+  ],
+  "turkishMistake": {
+   "wrong": "Unfortunately I cannot. (her yerde)",
+   "right": "I'm afraid I can't.",
+   "why": "\"I'm afraid\" kötü haberi yumuşatır, korku anlamı yoktur."
+  },
+  "situations": [
+   "Davete gelemeyeceğini söylüyorsun",
+   "Müşteriye ürünün bittiğini söylüyorsun",
+   "Arkadaşına yardım edemeyeceğini söylüyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Can you come on Saturday?"
+   },
+   {
+    "speaker": "B",
+    "line": "I'm afraid I can't. I'm working all weekend."
+   }
+  ]
+ },
+ {
+  "id": "p-the-problem-is",
+  "text": "The problem is,…",
+  "function": "sorunu belirtme",
+  "register": "neutral",
+  "cefr": "A2",
+  "variations": [
+   "The only problem is…",
+   "The trouble is…",
+   "The issue is…"
+  ],
+  "turkishMistake": {
+   "wrong": "There is a problem that…",
+   "right": "The problem is, …",
+   "why": "Kısa ve doğal kalıp budur."
+  },
+  "situations": [
+   "Ev sahibine kaloriferi anlatıyorsun",
+   "Arkadaşına plandaki sorunu söylüyorsun",
+   "Yöneticine neden geciktiğini açıklıyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Why don't you just take the train?"
+   },
+   {
+    "speaker": "B",
+    "line": "The problem is, there's no train after ten."
+   }
+  ]
+ },
+ {
+  "id": "p-id-love-to-but",
+  "text": "I'd love to, but…",
+  "function": "kibarca reddetme",
+  "register": "neutral",
+  "cefr": "A2",
+  "variations": [
+   "I'd love to, but I can't.",
+   "That sounds great, but…",
+   "I wish I could, but…"
+  ],
+  "turkishMistake": {
+   "wrong": "No, I can't come.",
+   "right": "I'd love to, but I can't make it.",
+   "why": "Doğrudan \"No\" kaba duyulur; önce olumlu başla."
+  },
+  "situations": [
+   "Doğum günü davetini reddediyorsun",
+   "İş arkadaşının öğle yemeği teklifini reddediyorsun",
+   "Hafta sonu gezisine katılamıyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Do you want to come to my birthday party?"
+   },
+   {
+    "speaker": "B",
+    "line": "I'd love to, but I'm away that weekend."
+   }
+  ]
+ },
+ {
+  "id": "p-i-think-ill-pass",
+  "text": "I think I'll pass.",
+  "function": "teklifi geçme",
+  "register": "casual",
+  "cefr": "B2",
+  "variations": [
+   "I'll pass, thanks.",
+   "I think I'll give it a miss.",
+   "Maybe next time."
+  ],
+  "turkishMistake": {
+   "wrong": "I don't want, thank you.",
+   "right": "I think I'll pass, thanks.",
+   "why": "\"I don't want\" eksik ve sert duyulur."
+  },
+  "situations": [
+   "Arkadaşının acı sos teklifini geçiyorsun",
+   "Gece kulübü planını geçiyorsun",
+   "Satıcının ek garantisini istemiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Want to try the extra hot sauce?"
+   },
+   {
+    "speaker": "B",
+    "line": "I think I'll pass, thanks."
+   }
+  ]
+ },
+ {
+  "id": "p-thanks-but-im-good",
+  "text": "Thanks, but I'm good.",
+  "function": "teklifi geri çevirme",
+  "register": "casual",
+  "cefr": "B1",
+  "variations": [
+   "I'm good, thanks.",
+   "No thanks, I'm fine.",
+   "I'm okay for now."
+  ],
+  "turkishMistake": {
+   "wrong": "No, thank you, I am not need.",
+   "right": "Thanks, but I'm good.",
+   "why": "\"I'm good\" burada \"gerek yok\" anlamındadır."
+  },
+  "situations": [
+   "Garson tekrar içecek öneriyor",
+   "Satıcı yardım teklif ediyor",
+   "Ev sahibi daha fazla yemek koymak istiyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Can I get you anything else?"
+   },
+   {
+    "speaker": "B",
+    "line": "Thanks, but I'm good."
+   }
+  ]
+ },
+ {
+  "id": "p-let-me-think-about-it",
+  "text": "Let me think about it.",
+  "function": "karar erteleme",
+  "register": "neutral",
+  "cefr": "A2",
+  "variations": [
+   "I'll think about it.",
+   "Let me sleep on it.",
+   "I need some time to think."
+  ],
+  "turkishMistake": {
+   "wrong": "I will think and say you.",
+   "right": "Let me think about it and get back to you.",
+   "why": "\"say you\" değil \"tell you\" ya da \"get back to you\"."
+  },
+  "situations": [
+   "Satıcı hemen karar vermeni istiyor",
+   "Arkadaşın ortak tatil öneriyor",
+   "İşveren teklif yapıyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "So, do you want to sign today?"
+   },
+   {
+    "speaker": "B",
+    "line": "Let me think about it. I'll call you tomorrow."
+   }
+  ]
+ },
+ {
+  "id": "p-can-i-get-back-to-you-on-that",
+  "text": "Can I get back to you on that?",
+  "function": "sonra dönüş yapma",
+  "register": "neutral",
+  "cefr": "B2",
+  "variations": [
+   "I'll get back to you.",
+   "Let me get back to you on that.",
+   "Can I let you know later?"
+  ],
+  "turkishMistake": {
+   "wrong": "I will return you later.",
+   "right": "I'll get back to you later.",
+   "why": "\"return you\" İngilizcede bu anlamı taşımaz."
+  },
+  "situations": [
+   "Toplantıda cevabını bilmediğin bir soru geliyor",
+   "Müşteri fiyat soruyor",
+   "Arkadaşın hafta sonu planını soruyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "What's the final budget?"
+   },
+   {
+    "speaker": "B",
+    "line": "I'm not sure yet. Can I get back to you on that?"
+   }
+  ]
+ },
+ {
+  "id": "p-is-it-just-me-or",
+  "text": "Is it just me, or…?",
+  "function": "başkası da fark etti mi",
+  "register": "casual",
+  "cefr": "B2",
+  "variations": [
+   "Is it just me, or is it…",
+   "Am I the only one who…",
+   "Does anyone else think…"
+  ],
+  "turkishMistake": {
+   "wrong": "Only I feel it is hot?",
+   "right": "Is it just me, or is it really hot in here?",
+   "why": "Kalıbın ikinci kısmı da soru sırasıyla kurulur."
+  },
+  "situations": [
+   "Ofiste herkesin aşırı sıcaktan rahatsız olup olmadığını soruyorsun",
+   "Toplantının çok uzun sürdüğünü ima ediyorsun",
+   "Filmin tuhaf olduğunu düşünüyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Is it just me, or is this meeting going on forever?"
+   },
+   {
+    "speaker": "B",
+    "line": "It's not just you."
+   }
+  ]
+ },
+ {
+  "id": "p-dont-get-me-wrong",
+  "text": "Don't get me wrong,…",
+  "function": "yanlış anlama",
+  "register": "neutral",
+  "cefr": "B2",
+  "variations": [
+   "Don't get me wrong, I love…",
+   "I don't mean it in a bad way, but…",
+   "Don't take this the wrong way, but…"
+  ],
+  "turkishMistake": {
+   "wrong": "Don't understand me wrong.",
+   "right": "Don't get me wrong.",
+   "why": "Sabit kalıp \"get\" ile kurulur."
+  },
+  "situations": [
+   "Arkadaşının yemeğini eleştiriyorsun",
+   "İşini sevdiğini ama maaşın düşük olduğunu söylüyorsun",
+   "Bir şehri sevdiğini ama pahalı bulduğunu söylüyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "So you don't like your job?"
+   },
+   {
+    "speaker": "B",
+    "line": "Don't get me wrong, I love my team. It's just the hours."
+   }
+  ]
+ },
+ {
+  "id": "p-what-i-mean-is",
+  "text": "What I mean is…",
+  "function": "açıklama, düzeltme",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "What I'm trying to say is…",
+   "I mean,…",
+   "Let me put it another way."
+  ],
+  "turkishMistake": {
+   "wrong": "My meaning is…",
+   "right": "What I mean is…",
+   "why": "Türkçe \"demek istediğim\" bu kalıpla karşılanır."
+  },
+  "situations": [
+   "Söylediğin yanlış anlaşıldı",
+   "Karmaşık bir fikri basitleştiriyorsun",
+   "Kaba duyulan bir cümleni düzeltiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "So you think my plan is bad?"
+   },
+   {
+    "speaker": "B",
+    "line": "No, what I mean is, it needs more time."
+   }
+  ]
+ },
+ {
+  "id": "p-not-to-mention",
+  "text": "Not to mention…",
+  "function": "üstelik, bir de",
+  "register": "neutral",
+  "cefr": "B2",
+  "variations": [
+   "Not to mention the fact that…",
+   "And on top of that…",
+   "Plus,…"
+  ],
+  "turkishMistake": {
+   "wrong": "And also additionally…",
+   "right": "Not to mention…",
+   "why": "Ek bir argümanı vurgulamanın doğal yolu."
+  },
+  "situations": [
+   "Bir restoranı neden sevmediğini anlatıyorsun",
+   "Ev seçerken artıları sayıyorsun",
+   "Bir işin neden zor olduğunu anlatıyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Why don't you like that hotel?"
+   },
+   {
+    "speaker": "B",
+    "line": "It's far from everything, not to mention really noisy."
+   }
+  ]
+ },
+ {
+  "id": "p-as-far-as-i-know",
+  "text": "As far as I know,…",
+  "function": "bildiğim kadarıyla",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "As far as I can tell,…",
+   "From what I know,…",
+   "Not as far as I know."
+  ],
+  "turkishMistake": {
+   "wrong": "According to my knowledge…",
+   "right": "As far as I know,…",
+   "why": "Günlük konuşmada çok daha doğal."
+  },
+  "situations": [
+   "Mağazanın pazar günü açık olup olmadığı soruluyor",
+   "Toplantının iptal edilip edilmediği soruluyor",
+   "Bir yolun kapalı olup olmadığı soruluyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Is the shop open on Sundays?"
+   },
+   {
+    "speaker": "B",
+    "line": "As far as I know, yes, until six."
+   }
+  ]
+ },
+ {
+  "id": "p-i-have-no-idea",
+  "text": "I have no idea…",
+  "function": "hiçbir fikrim yok",
+  "register": "casual",
+  "cefr": "A2",
+  "variations": [
+   "I have no idea where…",
+   "No idea.",
+   "I haven't got a clue."
+  ],
+  "turkishMistake": {
+   "wrong": "I have no idea where is he.",
+   "right": "I have no idea where he is.",
+   "why": "İç içe soruda fiil sona gider."
+  },
+  "situations": [
+   "Kayıp eşyanın nerede olduğunu bilmiyorsun",
+   "Toplantının ne zaman biteceğini bilmiyorsun",
+   "Birinin neden kızgın olduğunu bilmiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Where's Tom?"
+   },
+   {
+    "speaker": "B",
+    "line": "I have no idea. He was here a minute ago."
+   }
+  ]
+ },
+ {
+  "id": "p-i-wish-i-could",
+  "text": "I wish I could…",
+  "function": "keşke",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "I wish I had…",
+   "I wish I knew…",
+   "If only…"
+  ],
+  "turkishMistake": {
+   "wrong": "I wish I can come.",
+   "right": "I wish I could come.",
+   "why": "\"wish\"ten sonra bir zaman geriye gidilir."
+  },
+  "situations": [
+   "Davete gidemediğin için üzgünsün",
+   "Daha fazla boş zamanın olmasını istiyorsun",
+   "Bir soruya cevap veremiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Are you coming to the concert?"
+   },
+   {
+    "speaker": "B",
+    "line": "I wish I could, but I have to work."
+   }
+  ]
+ },
+ {
+  "id": "p-i-should-have",
+  "text": "I should have…",
+  "function": "pişmanlık",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "You should have told me.",
+   "I shouldn't have…",
+   "I could have…"
+  ],
+  "turkishMistake": {
+   "wrong": "I must have called you. (pişmanlık için)",
+   "right": "I should have called you.",
+   "why": "\"must have\" tahmin bildirir, pişmanlık değil."
+  },
+  "situations": [
+   "Rezervasyon yapmadığın için kapıda kaldınız",
+   "Arkadaşını aramadığın için özür diliyorsun",
+   "Şemsiye almadığına pişmansın"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "The restaurant's fully booked."
+   },
+   {
+    "speaker": "B",
+    "line": "Ugh, I should have booked a table."
+   }
+  ]
+ },
+ {
+  "id": "p-its-up-to-you",
+  "text": "It's up to you.",
+  "function": "sen bilirsin, karar senin",
+  "register": "casual",
+  "cefr": "B1",
+  "variations": [
+   "Whatever works for you.",
+   "I don't mind either way.",
+   "Your call."
+  ],
+  "turkishMistake": {
+   "wrong": "As you want.",
+   "right": "It's up to you.",
+   "why": "\"As you want\" İngilizcede soğuk duyulabilir."
+  },
+  "situations": [
+   "Arkadaşın restoran seçemiyor",
+   "İş arkadaşın toplantı saatini soruyor",
+   "Partnerin film seçiyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Pizza or sushi?"
+   },
+   {
+    "speaker": "B",
+    "line": "It's up to you. I'm happy with either."
+   }
+  ]
+ },
+ {
+  "id": "p-how-did-go",
+  "text": "How did … go?",
+  "function": "nasıl geçti",
+  "register": "casual",
+  "cefr": "A2",
+  "variations": [
+   "How was your…?",
+   "How did it go?",
+   "How's … going?"
+  ],
+  "turkishMistake": {
+   "wrong": "How passed your interview?",
+   "right": "How did your interview go?",
+   "why": "\"pass\" bu anlamda kullanılmaz, \"go\" kullanılır."
+  },
+  "situations": [
+   "Arkadaşına iş görüşmesini soruyorsun",
+   "İş arkadaşına sunumunu soruyorsun",
+   "Komşuna tatilini soruyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "How did your interview go?"
+   },
+   {
+    "speaker": "B",
+    "line": "Pretty well, I think. They're calling me next week."
+   }
+  ]
+ },
+ {
+  "id": "p-what-have-you-been-up-to",
+  "text": "What have you been up to?",
+  "function": "neler yapıyorsun",
+  "register": "casual",
+  "cefr": "B1",
+  "variations": [
+   "What are you up to?",
+   "What's new?",
+   "How have you been?"
+  ],
+  "turkishMistake": {
+   "wrong": "What are you doing these days? (her zaman)",
+   "right": "What have you been up to?",
+   "why": "Uzun süre sonra görüşünce en doğal soru budur."
+  },
+  "situations": [
+   "Eski bir arkadaşla karşılaşıyorsun",
+   "Uzun bir tatilden dönen iş arkadaşını görüyorsun",
+   "Kuzenini arıyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Hey! What have you been up to?"
+   },
+   {
+    "speaker": "B",
+    "line": "Not much. Just working a lot. You?"
+   }
+  ]
+ },
+ {
+  "id": "p-i-cant-believe",
+  "text": "I can't believe…",
+  "function": "inanamıyorum",
+  "register": "casual",
+  "cefr": "B1",
+  "variations": [
+   "I can't believe it!",
+   "I can't believe you…",
+   "Can you believe…?"
+  ],
+  "turkishMistake": {
+   "wrong": "I don't believe that he came!",
+   "right": "I can't believe he came!",
+   "why": "Şaşkınlık \"can't believe\" ile söylenir."
+  },
+  "situations": [
+   "Arkadaşın iş teklifini reddetmiş",
+   "Kira iki katına çıkmış",
+   "Uçuş biletin bir anda çok ucuzlamış"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "They raised the rent by fifty percent."
+   },
+   {
+    "speaker": "B",
+    "line": "I can't believe it! Can they even do that?"
+   }
+  ]
+ },
+ {
+  "id": "p-speaking-of",
+  "text": "Speaking of…,",
+  "function": "konu açılmışken",
+  "register": "casual",
+  "cefr": "B1",
+  "variations": [
+   "Speaking of which,…",
+   "That reminds me,…",
+   "On that note,…"
+  ],
+  "turkishMistake": {
+   "wrong": "About this topic…",
+   "right": "Speaking of…,",
+   "why": "Konudan konuya doğal geçiş böyle yapılır."
+  },
+  "situations": [
+   "Yemek konuşurken bir restoran önerisi yapıyorsun",
+   "Tatil konuşurken kendi planını açıyorsun",
+   "İş konuşurken bir haberi paylaşıyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "I'm so hungry."
+   },
+   {
+    "speaker": "B",
+    "line": "Speaking of food, have you tried the new Thai place?"
+   }
+  ]
+ },
+ {
+  "id": "p-that-sounds",
+  "text": "That sounds…",
+  "function": "tepki verme",
+  "register": "casual",
+  "cefr": "A2",
+  "variations": [
+   "That sounds great!",
+   "Sounds like a plan.",
+   "That sounds awful."
+  ],
+  "turkishMistake": {
+   "wrong": "It is sounding good.",
+   "right": "That sounds good.",
+   "why": "\"sound\" bu anlamda -ing almaz."
+  },
+  "situations": [
+   "Arkadaşın plan öneriyor",
+   "İş arkadaşın kötü bir haberini anlatıyor",
+   "Birisi tatilini anlatıyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Let's meet at seven and grab dinner."
+   },
+   {
+    "speaker": "B",
+    "line": "Sounds like a plan."
+   }
+  ]
+ },
+ {
+  "id": "p-im-calling-about",
+  "text": "I'm calling about…",
+  "function": "arama nedenini söyleme",
+  "register": "neutral",
+  "cefr": "A2",
+  "variations": [
+   "I'm calling to…",
+   "I'm calling regarding…",
+   "The reason I'm calling is…"
+  ],
+  "turkishMistake": {
+   "wrong": "I am searching you for…",
+   "right": "I'm calling about…",
+   "why": "\"aramak\" telefonda \"call\" olur; \"search\" değil."
+  },
+  "situations": [
+   "Kargo firmasını paketin için arıyorsun",
+   "Doktor muayenehanesini randevu için arıyorsun",
+   "Ev sahibini kalorifer için arıyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Good morning, Bright Dental."
+   },
+   {
+    "speaker": "B",
+    "line": "Hi, I'm calling about my appointment on Friday."
+   }
+  ]
+ },
+ {
+  "id": "p-would-it-be-possible-to",
+  "text": "Would it be possible to…?",
+  "function": "resmi rica",
+  "register": "formal",
+  "cefr": "B1",
+  "variations": [
+   "Would it be possible for me to…",
+   "Is it possible to…",
+   "Would that be possible?"
+  ],
+  "turkishMistake": {
+   "wrong": "It is possible to change?",
+   "right": "Would it be possible to change it?",
+   "why": "Soru sırası ve nesne (it) eksik bırakılmaz."
+  },
+  "situations": [
+   "Otelden erken giriş istiyorsun",
+   "Bankadan ek süre istiyorsun",
+   "Okulda sınav tarihini değiştirmek istiyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Would it be possible to check in early?"
+   },
+   {
+    "speaker": "B",
+    "line": "Let me check if your room is ready."
+   }
+  ]
+ },
+ {
+  "id": "p-im-on-my-way",
+  "text": "I'm on my way.",
+  "function": "yoldayım",
+  "register": "casual",
+  "cefr": "A2",
+  "variations": [
+   "I'm on my way to…",
+   "I'll be there in ten minutes.",
+   "I'm running a bit late."
+  ],
+  "turkishMistake": {
+   "wrong": "I am in the road.",
+   "right": "I'm on my way.",
+   "why": "\"Yoldayım\" İngilizcede \"on my way\" ile söylenir."
+  },
+  "situations": [
+   "Arkadaşın nerede olduğunu soruyor",
+   "Taksiye bindiğini haber veriyorsun",
+   "Toplantıya geç kalacağını bildiriyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Where are you?"
+   },
+   {
+    "speaker": "B",
+    "line": "I'm on my way. I'll be there in ten minutes."
+   }
+  ]
+ },
+ {
+  "id": "p-whats-the-best-way-to",
+  "text": "What's the best way to…?",
+  "function": "yol/yöntem sorma",
+  "register": "neutral",
+  "cefr": "A2",
+  "variations": [
+   "What's the easiest way to…",
+   "How do I get to…",
+   "What would you suggest for…"
+  ],
+  "turkishMistake": {
+   "wrong": "Which is the best road for going…?",
+   "right": "What's the best way to get to…?",
+   "why": "\"way\" hem yol hem yöntem anlamında kullanılır."
+  },
+  "situations": [
+   "Havalimanına nasıl gideceğini soruyorsun",
+   "Bir dili öğrenmenin en iyi yolunu soruyorsun",
+   "Bankaya para göndermenin yolunu soruyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "What's the best way to get to the airport?"
+   },
+   {
+    "speaker": "B",
+    "line": "Take the express train. It's only twenty minutes."
+   }
+  ]
+ },
+ {
+  "id": "p-dont-worry-about-it",
+  "text": "Don't worry about it.",
+  "function": "önemli değil",
+  "register": "casual",
+  "cefr": "A2",
+  "variations": [
+   "No worries.",
+   "It's fine, really.",
+   "Don't mention it."
+  ],
+  "turkishMistake": {
+   "wrong": "No problem, no problem. (her durumda)",
+   "right": "Don't worry about it.",
+   "why": "Özür dileyene en doğal cevap budur."
+  },
+  "situations": [
+   "Arkadaşın kahveni döktü",
+   "Komşun gürültü için özür diliyor",
+   "İş arkadaşın geç kaldığı için özür diliyor"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "I'm so sorry I'm late."
+   },
+   {
+    "speaker": "B",
+    "line": "Don't worry about it. We just got here too."
+   }
+  ]
+ },
+ {
+  "id": "p-im-not-really-into",
+  "text": "I'm not really into…",
+  "function": "pek sevmem",
+  "register": "casual",
+  "cefr": "B1",
+  "variations": [
+   "I'm not a big fan of…",
+   "… isn't really my thing.",
+   "I'm more into…"
+  ],
+  "turkishMistake": {
+   "wrong": "I don't like so much football.",
+   "right": "I'm not really into football.",
+   "why": "Kalıp hem doğal hem kibar bir \"sevmem\"dir."
+  },
+  "situations": [
+   "Arkadaşın maç izlemeyi öneriyor",
+   "Yeni tanıştığın biri hobilerini soruyor",
+   "Bir yemek önerisini geri çeviriyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Want to watch the game tonight?"
+   },
+   {
+    "speaker": "B",
+    "line": "I'm not really into football, to be honest."
+   }
+  ]
+ },
+ {
+  "id": "p-the-good-thing-is",
+  "text": "The good thing is…",
+  "function": "iyi tarafı",
+  "register": "neutral",
+  "cefr": "B1",
+  "variations": [
+   "The good news is…",
+   "At least…",
+   "On the bright side,…"
+  ],
+  "turkishMistake": {
+   "wrong": "Good side is…",
+   "right": "The good thing is…",
+   "why": "\"The\" ile başlar ve sabit kalıptır."
+  },
+  "situations": [
+   "Uçuş gecikti ama yemek kuponu verdiler",
+   "Telefonun bozuldu ama garantisi var",
+   "Yağmur yağıyor ama müze açık"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Our flight's delayed three hours."
+   },
+   {
+    "speaker": "B",
+    "line": "The good thing is, they gave us food vouchers."
+   }
+  ]
+ },
+ {
+  "id": "p-would-you-like-me-to",
+  "text": "Would you like me to…?",
+  "function": "yardım teklif etme",
+  "register": "neutral",
+  "cefr": "A2",
+  "variations": [
+   "Do you want me to…",
+   "Shall I…",
+   "Let me…"
+  ],
+  "turkishMistake": {
+   "wrong": "Do you want that I help you?",
+   "right": "Would you like me to help you?",
+   "why": "\"want/like + kişi + to + fiil\" yapısı kullanılır."
+  },
+  "situations": [
+   "Yaşlı birine çantasını taşımayı teklif ediyorsun",
+   "İş arkadaşına raporu kontrol etmeyi öneriyorsun",
+   "Misafirine taksi çağırmayı teklif ediyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "These boxes are so heavy."
+   },
+   {
+    "speaker": "B",
+    "line": "Would you like me to carry one?"
+   }
+  ]
+ },
+ {
+  "id": "p-its-no-big-deal",
+  "text": "It's no big deal.",
+  "function": "önemli bir şey değil",
+  "register": "casual",
+  "cefr": "B1",
+  "variations": [
+   "It's not a big deal.",
+   "What's the big deal?",
+   "It's not the end of the world."
+  ],
+  "turkishMistake": {
+   "wrong": "It is not important thing.",
+   "right": "It's no big deal.",
+   "why": "Gündelik konuşmada bu kalıp kullanılır."
+  },
+  "situations": [
+   "Küçük bir hatanın önemsiz olduğunu söylüyorsun",
+   "Arkadaşının teşekkürüne cevap veriyorsun",
+   "Birinin aşırı tepkisini yatıştırıyorsun"
+  ],
+  "miniScene": [
+   {
+    "speaker": "A",
+    "line": "Thanks so much for helping me move!"
+   },
+   {
+    "speaker": "B",
+    "line": "It's no big deal. Happy to help."
+   }
+  ]
+ }
+]

@@ -1,0 +1,408 @@
+# Günün kalıpları
+# @ kalıp | işlev | ortam (casual/neutral/formal) | CEFR
+# var:   3 varyasyon, " / " ile
+# err:   yaygın Türk konuşucu hatası -> doğrusu :: neden
+# sit:   kalıbı doğal olarak gerektiren 3 durum (Türkçe), " / " ile
+# scene: mini sahne, "A: ... / B: ..."
+
+@ I was wondering if… | kibar rica | neutral | B1
+var: I was wondering whether… / I was just wondering if… / I wonder if you could…
+err: I wonder can you help me? -> I was wondering if you could help me. :: "if"ten sonra soru sırası değil, düz cümle sırası gelir.
+sit: Resepsiyondan geç çıkış istiyorsun / Komşundan arabasını ödünç istiyorsun / Yöneticinden bir gün izin istiyorsun
+scene: A: I was wondering if I could leave my bags here for a few hours. / B: Of course. I'll give you a tag.
+
+@ Would you mind…? | kibar rica | neutral | B1
+var: Would you mind if I… / Do you mind -ing… / Would you mind not -ing…
+err: Would you mind to close the window? -> Would you mind closing the window? :: "mind"dan sonra fiil -ing alır.
+sit: Yan koltuktakinden yer değiştirmesini istiyorsun / Kafedeki adamdan çantasını çekmesini istiyorsun / İş arkadaşından raporu kontrol etmesini istiyorsun
+scene: A: Would you mind swapping seats with me? I'd like to sit next to my friend. / B: Not at all. Go ahead.
+
+@ Do you happen to know…? | kibar soru | neutral | B1
+var: You don't happen to know… do you? / Do you happen to have… / Would you happen to know…
+err: Do you happen to know where is the station? -> Do you happen to know where the station is? :: İç içe soruda fiil sona gider.
+sit: Sokakta birine eczane soruyorsun / Garsona Wi-Fi şifresini soruyorsun / İş arkadaşına toplantı saatini soruyorsun
+scene: A: Do you happen to know if there's a pharmacy around here? / B: Yeah, there's one just around the corner.
+
+@ Is it okay if I…? | izin isteme | casual | A2
+var: Is it all right if I… / Is it okay to… / Would it be okay if I…
+err: Is it okay if I will sit here? -> Is it okay if I sit here? :: "if"ten sonra gelecek zaman için bile geniş zaman kullanılır.
+sit: Kafede boş sandalyeye oturmak istiyorsun / Arkadaşının evinde duş almak istiyorsun / Toplantıdan erken çıkmak istiyorsun
+scene: A: Is it okay if I charge my phone here? / B: Sure, the socket's under the table.
+
+@ Could you possibly…? | çok kibar rica | formal | B1
+var: Could I possibly… / Is there any chance you could… / Could you maybe…
+err: Can you possibly to send it today? -> Could you possibly send it today? :: "could"dan sonra "to" gelmez; "could" daha kibardır.
+sit: Kargo firmasından paketi bugün getirmesini istiyorsun / Doktordan daha erken randevu istiyorsun / Hocandan teslim tarihini uzatmasını istiyorsun
+scene: A: Could you possibly move my appointment to the morning? / B: Let me check. Yes, there's a slot at nine.
+
+@ I'd like to… | kibar istek | neutral | A2
+var: I'd like a… / I'd like you to… / I'd love to…
+err: I want a coffee. -> I'd like a coffee, please. :: "I want" İngilizcede hizmet ortamında kaba duyulabilir.
+sit: Kafede sipariş veriyorsun / Bankada hesap açıyorsun / Otelde oda değiştirmek istiyorsun
+scene: A: Hi, I'd like to return this jacket. / B: Sure. Do you have the receipt?
+
+@ Is there any way…? | istisna isteme | neutral | B1
+var: Is there any way I could… / Is there any chance… / Is there anything you can do…
+err: Is there any way for change it? -> Is there any way I could change it? :: "way"den sonra tam cümle ya da "to" + fiil gelir.
+sit: Kaçırdığın uçuşu ücretsiz değiştirmek istiyorsun / Dolu restoranda masa istiyorsun / Kapanmış başvuruya hâlâ başvurmak istiyorsun
+scene: A: Is there any way I could get on the next flight without paying a fee? / B: Let me see what I can do.
+
+@ It's not that…, it's just that… | yumuşak itiraz | neutral | B2
+var: It's not that I don't…, it's just… / It's not like…, it's just… / I don't mean…, it's just that…
+err: It's not that I don't like it, only it is expensive. -> It's not that I don't like it, it's just that it's expensive. :: İkinci kısım "it's just that" ile bağlanır.
+sit: Arkadaşının yemek önerisini geri çeviriyorsun / Patronun ek işini kabul etmiyorsun / Sevgilinin film seçimine itiraz ediyorsun
+scene: A: You don't like my idea? / B: It's not that I don't like it, it's just that we don't have the budget.
+
+@ I see what you mean, but… | kibar karşı çıkma | neutral | B1
+var: I see your point, but… / I know what you mean, but… / I get that, but…
+err: I understand you but I am not agree. -> I see what you mean, but I don't agree. :: "agree" fiildir; "am agree" denmez.
+sit: Toplantıda bir fikre katılmıyorsun / Ev arkadaşınla temizlik planını tartışıyorsun / Satıcının önerisini istemiyorsun
+scene: A: We should launch next week. / B: I see what you mean, but I think we need more testing first.
+
+@ I'm not sure that's… | yumuşak katılmama | neutral | B1
+var: I'm not sure that's a good idea. / I'm not so sure about that. / I'm not convinced that…
+err: I think it is not good idea. -> I'm not sure that's a good idea. :: İngilizcede olumsuz fikir "I don't think…" ya da yumuşak "I'm not sure…" ile kurulur.
+sit: Arkadaşın gece yarısı yola çıkmayı öneriyor / İş arkadaşın müşteriye indirim vermek istiyor / Kardeşin pahalı bir telefon almak istiyor
+scene: A: Let's just drive there tonight. / B: I'm not sure that's a good idea. It's a six-hour drive.
+
+@ That's a good point, but… | kısmen katılma | neutral | B1
+var: Fair point, but… / You've got a point, but… / True, but…
+err: You are right but also… -> That's a good point, but… :: "You are right but" kabadır ve çelişkili duyulur.
+sit: Fiyat-kalite tartışması yapıyorsun / Tatil yeri seçiyorsunuz / Toplantıda zaman çizelgesini konuşuyorsunuz
+scene: A: The hotel downtown is closer to everything. / B: That's a good point, but it's twice the price.
+
+@ To be fair,… | adil olmak gerekirse | neutral | B2
+var: To be fair to him,… / In fairness,… / Fair enough, but…
+err: For being fair… -> To be fair,… :: Sabit kalıptır, "to" ile başlar.
+sit: Arkadaşın birini eleştiriyor ama sen onu savunuyorsun / Kötü bir restoranı kısmen savunuyorsun / Geç kalan iş arkadaşını savunuyorsun
+scene: A: He's always late for meetings. / B: To be fair, he lives really far away.
+
+@ No wonder… | tabii ya, belli | casual | B2
+var: No wonder you're tired. / That's why… / That explains it.
+err: It is no surprise you are tired. -> No wonder you're tired. :: Kısa ve doğal olan "No wonder" kalıbıdır.
+sit: Arkadaşın üç saat uyuduğunu söylüyor / Restoranın neden boş olduğunu anlıyorsun / Telefonun neden şarj olmadığını buluyorsun
+scene: A: I only slept three hours last night. / B: No wonder you look exhausted.
+
+@ I was going to…, but… | değişen plan | neutral | B1
+var: I was planning to…, but… / I was about to… / I meant to…, but…
+err: I will call you but I forgot. -> I was going to call you, but I forgot. :: Geçmişteki niyet "was going to" ile söylenir.
+sit: Arkadaşını neden aramadığını açıklıyorsun / Spor salonuna neden gitmediğini anlatıyorsun / Raporu neden göndermediğini açıklıyorsun
+scene: A: Did you send the report? / B: I was going to, but the system crashed.
+
+@ I've been meaning to… | uzun süredir niyet | casual | B2
+var: I've been meaning to ask you… / I've been wanting to… / I keep meaning to…
+err: Since long time I want to call you. -> I've been meaning to call you. :: Süregelen niyet present perfect continuous ile kurulur.
+sit: Eski bir arkadaşa sonunda yazıyorsun / Komşuna bir şey sormak istiyorsun / Doktora gitmeyi erteliyorsun
+scene: A: Hey, long time no see! / B: I know! I've been meaning to call you for weeks.
+
+@ I ended up… | sonunda (planlanmadan) | casual | B1
+var: We ended up -ing… / It ended up being… / I ended up with…
+err: At the end I stayed at home. -> I ended up staying at home. :: "ended up"tan sonra fiil -ing alır; "at the end" yer bildirir.
+sit: Hafta sonunu anlatıyorsun / Alışverişte planladığından fazlasını aldığını anlatıyorsun / Yanlış otobüse binip nereye vardığını anlatıyorsun
+scene: A: How was the party? / B: I ended up staying until two.
+
+@ It turns out (that)… | meğerse | neutral | B1
+var: It turned out that… / As it turns out,… / Turns out…
+err: I learned that it was closed before. -> It turns out it was closed. :: Sonradan öğrenilen şey "it turns out" ile söylenir.
+sit: Kayıp sandığın cüzdanı bulduğunu anlatıyorsun / Rezervasyonun yanlış güne yapıldığını öğreniyorsun / İş arkadaşının aslında Türk olduğunu öğreniyorsun
+scene: A: Did you find your keys? / B: Yeah, it turns out they were in my jacket the whole time.
+
+@ I'm thinking of… | düşünüyorum, planlıyorum | casual | A2
+var: I'm thinking about -ing… / I'm planning to… / I might…
+err: I think to change my job. -> I'm thinking of changing my job. :: "think of/about" + -ing kullanılır.
+sit: Arkadaşına iş değiştirmeyi düşündüğünü söylüyorsun / Tatil planını anlatıyorsun / Spor salonuna yazılmayı düşünüyorsun
+scene: A: Any plans for the summer? / B: I'm thinking of going to Portugal.
+
+@ Are you up for…? | var mısın? | casual | B2
+var: Are you up for it? / Do you fancy… / Are you in?
+err: Are you available for coffee? -> Are you up for a coffee? :: Arkadaşlar arasında "available" fazla resmidir.
+sit: Arkadaşını akşam yemeğine çağırıyorsun / İş çıkışı bir şeyler içmeyi öneriyorsun / Hafta sonu yürüyüş teklif ediyorsun
+scene: A: Are you up for a walk after work? / B: Sure, why not?
+
+@ How about…? | öneri | casual | A2
+var: What about… / How about we… / How does … sound?
+err: How about to go to the cinema? -> How about going to the cinema? :: "How about"tan sonra fiil -ing alır.
+sit: Buluşma saati öneriyorsun / Yemek yeri öneriyorsun / Toplantı için gün öneriyorsun
+scene: A: When should we meet? / B: How about Thursday at six?
+
+@ Why don't we…? | öneri | casual | A2
+var: Why don't you… / Shall we… / Let's…
+err: Why we don't go? -> Why don't we go? :: Soru sırası: Why + don't + we.
+sit: Arkadaşına taksi yerine yürümeyi öneriyorsun / Ekibe ara vermeyi öneriyorsun / Sıkılan arkadaşına film öneriyorsun
+scene: A: I'm so bored. / B: Why don't we go to the cinema?
+
+@ Do you feel like…? | canın ister mi | casual | B1
+var: I don't feel like -ing… / Do you feel like going out? / I feel like…
+err: Do you want to go out? (her zaman) -> Do you feel like going out? :: "feel like" o anki isteği sorar ve daha doğaldır.
+sit: Arkadaşına akşam ne yapmak istediğini soruyorsun / Yorgun olduğun için dışarı çıkmak istemediğini söylüyorsun / Canının çektiği yemeği söylüyorsun
+scene: A: Do you feel like going out tonight? / B: Honestly, I don't feel like doing anything.
+
+@ I'd rather… than… | tercih | neutral | B1
+var: I'd rather not… / I'd rather you didn't… / Would you rather…?
+err: I prefer stay home than go out. -> I'd rather stay home than go out. :: "I'd rather"dan sonra yalın fiil gelir.
+sit: Taksi ile metro arasında seçim yapıyorsun / Ev arkadaşına odanda sigara içilmemesini istiyorsun / Arkadaşına iki film arasında seçim soruyorsun
+scene: A: Shall we take a taxi? / B: I'd rather walk than sit in traffic.
+
+@ If I were you, I'd… | tavsiye | neutral | B1
+var: If I were in your shoes… / I'd probably… / If it were me, I'd…
+err: If I am you, I will… -> If I were you, I'd… :: Hayali durumda "were" ve "would" kullanılır.
+sit: Arkadaşın iş teklifi alıp kararsız / Kardeşin pahalı bir kurs düşünüyor / İş arkadaşın patronuyla sorun yaşıyor
+scene: A: Should I take the job? / B: If I were you, I'd ask for more money first.
+
+@ You might want to… | yumuşak tavsiye | neutral | B2
+var: You may want to… / It might be a good idea to… / You might consider -ing…
+err: You must check it. -> You might want to check it. :: "must" emir gibi duyulur; tavsiye için yumuşatılır.
+sit: Turiste şemsiye almasını öneriyorsun / Yeni iş arkadaşına bir uyarı yapıyorsun / Müşteriye rezervasyon yaptırmasını öneriyorsun
+scene: A: I'm going to the market tomorrow. / B: You might want to go early. It gets really busy.
+
+@ I could be wrong, but… | çekinerek fikir | neutral | B1
+var: Correct me if I'm wrong, but… / I might be wrong, but… / I'm not a hundred percent sure, but…
+err: Maybe I am wrong but… -> I could be wrong, but… :: Kalıp halinde daha doğal ve kibar duyulur.
+sit: Toplantıda rakamların yanlış olduğunu düşünüyorsun / Arkadaşına yanlış yolda olduklarını söylüyorsun / Garsona hesapta hata olduğunu söylüyorsun
+scene: A: The meeting's at three, right? / B: I could be wrong, but I think it was moved to four.
+
+@ It looks like… | görünüşe göre | neutral | A2
+var: It seems like… / Looks like… / It sounds like…
+err: It looks like that it will rain. -> It looks like it's going to rain. :: "like"tan sonra "that" gelmez.
+sit: Havanın yağmurlu olacağını söylüyorsun / Uçuşun gecikeceğini tahmin ediyorsun / Arkadaşın üzgün görünüyor
+scene: A: Should we sit outside? / B: It looks like it's going to rain. Let's stay in.
+
+@ I can't help… | elimde değil | neutral | B2
+var: I can't help thinking… / I couldn't help it. / I can't help feeling…
+err: I can't help to laugh. -> I can't help laughing. :: "can't help"ten sonra -ing gelir.
+sit: Toplantıda gülmeden duramadığını anlatıyorsun / Bir şeyden şüphelendiğini söylüyorsun / Tatlıya dayanamadığını söylüyorsun
+scene: A: Why do you keep checking your phone? / B: Sorry, I can't help worrying about the results.
+
+@ I'm used to… | alışkın olmak | neutral | B1
+var: I'm getting used to… / I'm not used to… / I used to… (eskiden)
+err: I am used to wake up early. -> I'm used to waking up early. :: "be used to"dan sonra -ing gelir.
+sit: Yeni şehirde trafiğe alışmaya çalışıyorsun / Soğuk havaya alışık olmadığını söylüyorsun / Erken kalkmaya alışkın olduğunu söylüyorsun
+scene: A: How's the new job? / B: Good, but I'm still getting used to the early mornings.
+
+@ It's been ages since… | çok zaman oldu | casual | B1
+var: It's been ages! / I haven't … in ages. / It's been a while since…
+err: Since long time I didn't see you. -> It's been ages since I last saw you. :: Süre "It's been … since" ile kurulur.
+sit: Eski arkadaşınla karşılaşıyorsun / Uzun zamandır sinemaya gitmediğini söylüyorsun / Memleketine gitmeyeli çok olduğunu anlatıyorsun
+scene: A: Mehmet! It's been ages! / B: I know! I haven't seen you since university.
+
+@ Do you mind if I…? | izin isteme | neutral | B1
+var: Do you mind if we… / Mind if I… / Would you mind if I…
+err: Do you mind if I open the window? — Yes. (izin veriyorum anlamında) -> No, not at all. :: Cevap "No" = sorun yok, demektir.
+sit: Trende pencere açmak istiyorsun / Arkadaşının evinde telefonla görüşmek istiyorsun / Toplantıda bir soru sormak istiyorsun
+scene: A: Do you mind if I open the window? / B: No, go ahead.
+
+@ Sorry to bother you, but… | rahatsız ederek söze girme | neutral | A2
+var: Sorry to interrupt, but… / Excuse me, I hate to bother you, but… / Sorry, do you have a second?
+err: Excuse me for disturbing. -> Sorry to bother you, but… :: Günlük dilde "bother" çok daha doğaldır.
+sit: Komşunun kapısını gece çalıyorsun / Meşgul bir çalışana soru soruyorsun / Toplantıya acil bir haberle giriyorsun
+scene: A: Sorry to bother you, but I think your car lights are on. / B: Oh no, thank you so much!
+
+@ Sorry, I didn't catch that. | anlamadım, tekrar | neutral | B1
+var: Sorry, could you say that again? / Sorry, what was that? / I didn't quite catch your name.
+err: Sorry, I didn't understand you. (her durumda) -> Sorry, I didn't catch that. :: "Catch" duyamadığını söyler, karşı tarafı suçlamaz.
+sit: Telefonda adı duyamadın / Gürültülü kafede garsonun sorusunu kaçırdın / Hızlı konuşan birinin numarasını kaçırdın
+scene: A: It's Siobhan, S-I-O… / B: Sorry, I didn't catch that. Could you spell it again?
+
+@ What do you mean by…? | açıklama isteme | neutral | B1
+var: What do you mean? / What exactly do you mean by… / When you say…, do you mean…?
+err: What is the meaning of 'soon'? -> What do you mean by 'soon'? :: Kişinin kastını sormak için "What do you mean by" kullanılır.
+sit: Kargo şirketi "yakında" diyor / Yöneticin "biraz değişiklik" istiyor / Satıcı "küçük bir ücret" diyor
+scene: A: Your package will arrive soon. / B: What do you mean by soon? Today or next week?
+
+@ So what you're saying is… | özetleyerek doğrulama | neutral | B1
+var: So you're saying that… / If I understand correctly,… / So basically,…
+err: You mean that I must pay again? -> So what you're saying is I have to pay again? :: Özetle doğrulama, itiraz etmeden netleştirir.
+sit: Müşteri hizmetleriyle sorunu netleştiriyorsun / Ev sahibinin kuralını özetliyorsun / Toplantıda kararları özetliyorsun
+scene: A: The refund takes up to thirty days. / B: So what you're saying is I won't get my money this month?
+
+@ Let me get this straight… | netleştirme (hafif itiraz) | casual | B2
+var: Just so I understand… / Wait, so… / Hold on, are you saying…
+err: Let me understand correct. -> Let me get this straight. :: Sabit kalıptır; şaşkınlık ve itiraz tonu taşır.
+sit: Ev sahibi depozitoyu geri vermeyeceğini söylüyor / Şirket iki kez ücret aldığını kabul etmiyor / Arkadaşın planı son anda değiştiriyor
+scene: A: You'll need to pay for the repairs. / B: Let me get this straight. The heater broke on its own, and I have to pay?
+
+@ Just to be clear,… | netlik sağlama | neutral | B1
+var: Just to clarify,… / To be clear,… / Just so we're on the same page,…
+err: For be clear… -> Just to be clear,… :: "to be clear" kalıbı "just" ile yumuşatılır.
+sit: Toplantının sonunda görev dağılımını netleştiriyorsun / Rezervasyon detaylarını teyit ediyorsun / Taksiciyle fiyatı netleştiriyorsun
+scene: A: So I'll send the slides tomorrow. / B: Just to be clear, tomorrow morning or tomorrow evening?
+
+@ I'm afraid… | kibar kötü haber | neutral | A2
+var: I'm afraid not. / I'm afraid so. / I'm afraid I can't…
+err: Unfortunately I cannot. (her yerde) -> I'm afraid I can't. :: "I'm afraid" kötü haberi yumuşatır, korku anlamı yoktur.
+sit: Davete gelemeyeceğini söylüyorsun / Müşteriye ürünün bittiğini söylüyorsun / Arkadaşına yardım edemeyeceğini söylüyorsun
+scene: A: Can you come on Saturday? / B: I'm afraid I can't. I'm working all weekend.
+
+@ The problem is,… | sorunu belirtme | neutral | A2
+var: The only problem is… / The trouble is… / The issue is…
+err: There is a problem that… -> The problem is, … :: Kısa ve doğal kalıp budur.
+sit: Ev sahibine kaloriferi anlatıyorsun / Arkadaşına plandaki sorunu söylüyorsun / Yöneticine neden geciktiğini açıklıyorsun
+scene: A: Why don't you just take the train? / B: The problem is, there's no train after ten.
+
+@ I'd love to, but… | kibarca reddetme | neutral | A2
+var: I'd love to, but I can't. / That sounds great, but… / I wish I could, but…
+err: No, I can't come. -> I'd love to, but I can't make it. :: Doğrudan "No" kaba duyulur; önce olumlu başla.
+sit: Doğum günü davetini reddediyorsun / İş arkadaşının öğle yemeği teklifini reddediyorsun / Hafta sonu gezisine katılamıyorsun
+scene: A: Do you want to come to my birthday party? / B: I'd love to, but I'm away that weekend.
+
+@ I think I'll pass. | teklifi geçme | casual | B2
+var: I'll pass, thanks. / I think I'll give it a miss. / Maybe next time.
+err: I don't want, thank you. -> I think I'll pass, thanks. :: "I don't want" eksik ve sert duyulur.
+sit: Arkadaşının acı sos teklifini geçiyorsun / Gece kulübü planını geçiyorsun / Satıcının ek garantisini istemiyorsun
+scene: A: Want to try the extra hot sauce? / B: I think I'll pass, thanks.
+
+@ Thanks, but I'm good. | teklifi geri çevirme | casual | B1
+var: I'm good, thanks. / No thanks, I'm fine. / I'm okay for now.
+err: No, thank you, I am not need. -> Thanks, but I'm good. :: "I'm good" burada "gerek yok" anlamındadır.
+sit: Garson tekrar içecek öneriyor / Satıcı yardım teklif ediyor / Ev sahibi daha fazla yemek koymak istiyor
+scene: A: Can I get you anything else? / B: Thanks, but I'm good.
+
+@ Let me think about it. | karar erteleme | neutral | A2
+var: I'll think about it. / Let me sleep on it. / I need some time to think.
+err: I will think and say you. -> Let me think about it and get back to you. :: "say you" değil "tell you" ya da "get back to you".
+sit: Satıcı hemen karar vermeni istiyor / Arkadaşın ortak tatil öneriyor / İşveren teklif yapıyor
+scene: A: So, do you want to sign today? / B: Let me think about it. I'll call you tomorrow.
+
+@ Can I get back to you on that? | sonra dönüş yapma | neutral | B2
+var: I'll get back to you. / Let me get back to you on that. / Can I let you know later?
+err: I will return you later. -> I'll get back to you later. :: "return you" İngilizcede bu anlamı taşımaz.
+sit: Toplantıda cevabını bilmediğin bir soru geliyor / Müşteri fiyat soruyor / Arkadaşın hafta sonu planını soruyor
+scene: A: What's the final budget? / B: I'm not sure yet. Can I get back to you on that?
+
+@ Is it just me, or…? | başkası da fark etti mi | casual | B2
+var: Is it just me, or is it… / Am I the only one who… / Does anyone else think…
+err: Only I feel it is hot? -> Is it just me, or is it really hot in here? :: Kalıbın ikinci kısmı da soru sırasıyla kurulur.
+sit: Ofiste herkesin aşırı sıcaktan rahatsız olup olmadığını soruyorsun / Toplantının çok uzun sürdüğünü ima ediyorsun / Filmin tuhaf olduğunu düşünüyorsun
+scene: A: Is it just me, or is this meeting going on forever? / B: It's not just you.
+
+@ Don't get me wrong,… | yanlış anlama | neutral | B2
+var: Don't get me wrong, I love… / I don't mean it in a bad way, but… / Don't take this the wrong way, but…
+err: Don't understand me wrong. -> Don't get me wrong. :: Sabit kalıp "get" ile kurulur.
+sit: Arkadaşının yemeğini eleştiriyorsun / İşini sevdiğini ama maaşın düşük olduğunu söylüyorsun / Bir şehri sevdiğini ama pahalı bulduğunu söylüyorsun
+scene: A: So you don't like your job? / B: Don't get me wrong, I love my team. It's just the hours.
+
+@ What I mean is… | açıklama, düzeltme | neutral | B1
+var: What I'm trying to say is… / I mean,… / Let me put it another way.
+err: My meaning is… -> What I mean is… :: Türkçe "demek istediğim" bu kalıpla karşılanır.
+sit: Söylediğin yanlış anlaşıldı / Karmaşık bir fikri basitleştiriyorsun / Kaba duyulan bir cümleni düzeltiyorsun
+scene: A: So you think my plan is bad? / B: No, what I mean is, it needs more time.
+
+@ Not to mention… | üstelik, bir de | neutral | B2
+var: Not to mention the fact that… / And on top of that… / Plus,…
+err: And also additionally… -> Not to mention… :: Ek bir argümanı vurgulamanın doğal yolu.
+sit: Bir restoranı neden sevmediğini anlatıyorsun / Ev seçerken artıları sayıyorsun / Bir işin neden zor olduğunu anlatıyorsun
+scene: A: Why don't you like that hotel? / B: It's far from everything, not to mention really noisy.
+
+@ As far as I know,… | bildiğim kadarıyla | neutral | B1
+var: As far as I can tell,… / From what I know,… / Not as far as I know.
+err: According to my knowledge… -> As far as I know,… :: Günlük konuşmada çok daha doğal.
+sit: Mağazanın pazar günü açık olup olmadığı soruluyor / Toplantının iptal edilip edilmediği soruluyor / Bir yolun kapalı olup olmadığı soruluyor
+scene: A: Is the shop open on Sundays? / B: As far as I know, yes, until six.
+
+@ I have no idea… | hiçbir fikrim yok | casual | A2
+var: I have no idea where… / No idea. / I haven't got a clue.
+err: I have no idea where is he. -> I have no idea where he is. :: İç içe soruda fiil sona gider.
+sit: Kayıp eşyanın nerede olduğunu bilmiyorsun / Toplantının ne zaman biteceğini bilmiyorsun / Birinin neden kızgın olduğunu bilmiyorsun
+scene: A: Where's Tom? / B: I have no idea. He was here a minute ago.
+
+@ I wish I could… | keşke | neutral | B1
+var: I wish I had… / I wish I knew… / If only…
+err: I wish I can come. -> I wish I could come. :: "wish"ten sonra bir zaman geriye gidilir.
+sit: Davete gidemediğin için üzgünsün / Daha fazla boş zamanın olmasını istiyorsun / Bir soruya cevap veremiyorsun
+scene: A: Are you coming to the concert? / B: I wish I could, but I have to work.
+
+@ I should have… | pişmanlık | neutral | B1
+var: You should have told me. / I shouldn't have… / I could have…
+err: I must have called you. (pişmanlık için) -> I should have called you. :: "must have" tahmin bildirir, pişmanlık değil.
+sit: Rezervasyon yapmadığın için kapıda kaldınız / Arkadaşını aramadığın için özür diliyorsun / Şemsiye almadığına pişmansın
+scene: A: The restaurant's fully booked. / B: Ugh, I should have booked a table.
+
+@ It's up to you. | sen bilirsin, karar senin | casual | B1
+var: Whatever works for you. / I don't mind either way. / Your call.
+err: As you want. -> It's up to you. :: "As you want" İngilizcede soğuk duyulabilir.
+sit: Arkadaşın restoran seçemiyor / İş arkadaşın toplantı saatini soruyor / Partnerin film seçiyor
+scene: A: Pizza or sushi? / B: It's up to you. I'm happy with either.
+
+@ How did … go? | nasıl geçti | casual | A2
+var: How was your…? / How did it go? / How's … going?
+err: How passed your interview? -> How did your interview go? :: "pass" bu anlamda kullanılmaz, "go" kullanılır.
+sit: Arkadaşına iş görüşmesini soruyorsun / İş arkadaşına sunumunu soruyorsun / Komşuna tatilini soruyorsun
+scene: A: How did your interview go? / B: Pretty well, I think. They're calling me next week.
+
+@ What have you been up to? | neler yapıyorsun | casual | B1
+var: What are you up to? / What's new? / How have you been?
+err: What are you doing these days? (her zaman) -> What have you been up to? :: Uzun süre sonra görüşünce en doğal soru budur.
+sit: Eski bir arkadaşla karşılaşıyorsun / Uzun bir tatilden dönen iş arkadaşını görüyorsun / Kuzenini arıyorsun
+scene: A: Hey! What have you been up to? / B: Not much. Just working a lot. You?
+
+@ I can't believe… | inanamıyorum | casual | B1
+var: I can't believe it! / I can't believe you… / Can you believe…?
+err: I don't believe that he came! -> I can't believe he came! :: Şaşkınlık "can't believe" ile söylenir.
+sit: Arkadaşın iş teklifini reddetmiş / Kira iki katına çıkmış / Uçuş biletin bir anda çok ucuzlamış
+scene: A: They raised the rent by fifty percent. / B: I can't believe it! Can they even do that?
+
+@ Speaking of…, | konu açılmışken | casual | B1
+var: Speaking of which,… / That reminds me,… / On that note,…
+err: About this topic… -> Speaking of…, :: Konudan konuya doğal geçiş böyle yapılır.
+sit: Yemek konuşurken bir restoran önerisi yapıyorsun / Tatil konuşurken kendi planını açıyorsun / İş konuşurken bir haberi paylaşıyorsun
+scene: A: I'm so hungry. / B: Speaking of food, have you tried the new Thai place?
+
+@ That sounds… | tepki verme | casual | A2
+var: That sounds great! / Sounds like a plan. / That sounds awful.
+err: It is sounding good. -> That sounds good. :: "sound" bu anlamda -ing almaz.
+sit: Arkadaşın plan öneriyor / İş arkadaşın kötü bir haberini anlatıyor / Birisi tatilini anlatıyor
+scene: A: Let's meet at seven and grab dinner. / B: Sounds like a plan.
+
+@ I'm calling about… | arama nedenini söyleme | neutral | A2
+var: I'm calling to… / I'm calling regarding… / The reason I'm calling is…
+err: I am searching you for… -> I'm calling about… :: "aramak" telefonda "call" olur; "search" değil.
+sit: Kargo firmasını paketin için arıyorsun / Doktor muayenehanesini randevu için arıyorsun / Ev sahibini kalorifer için arıyorsun
+scene: A: Good morning, Bright Dental. / B: Hi, I'm calling about my appointment on Friday.
+
+@ Would it be possible to…? | resmi rica | formal | B1
+var: Would it be possible for me to… / Is it possible to… / Would that be possible?
+err: It is possible to change? -> Would it be possible to change it? :: Soru sırası ve nesne (it) eksik bırakılmaz.
+sit: Otelden erken giriş istiyorsun / Bankadan ek süre istiyorsun / Okulda sınav tarihini değiştirmek istiyorsun
+scene: A: Would it be possible to check in early? / B: Let me check if your room is ready.
+
+@ I'm on my way. | yoldayım | casual | A2
+var: I'm on my way to… / I'll be there in ten minutes. / I'm running a bit late.
+err: I am in the road. -> I'm on my way. :: "Yoldayım" İngilizcede "on my way" ile söylenir.
+sit: Arkadaşın nerede olduğunu soruyor / Taksiye bindiğini haber veriyorsun / Toplantıya geç kalacağını bildiriyorsun
+scene: A: Where are you? / B: I'm on my way. I'll be there in ten minutes.
+
+@ What's the best way to…? | yol/yöntem sorma | neutral | A2
+var: What's the easiest way to… / How do I get to… / What would you suggest for…
+err: Which is the best road for going…? -> What's the best way to get to…? :: "way" hem yol hem yöntem anlamında kullanılır.
+sit: Havalimanına nasıl gideceğini soruyorsun / Bir dili öğrenmenin en iyi yolunu soruyorsun / Bankaya para göndermenin yolunu soruyorsun
+scene: A: What's the best way to get to the airport? / B: Take the express train. It's only twenty minutes.
+
+@ Don't worry about it. | önemli değil | casual | A2
+var: No worries. / It's fine, really. / Don't mention it.
+err: No problem, no problem. (her durumda) -> Don't worry about it. :: Özür dileyene en doğal cevap budur.
+sit: Arkadaşın kahveni döktü / Komşun gürültü için özür diliyor / İş arkadaşın geç kaldığı için özür diliyor
+scene: A: I'm so sorry I'm late. / B: Don't worry about it. We just got here too.
+
+@ I'm not really into… | pek sevmem | casual | B1
+var: I'm not a big fan of… / … isn't really my thing. / I'm more into…
+err: I don't like so much football. -> I'm not really into football. :: Kalıp hem doğal hem kibar bir "sevmem"dir.
+sit: Arkadaşın maç izlemeyi öneriyor / Yeni tanıştığın biri hobilerini soruyor / Bir yemek önerisini geri çeviriyorsun
+scene: A: Want to watch the game tonight? / B: I'm not really into football, to be honest.
+
+@ The good thing is… | iyi tarafı | neutral | B1
+var: The good news is… / At least… / On the bright side,…
+err: Good side is… -> The good thing is… :: "The" ile başlar ve sabit kalıptır.
+sit: Uçuş gecikti ama yemek kuponu verdiler / Telefonun bozuldu ama garantisi var / Yağmur yağıyor ama müze açık
+scene: A: Our flight's delayed three hours. / B: The good thing is, they gave us food vouchers.
+
+@ Would you like me to…? | yardım teklif etme | neutral | A2
+var: Do you want me to… / Shall I… / Let me…
+err: Do you want that I help you? -> Would you like me to help you? :: "want/like + kişi + to + fiil" yapısı kullanılır.
+sit: Yaşlı birine çantasını taşımayı teklif ediyorsun / İş arkadaşına raporu kontrol etmeyi öneriyorsun / Misafirine taksi çağırmayı teklif ediyorsun
+scene: A: These boxes are so heavy. / B: Would you like me to carry one?
+
+@ It's no big deal. | önemli bir şey değil | casual | B1
+var: It's not a big deal. / What's the big deal? / It's not the end of the world.
+err: It is not important thing. -> It's no big deal. :: Gündelik konuşmada bu kalıp kullanılır.
+sit: Küçük bir hatanın önemsiz olduğunu söylüyorsun / Arkadaşının teşekkürüne cevap veriyorsun / Birinin aşırı tepkisini yatıştırıyorsun
+scene: A: Thanks so much for helping me move! / B: It's no big deal. Happy to help.

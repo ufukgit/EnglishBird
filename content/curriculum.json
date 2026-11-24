@@ -1,0 +1,578 @@
+[
+ {
+  "day": 1,
+  "domains": [
+   "food"
+  ],
+  "items": [
+   "w-order",
+   "w-full",
+   "w-bill",
+   "w-split",
+   "w-to-go",
+   "w-tip",
+   "w-book-a-table",
+   "w-ill-have",
+   "w-dessert",
+   "w-help-yourself"
+  ],
+  "pattern": "p-is-it-okay-if-i"
+ },
+ {
+  "day": 2,
+  "domains": [
+   "shopping"
+  ],
+  "items": [
+   "w-bag",
+   "w-size",
+   "w-receipt",
+   "w-exchange",
+   "w-try-on",
+   "w-fitting-room",
+   "w-fit",
+   "w-on-sale",
+   "w-just-looking",
+   "w-cash-or-card"
+  ],
+  "pattern": "p-id-like-to"
+ },
+ {
+  "day": 3,
+  "domains": [
+   "transport"
+  ],
+  "items": [
+   "w-miss",
+   "w-turn-left",
+   "w-stop",
+   "w-fare",
+   "w-pick-up",
+   "w-delayed",
+   "w-get-off",
+   "w-directions",
+   "w-how-far",
+   "w-it-takes"
+  ],
+  "pattern": "p-im-thinking-of"
+ },
+ {
+  "day": 4,
+  "domains": [
+   "travel"
+  ],
+  "items": [
+   "w-quiet",
+   "w-check-in",
+   "w-check-out",
+   "w-boarding-pass",
+   "w-gate",
+   "w-window-seat",
+   "w-view",
+   "w-noisy",
+   "w-wi-fi-password",
+   "w-local"
+  ],
+  "pattern": "p-how-about"
+ },
+ {
+  "day": 5,
+  "domains": [
+   "health"
+  ],
+  "items": [
+   "w-fever",
+   "w-headache",
+   "w-sore-throat",
+   "w-dizzy",
+   "w-appointment",
+   "w-it-hurts",
+   "w-emergency",
+   "w-get-better",
+   "w-prescription",
+   "w-painkiller"
+  ],
+  "pattern": "p-why-dont-we"
+ },
+ {
+  "day": 6,
+  "domains": [
+   "home"
+  ],
+  "items": [
+   "w-broken",
+   "w-borrow",
+   "w-neighbor",
+   "w-rent",
+   "w-fix",
+   "w-take-out-the-trash",
+   "w-lend",
+   "w-do-the-dishes",
+   "w-heating",
+   "w-landlord"
+  ],
+  "pattern": "p-it-looks-like"
+ },
+ {
+  "day": 7,
+  "domains": [
+   "services"
+  ],
+  "items": [
+   "w-sign",
+   "w-form",
+   "w-account",
+   "w-fee",
+   "w-complaint",
+   "w-id",
+   "w-wait-in-line",
+   "w-opening-hours",
+   "w-transfer",
+   "w-charged-twice"
+  ],
+  "pattern": "p-sorry-to-bother-you-but"
+ },
+ {
+  "day": 8,
+  "domains": [
+   "work"
+  ],
+  "items": [
+   "w-interview",
+   "w-skills",
+   "w-remote",
+   "w-day-off",
+   "w-handle",
+   "w-experience",
+   "w-deadline",
+   "w-catch-up",
+   "w-agenda",
+   "w-raise"
+  ],
+  "pattern": "p-im-afraid"
+ },
+ {
+  "day": 9,
+  "domains": [
+   "social"
+  ],
+  "items": [
+   "w-plans",
+   "w-hometown",
+   "w-come-over",
+   "w-by-the-way",
+   "w-what-do-you-do",
+   "w-invite",
+   "w-host",
+   "w-anyway",
+   "w-hang-out",
+   "w-keep-in-touch"
+  ],
+  "pattern": "p-the-problem-is"
+ },
+ {
+  "day": 10,
+  "domains": [
+   "phone"
+  ],
+  "items": [
+   "w-spell",
+   "w-call",
+   "w-call-back",
+   "w-leave-a-message",
+   "w-text",
+   "w-hold-on",
+   "w-wrong-number",
+   "w-whos-calling",
+   "w-app",
+   "w-speaker"
+  ],
+  "pattern": "p-id-love-to-but"
+ },
+ {
+  "day": 11,
+  "domains": [
+   "conflict"
+  ],
+  "items": [
+   "w-excuse",
+   "w-complain",
+   "w-apologize",
+   "w-my-fault",
+   "w-im-afraid",
+   "w-unfair",
+   "w-blame",
+   "w-upset",
+   "w-disappointed",
+   "w-misunderstanding"
+  ],
+  "pattern": "p-let-me-think-about-it"
+ },
+ {
+  "day": 12,
+  "domains": [
+   "opinion"
+  ],
+  "items": [
+   "w-agree",
+   "w-disagree",
+   "w-it-depends",
+   "w-actually",
+   "w-exactly",
+   "w-issue",
+   "w-consider",
+   "w-im-not-sure-about-that",
+   "w-point-of-view",
+   "w-convince"
+  ],
+  "pattern": "p-i-have-no-idea"
+ },
+ {
+  "day": 13,
+  "domains": [
+   "food"
+  ],
+  "items": [
+   "w-recommend",
+   "w-allergic",
+   "w-spicy",
+   "w-refill",
+   "w-starving",
+   "w-leftovers",
+   "w-option",
+   "w-were-out-of",
+   "w-its-on-me",
+   "w-grab-a-bite"
+  ],
+  "pattern": "p-how-did-go"
+ },
+ {
+  "day": 14,
+  "domains": [
+   "shopping"
+  ],
+  "items": [
+   "w-bargain",
+   "w-deal",
+   "w-cheaper",
+   "w-refund",
+   "w-discount",
+   "w-out-of-stock",
+   "w-afford",
+   "w-worth-it",
+   "w-come-with",
+   "w-checkout"
+  ],
+  "pattern": "p-that-sounds"
+ },
+ {
+  "day": 15,
+  "domains": [
+   "transport"
+  ],
+  "items": [
+   "w-rent-a-car",
+   "w-on-the-way",
+   "w-stuck-in-traffic",
+   "w-drop-off",
+   "w-change-trains",
+   "w-platform",
+   "w-give-someone-a-lift",
+   "w-rush-hour",
+   "w-blocks-away",
+   "w-parking"
+  ],
+  "pattern": "p-im-calling-about"
+ },
+ {
+  "day": 16,
+  "domains": [
+   "travel"
+  ],
+  "items": [
+   "w-reservation",
+   "w-available",
+   "w-luggage",
+   "w-carry-on",
+   "w-sightseeing",
+   "w-aisle-seat",
+   "w-lost-and-found",
+   "w-passport-control",
+   "w-layover",
+   "w-jet-lag"
+  ],
+  "pattern": "p-im-on-my-way"
+ },
+ {
+  "day": 17,
+  "domains": [
+   "health"
+  ],
+  "items": [
+   "w-symptoms",
+   "w-cough",
+   "w-swollen",
+   "w-insurance",
+   "w-take-it-easy",
+   "w-check-up",
+   "w-runny-nose",
+   "w-throw-up",
+   "w-pharmacy",
+   "w-injury"
+  ],
+  "pattern": "p-whats-the-best-way-to"
+ },
+ {
+  "day": 18,
+  "domains": [
+   "home"
+  ],
+  "items": [
+   "w-run-out-of",
+   "w-move-in",
+   "w-move-out",
+   "w-deposit",
+   "w-drop-by",
+   "w-mess",
+   "w-tidy-up",
+   "w-spare-key",
+   "w-leak",
+   "w-plumber"
+  ],
+  "pattern": "p-dont-worry-about-it"
+ },
+ {
+  "day": 19,
+  "domains": [
+   "services"
+  ],
+  "items": [
+   "w-package",
+   "w-deliver",
+   "w-tracking-number",
+   "w-customer-service",
+   "w-speak-to-a-manager",
+   "w-fill-out",
+   "w-switch-to",
+   "w-out-of-order",
+   "w-cash-machine",
+   "w-withdraw"
+  ],
+  "pattern": "p-would-you-like-me-to"
+ },
+ {
+  "day": 20,
+  "domains": [
+   "work"
+  ],
+  "items": [
+   "w-overtime",
+   "w-update",
+   "w-assign",
+   "w-deal-with",
+   "w-figure-out",
+   "w-point-out",
+   "w-in-charge-of",
+   "w-follow-up",
+   "w-on-the-same-page",
+   "w-reschedule"
+  ],
+  "pattern": "p-i-was-wondering-if"
+ },
+ {
+  "day": 21,
+  "domains": [
+   "social"
+  ],
+  "items": [
+   "w-make-it",
+   "w-show-up",
+   "w-run-into",
+   "w-get-along",
+   "w-awkward",
+   "w-into",
+   "w-no-way",
+   "w-get-to-know",
+   "w-catch-you-later",
+   "w-cheers"
+  ],
+  "pattern": "p-would-you-mind"
+ },
+ {
+  "day": 22,
+  "domains": [
+   "phone"
+  ],
+  "items": [
+   "w-hang-up",
+   "w-bad-connection",
+   "w-on-mute",
+   "w-my-phone-died",
+   "w-charger",
+   "w-share-my-screen",
+   "w-frozen",
+   "w-log-in",
+   "w-password",
+   "w-notification"
+  ],
+  "pattern": "p-do-you-happen-to-know"
+ },
+ {
+  "day": 23,
+  "domains": [
+   "conflict"
+  ],
+  "items": [
+   "w-sort-out",
+   "w-to-be-honest",
+   "w-frustrated",
+   "w-annoyed",
+   "w-insist",
+   "w-thats-not-the-point",
+   "w-let-it-go",
+   "w-calm",
+   "w-its-not-a-big-deal",
+   "w-mix-up"
+  ],
+  "pattern": "p-could-you-possibly"
+ },
+ {
+  "day": 24,
+  "domains": [
+   "opinion"
+  ],
+  "items": [
+   "w-i-suppose",
+   "w-make-sense",
+   "w-on-the-other-hand",
+   "w-compromise",
+   "w-persuade",
+   "w-assume",
+   "w-id-rather",
+   "w-obviously",
+   "w-approach",
+   "w-honestly"
+  ],
+  "pattern": "p-is-there-any-way"
+ },
+ {
+  "day": 25,
+  "domains": [
+   "food",
+   "shopping"
+  ],
+  "items": [
+   "w-server",
+   "w-craving",
+   "w-portion",
+   "w-bland",
+   "w-overcooked",
+   "w-in-stock",
+   "w-warranty",
+   "w-installments",
+   "w-rip-off",
+   "w-browse"
+  ],
+  "pattern": "p-i-see-what-you-mean-but"
+ },
+ {
+  "day": 26,
+  "domains": [
+   "transport",
+   "travel"
+  ],
+  "items": [
+   "w-fill-up",
+   "w-flat-tire",
+   "w-commute",
+   "w-shortcut",
+   "w-route",
+   "w-overbooked",
+   "w-cancellation-fee",
+   "w-declare",
+   "w-upgrade",
+   "w-itinerary"
+  ],
+  "pattern": "p-im-not-sure-thats"
+ },
+ {
+  "day": 27,
+  "domains": [
+   "health",
+   "home"
+  ],
+  "items": [
+   "w-allergy",
+   "w-under-the-weather",
+   "w-sprain",
+   "w-rash",
+   "w-side-effects",
+   "w-keep-it-down",
+   "w-utilities",
+   "w-lease",
+   "w-locked-myself-out",
+   "w-laundry"
+  ],
+  "pattern": "p-thats-a-good-point-but"
+ },
+ {
+  "day": 28,
+  "domains": [
+   "services",
+   "work"
+  ],
+  "items": [
+   "w-on-hold",
+   "w-subscription",
+   "w-contract",
+   "w-reference-number",
+   "w-appointment-slot",
+   "w-colleague",
+   "w-workload",
+   "w-feedback",
+   "w-priority",
+   "w-behind-schedule"
+  ],
+  "pattern": "p-i-was-going-to-but"
+ },
+ {
+  "day": 29,
+  "domains": [
+   "social",
+   "phone"
+  ],
+  "items": [
+   "w-congratulations",
+   "w-ive-heard-a-lot-about-you",
+   "w-how-come",
+   "w-fair-enough",
+   "w-small-talk",
+   "w-reception",
+   "w-speak-up",
+   "w-voicemail",
+   "w-breaking-up",
+   "w-put-through"
+  ],
+  "pattern": "p-i-ended-up"
+ },
+ {
+  "day": 30,
+  "domains": [
+   "conflict",
+   "opinion"
+  ],
+  "items": [
+   "w-make-up-for",
+   "w-compensation",
+   "w-no-offense",
+   "w-overcharged",
+   "w-i-see-where-youre-coming-from",
+   "w-good-point",
+   "w-the-thing-is",
+   "w-whatever-you-think",
+   "w-pros-and-cons",
+   "w-to-some-extent"
+  ],
+  "pattern": "p-it-turns-out-that"
+ }
+]

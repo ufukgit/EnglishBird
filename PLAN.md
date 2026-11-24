@@ -61,15 +61,14 @@ Worker sırayla dener; bir sağlayıcı limit/hata verirse sıradakine geçer.
 
 | Ne için | Kaynak | Lisans |
 |---|---|---|
-| Ana kelime listesi | NGSL-Spoken (Browne & Culligan, 721 kelime) | CC BY-SA 4.0 |
-| Genişletme | NGSL 1.2 (~2.800 kelime) | CC BY-SA 4.0 |
-| CEFR A1–B2 | CEFR-J Wordlist (Tono Lab, TUFS) | Atıfla ücretsiz |
+| Kelime seçimi + CEFR A1–B2 | CEFR-J Wordlist 1.5 (Tono Lab, TUFS) | Araştırma ve ticari kullanımda atıfla ücretsiz (repo README'sinde doğrulandı) |
 | CEFR C1–C2 | Octanove C1/C2 profili | CC BY-SA 4.0 |
 | Örnek cümle | Tatoeba (Türkçe çevirili) | CC BY 2.0 FR |
 | Telaffuz/fonem | CMU Pronouncing Dictionary | BSD tarzı |
 | Kalıplar, öbekler, senaryolar, dinleme metinleri | Projede sıfırdan üretilir | Projeye ait |
 
-SUBTLEX-US kullanılmaz (CC BY-NC-ND, türetmeye izin vermez). PHRASE List yalnızca kontrol
+NGSL-Spoken planlanmıştı ama sitesine geliştirme ortamından erişilemedi; kelimeler CEFR-J listesinden,
+günlük konuşmadaki işlevselliğe göre elle seçildi. SUBTLEX-US kullanılmaz (CC BY-NC-ND, türetmeye izin vermez). PHRASE List yalnızca kontrol
 referansıdır, içeriği kopyalanmaz. Atıflar `CREDITS.md` dosyasındadır.
 
 ## 3. Ürün tasarımı (dokümandan, değişmeden)
@@ -112,6 +111,19 @@ senaryo iskeletleri, dinleme metinleri ve soruları.
 | **2 · Dinleme ve seviye** | Dinleme modülü, seviye testi, ayrı seviyeler, zayıf yön motoru, haftalık rapor | Rapordaki zayıf yönler gözlemle örtüşüyor |
 | **3 · Derinleşme** | Shadowing, perde eğrisi, mikro beceriler, katalog 1.200+ / 1.200+ | — |
 | **4 · Genişleme** | Dizi/film kesitleri (YouTube gömülü oynatıcı) | — |
+
+### Aşama 0 durumu
+
+| İş | Durum |
+|---|---|
+| Proje iskeleti (PWA), iPhone ses testi, Worker | ✅ |
+| 300 kelime/öbek (12 alan × 25, CEFR etiketli) | ✅ `content/words.json` |
+| 60+ kalıp (67) | ✅ `content/patterns.json` |
+| 100+ konuşma senaryosu iskeleti (102) | ✅ `content/scenarios.speaking.json` |
+| Beklenmedik olay kütüphanesi | ✅ `content/twists.json` |
+| Sistem talimatları (tur, yardım, daha doğal, analiz, seviye kuralları) | ✅ `content/prompts/` |
+| 30 günlük varsayılan müfredat | ✅ `content/curriculum.json` |
+| iPhone ses testi sonucu | ⏳ kullanıcıdan bekleniyor |
 
 ## 6. Kullanıcının yapacakları (hepsi ücretsiz, kart istemez)
 

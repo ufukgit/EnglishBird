@@ -1,0 +1,2336 @@
+[
+ {
+  "id": "SPK-FOD-001-A1-a",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Kafede kahve siparişi",
+  "userRole": "Müşteri",
+  "aiRole": "Kalabalık bir kafede barista",
+  "goal": "İki kahve sipariş et, birini yulaf sütlü iste ve paket al",
+  "functions": [
+   "sipariş",
+   "rica",
+   "netleştirme"
+  ],
+  "twist": "Olay yok; barista sade ve yavaş konuşur",
+  "twistType": "none",
+  "cefr": "A1",
+  "persona": {
+   "speed": "slow",
+   "mood": "neşeli",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-FOD-001-A2-b",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Kafede kahve siparişi",
+  "userRole": "Müşteri",
+  "aiRole": "Kalabalık bir kafede barista",
+  "goal": "İki kahve sipariş et, birini yulaf sütlü iste ve paket al",
+  "functions": [
+   "sipariş",
+   "rica",
+   "netleştirme"
+  ],
+  "twist": "Barista adını yanlış duyar ve bardağa yanlış yazar",
+  "twistType": "misunderstanding",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "aceleci",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-FOD-001-B1-c",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Kafede kahve siparişi",
+  "userRole": "Müşteri",
+  "aiRole": "Kalabalık bir kafede barista",
+  "goal": "İki kahve sipariş et, birini yulaf sütlü iste ve paket al",
+  "functions": [
+   "sipariş",
+   "rica",
+   "netleştirme"
+  ],
+  "twist": "Barista \"How's your day going?\" diye sorar; bu bir sohbet açılışıdır, uzun cevap beklemez",
+  "twistType": "cultural-trap",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "neşeli",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-FOD-002-A2-a",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Restoranda yanlış gelen yemek",
+  "userRole": "Müşteri",
+  "aiRole": "Garson",
+  "goal": "Yanlış gelen yemeği kibarca geri gönder ve doğrusunu iste",
+  "functions": [
+   "şikâyet",
+   "rica",
+   "netleştirme"
+  ],
+  "twist": "Garson senin söylediğini getirdiğinde ısrar eder; sipariş fişinde gerçekten başka yemek yazıyor",
+  "twistType": "misunderstanding",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "sakin",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-FOD-002-B1-b",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Restoranda yanlış gelen yemek",
+  "userRole": "Müşteri",
+  "aiRole": "Garson",
+  "goal": "Yanlış gelen yemeği kibarca geri gönder ve doğrusunu iste",
+  "functions": [
+   "şikâyet",
+   "rica",
+   "netleştirme"
+  ],
+  "twist": "İstediğin yemek mutfakta bitmiş; garson alternatif önerir",
+  "twistType": "plan-breaks",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "özür dileyen",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-FOD-002-B2-c",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Restoranda yanlış gelen yemek",
+  "userRole": "Müşteri",
+  "aiRole": "Garson",
+  "goal": "Yanlış gelen yemeği kibarca geri gönder ve doğrusunu iste",
+  "functions": [
+   "şikâyet",
+   "rica",
+   "netleştirme"
+  ],
+  "twist": "Garson savunmaya geçer ve hatanın senin siparişinde olduğunu ima eder",
+  "twistType": "difficult-person",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "gergin",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-FOD-003-A2-a",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Arkadaşlarla hesap ödeme",
+  "userRole": "Arkadaş grubundan biri",
+  "aiRole": "Grubun en konuşkan arkadaşı",
+  "goal": "Hesabı adil şekilde bölüşün; sen sadece çorba içtin",
+  "functions": [
+   "öneri",
+   "itiraz",
+   "pazarlık"
+  ],
+  "twist": "Olay yok; arkadaş eşit bölmeyi önerir ve sen itiraz edersin",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "rahat",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-FOD-003-B1-b",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Arkadaşlarla hesap ödeme",
+  "userRole": "Arkadaş grubundan biri",
+  "aiRole": "Grubun en konuşkan arkadaşı",
+  "goal": "Hesabı adil şekilde bölüşün; sen sadece çorba içtin",
+  "functions": [
+   "öneri",
+   "itiraz",
+   "pazarlık"
+  ],
+  "twist": "Bir arkadaş en pahalı şarabı içtiği halde eşit bölmek istiyor",
+  "twistType": "grey-area",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "neşeli",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-FOD-003-B2-c",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Arkadaşlarla hesap ödeme",
+  "userRole": "Arkadaş grubundan biri",
+  "aiRole": "Grubun en konuşkan arkadaşı",
+  "goal": "Hesabı adil şekilde bölüşün; sen sadece çorba içtin",
+  "functions": [
+   "öneri",
+   "itiraz",
+   "pazarlık"
+  ],
+  "twist": "Arkadaş bahşişi de hesaba katmadığın için şaşırır; ülkede %20 bahşiş beklenir",
+  "twistType": "cultural-trap",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "şaşkın",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-FOD-004-A2-a",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Telefonla masa ayırtma",
+  "userRole": "Müşteri",
+  "aiRole": "Restoran çalışanı",
+  "goal": "Cumartesi akşamı dört kişilik masa ayırt, biri vejetaryen",
+  "functions": [
+   "rica",
+   "netleştirme",
+   "sayı ve saat"
+  ],
+  "twist": "Çalışan \"fourteen\" yerine \"forty\" anlar",
+  "twistType": "misunderstanding",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "sakin",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-FOD-004-B1-b",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Telefonla masa ayırtma",
+  "userRole": "Müşteri",
+  "aiRole": "Restoran çalışanı",
+  "goal": "Cumartesi akşamı dört kişilik masa ayırt, biri vejetaryen",
+  "functions": [
+   "rica",
+   "netleştirme",
+   "sayı ve saat"
+  ],
+  "twist": "Cumartesi tamamen dolu; sadece 21:30 veya pazar var",
+  "twistType": "plan-breaks",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "yardımsever",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-FOD-004-B2-c",
+  "modality": "speaking",
+  "domain": "food",
+  "situation": "Telefonla masa ayırtma",
+  "userRole": "Müşteri",
+  "aiRole": "Restoran çalışanı",
+  "goal": "Cumartesi akşamı dört kişilik masa ayırt, biri vejetaryen",
+  "functions": [
+   "rica",
+   "netleştirme",
+   "sayı ve saat"
+  ],
+  "twist": "Çalışan \"I'll see what I can do\" der ama rezervasyonu onaylamaz; netlik istemen gerekir",
+  "twistType": "vague-answer",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "dalgın",
+   "accent": "en-AU"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SHP-001-A2-a",
+  "modality": "speaking",
+  "domain": "shopping",
+  "situation": "Kıyafet iadesi",
+  "userRole": "Müşteri",
+  "aiRole": "Mağaza kasiyeri",
+  "goal": "Küçük gelen kazağı iade et ve paranı geri al",
+  "functions": [
+   "şikâyet",
+   "rica",
+   "netleştirme"
+  ],
+  "twist": "Olay yok; kasiyer fiş ister",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "slow",
+   "mood": "nazik",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SHP-001-B1-b",
+  "modality": "speaking",
+  "domain": "shopping",
+  "situation": "Kıyafet iadesi",
+  "userRole": "Müşteri",
+  "aiRole": "Mağaza kasiyeri",
+  "goal": "Küçük gelen kazağı iade et ve paranı geri al",
+  "functions": [
+   "şikâyet",
+   "rica",
+   "netleştirme"
+  ],
+  "twist": "Mağaza sadece değişim yapıyor, para iadesi yok; kasiyer seni hediye çekine yönlendirir",
+  "twistType": "saying-no",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "kurallara bağlı",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SHP-001-B1-c",
+  "modality": "speaking",
+  "domain": "shopping",
+  "situation": "Kıyafet iadesi",
+  "userRole": "Müşteri",
+  "aiRole": "Mağaza kasiyeri",
+  "goal": "Küçük gelen kazağı iade et ve paranı geri al",
+  "functions": [
+   "şikâyet",
+   "rica",
+   "netleştirme"
+  ],
+  "twist": "Fişi evde unuttuğunu fark edersin",
+  "twistType": "your-mistake",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "sabırlı",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SHP-002-B1-a",
+  "modality": "speaking",
+  "domain": "shopping",
+  "situation": "Elektronik mağazasında telefon seçimi",
+  "userRole": "Müşteri",
+  "aiRole": "Satış temsilcisi",
+  "goal": "Bütçene uygun, kamerası iyi bir telefon bul",
+  "functions": [
+   "soru sorma",
+   "karşılaştırma",
+   "reddetme"
+  ],
+  "twist": "Temsilci sürekli pahalı modeli ve ek garantiyi satmaya çalışır",
+  "twistType": "difficult-person",
+  "cefr": "B1",
+  "persona": {
+   "speed": "fast",
+   "mood": "ısrarcı",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SHP-002-B2-b",
+  "modality": "speaking",
+  "domain": "shopping",
+  "situation": "Elektronik mağazasında telefon seçimi",
+  "userRole": "Müşteri",
+  "aiRole": "Satış temsilcisi",
+  "goal": "Bütçene uygun, kamerası iyi bir telefon bul",
+  "functions": [
+   "soru sorma",
+   "karşılaştırma",
+   "reddetme"
+  ],
+  "twist": "Temsilci aylık abonelikli paketi \"bedava telefon\" diye sunar; hayır demen gerekir",
+  "twistType": "saying-no",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "ısrarcı",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SHP-003-A2-a",
+  "modality": "speaking",
+  "domain": "shopping",
+  "situation": "Pazarda pazarlık",
+  "userRole": "Müşteri",
+  "aiRole": "Pazar tezgâhında satıcı",
+  "goal": "El yapımı bir çantayı makul bir fiyata al",
+  "functions": [
+   "pazarlık",
+   "itiraz",
+   "karşı teklif"
+  ],
+  "twist": "Olay yok; satıcı ilk fiyatı yüksek söyler",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "neşeli",
+   "accent": "en-IN"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SHP-003-B2-b",
+  "modality": "speaking",
+  "domain": "shopping",
+  "situation": "Pazarda pazarlık",
+  "userRole": "Müşteri",
+  "aiRole": "Pazar tezgâhında satıcı",
+  "goal": "El yapımı bir çantayı makul bir fiyata al",
+  "functions": [
+   "pazarlık",
+   "itiraz",
+   "karşı teklif"
+  ],
+  "twist": "Satıcı çantayı annesinin yaptığını söyleyip duygusal bir hikâye anlatır",
+  "twistType": "emotion",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "samimi",
+   "accent": "en-IN"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SHP-004-B1-a",
+  "modality": "speaking",
+  "domain": "shopping",
+  "situation": "Bozuk ürünle müşteri hizmetleri",
+  "userRole": "Müşteri",
+  "aiRole": "Mağazanın müşteri hizmetleri",
+  "goal": "İki haftalık kulaklığın değiştirilmesini sağla",
+  "functions": [
+   "şikâyet",
+   "açıklama",
+   "ısrar"
+  ],
+  "twist": "Temsilci \"We'll look into it\" deyip net bir tarih vermez",
+  "twistType": "vague-answer",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "ilgisiz",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SHP-004-B2-b",
+  "modality": "speaking",
+  "domain": "shopping",
+  "situation": "Bozuk ürünle müşteri hizmetleri",
+  "userRole": "Müşteri",
+  "aiRole": "Mağazanın müşteri hizmetleri",
+  "goal": "İki haftalık kulaklığın değiştirilmesini sağla",
+  "functions": [
+   "şikâyet",
+   "açıklama",
+   "ısrar"
+  ],
+  "twist": "Temsilci hasarın kullanıcı hatası olabileceğini ima eder",
+  "twistType": "grey-area",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "şüpheci",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRN-001-B1-a",
+  "modality": "speaking",
+  "domain": "transport",
+  "situation": "Taksiyle havalimanına gitmek",
+  "userRole": "Yolcu",
+  "aiRole": "Taksi şoförü",
+  "goal": "Havalimanına zamanında var ve ücreti netleştir",
+  "functions": [
+   "yön tarifi",
+   "pazarlık",
+   "netleştirme"
+  ],
+  "twist": "Şoför siyaset ve senin ülken hakkında kişisel sorular sorar; kibarca geçiştirmen gerekir",
+  "twistType": "topic-drift",
+  "cefr": "B1",
+  "persona": {
+   "speed": "fast",
+   "mood": "konuşkan",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRN-001-B1-b",
+  "modality": "speaking",
+  "domain": "transport",
+  "situation": "Taksiyle havalimanına gitmek",
+  "userRole": "Yolcu",
+  "aiRole": "Taksi şoförü",
+  "goal": "Havalimanına zamanında var ve ücreti netleştir",
+  "functions": [
+   "yön tarifi",
+   "pazarlık",
+   "netleştirme"
+  ],
+  "twist": "Şoför taksimetreyi açmaz ve sabit, yüksek bir fiyat söyler",
+  "twistType": "difficult-person",
+  "cefr": "B1",
+  "persona": {
+   "speed": "fast",
+   "mood": "aceleci",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-TRN-001-B2-c",
+  "modality": "speaking",
+  "domain": "transport",
+  "situation": "Taksiyle havalimanına gitmek",
+  "userRole": "Yolcu",
+  "aiRole": "Taksi şoförü",
+  "goal": "Havalimanına zamanında var ve ücreti netleştir",
+  "functions": [
+   "yön tarifi",
+   "pazarlık",
+   "netleştirme"
+  ],
+  "twist": "Yol kapalıdır; şoför uzun bir alternatif önerir, sürekli telefonla da konuşur",
+  "twistType": "interruption",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "gergin",
+   "accent": "en-IN"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRN-002-A1-a",
+  "modality": "speaking",
+  "domain": "transport",
+  "situation": "Yol tarifi sormak",
+  "userRole": "Turist",
+  "aiRole": "Sokakta yerel biri",
+  "goal": "Müzeye nasıl gideceğini öğren",
+  "functions": [
+   "soru sorma",
+   "netleştirme",
+   "teşekkür"
+  ],
+  "twist": "Olay yok; yerel kişi yavaş ve net anlatır",
+  "twistType": "none",
+  "cefr": "A1",
+  "persona": {
+   "speed": "slow",
+   "mood": "yardımsever",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-TRN-002-A2-b",
+  "modality": "speaking",
+  "domain": "transport",
+  "situation": "Yol tarifi sormak",
+  "userRole": "Turist",
+  "aiRole": "Sokakta yerel biri",
+  "goal": "Müzeye nasıl gideceğini öğren",
+  "functions": [
+   "soru sorma",
+   "netleştirme",
+   "teşekkür"
+  ],
+  "twist": "Yerel kişi başka bir müzeyi anlatır",
+  "twistType": "misunderstanding",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "yardımsever",
+   "accent": "en-AU"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-TRN-002-B1-c",
+  "modality": "speaking",
+  "domain": "transport",
+  "situation": "Yol tarifi sormak",
+  "userRole": "Turist",
+  "aiRole": "Sokakta yerel biri",
+  "goal": "Müzeye nasıl gideceğini öğren",
+  "functions": [
+   "soru sorma",
+   "netleştirme",
+   "teşekkür"
+  ],
+  "twist": "Kişi \"It's not far, just keep going\" der; sokak ve dönüş bilgisi vermez",
+  "twistType": "vague-answer",
+  "cefr": "B1",
+  "persona": {
+   "speed": "fast",
+   "mood": "aceleci",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-TRN-003-B1-a",
+  "modality": "speaking",
+  "domain": "transport",
+  "situation": "Tren aktarması kaçtı",
+  "userRole": "Yolcu",
+  "aiRole": "İstasyon görevlisi",
+  "goal": "Bir sonraki bağlantıyı bul ve biletinin geçerli olup olmadığını öğren",
+  "functions": [
+   "rica",
+   "netleştirme",
+   "şikâyet"
+  ],
+  "twist": "Son tren iptal edilmiştir; seçenek otobüs veya sabah treni",
+  "twistType": "plan-breaks",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "yorgun",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRN-003-B2-b",
+  "modality": "speaking",
+  "domain": "transport",
+  "situation": "Tren aktarması kaçtı",
+  "userRole": "Yolcu",
+  "aiRole": "İstasyon görevlisi",
+  "goal": "Bir sonraki bağlantıyı bul ve biletinin geçerli olup olmadığını öğren",
+  "functions": [
+   "rica",
+   "netleştirme",
+   "şikâyet"
+  ],
+  "twist": "Görevli biletinin yeni trende geçmediğini ve yeniden ödemen gerektiğini söyler",
+  "twistType": "saying-no",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "kurallara bağlı",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRN-004-B1-a",
+  "modality": "speaking",
+  "domain": "transport",
+  "situation": "Araç kiralama",
+  "userRole": "Müşteri",
+  "aiRole": "Araç kiralama görevlisi",
+  "goal": "Üç günlüğüne küçük bir araba kirala, gizli ücretleri sor",
+  "functions": [
+   "soru sorma",
+   "netleştirme",
+   "reddetme"
+  ],
+  "twist": "Görevli tam kapsamlı sigortayı zorla satmaya çalışır",
+  "twistType": "difficult-person",
+  "cefr": "B1",
+  "persona": {
+   "speed": "fast",
+   "mood": "ısrarcı",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRN-004-B2-b",
+  "modality": "speaking",
+  "domain": "transport",
+  "situation": "Araç kiralama",
+  "userRole": "Müşteri",
+  "aiRole": "Araç kiralama görevlisi",
+  "goal": "Üç günlüğüne küçük bir araba kirala, gizli ücretleri sor",
+  "functions": [
+   "soru sorma",
+   "netleştirme",
+   "reddetme"
+  ],
+  "twist": "Arabada önceden kalan çizik var; görevli kayda geçirmek istemez",
+  "twistType": "grey-area",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "aceleci",
+   "accent": "en-AU"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRV-001-B1-a",
+  "modality": "speaking",
+  "domain": "travel",
+  "situation": "Gece geç saatte otele giriş",
+  "userRole": "Misafir",
+  "aiRole": "Yorgun gece resepsiyonisti",
+  "goal": "Rezervasyonunu bul ve sessiz bir oda iste",
+  "functions": [
+   "rica",
+   "itiraz",
+   "netleştirme"
+  ],
+  "twist": "Rezervasyon ertesi güne kayıtlı",
+  "twistType": "plan-breaks",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "yorgun",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRV-001-A2-b",
+  "modality": "speaking",
+  "domain": "travel",
+  "situation": "Gece geç saatte otele giriş",
+  "userRole": "Misafir",
+  "aiRole": "Yorgun gece resepsiyonisti",
+  "goal": "Rezervasyonunu bul ve sessiz bir oda iste",
+  "functions": [
+   "rica",
+   "itiraz",
+   "netleştirme"
+  ],
+  "twist": "Olay yok; resepsiyonist yavaş konuşur ve pasaport ister",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "slow",
+   "mood": "nazik",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-TRV-001-B2-c",
+  "modality": "speaking",
+  "domain": "travel",
+  "situation": "Gece geç saatte otele giriş",
+  "userRole": "Misafir",
+  "aiRole": "Yorgun gece resepsiyonisti",
+  "goal": "Rezervasyonunu bul ve sessiz bir oda iste",
+  "functions": [
+   "rica",
+   "itiraz",
+   "netleştirme"
+  ],
+  "twist": "Resepsiyonist sık sık telefona bakar, arada başka misafirle ilgilenir",
+  "twistType": "interruption",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "dalgın",
+   "accent": "en-IN"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRV-002-A2-a",
+  "modality": "speaking",
+  "domain": "travel",
+  "situation": "Havalimanında kayıp bagaj",
+  "userRole": "Yolcu",
+  "aiRole": "Kayıp bagaj ofisi görevlisi",
+  "goal": "Bavulunu bildir ve ne zaman geleceğini öğren",
+  "functions": [
+   "açıklama",
+   "tarif etme",
+   "netleştirme"
+  ],
+  "twist": "Olay yok; görevli formu birlikte doldurur",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "slow",
+   "mood": "sakin",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-TRV-002-B1-b",
+  "modality": "speaking",
+  "domain": "travel",
+  "situation": "Havalimanında kayıp bagaj",
+  "userRole": "Yolcu",
+  "aiRole": "Kayıp bagaj ofisi görevlisi",
+  "goal": "Bavulunu bildir ve ne zaman geleceğini öğren",
+  "functions": [
+   "açıklama",
+   "tarif etme",
+   "netleştirme"
+  ],
+  "twist": "Görevli \"within a few days\" der; tazminat ve acil ihtiyaçlar konusunda netlik istemen gerekir",
+  "twistType": "vague-answer",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "ilgisiz",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRV-003-B1-a",
+  "modality": "speaking",
+  "domain": "travel",
+  "situation": "Uçuş iptali ve yeniden rezervasyon",
+  "userRole": "Yolcu",
+  "aiRole": "Havayolu kontuar görevlisi",
+  "goal": "Bugün başka bir uçuşa geç",
+  "functions": [
+   "rica",
+   "pazarlık",
+   "ısrar"
+  ],
+  "twist": "Bugün uçuş yok; görevli yarın sabahı ve otel kuponu önerir",
+  "twistType": "plan-breaks",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "stresli",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRV-003-B2-b",
+  "modality": "speaking",
+  "domain": "travel",
+  "situation": "Uçuş iptali ve yeniden rezervasyon",
+  "userRole": "Yolcu",
+  "aiRole": "Havayolu kontuar görevlisi",
+  "goal": "Bugün başka bir uçuşa geç",
+  "functions": [
+   "rica",
+   "pazarlık",
+   "ısrar"
+  ],
+  "twist": "Görevli tazminat hakkın olmadığını söyler; iptal hava durumundan değil teknik arızadan",
+  "twistType": "grey-area",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "savunmacı",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-TRV-004-B1-a",
+  "modality": "speaking",
+  "domain": "travel",
+  "situation": "Kiralık evde ev sahibiyle tanışma",
+  "userRole": "Kiracı",
+  "aiRole": "Kiralık evin sahibi",
+  "goal": "Evi teslim al, Wi-Fi ve çöp kurallarını öğren",
+  "functions": [
+   "soru sorma",
+   "netleştirme",
+   "teşekkür"
+  ],
+  "twist": "Ev sahibi \"Make yourself at home\" der ama sonra ayakkabıyla girmemeni ima eder",
+  "twistType": "cultural-trap",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "samimi",
+   "accent": "en-AU"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-TRV-004-B2-b",
+  "modality": "speaking",
+  "domain": "travel",
+  "situation": "Kiralık evde ev sahibiyle tanışma",
+  "userRole": "Kiracı",
+  "aiRole": "Kiralık evin sahibi",
+  "goal": "Evi teslim al, Wi-Fi ve çöp kurallarını öğren",
+  "functions": [
+   "soru sorma",
+   "netleştirme",
+   "teşekkür"
+  ],
+  "twist": "Ev sahibi bir arkadaşının evde bir gece kalıp kalamayacağını sorar",
+  "twistType": "unexpected-request",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "samimi",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-HLT-001-A2-a",
+  "modality": "speaking",
+  "domain": "health",
+  "situation": "Eczanede ilaç almak",
+  "userRole": "Hasta",
+  "aiRole": "Eczacı",
+  "goal": "Boğaz ağrısı ve ateş için ilaç al",
+  "functions": [
+   "açıklama",
+   "soru sorma"
+  ],
+  "twist": "Olay yok; eczacı yavaşça belirtileri sorar",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "slow",
+   "mood": "nazik",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-HLT-001-B1-b",
+  "modality": "speaking",
+  "domain": "health",
+  "situation": "Eczanede ilaç almak",
+  "userRole": "Hasta",
+  "aiRole": "Eczacı",
+  "goal": "Boğaz ağrısı ve ateş için ilaç al",
+  "functions": [
+   "açıklama",
+   "soru sorma"
+  ],
+  "twist": "İstediğin ilaç reçetesiz verilmiyor",
+  "twistType": "saying-no",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "kurallara bağlı",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-HLT-002-A2-a",
+  "modality": "speaking",
+  "domain": "health",
+  "situation": "Doktordan randevu almak",
+  "userRole": "Hasta",
+  "aiRole": "Muayenehane sekreteri",
+  "goal": "Bu hafta içinde randevu al",
+  "functions": [
+   "rica",
+   "tarih saat",
+   "ısrar"
+  ],
+  "twist": "En erken randevu iki hafta sonra",
+  "twistType": "plan-breaks",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "yorgun",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-HLT-002-B1-b",
+  "modality": "speaking",
+  "domain": "health",
+  "situation": "Doktordan randevu almak",
+  "userRole": "Hasta",
+  "aiRole": "Muayenehane sekreteri",
+  "goal": "Bu hafta içinde randevu al",
+  "functions": [
+   "rica",
+   "tarih saat",
+   "ısrar"
+  ],
+  "twist": "Sekreter acil değilse beklemen gerektiğini söyler; durumu anlatıp ikna etmen gerekir",
+  "twistType": "grey-area",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "sabırsız",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-HLT-003-A2-a",
+  "modality": "speaking",
+  "domain": "health",
+  "situation": "Doktora belirtileri anlatmak",
+  "userRole": "Hasta",
+  "aiRole": "Aile hekimi",
+  "goal": "Belirtilerini anlat ve ne yapacağını öğren",
+  "functions": [
+   "açıklama",
+   "soru sorma",
+   "netleştirme"
+  ],
+  "twist": "Olay yok; doktor sorular sorar",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "slow",
+   "mood": "sakin",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-HLT-003-B1-b",
+  "modality": "speaking",
+  "domain": "health",
+  "situation": "Doktora belirtileri anlatmak",
+  "userRole": "Hasta",
+  "aiRole": "Aile hekimi",
+  "goal": "Belirtilerini anlat ve ne yapacağını öğren",
+  "functions": [
+   "açıklama",
+   "soru sorma",
+   "netleştirme"
+  ],
+  "twist": "Doktor \"dizzy\" kelimesini başka anlar ve yanlış teşhise gider",
+  "twistType": "misunderstanding",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "aceleci",
+   "accent": "en-IN"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-HLT-003-B2-c",
+  "modality": "speaking",
+  "domain": "health",
+  "situation": "Doktora belirtileri anlatmak",
+  "userRole": "Hasta",
+  "aiRole": "Aile hekimi",
+  "goal": "Belirtilerini anlat ve ne yapacağını öğren",
+  "functions": [
+   "açıklama",
+   "soru sorma",
+   "netleştirme"
+  ],
+  "twist": "Doktor endişe verici bir test gerektiğini söyler; soğukkanlı soru sorman gerekir",
+  "twistType": "emotion",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "ciddi",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-HLT-004-B2-a",
+  "modality": "speaking",
+  "domain": "health",
+  "situation": "Acilde bir arkadaşa refakat",
+  "userRole": "Refakatçi",
+  "aiRole": "Acil servis hemşiresi",
+  "goal": "Arkadaşının durumunu anlat ve bekleme süresini öğren",
+  "functions": [
+   "açıklama",
+   "ısrar",
+   "netleştirme"
+  ],
+  "twist": "Hemşire sürekli başka hastalarla ilgilenir, cevapları yarım kalır",
+  "twistType": "interruption",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "stresli",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-HOM-001-B1-a",
+  "modality": "speaking",
+  "domain": "home",
+  "situation": "Ev sahibine arıza bildirmek",
+  "userRole": "Kiracı",
+  "aiRole": "Ev sahibi",
+  "goal": "Kaloriferin tamirini bu hafta ayarlat",
+  "functions": [
+   "şikâyet",
+   "rica",
+   "ısrar"
+  ],
+  "twist": "Ev sahibi \"I'll get someone to look at it\" der ama gün vermez",
+  "twistType": "vague-answer",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "ilgisiz",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-HOM-001-B2-b",
+  "modality": "speaking",
+  "domain": "home",
+  "situation": "Ev sahibine arıza bildirmek",
+  "userRole": "Kiracı",
+  "aiRole": "Ev sahibi",
+  "goal": "Kaloriferin tamirini bu hafta ayarlat",
+  "functions": [
+   "şikâyet",
+   "rica",
+   "ısrar"
+  ],
+  "twist": "Ev sahibi arızanın senin kullanımından olduğunu ima eder ve masrafı paylaşmak ister",
+  "twistType": "grey-area",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "savunmacı",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-HOM-002-A2-a",
+  "modality": "speaking",
+  "domain": "home",
+  "situation": "Gürültülü komşu",
+  "userRole": "Komşu",
+  "aiRole": "Üst kattaki komşu",
+  "goal": "Gece müziğin kısılmasını kibarca iste",
+  "functions": [
+   "rica",
+   "şikâyet",
+   "uzlaşma"
+  ],
+  "twist": "Olay yok; komşu hemen özür diler",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "mahcup",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-HOM-002-B1-b",
+  "modality": "speaking",
+  "domain": "home",
+  "situation": "Gürültülü komşu",
+  "userRole": "Komşu",
+  "aiRole": "Üst kattaki komşu",
+  "goal": "Gece müziğin kısılmasını kibarca iste",
+  "functions": [
+   "rica",
+   "şikâyet",
+   "uzlaşma"
+  ],
+  "twist": "Komşu saatin henüz erken olduğunu söyleyip sana itiraz eder",
+  "twistType": "difficult-person",
+  "cefr": "B1",
+  "persona": {
+   "speed": "fast",
+   "mood": "savunmacı",
+   "accent": "en-AU"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-HOM-002-B2-c",
+  "modality": "speaking",
+  "domain": "home",
+  "situation": "Gürültülü komşu",
+  "userRole": "Komşu",
+  "aiRole": "Üst kattaki komşu",
+  "goal": "Gece müziğin kısılmasını kibarca iste",
+  "functions": [
+   "rica",
+   "şikâyet",
+   "uzlaşma"
+  ],
+  "twist": "Komşu o gün işten çıkarıldığını ve arkadaşlarının moral için geldiğini söyler",
+  "twistType": "emotion",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "üzgün",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-HOM-003-A2-a",
+  "modality": "speaking",
+  "domain": "home",
+  "situation": "Ev arkadaşıyla iş bölümü",
+  "userRole": "Ev arkadaşı",
+  "aiRole": "Ev arkadaşın",
+  "goal": "Temizlik ve çöp sırası için adil bir düzen kur",
+  "functions": [
+   "öneri",
+   "itiraz",
+   "uzlaşma"
+  ],
+  "twist": "Olay yok; ev arkadaşı plana açıktır",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "rahat",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-HOM-003-B1-b",
+  "modality": "speaking",
+  "domain": "home",
+  "situation": "Ev arkadaşıyla iş bölümü",
+  "userRole": "Ev arkadaşı",
+  "aiRole": "Ev arkadaşın",
+  "goal": "Temizlik ve çöp sırası için adil bir düzen kur",
+  "functions": [
+   "öneri",
+   "itiraz",
+   "uzlaşma"
+  ],
+  "twist": "Ev arkadaşı geçen hafta senin sıranda çöpü onun çıkardığını hatırlatır",
+  "twistType": "your-mistake",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "kırgın",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-HOM-004-B1-a",
+  "modality": "speaking",
+  "domain": "home",
+  "situation": "Kapıda kalmak",
+  "userRole": "Kiracı",
+  "aiRole": "Bina görevlisi",
+  "goal": "Yedek anahtarla içeri gir",
+  "functions": [
+   "açıklama",
+   "rica"
+  ],
+  "twist": "Görevli kimliğini görmeden kapıyı açamayacağını söyler; kimliğin içeride",
+  "twistType": "saying-no",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "kurallara bağlı",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SRV-001-A2-a",
+  "modality": "speaking",
+  "domain": "services",
+  "situation": "Bankada hesap açmak",
+  "userRole": "Müşteri",
+  "aiRole": "Banka çalışanı",
+  "goal": "Yabancı olarak hesap aç ve masrafları öğren",
+  "functions": [
+   "soru sorma",
+   "netleştirme"
+  ],
+  "twist": "Olay yok; çalışan adım adım anlatır",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "slow",
+   "mood": "nazik",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SRV-001-B1-b",
+  "modality": "speaking",
+  "domain": "services",
+  "situation": "Bankada hesap açmak",
+  "userRole": "Müşteri",
+  "aiRole": "Banka çalışanı",
+  "goal": "Yabancı olarak hesap aç ve masrafları öğren",
+  "functions": [
+   "soru sorma",
+   "netleştirme"
+  ],
+  "twist": "Adres belgesi istenir; senin yok",
+  "twistType": "plan-breaks",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "kurallara bağlı",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SRV-002-B1-a",
+  "modality": "speaking",
+  "domain": "services",
+  "situation": "Kargo takibi",
+  "userRole": "Müşteri",
+  "aiRole": "Kargo şirketi çağrı merkezi",
+  "goal": "Bir haftadır gelmeyen paketinin nerede olduğunu öğren",
+  "functions": [
+   "şikâyet",
+   "netleştirme",
+   "ısrar"
+  ],
+  "twist": "Temsilci \"It's in transit\" demekten öteye geçmez",
+  "twistType": "vague-answer",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "ilgisiz",
+   "accent": "en-IN"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SRV-002-B2-b",
+  "modality": "speaking",
+  "domain": "services",
+  "situation": "Kargo takibi",
+  "userRole": "Müşteri",
+  "aiRole": "Kargo şirketi çağrı merkezi",
+  "goal": "Bir haftadır gelmeyen paketinin nerede olduğunu öğren",
+  "functions": [
+   "şikâyet",
+   "netleştirme",
+   "ısrar"
+  ],
+  "twist": "Sistem paketi teslim edilmiş gösterir; senin elinde değil",
+  "twistType": "misunderstanding",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "şüpheci",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SRV-003-B1-a",
+  "modality": "speaking",
+  "domain": "services",
+  "situation": "Abonelik iptali",
+  "userRole": "Müşteri",
+  "aiRole": "Abonelik şirketi temsilcisi",
+  "goal": "Spor salonu aboneliğini iptal et",
+  "functions": [
+   "reddetme",
+   "ısrar",
+   "netleştirme"
+  ],
+  "twist": "Temsilci seni tutmak için indirim ve bedava ay teklif eder",
+  "twistType": "saying-no",
+  "cefr": "B1",
+  "persona": {
+   "speed": "fast",
+   "mood": "ısrarcı",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SRV-003-B2-b",
+  "modality": "speaking",
+  "domain": "services",
+  "situation": "Abonelik iptali",
+  "userRole": "Müşteri",
+  "aiRole": "Abonelik şirketi temsilcisi",
+  "goal": "Spor salonu aboneliğini iptal et",
+  "functions": [
+   "reddetme",
+   "ısrar",
+   "netleştirme"
+  ],
+  "twist": "Temsilci sözleşmede 3 aylık bildirim süresi olduğunu söyler",
+  "twistType": "grey-area",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "kurallara bağlı",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SRV-004-B1-a",
+  "modality": "speaking",
+  "domain": "services",
+  "situation": "Fatura itirazı",
+  "userRole": "Müşteri",
+  "aiRole": "Telefon operatörü",
+  "goal": "Faturadaki fazla ücretin iadesini iste",
+  "functions": [
+   "şikâyet",
+   "açıklama",
+   "ısrar"
+  ],
+  "twist": "Ücretin aslında yurtdışında kullandığın internetten geldiği ortaya çıkar",
+  "twistType": "your-mistake",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "sabırlı",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SRV-004-B2-b",
+  "modality": "speaking",
+  "domain": "services",
+  "situation": "Fatura itirazı",
+  "userRole": "Müşteri",
+  "aiRole": "Telefon operatörü",
+  "goal": "Faturadaki fazla ücretin iadesini iste",
+  "functions": [
+   "şikâyet",
+   "açıklama",
+   "ısrar"
+  ],
+  "twist": "Temsilci aynı açıklamayı tekrar eder ve yöneticiye bağlamaz",
+  "twistType": "difficult-person",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "robotik",
+   "accent": "en-IN"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-WRK-001-B1-a",
+  "modality": "speaking",
+  "domain": "work",
+  "situation": "İş görüşmesi",
+  "userRole": "Aday",
+  "aiRole": "İşe alım yöneticisi",
+  "goal": "Kendini tanıt ve neden uygun olduğunu anlat",
+  "functions": [
+   "kendini tanıtma",
+   "örnek verme",
+   "soru sorma"
+  ],
+  "twist": "Olay yok; standart sorular",
+  "twistType": "none",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "profesyonel",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-WRK-001-B2-b",
+  "modality": "speaking",
+  "domain": "work",
+  "situation": "İş görüşmesi",
+  "userRole": "Aday",
+  "aiRole": "İşe alım yöneticisi",
+  "goal": "Kendini tanıt ve neden uygun olduğunu anlat",
+  "functions": [
+   "kendini tanıtma",
+   "örnek verme",
+   "soru sorma"
+  ],
+  "twist": "Yönetici \"Tell me about a time you failed\" gibi zor bir soru sorar",
+  "twistType": "unexpected-request",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "profesyonel",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-WRK-001-B2-c",
+  "modality": "speaking",
+  "domain": "work",
+  "situation": "İş görüşmesi",
+  "userRole": "Aday",
+  "aiRole": "İşe alım yöneticisi",
+  "goal": "Kendini tanıt ve neden uygun olduğunu anlat",
+  "functions": [
+   "kendini tanıtma",
+   "örnek verme",
+   "soru sorma"
+  ],
+  "twist": "Görüşme sonunda \"Do you have any questions for us?\" diye sorulur; \"Hayır\" demek zayıf izlenim bırakır",
+  "twistType": "cultural-trap",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "profesyonel",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-WRK-002-B2-a",
+  "modality": "speaking",
+  "domain": "work",
+  "situation": "Toplantıda fikrine itiraz",
+  "userRole": "Ekip üyesi",
+  "aiRole": "Kıdemli iş arkadaşı",
+  "goal": "Önerini savun ve ortak bir karara var",
+  "functions": [
+   "fikir savunma",
+   "itiraz",
+   "uzlaşma"
+  ],
+  "twist": "İş arkadaşı sözünü keser ve fikrini kendi fikri gibi sunar",
+  "twistType": "difficult-person",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "baskın",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-WRK-002-B2-b",
+  "modality": "speaking",
+  "domain": "work",
+  "situation": "Toplantıda fikrine itiraz",
+  "userRole": "Ekip üyesi",
+  "aiRole": "Kıdemli iş arkadaşı",
+  "goal": "Önerini savun ve ortak bir karara var",
+  "functions": [
+   "fikir savunma",
+   "itiraz",
+   "uzlaşma"
+  ],
+  "twist": "İş arkadaşı senin hatanı toplantıda ima eder ama doğrudan söylemez",
+  "twistType": "grey-area",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "pasif agresif",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-WRK-003-A2-a",
+  "modality": "speaking",
+  "domain": "work",
+  "situation": "Yöneticiden izin istemek",
+  "userRole": "Çalışan",
+  "aiRole": "Yönetici",
+  "goal": "Gelecek cuma izin al",
+  "functions": [
+   "rica",
+   "gerekçe",
+   "pazarlık"
+  ],
+  "twist": "Olay yok; yönetici kabul eder ama işleri sorar",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "rahat",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-WRK-003-B1-b",
+  "modality": "speaking",
+  "domain": "work",
+  "situation": "Yöneticiden izin istemek",
+  "userRole": "Çalışan",
+  "aiRole": "Yönetici",
+  "goal": "Gelecek cuma izin al",
+  "functions": [
+   "rica",
+   "gerekçe",
+   "pazarlık"
+  ],
+  "twist": "Yönetici o gün önemli bir teslim olduğunu söyler",
+  "twistType": "saying-no",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "gergin",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-WRK-004-B1-a",
+  "modality": "speaking",
+  "domain": "work",
+  "situation": "Yeni iş arkadaşıyla tanışma",
+  "userRole": "Ekipteki yeni kişi",
+  "aiRole": "Ekipten samimi bir iş arkadaşı",
+  "goal": "Kendini tanıt, ekip ve ofis hakkında bilgi al",
+  "functions": [
+   "kendini tanıtma",
+   "soru sorma",
+   "küçük sohbet"
+  ],
+  "twist": "İş arkadaşı dedikoduya girip başka birini eleştirmeye başlar",
+  "twistType": "topic-drift",
+  "cefr": "B1",
+  "persona": {
+   "speed": "fast",
+   "mood": "konuşkan",
+   "accent": "en-AU"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-WRK-004-B1-b",
+  "modality": "speaking",
+  "domain": "work",
+  "situation": "Yeni iş arkadaşıyla tanışma",
+  "userRole": "Ekipteki yeni kişi",
+  "aiRole": "Ekipten samimi bir iş arkadaşı",
+  "goal": "Kendini tanıt, ekip ve ofis hakkında bilgi al",
+  "functions": [
+   "kendini tanıtma",
+   "soru sorma",
+   "küçük sohbet"
+  ],
+  "twist": "İş arkadaşı \"We should grab lunch sometime\" der; bu her zaman gerçek bir davet değildir",
+  "twistType": "cultural-trap",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "samimi",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SOC-001-A2-a",
+  "modality": "speaking",
+  "domain": "social",
+  "situation": "Partide yeni biriyle tanışmak",
+  "userRole": "Davetli",
+  "aiRole": "Partide yeni tanıştığın biri",
+  "goal": "Sohbet başlat ve ortak bir ilgi alanı bul",
+  "functions": [
+   "küçük sohbet",
+   "soru sorma",
+   "tepki verme"
+  ],
+  "twist": "Olay yok; karşı taraf meraklı ve sabırlı",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "slow",
+   "mood": "neşeli",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SOC-001-B1-b",
+  "modality": "speaking",
+  "domain": "social",
+  "situation": "Partide yeni biriyle tanışmak",
+  "userRole": "Davetli",
+  "aiRole": "Partide yeni tanıştığın biri",
+  "goal": "Sohbet başlat ve ortak bir ilgi alanı bul",
+  "functions": [
+   "küçük sohbet",
+   "soru sorma",
+   "tepki verme"
+  ],
+  "twist": "Karşındaki adını yanlış hatırlar ve iki kez yanlış söyler",
+  "twistType": "misunderstanding",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "utangaç",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SOC-001-B2-c",
+  "modality": "speaking",
+  "domain": "social",
+  "situation": "Partide yeni biriyle tanışmak",
+  "userRole": "Davetli",
+  "aiRole": "Partide yeni tanıştığın biri",
+  "goal": "Sohbet başlat ve ortak bir ilgi alanı bul",
+  "functions": [
+   "küçük sohbet",
+   "soru sorma",
+   "tepki verme"
+  ],
+  "twist": "Karşındaki kişi sürekli kendinden bahseder; sohbeti dengelemen gerekir",
+  "twistType": "topic-drift",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "ben merkezci",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SOC-002-B1-a",
+  "modality": "speaking",
+  "domain": "social",
+  "situation": "Daveti kibarca reddetmek",
+  "userRole": "Arkadaş",
+  "aiRole": "Israrcı bir arkadaş",
+  "goal": "Hafta sonu davetine katılamayacağını söyle ama ilişkiyi koru",
+  "functions": [
+   "reddetme",
+   "gerekçe",
+   "alternatif önerme"
+  ],
+  "twist": "Arkadaş ısrar eder ve \"Just for an hour!\" der",
+  "twistType": "saying-no",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "ısrarcı",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SOC-002-B2-b",
+  "modality": "speaking",
+  "domain": "social",
+  "situation": "Daveti kibarca reddetmek",
+  "userRole": "Arkadaş",
+  "aiRole": "Israrcı bir arkadaş",
+  "goal": "Hafta sonu davetine katılamayacağını söyle ama ilişkiyi koru",
+  "functions": [
+   "reddetme",
+   "gerekçe",
+   "alternatif önerme"
+  ],
+  "twist": "Arkadaş kırılır ve son zamanlarda hep reddettiğini söyler",
+  "twistType": "emotion",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "kırgın",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SOC-003-A2-a",
+  "modality": "speaking",
+  "domain": "social",
+  "situation": "Eski bir arkadaşla karşılaşmak",
+  "userRole": "Eski arkadaş",
+  "aiRole": "Yıllardır görmediğin bir arkadaş",
+  "goal": "Hal hatır sor ve tekrar buluşma planı yap",
+  "functions": [
+   "selamlaşma",
+   "geçmişi anlatma",
+   "plan yapma"
+  ],
+  "twist": "Olay yok; arkadaş çok heyecanlı",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "neşeli",
+   "accent": "en-AU"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-SOC-003-B1-b",
+  "modality": "speaking",
+  "domain": "social",
+  "situation": "Eski bir arkadaşla karşılaşmak",
+  "userRole": "Eski arkadaş",
+  "aiRole": "Yıllardır görmediğin bir arkadaş",
+  "goal": "Hal hatır sor ve tekrar buluşma planı yap",
+  "functions": [
+   "selamlaşma",
+   "geçmişi anlatma",
+   "plan yapma"
+  ],
+  "twist": "Arkadaş zor bir dönemden geçtiğini anlatır",
+  "twistType": "emotion",
+  "cefr": "B1",
+  "persona": {
+   "speed": "slow",
+   "mood": "hüzünlü",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-SOC-004-B1-a",
+  "modality": "speaking",
+  "domain": "social",
+  "situation": "Arkadaşa kötü haber vermek",
+  "userRole": "Arkadaş",
+  "aiRole": "Yakın arkadaşın",
+  "goal": "Arkadaşından ödünç aldığın kamerayı düşürüp kırdığını söyle",
+  "functions": [
+   "özür dileme",
+   "açıklama",
+   "telafi önerme"
+  ],
+  "twist": "Arkadaş kameranın babasından kaldığını söyler",
+  "twistType": "your-mistake",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "şaşkın",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-PHN-001-A2-a",
+  "modality": "speaking",
+  "domain": "phone",
+  "situation": "Kötü bağlantıyla telefon görüşmesi",
+  "userRole": "Arayan kişi",
+  "aiRole": "Çağrı merkezinde temsilci",
+  "goal": "Randevunu doğrula; hat sürekli kesiliyor",
+  "functions": [
+   "netleştirme",
+   "tekrar isteme",
+   "heceleme"
+  ],
+  "twist": "Bağlantı kesik kesik gelir; temsilci tarihleri yanlış duyar",
+  "twistType": "interruption",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "sabırlı",
+   "accent": "en-IN"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-PHN-001-B1-b",
+  "modality": "speaking",
+  "domain": "phone",
+  "situation": "Kötü bağlantıyla telefon görüşmesi",
+  "userRole": "Arayan kişi",
+  "aiRole": "Çağrı merkezinde temsilci",
+  "goal": "Randevunu doğrula; hat sürekli kesiliyor",
+  "functions": [
+   "netleştirme",
+   "tekrar isteme",
+   "heceleme"
+  ],
+  "twist": "Temsilci \"fifteenth\" yerine \"fiftieth\" diye anlar; tarih karışır",
+  "twistType": "misunderstanding",
+  "cefr": "B1",
+  "persona": {
+   "speed": "fast",
+   "mood": "aceleci",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-PHN-002-B1-a",
+  "modality": "speaking",
+  "domain": "phone",
+  "situation": "Görüntülü iş görüşmesinde teknik sorun",
+  "userRole": "Toplantı katılımcısı",
+  "aiRole": "Toplantıyı yöneten iş arkadaşı",
+  "goal": "Sunumunu yap; ekran paylaşımı çalışmıyor",
+  "functions": [
+   "açıklama",
+   "özür",
+   "çözüm önerme"
+  ],
+  "twist": "Görüntün donar ve sesin gider; diğerleri seni beklemeden devam eder",
+  "twistType": "interruption",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "sabırsız",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-PHN-002-B1-b",
+  "modality": "speaking",
+  "domain": "phone",
+  "situation": "Görüntülü iş görüşmesinde teknik sorun",
+  "userRole": "Toplantı katılımcısı",
+  "aiRole": "Toplantıyı yöneten iş arkadaşı",
+  "goal": "Sunumunu yap; ekran paylaşımı çalışmıyor",
+  "functions": [
+   "açıklama",
+   "özür",
+   "çözüm önerme"
+  ],
+  "twist": "Bir süre mikrofonun kapalı konuştuğunu fark edersin",
+  "twistType": "your-mistake",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "eğlenmiş",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-PHN-003-A2-a",
+  "modality": "speaking",
+  "domain": "phone",
+  "situation": "Yanlış numara",
+  "userRole": "Telefonu açan kişi",
+  "aiRole": "Seni başkası sanan bir arayan",
+  "goal": "Yanlış numara olduğunu açıkla",
+  "functions": [
+   "netleştirme",
+   "açıklama"
+  ],
+  "twist": "Arayan kişi ısrarla seni \"Dave\" sanır ve randevuyu hatırlatır",
+  "twistType": "misunderstanding",
+  "cefr": "A2",
+  "persona": {
+   "speed": "fast",
+   "mood": "aceleci",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-PHN-003-B1-b",
+  "modality": "speaking",
+  "domain": "phone",
+  "situation": "Yanlış numara",
+  "userRole": "Telefonu açan kişi",
+  "aiRole": "Seni başkası sanan bir arayan",
+  "goal": "Yanlış numara olduğunu açıkla",
+  "functions": [
+   "netleştirme",
+   "açıklama"
+  ],
+  "twist": "Arayan yanlış numara olduğunu anlayınca senden Dave'e mesaj iletmeni ister",
+  "twistType": "unexpected-request",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "utanmış",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-PHN-004-B1-a",
+  "modality": "speaking",
+  "domain": "phone",
+  "situation": "Sesli mesaj bırakmak",
+  "userRole": "Arayan kişi",
+  "aiRole": "Sesli mesaj kutusu; ardından geri arayan kişi",
+  "goal": "Kısa ve net bir sesli mesaj bırak, sonra geri aramaya cevap ver",
+  "functions": [
+   "özetleme",
+   "netleştirme"
+  ],
+  "twist": "Geri arayan kişi mesajını tam dinlememiştir ve her şeyi tekrar sorar",
+  "twistType": "vague-answer",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "dalgın",
+   "accent": "en-AU"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-CNF-001-B1-a",
+  "modality": "speaking",
+  "domain": "conflict",
+  "situation": "Sıraya kaynak yapan biri",
+  "userRole": "Sırada bekleyen kişi",
+  "aiRole": "Sıraya araya giren biri",
+  "goal": "Kibarca ama net şekilde sıranı savun",
+  "functions": [
+   "itiraz",
+   "netleştirme"
+  ],
+  "twist": "Kişi acelesi olduğunu söyleyip sıranı vermez",
+  "twistType": "difficult-person",
+  "cefr": "B1",
+  "persona": {
+   "speed": "fast",
+   "mood": "kaba",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-CNF-001-B2-b",
+  "modality": "speaking",
+  "domain": "conflict",
+  "situation": "Sıraya kaynak yapan biri",
+  "userRole": "Sırada bekleyen kişi",
+  "aiRole": "Sıraya araya giren biri",
+  "goal": "Kibarca ama net şekilde sıranı savun",
+  "functions": [
+   "itiraz",
+   "netleştirme"
+  ],
+  "twist": "Kişi biri onun için yer tutmuş gibi davranır",
+  "twistType": "grey-area",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "sakin",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-CNF-002-A2-a",
+  "modality": "speaking",
+  "domain": "conflict",
+  "situation": "Geç kaldığın için özür",
+  "userRole": "Arkadaş",
+  "aiRole": "Seni 40 dakika bekleyen arkadaş",
+  "goal": "Özür dile ve durumu toparla",
+  "functions": [
+   "özür dileme",
+   "açıklama",
+   "telafi önerme"
+  ],
+  "twist": "Arkadaş sitem eder ama affetmeye hazırdır",
+  "twistType": "your-mistake",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "kırgın",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-CNF-002-B2-b",
+  "modality": "speaking",
+  "domain": "conflict",
+  "situation": "Geç kaldığın için özür",
+  "userRole": "Arkadaş",
+  "aiRole": "Seni 40 dakika bekleyen arkadaş",
+  "goal": "Özür dile ve durumu toparla",
+  "functions": [
+   "özür dileme",
+   "açıklama",
+   "telafi önerme"
+  ],
+  "twist": "Arkadaş bunun ilk kez olmadığını ve kendini önemsiz hissettiğini söyler",
+  "twistType": "emotion",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "kırgın",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-CNF-003-A2-a",
+  "modality": "speaking",
+  "domain": "conflict",
+  "situation": "Fazla ücret alındığını fark etmek",
+  "userRole": "Müşteri",
+  "aiRole": "Kafe kasiyeri",
+  "goal": "Hesaptaki hatayı düzelt",
+  "functions": [
+   "itiraz",
+   "netleştirme"
+  ],
+  "twist": "Olay yok; kasiyer hemen düzeltir",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "özür dileyen",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-CNF-003-B2-b",
+  "modality": "speaking",
+  "domain": "conflict",
+  "situation": "Fazla ücret alındığını fark etmek",
+  "userRole": "Müşteri",
+  "aiRole": "Kafe kasiyeri",
+  "goal": "Hesaptaki hatayı düzelt",
+  "functions": [
+   "itiraz",
+   "netleştirme"
+  ],
+  "twist": "Kasiyer sana fazla para üstü verir; dürüstçe söylemen gerekir",
+  "twistType": "grey-area",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "dalgın",
+   "accent": "en-AU"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-CNF-004-B2-a",
+  "modality": "speaking",
+  "domain": "conflict",
+  "situation": "Yanlış anlaşılan mesaj",
+  "userRole": "İş arkadaşı",
+  "aiRole": "Mesajını yanlış anlayıp alınan iş arkadaşı",
+  "goal": "Yanlış anlaşılmayı düzelt ve ilişkiyi onar",
+  "functions": [
+   "açıklama",
+   "özür",
+   "netleştirme"
+  ],
+  "twist": "İş arkadaşı e-postandaki \"as I said before\" ifadesini kaba bulmuştur",
+  "twistType": "misunderstanding",
+  "cefr": "B2",
+  "persona": {
+   "speed": "normal",
+   "mood": "soğuk",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-OPN-001-B1-a",
+  "modality": "speaking",
+  "domain": "opinion",
+  "situation": "Uzaktan çalışma tartışması",
+  "userRole": "Tartışmaya katılan",
+  "aiRole": "Ofise dönüşü savunan iş arkadaşı",
+  "goal": "Görüşünü gerekçelerle savun",
+  "functions": [
+   "fikir savunma",
+   "örnek verme",
+   "karşı argüman"
+  ],
+  "twist": "Olay yok; karşı taraf dinler ve soru sorar",
+  "twistType": "none",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "meraklı",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-OPN-001-B2-b",
+  "modality": "speaking",
+  "domain": "opinion",
+  "situation": "Uzaktan çalışma tartışması",
+  "userRole": "Tartışmaya katılan",
+  "aiRole": "Ofise dönüşü savunan iş arkadaşı",
+  "goal": "Görüşünü gerekçelerle savun",
+  "functions": [
+   "fikir savunma",
+   "örnek verme",
+   "karşı argüman"
+  ],
+  "twist": "Karşı taraf bilerek zıt görüşü güçlü şekilde savunur ve sözünü keser",
+  "twistType": "difficult-person",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "iddialı",
+   "accent": "en-GB"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-OPN-002-A2-a",
+  "modality": "speaking",
+  "domain": "opinion",
+  "situation": "Tatil yeri seçimi",
+  "userRole": "Arkadaş",
+  "aiRole": "Farklı bir yer isteyen arkadaşın",
+  "goal": "Kendi seçtiğin yeri savun ama ortak karara var",
+  "functions": [
+   "öneri",
+   "karşılaştırma",
+   "uzlaşma"
+  ],
+  "twist": "Olay yok; arkadaş açık fikirli",
+  "twistType": "none",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "rahat",
+   "accent": "en-AU"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-OPN-002-B1-b",
+  "modality": "speaking",
+  "domain": "opinion",
+  "situation": "Tatil yeri seçimi",
+  "userRole": "Arkadaş",
+  "aiRole": "Farklı bir yer isteyen arkadaşın",
+  "goal": "Kendi seçtiğin yeri savun ama ortak karara var",
+  "functions": [
+   "öneri",
+   "karşılaştırma",
+   "uzlaşma"
+  ],
+  "twist": "Arkadaş bütçesinin az olduğunu sonradan söyler",
+  "twistType": "grey-area",
+  "cefr": "B1",
+  "persona": {
+   "speed": "normal",
+   "mood": "mahcup",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-OPN-003-B2-a",
+  "modality": "speaking",
+  "domain": "opinion",
+  "situation": "Sosyal medya ve gençler",
+  "userRole": "Tartışmaya katılan",
+  "aiRole": "Bir podcast sunucusu",
+  "goal": "Artıları ve eksileri tartış ve net bir görüş belirt",
+  "functions": [
+   "fikir belirtme",
+   "artı-eksi",
+   "örnek verme"
+  ],
+  "twist": "Sunucu senden 30 saniyede net bir tavsiye vermeni ister",
+  "twistType": "unexpected-request",
+  "cefr": "B2",
+  "persona": {
+   "speed": "fast",
+   "mood": "enerjik",
+   "accent": "en-US"
+  },
+  "length": "deep"
+ },
+ {
+  "id": "SPK-OPN-004-A1-a",
+  "modality": "speaking",
+  "domain": "opinion",
+  "situation": "Akşam ne yapılacağına karar vermek",
+  "userRole": "Ev arkadaşı",
+  "aiRole": "Ev arkadaşın",
+  "goal": "Film mi dışarı mı karar verin",
+  "functions": [
+   "öneri",
+   "tercih belirtme",
+   "uzlaşma"
+  ],
+  "twist": "Olay yok; ev arkadaşı kararsız",
+  "twistType": "none",
+  "cefr": "A1",
+  "persona": {
+   "speed": "slow",
+   "mood": "rahat",
+   "accent": "en-US"
+  },
+  "length": "quick"
+ },
+ {
+  "id": "SPK-OPN-004-A2-b",
+  "modality": "speaking",
+  "domain": "opinion",
+  "situation": "Akşam ne yapılacağına karar vermek",
+  "userRole": "Ev arkadaşı",
+  "aiRole": "Ev arkadaşın",
+  "goal": "Film mi dışarı mı karar verin",
+  "functions": [
+   "öneri",
+   "tercih belirtme",
+   "uzlaşma"
+  ],
+  "twist": "Ev arkadaşı her öneriye \"I don't mind\" der ama hiçbirini sevmez",
+  "twistType": "vague-answer",
+  "cefr": "A2",
+  "persona": {
+   "speed": "normal",
+   "mood": "kararsız",
+   "accent": "en-GB"
+  },
+  "length": "quick"
+ }
+]

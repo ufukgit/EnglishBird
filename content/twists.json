@@ -1,0 +1,80 @@
+[
+ {
+  "type": "misunderstanding",
+  "tr": "Yanlış anlaşılma",
+  "examples": ["Barista adını yanlış yazar", "Telefondaki kişi \"fifteen\" yerine \"fifty\" anlar", "Garson başka bir yemeği getirir"],
+  "aiInstruction": "At a natural moment, misunderstand one concrete detail the user said (a number, name, date or item). Act on the wrong version until the user notices and corrects you. Do not hint that it is a test."
+ },
+ {
+  "type": "plan-breaks",
+  "tr": "Plan çöker",
+  "examples": ["Rezervasyon sistemde yoktur", "Kart geçmez", "Son tren iptal edilmiştir"],
+  "aiInstruction": "After the user states their goal, reveal that the expected plan is impossible. Offer one imperfect alternative only if asked. Let the user negotiate."
+ },
+ {
+  "type": "difficult-person",
+  "tr": "Zor karşı taraf",
+  "examples": ["Kaba, aceleci, ilgisiz ya da durmadan konuşan biri"],
+  "aiInstruction": "Be impatient or unhelpful in a realistic, non-abusive way: short answers, interruptions, pushing your own agenda. Soften only when the user is clear and firm."
+ },
+ {
+  "type": "your-mistake",
+  "tr": "Senin hatan",
+  "examples": ["Geç kaldın", "Yanlış şeyi sipariş ettin", "Birinin adını unuttun"],
+  "aiInstruction": "Reveal that the problem was caused by the user. Be fair but expect an apology and a way to fix it."
+ },
+ {
+  "type": "cultural-trap",
+  "tr": "Kültürel tuzak",
+  "examples": ["\"How are you?\" gerçek bir soru değildir", "\"We should grab coffee sometime\" çoğu zaman gerçek davet değildir", "Bahşiş beklentisi"],
+  "aiInstruction": "Use a culturally loaded phrase or expectation naturally. React realistically if the user takes it too literally or ignores it. Do not explain it during the chat."
+ },
+ {
+  "type": "saying-no",
+  "tr": "Hayır demek",
+  "examples": ["Abonelik iptalinde seni tutmaya çalışan temsilci", "Mağazada ısrarcı satış"],
+  "aiInstruction": "Push an offer the user does not want, up to three times, each time with a new angle. Accept only a clear, polite refusal."
+ },
+ {
+  "type": "topic-drift",
+  "tr": "Konu kayması",
+  "examples": ["Taksi şoförü kişisel veya politik bir soru sorar"],
+  "aiInstruction": "Drift to a personal or sensitive side topic. Keep going unless the user politely steers back to the goal."
+ },
+ {
+  "type": "vague-answer",
+  "tr": "Belirsiz cevap",
+  "examples": ["\"I'll see what I can do\" der ama hiçbir şey vaat etmez"],
+  "aiInstruction": "Give vague, non-committal answers (no dates, no numbers, no promises) until the user asks a precise question that forces a concrete answer."
+ },
+ {
+  "type": "interruption",
+  "tr": "Kesinti",
+  "examples": ["Telefon çekmez", "Ortam gürültülüdür", "Üçüncü biri araya girer"],
+  "aiInstruction": "Simulate interruptions: say you missed part of what they said, get distracted by someone else, or drop half a sentence. The user must repeat, summarise and confirm."
+ },
+ {
+  "type": "grey-area",
+  "tr": "Gri bölge",
+  "examples": ["Kasiyer fazla para üstü verir", "İş arkadaşı senin fikrini kendi fikri gibi sunar"],
+  "aiInstruction": "Create an ethically or socially ambiguous situation that the user has to address tactfully. Do not point it out yourself."
+ },
+ {
+  "type": "emotion",
+  "tr": "Duygu",
+  "examples": ["Karşındaki kötü bir haber verir ve teselli etmen gerekir"],
+  "aiInstruction": "Share something emotional and personal mid-conversation. Respond warmly to empathy and coldly to ignoring it."
+ },
+ {
+  "type": "unexpected-request",
+  "tr": "Beklenmedik rica",
+  "examples": ["Bir yabancı fotoğrafını çekmeni ister", "Yanlış numara arar"],
+  "aiInstruction": "Make an unexpected request that is not part of the user's goal. The user may accept, negotiate or decline politely."
+ },
+ {
+  "type": "none",
+  "tr": "Olay yok",
+  "examples": ["Temel seviye: karşı taraf yardımsever ve sabırlıdır"],
+  "aiInstruction": "No complication. Be cooperative and patient so the user can focus on the language."
+ }
+]

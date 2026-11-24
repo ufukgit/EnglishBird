@@ -55,7 +55,7 @@ export interface WordEntry {
   examples: string[];
   sayIt: { tr: string; en: string }[]; // "Durumdan söyle" görevleri
   collocations?: string[];
-  source: 'ngsl-spoken' | 'ngsl' | 'project';
+  source: 'cefr-j' | 'project';
 }
 
 /** Statik içerik: günün kalıbı */
@@ -81,13 +81,28 @@ export interface ScenarioSkeleton {
   aiRole: string;
   goal: string;
   twist: string;
-  twistType: TwistType;
+  twistType: TwistType | 'none';
   cefr: Cefr;
   functions: string[];
   persona: { speed: 'slow' | 'normal' | 'fast'; mood: string; accent: 'en-US' | 'en-GB' | 'en-AU' | 'en-IN' };
   length: 'quick' | 'deep';
   /** dinleme için: anons, sesli mesaj, kulak misafiri, talimat, toplantı, telefon menüsü, hikâye, tartışma */
   listeningFormat?: string;
+}
+
+/** Varsayılan müfredat günü */
+export interface CurriculumDay {
+  day: number;
+  domains: Domain[];
+  items: string[]; // WordEntry id
+  pattern: string; // PatternEntry id
+}
+
+export interface TwistInfo {
+  type: TwistType | 'none';
+  tr: string;
+  examples: string[];
+  aiInstruction: string;
 }
 
 /** Kullanıcı durumu: kelime/kalıp/hata öğesi */

@@ -1,0 +1,180 @@
+# Konuşma senaryosu iskeletleri
+# ## alan
+# = temel durum | senin rolün | AI'ın rolü | amacın (kullanıcıya gösterilir) | işlevler (virgülle)
+# - olay türü | CEFR | uzunluk (quick/deep) | beklenmedik olay (kullanıcıya gösterilmez) | hız | ruh hali | aksan
+# Olay türleri: misunderstanding, plan-breaks, difficult-person, your-mistake, cultural-trap, saying-no,
+#               topic-drift, vague-answer, interruption, grey-area, emotion, unexpected-request, none
+
+## food
+= Kafede kahve siparişi | Müşteri | Kalabalık bir kafede barista | İki kahve sipariş et, birini yulaf sütlü iste ve paket al | sipariş, rica, netleştirme
+- none | A1 | quick | Olay yok; barista sade ve yavaş konuşur | slow | neşeli | en-US
+- misunderstanding | A2 | quick | Barista adını yanlış duyar ve bardağa yanlış yazar | normal | aceleci | en-US
+- cultural-trap | B1 | quick | Barista "How's your day going?" diye sorar; bu bir sohbet açılışıdır, uzun cevap beklemez | normal | neşeli | en-US
+= Restoranda yanlış gelen yemek | Müşteri | Garson | Yanlış gelen yemeği kibarca geri gönder ve doğrusunu iste | şikâyet, rica, netleştirme
+- misunderstanding | A2 | quick | Garson senin söylediğini getirdiğinde ısrar eder; sipariş fişinde gerçekten başka yemek yazıyor | normal | sakin | en-GB
+- plan-breaks | B1 | deep | İstediğin yemek mutfakta bitmiş; garson alternatif önerir | normal | özür dileyen | en-GB
+- difficult-person | B2 | deep | Garson savunmaya geçer ve hatanın senin siparişinde olduğunu ima eder | fast | gergin | en-US
+= Arkadaşlarla hesap ödeme | Arkadaş grubundan biri | Grubun en konuşkan arkadaşı | Hesabı adil şekilde bölüşün; sen sadece çorba içtin | öneri, itiraz, pazarlık
+- none | A2 | quick | Olay yok; arkadaş eşit bölmeyi önerir ve sen itiraz edersin | normal | rahat | en-US
+- grey-area | B1 | deep | Bir arkadaş en pahalı şarabı içtiği halde eşit bölmek istiyor | normal | neşeli | en-GB
+- cultural-trap | B2 | deep | Arkadaş bahşişi de hesaba katmadığın için şaşırır; ülkede %20 bahşiş beklenir | fast | şaşkın | en-US
+= Telefonla masa ayırtma | Müşteri | Restoran çalışanı | Cumartesi akşamı dört kişilik masa ayırt, biri vejetaryen | rica, netleştirme, sayı ve saat
+- misunderstanding | A2 | quick | Çalışan "fourteen" yerine "forty" anlar | normal | sakin | en-GB
+- plan-breaks | B1 | quick | Cumartesi tamamen dolu; sadece 21:30 veya pazar var | normal | yardımsever | en-US
+- vague-answer | B2 | deep | Çalışan "I'll see what I can do" der ama rezervasyonu onaylamaz; netlik istemen gerekir | fast | dalgın | en-AU
+
+## shopping
+= Kıyafet iadesi | Müşteri | Mağaza kasiyeri | Küçük gelen kazağı iade et ve paranı geri al | şikâyet, rica, netleştirme
+- none | A2 | quick | Olay yok; kasiyer fiş ister | slow | nazik | en-US
+- saying-no | B1 | deep | Mağaza sadece değişim yapıyor, para iadesi yok; kasiyer seni hediye çekine yönlendirir | normal | kurallara bağlı | en-GB
+- your-mistake | B1 | quick | Fişi evde unuttuğunu fark edersin | normal | sabırlı | en-US
+= Elektronik mağazasında telefon seçimi | Müşteri | Satış temsilcisi | Bütçene uygun, kamerası iyi bir telefon bul | soru sorma, karşılaştırma, reddetme
+- difficult-person | B1 | deep | Temsilci sürekli pahalı modeli ve ek garantiyi satmaya çalışır | fast | ısrarcı | en-US
+- saying-no | B2 | deep | Temsilci aylık abonelikli paketi "bedava telefon" diye sunar; hayır demen gerekir | fast | ısrarcı | en-GB
+= Pazarda pazarlık | Müşteri | Pazar tezgâhında satıcı | El yapımı bir çantayı makul bir fiyata al | pazarlık, itiraz, karşı teklif
+- none | A2 | quick | Olay yok; satıcı ilk fiyatı yüksek söyler | normal | neşeli | en-IN
+- emotion | B2 | deep | Satıcı çantayı annesinin yaptığını söyleyip duygusal bir hikâye anlatır | normal | samimi | en-IN
+= Bozuk ürünle müşteri hizmetleri | Müşteri | Mağazanın müşteri hizmetleri | İki haftalık kulaklığın değiştirilmesini sağla | şikâyet, açıklama, ısrar
+- vague-answer | B1 | deep | Temsilci "We'll look into it" deyip net bir tarih vermez | normal | ilgisiz | en-US
+- grey-area | B2 | deep | Temsilci hasarın kullanıcı hatası olabileceğini ima eder | normal | şüpheci | en-GB
+
+## transport
+= Taksiyle havalimanına gitmek | Yolcu | Taksi şoförü | Havalimanına zamanında var ve ücreti netleştir | yön tarifi, pazarlık, netleştirme
+- topic-drift | B1 | deep | Şoför siyaset ve senin ülken hakkında kişisel sorular sorar; kibarca geçiştirmen gerekir | fast | konuşkan | en-US
+- difficult-person | B1 | quick | Şoför taksimetreyi açmaz ve sabit, yüksek bir fiyat söyler | fast | aceleci | en-GB
+- interruption | B2 | deep | Yol kapalıdır; şoför uzun bir alternatif önerir, sürekli telefonla da konuşur | fast | gergin | en-IN
+= Yol tarifi sormak | Turist | Sokakta yerel biri | Müzeye nasıl gideceğini öğren | soru sorma, netleştirme, teşekkür
+- none | A1 | quick | Olay yok; yerel kişi yavaş ve net anlatır | slow | yardımsever | en-GB
+- misunderstanding | A2 | quick | Yerel kişi başka bir müzeyi anlatır | normal | yardımsever | en-AU
+- vague-answer | B1 | quick | Kişi "It's not far, just keep going" der; sokak ve dönüş bilgisi vermez | fast | aceleci | en-US
+= Tren aktarması kaçtı | Yolcu | İstasyon görevlisi | Bir sonraki bağlantıyı bul ve biletinin geçerli olup olmadığını öğren | rica, netleştirme, şikâyet
+- plan-breaks | B1 | deep | Son tren iptal edilmiştir; seçenek otobüs veya sabah treni | normal | yorgun | en-GB
+- saying-no | B2 | deep | Görevli biletinin yeni trende geçmediğini ve yeniden ödemen gerektiğini söyler | normal | kurallara bağlı | en-GB
+= Araç kiralama | Müşteri | Araç kiralama görevlisi | Üç günlüğüne küçük bir araba kirala, gizli ücretleri sor | soru sorma, netleştirme, reddetme
+- difficult-person | B1 | deep | Görevli tam kapsamlı sigortayı zorla satmaya çalışır | fast | ısrarcı | en-US
+- grey-area | B2 | deep | Arabada önceden kalan çizik var; görevli kayda geçirmek istemez | normal | aceleci | en-AU
+
+## travel
+= Gece geç saatte otele giriş | Misafir | Yorgun gece resepsiyonisti | Rezervasyonunu bul ve sessiz bir oda iste | rica, itiraz, netleştirme
+- plan-breaks | B1 | deep | Rezervasyon ertesi güne kayıtlı | normal | yorgun | en-GB
+- none | A2 | quick | Olay yok; resepsiyonist yavaş konuşur ve pasaport ister | slow | nazik | en-US
+- interruption | B2 | deep | Resepsiyonist sık sık telefona bakar, arada başka misafirle ilgilenir | fast | dalgın | en-IN
+= Havalimanında kayıp bagaj | Yolcu | Kayıp bagaj ofisi görevlisi | Bavulunu bildir ve ne zaman geleceğini öğren | açıklama, tarif etme, netleştirme
+- none | A2 | quick | Olay yok; görevli formu birlikte doldurur | slow | sakin | en-GB
+- vague-answer | B1 | deep | Görevli "within a few days" der; tazminat ve acil ihtiyaçlar konusunda netlik istemen gerekir | normal | ilgisiz | en-US
+= Uçuş iptali ve yeniden rezervasyon | Yolcu | Havayolu kontuar görevlisi | Bugün başka bir uçuşa geç | rica, pazarlık, ısrar
+- plan-breaks | B1 | deep | Bugün uçuş yok; görevli yarın sabahı ve otel kuponu önerir | normal | stresli | en-GB
+- grey-area | B2 | deep | Görevli tazminat hakkın olmadığını söyler; iptal hava durumundan değil teknik arızadan | fast | savunmacı | en-US
+= Kiralık evde ev sahibiyle tanışma | Kiracı | Kiralık evin sahibi | Evi teslim al, Wi-Fi ve çöp kurallarını öğren | soru sorma, netleştirme, teşekkür
+- cultural-trap | B1 | quick | Ev sahibi "Make yourself at home" der ama sonra ayakkabıyla girmemeni ima eder | normal | samimi | en-AU
+- unexpected-request | B2 | deep | Ev sahibi bir arkadaşının evde bir gece kalıp kalamayacağını sorar | normal | samimi | en-US
+
+## health
+= Eczanede ilaç almak | Hasta | Eczacı | Boğaz ağrısı ve ateş için ilaç al | açıklama, soru sorma
+- none | A2 | quick | Olay yok; eczacı yavaşça belirtileri sorar | slow | nazik | en-GB
+- saying-no | B1 | quick | İstediğin ilaç reçetesiz verilmiyor | normal | kurallara bağlı | en-US
+= Doktordan randevu almak | Hasta | Muayenehane sekreteri | Bu hafta içinde randevu al | rica, tarih saat, ısrar
+- plan-breaks | A2 | quick | En erken randevu iki hafta sonra | normal | yorgun | en-GB
+- grey-area | B1 | deep | Sekreter acil değilse beklemen gerektiğini söyler; durumu anlatıp ikna etmen gerekir | normal | sabırsız | en-US
+= Doktora belirtileri anlatmak | Hasta | Aile hekimi | Belirtilerini anlat ve ne yapacağını öğren | açıklama, soru sorma, netleştirme
+- none | A2 | deep | Olay yok; doktor sorular sorar | slow | sakin | en-GB
+- misunderstanding | B1 | deep | Doktor "dizzy" kelimesini başka anlar ve yanlış teşhise gider | normal | aceleci | en-IN
+- emotion | B2 | deep | Doktor endişe verici bir test gerektiğini söyler; soğukkanlı soru sorman gerekir | normal | ciddi | en-US
+= Acilde bir arkadaşa refakat | Refakatçi | Acil servis hemşiresi | Arkadaşının durumunu anlat ve bekleme süresini öğren | açıklama, ısrar, netleştirme
+- interruption | B2 | deep | Hemşire sürekli başka hastalarla ilgilenir, cevapları yarım kalır | fast | stresli | en-US
+
+## home
+= Ev sahibine arıza bildirmek | Kiracı | Ev sahibi | Kaloriferin tamirini bu hafta ayarlat | şikâyet, rica, ısrar
+- vague-answer | B1 | deep | Ev sahibi "I'll get someone to look at it" der ama gün vermez | normal | ilgisiz | en-GB
+- grey-area | B2 | deep | Ev sahibi arızanın senin kullanımından olduğunu ima eder ve masrafı paylaşmak ister | normal | savunmacı | en-US
+= Gürültülü komşu | Komşu | Üst kattaki komşu | Gece müziğin kısılmasını kibarca iste | rica, şikâyet, uzlaşma
+- none | A2 | quick | Olay yok; komşu hemen özür diler | normal | mahcup | en-US
+- difficult-person | B1 | quick | Komşu saatin henüz erken olduğunu söyleyip sana itiraz eder | fast | savunmacı | en-AU
+- emotion | B2 | deep | Komşu o gün işten çıkarıldığını ve arkadaşlarının moral için geldiğini söyler | normal | üzgün | en-US
+= Ev arkadaşıyla iş bölümü | Ev arkadaşı | Ev arkadaşın | Temizlik ve çöp sırası için adil bir düzen kur | öneri, itiraz, uzlaşma
+- none | A2 | quick | Olay yok; ev arkadaşı plana açıktır | normal | rahat | en-GB
+- your-mistake | B1 | deep | Ev arkadaşı geçen hafta senin sıranda çöpü onun çıkardığını hatırlatır | normal | kırgın | en-US
+= Kapıda kalmak | Kiracı | Bina görevlisi | Yedek anahtarla içeri gir | açıklama, rica
+- saying-no | B1 | quick | Görevli kimliğini görmeden kapıyı açamayacağını söyler; kimliğin içeride | normal | kurallara bağlı | en-GB
+
+## services
+= Bankada hesap açmak | Müşteri | Banka çalışanı | Yabancı olarak hesap aç ve masrafları öğren | soru sorma, netleştirme
+- none | A2 | deep | Olay yok; çalışan adım adım anlatır | slow | nazik | en-GB
+- plan-breaks | B1 | deep | Adres belgesi istenir; senin yok | normal | kurallara bağlı | en-GB
+= Kargo takibi | Müşteri | Kargo şirketi çağrı merkezi | Bir haftadır gelmeyen paketinin nerede olduğunu öğren | şikâyet, netleştirme, ısrar
+- vague-answer | B1 | quick | Temsilci "It's in transit" demekten öteye geçmez | normal | ilgisiz | en-IN
+- misunderstanding | B2 | deep | Sistem paketi teslim edilmiş gösterir; senin elinde değil | normal | şüpheci | en-US
+= Abonelik iptali | Müşteri | Abonelik şirketi temsilcisi | Spor salonu aboneliğini iptal et | reddetme, ısrar, netleştirme
+- saying-no | B1 | deep | Temsilci seni tutmak için indirim ve bedava ay teklif eder | fast | ısrarcı | en-US
+- grey-area | B2 | deep | Temsilci sözleşmede 3 aylık bildirim süresi olduğunu söyler | normal | kurallara bağlı | en-GB
+= Fatura itirazı | Müşteri | Telefon operatörü | Faturadaki fazla ücretin iadesini iste | şikâyet, açıklama, ısrar
+- your-mistake | B1 | quick | Ücretin aslında yurtdışında kullandığın internetten geldiği ortaya çıkar | normal | sabırlı | en-US
+- difficult-person | B2 | deep | Temsilci aynı açıklamayı tekrar eder ve yöneticiye bağlamaz | fast | robotik | en-IN
+
+## work
+= İş görüşmesi | Aday | İşe alım yöneticisi | Kendini tanıt ve neden uygun olduğunu anlat | kendini tanıtma, örnek verme, soru sorma
+- none | B1 | deep | Olay yok; standart sorular | normal | profesyonel | en-US
+- unexpected-request | B2 | deep | Yönetici "Tell me about a time you failed" gibi zor bir soru sorar | normal | profesyonel | en-GB
+- cultural-trap | B2 | deep | Görüşme sonunda "Do you have any questions for us?" diye sorulur; "Hayır" demek zayıf izlenim bırakır | normal | profesyonel | en-US
+= Toplantıda fikrine itiraz | Ekip üyesi | Kıdemli iş arkadaşı | Önerini savun ve ortak bir karara var | fikir savunma, itiraz, uzlaşma
+- difficult-person | B2 | deep | İş arkadaşı sözünü keser ve fikrini kendi fikri gibi sunar | fast | baskın | en-US
+- grey-area | B2 | deep | İş arkadaşı senin hatanı toplantıda ima eder ama doğrudan söylemez | normal | pasif agresif | en-GB
+= Yöneticiden izin istemek | Çalışan | Yönetici | Gelecek cuma izin al | rica, gerekçe, pazarlık
+- none | A2 | quick | Olay yok; yönetici kabul eder ama işleri sorar | normal | rahat | en-US
+- saying-no | B1 | quick | Yönetici o gün önemli bir teslim olduğunu söyler | normal | gergin | en-GB
+= Yeni iş arkadaşıyla tanışma | Ekipteki yeni kişi | Ekipten samimi bir iş arkadaşı | Kendini tanıt, ekip ve ofis hakkında bilgi al | kendini tanıtma, soru sorma, küçük sohbet
+- topic-drift | B1 | quick | İş arkadaşı dedikoduya girip başka birini eleştirmeye başlar | fast | konuşkan | en-AU
+- cultural-trap | B1 | quick | İş arkadaşı "We should grab lunch sometime" der; bu her zaman gerçek bir davet değildir | normal | samimi | en-US
+
+## social
+= Partide yeni biriyle tanışmak | Davetli | Partide yeni tanıştığın biri | Sohbet başlat ve ortak bir ilgi alanı bul | küçük sohbet, soru sorma, tepki verme
+- none | A2 | quick | Olay yok; karşı taraf meraklı ve sabırlı | slow | neşeli | en-US
+- misunderstanding | B1 | quick | Karşındaki adını yanlış hatırlar ve iki kez yanlış söyler | normal | utangaç | en-GB
+- topic-drift | B2 | deep | Karşındaki kişi sürekli kendinden bahseder; sohbeti dengelemen gerekir | fast | ben merkezci | en-US
+= Daveti kibarca reddetmek | Arkadaş | Israrcı bir arkadaş | Hafta sonu davetine katılamayacağını söyle ama ilişkiyi koru | reddetme, gerekçe, alternatif önerme
+- saying-no | B1 | quick | Arkadaş ısrar eder ve "Just for an hour!" der | normal | ısrarcı | en-US
+- emotion | B2 | deep | Arkadaş kırılır ve son zamanlarda hep reddettiğini söyler | normal | kırgın | en-GB
+= Eski bir arkadaşla karşılaşmak | Eski arkadaş | Yıllardır görmediğin bir arkadaş | Hal hatır sor ve tekrar buluşma planı yap | selamlaşma, geçmişi anlatma, plan yapma
+- none | A2 | quick | Olay yok; arkadaş çok heyecanlı | normal | neşeli | en-AU
+- emotion | B1 | deep | Arkadaş zor bir dönemden geçtiğini anlatır | slow | hüzünlü | en-US
+= Arkadaşa kötü haber vermek | Arkadaş | Yakın arkadaşın | Arkadaşından ödünç aldığın kamerayı düşürüp kırdığını söyle | özür dileme, açıklama, telafi önerme
+- your-mistake | B1 | deep | Arkadaş kameranın babasından kaldığını söyler | normal | şaşkın | en-GB
+
+## phone
+= Kötü bağlantıyla telefon görüşmesi | Arayan kişi | Çağrı merkezinde temsilci | Randevunu doğrula; hat sürekli kesiliyor | netleştirme, tekrar isteme, heceleme
+- interruption | A2 | quick | Bağlantı kesik kesik gelir; temsilci tarihleri yanlış duyar | normal | sabırlı | en-IN
+- misunderstanding | B1 | quick | Temsilci "fifteenth" yerine "fiftieth" diye anlar; tarih karışır | fast | aceleci | en-US
+= Görüntülü iş görüşmesinde teknik sorun | Toplantı katılımcısı | Toplantıyı yöneten iş arkadaşı | Sunumunu yap; ekran paylaşımı çalışmıyor | açıklama, özür, çözüm önerme
+- interruption | B1 | deep | Görüntün donar ve sesin gider; diğerleri seni beklemeden devam eder | normal | sabırsız | en-GB
+- your-mistake | B1 | quick | Bir süre mikrofonun kapalı konuştuğunu fark edersin | normal | eğlenmiş | en-US
+= Yanlış numara | Telefonu açan kişi | Seni başkası sanan bir arayan | Yanlış numara olduğunu açıkla | netleştirme, açıklama
+- misunderstanding | A2 | quick | Arayan kişi ısrarla seni "Dave" sanır ve randevuyu hatırlatır | fast | aceleci | en-US
+- unexpected-request | B1 | quick | Arayan yanlış numara olduğunu anlayınca senden Dave'e mesaj iletmeni ister | normal | utanmış | en-GB
+= Sesli mesaj bırakmak | Arayan kişi | Sesli mesaj kutusu; ardından geri arayan kişi | Kısa ve net bir sesli mesaj bırak, sonra geri aramaya cevap ver | özetleme, netleştirme
+- vague-answer | B1 | quick | Geri arayan kişi mesajını tam dinlememiştir ve her şeyi tekrar sorar | normal | dalgın | en-AU
+
+## conflict
+= Sıraya kaynak yapan biri | Sırada bekleyen kişi | Sıraya araya giren biri | Kibarca ama net şekilde sıranı savun | itiraz, netleştirme
+- difficult-person | B1 | quick | Kişi acelesi olduğunu söyleyip sıranı vermez | fast | kaba | en-US
+- grey-area | B2 | quick | Kişi biri onun için yer tutmuş gibi davranır | normal | sakin | en-GB
+= Geç kaldığın için özür | Arkadaş | Seni 40 dakika bekleyen arkadaş | Özür dile ve durumu toparla | özür dileme, açıklama, telafi önerme
+- your-mistake | A2 | quick | Arkadaş sitem eder ama affetmeye hazırdır | normal | kırgın | en-US
+- emotion | B2 | deep | Arkadaş bunun ilk kez olmadığını ve kendini önemsiz hissettiğini söyler | normal | kırgın | en-GB
+= Fazla ücret alındığını fark etmek | Müşteri | Kafe kasiyeri | Hesaptaki hatayı düzelt | itiraz, netleştirme
+- none | A2 | quick | Olay yok; kasiyer hemen düzeltir | normal | özür dileyen | en-US
+- grey-area | B2 | quick | Kasiyer sana fazla para üstü verir; dürüstçe söylemen gerekir | fast | dalgın | en-AU
+= Yanlış anlaşılan mesaj | İş arkadaşı | Mesajını yanlış anlayıp alınan iş arkadaşı | Yanlış anlaşılmayı düzelt ve ilişkiyi onar | açıklama, özür, netleştirme
+- misunderstanding | B2 | deep | İş arkadaşı e-postandaki "as I said before" ifadesini kaba bulmuştur | normal | soğuk | en-GB
+
+## opinion
+= Uzaktan çalışma tartışması | Tartışmaya katılan | Ofise dönüşü savunan iş arkadaşı | Görüşünü gerekçelerle savun | fikir savunma, örnek verme, karşı argüman
+- none | B1 | deep | Olay yok; karşı taraf dinler ve soru sorar | normal | meraklı | en-US
+- difficult-person | B2 | deep | Karşı taraf bilerek zıt görüşü güçlü şekilde savunur ve sözünü keser | fast | iddialı | en-GB
+= Tatil yeri seçimi | Arkadaş | Farklı bir yer isteyen arkadaşın | Kendi seçtiğin yeri savun ama ortak karara var | öneri, karşılaştırma, uzlaşma
+- none | A2 | quick | Olay yok; arkadaş açık fikirli | normal | rahat | en-AU
+- grey-area | B1 | deep | Arkadaş bütçesinin az olduğunu sonradan söyler | normal | mahcup | en-US
+= Sosyal medya ve gençler | Tartışmaya katılan | Bir podcast sunucusu | Artıları ve eksileri tartış ve net bir görüş belirt | fikir belirtme, artı-eksi, örnek verme
+- unexpected-request | B2 | deep | Sunucu senden 30 saniyede net bir tavsiye vermeni ister | fast | enerjik | en-US
+= Akşam ne yapılacağına karar vermek | Ev arkadaşı | Ev arkadaşın | Film mi dışarı mı karar verin | öneri, tercih belirtme, uzlaşma
+- none | A1 | quick | Olay yok; ev arkadaşı kararsız | slow | rahat | en-US
+- vague-answer | A2 | quick | Ev arkadaşı her öneriye "I don't mind" der ama hiçbirini sevmez | normal | kararsız | en-GB
