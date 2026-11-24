@@ -336,7 +336,7 @@ export default function SpeechTest() {
     <main>
       <button onClick={() => (location.hash = '')}>← Geri</button>
       <h1>iPhone ses testi</h1>
-      <p className="muted">Sonuçları kopyala ve sohbete yapıştır.</p>
+      <p className="muted">Sonuçları kopyala ve sohbete yapıştır. · Sürüm {__BUILD__}</p>
 
       <h2>1. Ortam</h2>
       {env ? (
