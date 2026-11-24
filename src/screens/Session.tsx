@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { getPattern, getWord, PATTERNS, WORDS } from '../lib/content';
 import { allItems, allSessions, getSettings, putSession, type ExerciseKind, type ItemState, type SessionRecord, type Settings } from '../lib/db';
 import { formatDuration, sessionDay, shuffle } from '../lib/day';
-import { applyReview, dueItems, dueTomorrowCount, ensureItem, nextDueDate, getTodayPlan, markDayDone, markIntroduced, putItem, recordAttempt, scheduleFirstDay } from '../lib/srs';
+import { applyReview, blindTestItems, dueItems, dueTomorrowCount, ensureItem, isDurableEvidence, nextDueDate, saveBlindTest, getTodayPlan, markDayDone, markIntroduced, putItem, recordAttempt, scheduleFirstDay } from '../lib/srs';
 import { notifySessionDone } from '../lib/api';
 import { sfx } from '../lib/sfx';
 import Bird from '../components/Bird';
@@ -34,6 +34,7 @@ type Step =
   | { t: 'catch'; id: string; distractors: string[] }
   | { t: 'use'; id: string }
   | { t: 'fix'; id: string }
+  | { t: 'blind'; id: string }
   | { t: 'scenario' };
 
 interface Built {
@@ -72,6 +73,10 @@ async function buildSession(kind: Kind): Promise<Built> {
     const as = nextRung === 1 ? 'recall' : nextRung === 3 ? 'use' : (plan.dayNumber + i) % 2 === 0 ? 'recall' : 'use';
     steps.push({ t: 'review', id: r.id, as });
   });
+  // Haftalık habersiz test (haftada bir, ısınmanın ardından, ipucusuz)
+  const blind = kind === 'extra' ? [] : await blindTestItems();
+  const reviewIds = new Set(reviews.map((r) => r.id));
+  blind.filter((b) => !reviewIds.has(b.id)).forEach((b) => steps.push({ t: 'blind', id: b.id }));
   // Geçmiş senaryolardaki hatalar: doğru hâlini söyle
   fixes.forEach((f) => steps.push({ t: 'fix', id: f.id }));
 
@@ -118,6 +123,8 @@ interface Stats {
   firstRecall: Record<string, boolean>; // yeni öğe → yardımsız hatırladı mı
   patternUsed: boolean;
   scenario: ScenarioOutcome | null;
+  blindTotal: number;
+  blindCorrect: number;
 }
 
 export default function Session({ kind, onExit }: { kind: Kind; onExit: () => void }) {
@@ -125,7 +132,7 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
   const [built, setBuilt] = useState<Built | null>(null);
   const [index, setIndex] = useState(0);
   const [report, setReport] = useState<{ lines: string[]; talk: string; recall: string; up: number } | null>(null);
-  const stats = useRef<Stats>({ speakingMs: 0, recallCorrect: 0, recallTotal: 0, rungUps: 0, helpUsed: 0, answered: 0, reviewed: 0, firstRecall: {}, patternUsed: false, scenario: null });
+  const stats = useRef<Stats>({ speakingMs: 0, recallCorrect: 0, recallTotal: 0, rungUps: 0, helpUsed: 0, answered: 0, reviewed: 0, firstRecall: {}, patternUsed: false, scenario: null, blindTotal: 0, blindCorrect: 0 });
   const items = useRef(new Map<string, ItemState>());
   const startedAt = useRef(new Date().toISOString());
 
@@ -195,6 +202,15 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
       case 'use':
         await record(step.id, 'word', 'use', r);
         break;
+      case 'blind': {
+        const it = await item(step.id, 'word');
+        applyReview(it, !!r.correct, false);
+        if (r.correct && isDurableEvidence(it) && recordAttempt(it, { kind: 'blind', correct: true, helped: false })) s.rungUps++;
+        s.blindTotal++;
+        if (r.correct) s.blindCorrect++;
+        s.speakingMs += 0;
+        break;
+      }
       case 'fix': {
         const it = await item(step.id, 'error');
         applyReview(it, !!r.correct, !!r.helped);
@@ -235,7 +251,9 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
     const dueTomorrow = await dueTomorrowCount();
 
     const sc = s.scenario;
+    if (s.blindTotal) await saveBlindTest(s.blindTotal, s.blindCorrect);
     const lines: string[] = [];
+    if (s.blindTotal) lines.push(`Habersiz test: ${s.blindCorrect}/${s.blindTotal} (%${Math.round((s.blindCorrect / s.blindTotal) * 100)}) — gerçek akılda tutma.`);
     lines.push(`Bugün ${formatDuration(todayMs)} konuştun${prevDay ? ` (önceki gün ${formatDuration(prevMs)})` : ''}.`);
     if (s.recallTotal) lines.push(`${s.recallTotal} öğenin ${s.recallCorrect} tanesini yardımsız söyledin.`);
     if (!sc?.played) lines.push('Bugün konuşmadın: senaryo yapılmadı.');
@@ -269,14 +287,14 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
       scenarioSuccess: sc?.success,
       spontaneous: sc?.spontaneous,
       helpUsed: s.helpUsed,
-      reportLines: lines.slice(0, 4),
+      reportLines: lines.slice(0, 5),
     };
     await putSession(rec);
     await markDayDone();
     void notifySessionDone(day);
     sfx.finish();
     setReport({
-      lines: lines.slice(2, 4),
+      lines: lines.filter((l) => !l.endsWith('konuştun.') && !/konuştun \(önceki gün/.test(l) && !/öğenin .* yardımsız/.test(l)).slice(0, 3),
       talk: formatDuration(todayMs),
       recall: s.recallTotal ? `${s.recallCorrect}/${s.recallTotal}` : '—',
       up: s.rungUps + (sc?.rungUps ?? 0),
@@ -344,6 +362,7 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
       {step.t === 'catch' && <CatchStep key={key} id={step.id} distractors={step.distractors} {...common} />}
       {step.t === 'use' && <UseStep key={key} id={step.id} {...common} />}
       {step.t === 'fix' && <FixStep key={key} id={step.id} {...common} />}
+      {step.t === 'blind' && <RecallStep key={key} id={step.id} blind {...common} />}
       {step.t === 'scenario' && (
         <ScenarioPlay
           key={key}

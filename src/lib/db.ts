@@ -90,6 +90,7 @@ interface MetaMap {
   dayCount: number;
   doneDays: string[];
   scenarioHistory: { id: string; base: string; day: string; success: boolean }[];
+  blindTests: { day: string; total: number; correct: number }[];
 }
 
 interface EBSchema extends DBSchema {

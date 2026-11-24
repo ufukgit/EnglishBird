@@ -142,7 +142,8 @@ senaryo iskeletleri, dinleme metinleri ve soruları.
 | Sesli roleplay: seçici (alan, seviye, 14 gün kuralı), akışlı cevap + cümle cümle seslendirme, 4 kademeli yardım (3. kademe Türkçe ses tanıma), "Daha doğal?", sohbette hata noktası, en fazla 3 düzeltme kartı, ikinci tur ve karşılaştırma | ✅ kod; gerçek anahtarlarla deneme bekliyor |
 | 5. basamak (kendiliğinden kullanım) analizden; düzeltmeler hata kartı olarak tekrar kuyruğunda | ✅ |
 | Günlük hatırlatma (VAPID anahtarı Worker'da otomatik), otomatik bulut yedeği | ✅ kod; kurulum bekliyor |
-| Haftalık habersiz test (Aşama 1 kapısı için) | ⏳ |
+| Haftalık habersiz test: 8. günden itibaren haftada bir, 7 günden eski kelimeler, ipucusuz; 30 günden eskiler doğruysa 6. basamak; Rapor'da Aşama 1 hedefi (14 gün, %70) | ✅ |
+| Worker kurulumu (Cloudflare, KV, anahtarlar), uygulama bağlantısı | ✅ 25.11.2026 |
 
 ## 6. Kullanıcının yapacakları (hepsi ücretsiz, kart istemez)
 

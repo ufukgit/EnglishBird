@@ -131,3 +131,35 @@ export { putItem };
 export function itemText(id: string) {
   return getWord(id)?.text ?? id;
 }
+
+// ---------------------------------------------------------------------------
+// Haftalık habersiz test: en az 7 gün önce öğrenilmiş öğeler, önceden haber verilmeden,
+// ipucu olmadan sorulur. Sonuç gerçek akılda tutma oranıdır.
+
+const DAY_MS = 86400000;
+const ageDays = (day: string) => (new Date(sessionDay()).getTime() - new Date(day).getTime()) / DAY_MS;
+
+export async function blindTestItems(): Promise<ItemState[]> {
+  const tests = (await getMeta('blindTests')) ?? [];
+  const last = tests[tests.length - 1];
+  if (last && ageDays(last.day) < 7) return [];
+  if (((await getMeta('dayCount')) ?? 0) < 8) return [];
+  const candidates = (await allItems())
+    .filter((i) => i.type === 'word' && ageDays(i.introducedOn) >= 7)
+    .sort((a, b) => a.introducedOn.localeCompare(b.introducedOn));
+  if (candidates.length < 5) return [];
+  // En eskiler ve rastgele karışım: yarısı en eski öğelerden
+  const oldest = candidates.slice(0, 4);
+  const rest = candidates.slice(4).sort(() => Math.random() - 0.5).slice(0, 4);
+  return [...oldest, ...rest];
+}
+
+/** 30 günden eski öğe habersiz testte doğruysa "Kalıcı" (6. basamak) kanıtı sayılır. */
+export function isDurableEvidence(item: ItemState) {
+  return ageDays(item.introducedOn) >= 30;
+}
+
+export async function saveBlindTest(total: number, correct: number) {
+  const tests = (await getMeta('blindTests')) ?? [];
+  await setMeta('blindTests', [...tests, { day: sessionDay(), total, correct }].slice(-60));
+}

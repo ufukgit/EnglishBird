@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
-import { allItems, allSessions, type SessionRecord } from '../lib/db';
+import { allItems, allSessions, getMeta, type SessionRecord } from '../lib/db';
 import { formatDuration } from '../lib/day';
 import { RUNG_NAMES, type Rung } from '../lib/types';
 
 export default function Report() {
   const [sessions, setSessions] = useState<SessionRecord[]>([]);
   const [rungs, setRungs] = useState<number[]>([]);
+  const [gate, setGate] = useState<{ days: number; blind: { day: string; total: number; correct: number }[] }>({ days: 0, blind: [] });
 
   useEffect(() => {
     void (async () => {
       setSessions((await allSessions()).sort((a, b) => b.startedAt.localeCompare(a.startedAt)));
+      setGate({ days: ((await getMeta('doneDays')) ?? []).length, blind: (await getMeta('blindTests')) ?? [] });
       const items = await allItems();
       setRungs([0, 1, 2, 3, 4, 5, 6].map((r) => items.filter((i) => i.type === 'word' && i.rung === r).length));
     })();
@@ -34,6 +36,24 @@ export default function Report() {
           ))}
         </div>
       )}
+
+      <h2>Aşama 1 hedefi</h2>
+      <div className="stats">
+        <div className="stat blue">
+          <span className="v">{Math.min(gate.days, 14)}/14</span>
+          <span className="k">gün kullanım</span>
+        </div>
+        <div className={`stat ${(() => { const b = gate.blind.at(-1); return b && b.correct / b.total >= 0.7 ? 'mint' : 'sun'; })()}`}>
+          <span className="v">
+            {gate.blind.length ? `%${Math.round((gate.blind.at(-1)!.correct / gate.blind.at(-1)!.total) * 100)}` : '—'}
+          </span>
+          <span className="k">son habersiz test (hedef %70)</span>
+        </div>
+        <div className="stat">
+          <span className="v">{gate.blind.length}</span>
+          <span className="k">habersiz test</span>
+        </div>
+      </div>
 
       <h2>Merdiven</h2>
       <div className="card ladder">

@@ -175,7 +175,7 @@ export function RecognizeStep({ id, distractors, accent, onDone }: { id: string;
 // ---------------------------------------------------------------------------
 // 2. Hatırladı: Türkçe durumdan İngilizcesini söyle (ısınma tekrarı da bunu kullanır)
 
-export function RecallStep({ id, review, micMode, accent, onDone }: { id: string; review?: boolean } & Common) {
+export function RecallStep({ id, review, blind, micMode, accent, onDone }: { id: string; review?: boolean; blind?: boolean } & Common) {
   const w = getWord(id)!;
   const task = w.sayIt[0];
   const [heard, setHeard] = useState<HeardResult | null>(null);
@@ -192,14 +192,14 @@ export function RecallStep({ id, review, micMode, accent, onDone }: { id: string
   const mood: BirdMood = !finished ? 'think' : result?.ok ? 'happy' : 'sad';
   return (
     <div className="step">
-      <Coach mood={mood} say={review ? 'Hatırla! İngilizce?' : 'İngilizce söyle!'} />
+      <Coach mood={mood} say={blind ? 'Sürpriz test!' : review ? 'Hatırla! İngilizce?' : 'İngilizce söyle!'} />
       <p className="situation">{task.tr}</p>
       {hint && !finished && <p className="hint pop">{hintOf(task.en)}</p>}
       {!finished && (
         <>
           <TalkButton mode={micMode} onResult={setHeard} />
           <div className="row center">
-            {!hint && (
+            {!hint && !blind && (
               <button className="chip" onClick={() => setHint(true)}>
                 <Icon name="bulb" size={18} /> İpucu
               </button>
