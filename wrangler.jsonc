@@ -1,0 +1,10 @@
+// Uygulamanın (PWA) Cloudflare'de yayınlanması için.
+// Cloudflare "Workers" akışıyla bağlanırsa: Build command = npm run build, Deploy command = npx wrangler deploy
+{
+  "name": "englishbird",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
