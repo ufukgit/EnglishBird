@@ -33,8 +33,26 @@ const OPTIONAL = new Set([
   'something', 'myself', 'yourself', 'to',
 ]);
 
+// Ses tanımanın farklı yazdığı ama aynı olan biçimler
+const VARIANTS: [RegExp, string][] = [
+  [/\bok\b/g, 'okay'],
+  [/\bo\.k\.?/g, 'okay'],
+  [/\balright\b/g, 'all right'],
+  [/\bgonna\b/g, 'going to'],
+  [/\bwanna\b/g, 'want to'],
+  [/\bgotta\b/g, 'got to'],
+  [/\bkinda\b/g, 'kind of'],
+  [/\bsorta\b/g, 'sort of'],
+  [/\b'?cause\b/g, 'because'],
+  [/\b'?til\b/g, 'until'],
+  [/\bwi-?fi\b/g, 'wifi'],
+  [/\bcheck-?in\b/g, 'check in'],
+  [/\bcheck-?out\b/g, 'check out'],
+];
+
 export function normalize(s: string): string[] {
   let t = s.toLowerCase().replace(/[’‘`]/g, "'").replace(/…/g, ' ');
+  for (const [re, rep] of VARIANTS) t = t.replace(re, rep);
   for (const [re, rep] of CONTRACTIONS) t = t.replace(re, rep);
   return t
     .replace(/[^a-z0-9' -]/g, ' ')

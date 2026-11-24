@@ -5,7 +5,7 @@ import Bird, { type BirdMood } from '../components/Bird';
 import Character from '../components/Character';
 import Icon from '../components/Icon';
 import { getPattern, getWord } from '../lib/content';
-import { containsTarget, wordDiff } from '../lib/match';
+import { containsTarget, normalize, wordDiff } from '../lib/match';
 import { shuffle } from '../lib/day';
 import { sfx } from '../lib/sfx';
 import { speak, stopSpeaking, type Accent } from '../lib/voice';
@@ -397,22 +397,40 @@ export function PatternCardStep({ patternId, accent, onDone }: { patternId: stri
 export function PatternUseStep({ patternId, situation, micMode, onDone }: { patternId: string; situation: string } & Common) {
   const p = getPattern(patternId)!;
   const [heard, setHeard] = useState<HeardResult | null>(null);
-  const ok = heard ? [p.text, ...p.variations].some((v) => containsTarget(heard.transcript, v).ok) : false;
+  const [incomplete, setIncomplete] = useState(false);
+  const [extraMs, setExtraMs] = useState(0);
+  const forms = [p.text, ...p.variations];
+  const ok = heard ? forms.some((v) => containsTarget(heard.transcript, v).ok) : false;
+
+  const onHeard = (h: HeardResult) => {
+    const matched = forms.some((v) => containsTarget(h.transcript, v).ok);
+    // Yalnızca kalıbı söylediyse (cümle kurmadıysa) yanlış sayma, tamamlamasını iste.
+    const patternLen = Math.min(...forms.map((v) => normalize(v).length));
+    if (matched && normalize(h.transcript).length < patternLen + 2) {
+      setIncomplete(true);
+      setExtraMs((m) => m + h.durationMs);
+      return;
+    }
+    setIncomplete(false);
+    setHeard(h);
+  };
+
   return (
     <div className="step">
-      <Coach mood={!heard ? 'think' : ok ? 'happy' : 'sad'} say="Kalıpla söyle!" />
+      <Coach mood={!heard ? 'think' : ok ? 'happy' : 'sad'} say={incomplete ? 'Cümleyi tamamla!' : 'Kalıpla söyle!'} />
       <p className="situation">{situation}</p>
       <div className="row center">
         <span className="pill">{p.text}</span>
       </div>
+      {incomplete && !heard && <p className="hint pop">Kalıp doğru 👍 Şimdi devamını da söyle.</p>}
       {!heard ? (
-        <TalkButton mode={micMode} onResult={setHeard} />
+        <TalkButton mode={micMode} onResult={onHeard} />
       ) : (
         <>
           <Feedback good={ok} title={ok ? 'Kalıbı kullandın!' : 'Kalıp duyulmadı'}>
             <span className="you">Sen: {heard.transcript || '—'}</span>
           </Feedback>
-          <Continue good={ok} onClick={() => onDone({ correct: ok, speakingMs: heard.durationMs })} />
+          <Continue good={ok} onClick={() => onDone({ correct: ok, speakingMs: heard.durationMs + extraMs })} />
         </>
       )}
     </div>
