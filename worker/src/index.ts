@@ -7,7 +7,7 @@
 //  POST /api/session-done  O günün oturumu bitti → kalan hatırlatmalar gönderilmez
 //  cron 17–22 UTC          İstanbul 20:00–01:00 saat başı hatırlatma
 
-import { sendEmptyPush } from './push';
+import { sendEmptyPush, type Vapid } from './push';
 
 export interface Env {
   STORE: KVNamespace;
@@ -72,7 +72,13 @@ export default {
           return json({ ok: true, bytes: body.length }, 200, cors);
         }
         case 'GET /api/push/key':
-          return json({ key: env.VAPID_PUBLIC_KEY ?? null }, 200, cors);
+          return json({ key: (await getVapid(env)).publicKey }, 200, cors);
+        case 'POST /api/push/test': {
+          const sub = await env.STORE.get('push-sub');
+          if (!sub) return json({ error: 'no subscription' }, 400, cors);
+          const status = await sendEmptyPush(JSON.parse(sub), await getVapid(env));
+          return json({ status }, 200, cors);
+        }
         case 'POST /api/push/subscribe':
           await env.STORE.put('push-sub', await request.text());
           return json({ ok: true }, 200, cors);
@@ -94,15 +100,33 @@ export default {
     const day = sessionDay(new Date());
     if (await env.STORE.get(`done:${day}`)) return;
     const sub = await env.STORE.get('push-sub');
-    if (!sub || !env.VAPID_PUBLIC_KEY || !env.VAPID_PRIVATE_JWK) return;
-    const status = await sendEmptyPush(JSON.parse(sub), {
-      publicKey: env.VAPID_PUBLIC_KEY,
-      privateJwk: JSON.parse(env.VAPID_PRIVATE_JWK),
-      subject: env.APP_ORIGIN,
-    });
+    if (!sub) return;
+    const status = await sendEmptyPush(JSON.parse(sub), await getVapid(env));
     if (status === 404 || status === 410) await env.STORE.delete('push-sub');
   },
 } satisfies ExportedHandler<Env>;
+
+// ---------------------------------------------------------------------------
+// VAPID anahtarları: gizli değişken olarak verilmediyse ilk kullanımda üretilip KV'de saklanır.
+
+async function getVapid(env: Env): Promise<Vapid> {
+  if (env.VAPID_PUBLIC_KEY && env.VAPID_PRIVATE_JWK) {
+    return { publicKey: env.VAPID_PUBLIC_KEY, privateJwk: JSON.parse(env.VAPID_PRIVATE_JWK), subject: env.APP_ORIGIN };
+  }
+  const stored = await env.STORE.get('vapid');
+  if (stored) {
+    const v = JSON.parse(stored) as { publicKey: string; privateJwk: JsonWebKey };
+    return { ...v, subject: env.APP_ORIGIN };
+  }
+  const kp = (await crypto.subtle.generateKey({ name: 'ECDSA', namedCurve: 'P-256' }, true, ['sign', 'verify'])) as CryptoKeyPair;
+  const raw = new Uint8Array((await crypto.subtle.exportKey('raw', kp.publicKey)) as ArrayBuffer);
+  const privateJwk = (await crypto.subtle.exportKey('jwk', kp.privateKey)) as JsonWebKey;
+  let bin = '';
+  for (const b of raw) bin += String.fromCharCode(b);
+  const publicKey = btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  await env.STORE.put('vapid', JSON.stringify({ publicKey, privateJwk }));
+  return { publicKey, privateJwk, subject: env.APP_ORIGIN };
+}
 
 // ---------------------------------------------------------------------------
 // Oturum günü (İstanbul, UTC+3). 00:00–05:59 arası önceki güne sayılır,

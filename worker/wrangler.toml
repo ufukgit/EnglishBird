@@ -24,6 +24,6 @@ OPENROUTER_MODEL = "openai/gpt-oss-120b:free"
 WORKERS_AI_MODEL = "@cf/openai/gpt-oss-120b"
 WHISPER_MODEL = "whisper-large-v3-turbo"
 
-# Gizli değerler (wrangler secret put ile eklenir, buraya yazılmaz):
-#   APP_SECRET, GROQ_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY,
-#   VAPID_PUBLIC_KEY, VAPID_PRIVATE_JWK
+# Gizli değerler (Cloudflare panelinde Settings → Variables and Secrets, türü Secret):
+#   APP_SECRET, GROQ_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY
+# VAPID (bildirim) anahtarları ilk kullanımda otomatik üretilip KV'de saklanır.
