@@ -33,6 +33,11 @@ async function vapidJwt(audience: string, v: Vapid): Promise<string> {
 }
 
 export async function sendEmptyPush(sub: PushSubscriptionJson, v: Vapid): Promise<number> {
+  return (await sendEmptyPushDetailed(sub, v)).status;
+}
+
+/** Bildirim sunucusunun durum kodu ve cevap metniyle birlikte (teşhis için). */
+export async function sendEmptyPushDetailed(sub: PushSubscriptionJson, v: Vapid): Promise<{ status: number; body: string; host: string }> {
   const audience = new URL(sub.endpoint).origin;
   const jwt = await vapidJwt(audience, v);
   const res = await fetch(sub.endpoint, {
@@ -40,10 +45,8 @@ export async function sendEmptyPush(sub: PushSubscriptionJson, v: Vapid): Promis
     headers: {
       authorization: `vapid t=${jwt}, k=${v.publicKey}`,
       ttl: '3000',
-      urgency: 'normal',
-      topic: 'daily',
-      'content-length': '0',
+      urgency: 'high',
     },
   });
-  return res.status;
+  return { status: res.status, body: (await res.text()).slice(0, 300), host: new URL(sub.endpoint).host };
 }

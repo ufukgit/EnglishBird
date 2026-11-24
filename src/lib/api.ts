@@ -57,26 +57,38 @@ function b64ToBytes(b64: string): Uint8Array {
 }
 
 export async function enableReminders(): Promise<string> {
-  if (!('serviceWorker' in navigator) || !('PushManager' in window) || !('Notification' in window)) {
-    return 'Bildirim yalnızca ana ekrandan açılan uygulamada çalışır.';
+  try {
+    if (!('serviceWorker' in navigator) || !('PushManager' in window) || !('Notification' in window)) {
+      return 'Bildirim yalnızca ana ekrandan açılan uygulamada çalışır.';
+    }
+    const perm = Notification.permission === 'granted' ? 'granted' : await Notification.requestPermission();
+    if (perm !== 'granted') return `Bildirim izni yok (${perm}). iPhone Ayarlar → Bildirimler → EnglishBird.`;
+    const keyRes = await call('/api/push/key');
+    if (!keyRes?.ok) return `Worker anahtar vermedi (${keyRes?.status ?? 'bağlı değil'}).`;
+    const { key } = (await keyRes.json()) as { key: string };
+    const reg = await navigator.serviceWorker.ready;
+    const old = await reg.pushManager.getSubscription();
+    if (old) await old.unsubscribe();
+    const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToBytes(key) as BufferSource });
+    const res = await call('/api/push/subscribe', { method: 'POST', body: JSON.stringify(sub) });
+    if (!res?.ok) return `Abonelik kaydedilemedi (${res?.status}).`;
+    const { host } = (await res.json()) as { host?: string };
+    return `Hatırlatmalar açık (${host}). 20:00–01:00 saat başı, oturum bitince durur.`;
+  } catch (e) {
+    return `Hata: ${(e as Error).name}: ${(e as Error).message}`;
   }
-  const perm = await Notification.requestPermission();
-  if (perm !== 'granted') return 'Bildirim izni verilmedi. Ayarlar → Bildirimler → EnglishBird.';
-  const keyRes = await call('/api/push/key');
-  if (!keyRes?.ok) return 'Önce Worker bağlantısını kur.';
-  const { key } = (await keyRes.json()) as { key: string };
-  const reg = await navigator.serviceWorker.ready;
-  const old = await reg.pushManager.getSubscription();
-  if (old) await old.unsubscribe();
-  const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToBytes(key) as BufferSource });
-  const res = await call('/api/push/subscribe', { method: 'POST', body: JSON.stringify(sub) });
-  return res?.ok ? 'Hatırlatmalar açık: 20:00–01:00 saat başı, oturum bitince durur.' : 'Abonelik kaydedilemedi.';
 }
 
-export async function testReminder(): Promise<string> {
-  const res = await call('/api/push/test', { method: 'POST' });
-  if (!res) return 'Worker bağlı değil.';
-  const j = (await res.json().catch(() => ({}))) as { status?: number; error?: string };
-  if (j.error) return 'Önce hatırlatmaları aç.';
-  return j.status && j.status < 300 ? 'Test bildirimi gönderildi.' : `Gönderilemedi (${j.status}).`;
+/** Test bildirimi. delay saniye sonra gönderilir; bu sürede uygulamayı kapat. */
+export async function testReminder(delay = 10): Promise<string> {
+  try {
+    const res = await call('/api/push/test', { method: 'POST', body: JSON.stringify({ delay }) });
+    if (!res) return 'Worker bağlı değil.';
+    const j = (await res.json().catch(() => ({}))) as { status?: number; body?: string; host?: string; error?: string };
+    if (j.error) return 'Önce "Hatırlatmaları aç" düğmesine bas.';
+    if (j.status && j.status < 300) return `Gönderildi (${j.host}, ${j.status}). Gelmediyse bana bu satırı yaz.`;
+    return `Bildirim sunucusu reddetti: ${j.status} ${j.body ?? ''} (${j.host})`;
+  } catch (e) {
+    return `Hata: ${(e as Error).message}`;
+  }
 }

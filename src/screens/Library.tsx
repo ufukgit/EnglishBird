@@ -86,6 +86,7 @@ function ItemList({ items, accent }: { items: ItemState[]; accent: Accent }) {
 function SettingsPanel({ initial }: { initial: Settings }) {
   const [s, setS] = useState(initial);
   const [msg, setMsg] = useState('');
+  const [remMsg, setRemMsg] = useState('');
   const fileRef = useRef<HTMLInputElement>(null);
 
   const save = async (next: Settings) => {
@@ -132,9 +133,17 @@ function SettingsPanel({ initial }: { initial: Settings }) {
 
       <h2>Hatırlatma</h2>
       <div className="row">
-        <button onClick={async () => setMsg(await enableReminders())}>Hatırlatmaları aç</button>
-        <button onClick={async () => setMsg(await testReminder())}>Test bildirimi</button>
+        <button onClick={async () => setRemMsg(await enableReminders())}>Hatırlatmaları aç</button>
+        <button
+          onClick={async () => {
+            setRemMsg('10 saniye içinde uygulamayı kapat (ana ekrana dön)…');
+            setRemMsg(await testReminder(10));
+          }}
+        >
+          Test bildirimi
+        </button>
       </div>
+      {remMsg && <p className="card small">{remMsg}</p>}
 
       <h2>Ses efektleri</h2>
       <div className="segmented">

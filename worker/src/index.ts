@@ -7,7 +7,7 @@
 //  POST /api/session-done  O günün oturumu bitti → kalan hatırlatmalar gönderilmez
 //  cron 17–22 UTC          İstanbul 20:00–01:00 saat başı hatırlatma
 
-import { sendEmptyPush, type Vapid } from './push';
+import { sendEmptyPush, sendEmptyPushDetailed, type Vapid } from './push';
 
 export interface Env {
   STORE: KVNamespace;
@@ -76,12 +76,19 @@ export default {
         case 'POST /api/push/test': {
           const sub = await env.STORE.get('push-sub');
           if (!sub) return json({ error: 'no subscription' }, 400, cors);
-          const status = await sendEmptyPush(JSON.parse(sub), await getVapid(env));
-          return json({ status }, 200, cors);
+          const { delay } = (await request.json().catch(() => ({}))) as { delay?: number };
+          // Uygulama ön plandayken iOS bildirimi göstermeyebilir: istenirse birkaç saniye bekle.
+          if (delay) await scheduler.wait(Math.min(delay, 20) * 1000);
+          const r = await sendEmptyPushDetailed(JSON.parse(sub), await getVapid(env));
+          return json(r, 200, cors);
         }
-        case 'POST /api/push/subscribe':
-          await env.STORE.put('push-sub', await request.text());
-          return json({ ok: true }, 200, cors);
+        case 'POST /api/push/subscribe': {
+          const body = await request.text();
+          const sub = JSON.parse(body) as { endpoint?: string };
+          if (!sub.endpoint) return json({ error: 'invalid subscription' }, 400, cors);
+          await env.STORE.put('push-sub', body);
+          return json({ ok: true, host: new URL(sub.endpoint).host }, 200, cors);
+        }
         case 'POST /api/session-done': {
           const { date } = (await request.json()) as { date?: string };
           const day = date ?? sessionDay(new Date());
