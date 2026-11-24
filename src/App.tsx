@@ -1,45 +1,53 @@
 import { useEffect, useState } from 'react';
 import SpeechTest from './test/SpeechTest';
-import { isStandalone } from './lib/speech';
+import Home from './screens/Home';
+import Session from './screens/Session';
+import Report from './screens/Report';
+import Library from './screens/Library';
 
 function useHash() {
-  const [hash, setHash] = useState(location.hash);
+  const [hash, setHash] = useState(location.hash || '#/');
   useEffect(() => {
-    const on = () => setHash(location.hash);
+    const on = () => setHash(location.hash || '#/');
     window.addEventListener('hashchange', on);
     return () => window.removeEventListener('hashchange', on);
   }, []);
   return hash;
 }
 
+const go = (h: string) => (location.hash = h);
+
 export default function App() {
   const hash = useHash();
+
+  useEffect(() => {
+    // iOS'un verileri silmemesi için kalıcı depolama iste (ana ekrandan açıldığında genelde verilir).
+    void navigator.storage?.persist?.().catch(() => undefined);
+  }, []);
+
   if (hash === '#/test') return <SpeechTest />;
-  return <Home />;
-}
+  const sessionMatch = hash.match(/^#\/session\/(quick|deep|extra)$/);
+  if (sessionMatch) return <Session kind={sessionMatch[1] as 'quick' | 'deep' | 'extra'} onExit={() => go('#/')} />;
 
-function Home() {
-  const installed = isStandalone();
+  const tab = hash === '#/report' ? 'report' : hash === '#/library' ? 'library' : 'home';
   return (
-    <main>
-      <h1>EnglishBird</h1>
-      <p className="muted">Kullanabildiğin kelime: 0</p>
-
-      {!installed && (
-        <div className="card">
-          <p className="big">Önce ana ekrana ekle</p>
-          <p className="muted">Paylaş düğmesi → Ana Ekrana Ekle. Verilerin böyle korunur.</p>
-        </div>
-      )}
-
-      <div className="card">
-        <p className="big">Aşama 0</p>
-        <p className="muted">Günlük oturum Aşama 1'de açılacak. Şimdilik ses testini yap.</p>
+    <>
+      <div className="page">
+        {tab === 'home' && <Home start={(k) => go(`#/session/${k}`)} />}
+        {tab === 'report' && <Report />}
+        {tab === 'library' && <Library />}
       </div>
-
-      <button className="primary" onClick={() => (location.hash = '#/test')}>
-        iPhone ses testini başlat
-      </button>
-    </main>
+      <nav className="tabs">
+        <button aria-pressed={tab === 'home'} onClick={() => go('#/')}>
+          Ana
+        </button>
+        <button aria-pressed={tab === 'report'} onClick={() => go('#/report')}>
+          Rapor
+        </button>
+        <button aria-pressed={tab === 'library'} onClick={() => go('#/library')}>
+          Kütüphane
+        </button>
+      </nav>
+    </>
   );
 }

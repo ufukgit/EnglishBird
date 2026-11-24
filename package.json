@@ -8,11 +8,14 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview --host",
     "typecheck": "tsc -b",
-    "content": "node content/build.mjs"
+    "content": "node content/build.mjs",
+    "e2e": "node tests/e2e-days.cjs"
   },
   "dependencies": {
+    "idb": "^8.0.4",
     "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react-dom": "^19.3.1",
+    "ts-fsrs": "^6.0.1"
   },
   "devDependencies": {
     "@types/react": "^19.3.0",

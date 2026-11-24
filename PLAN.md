@@ -125,6 +125,19 @@ senaryo iskeletleri, dinleme metinleri ve soruları.
 | 30 günlük varsayılan müfredat | ✅ `content/curriculum.json` |
 | iPhone ses testi sonucu | ✅ bkz. §8 |
 
+### Aşama 1 durumu
+
+| İş | Durum |
+|---|---|
+| IndexedDB veri katmanı, yedek indir/yükle | ✅ |
+| FSRS (ts-fsrs, gün içi tekrar yok) + 6 basamaklı merdiven, unutunca bir basamak geri | ✅ |
+| Günlük plan: 10 yeni öğe (tekrar > 80 ise 5), sunulmayanlar ertesi güne kayar | ✅ |
+| Akış: ısınma (seçeneksiz sesli) → günün kalıbı (sahne, anlam, kart, kullanım) → 10 kelime (tanıt, tanı, hatırla, hızlıda yakala, kullan) → senaryo → kapanış | ✅ (senaryo yer tutucu) |
+| Takılan öğeye eksik basamağın egzersizi | ✅ |
+| Ana, Rapor, Kütüphane (+Ayarlar) ekranları | ✅ |
+| Sesli roleplay (LLM), düzeltme kartları, yardım merdiveni | ⏳ Worker kurulumu gerekli |
+| Günlük hatırlatma aboneliği, otomatik bulut yedeği | ⏳ Worker kurulumu gerekli |
+
 ## 6. Kullanıcının yapacakları (hepsi ücretsiz, kart istemez)
 
 Aşama 1 kurulumunda gerekir:
