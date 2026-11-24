@@ -4,6 +4,8 @@ import { allItems, allSessions, getMeta } from '../lib/db';
 import { sessionDay } from '../lib/day';
 import { dueItems, getTodayPlan } from '../lib/srs';
 import { isStandalone } from '../lib/speech';
+import Bird from '../components/Bird';
+import Icon from '../components/Icon';
 
 interface HomeData {
   usable: number;
@@ -46,41 +48,52 @@ export default function Home({ start }: { start: (kind: 'quick' | 'deep' | 'extr
     <main>
       {!isStandalone() && (
         <div className="card warn-card">
-          <p className="big">Önce ana ekrana ekle</p>
-          <p className="muted">Paylaş → Ana Ekrana Ekle. Verilerin böyle korunur.</p>
+          <b>Önce ana ekrana ekle:</b> Paylaş → Ana Ekrana Ekle
         </div>
       )}
 
-      <p className="status">Kullanabildiğin kelime: {d.usable}</p>
-
-      <div className="card">
-        <p className="muted small">Bugünün kalıbı</p>
-        <p className="big">{d.pattern}</p>
-        <p className="muted small">{d.patternFn}</p>
+      <div className="home-top">
+        <span className="pill mint" title="Kullanabildiğin kelime">
+          <Icon name="mic" size={18} /> {d.usable} kelime
+        </span>
+        <span className="pill sun">
+          <Icon name="bolt" size={18} /> {d.due} tekrar
+        </span>
       </div>
 
-      {d.focus && !d.doneToday && <p className="muted">{d.focus}</p>}
-      {d.reducedLoad && <p className="muted small">Bekleyen tekrar çok: bugün 5 yeni öğe.</p>}
+      <div className="hero">
+        <Bird mood={d.doneToday ? 'happy' : 'idle'} size={112} say={d.doneToday ? 'Bugün tamam!' : 'Hazır mısın?'} />
+      </div>
+
+      <div className="pattern-card">
+        <div className="label">Günün kalıbı</div>
+        <div className="text">{d.pattern}</div>
+        <div className="fn">{d.patternFn}</div>
+      </div>
+
+      {d.reducedLoad && <p className="muted small center">Çok tekrar birikti: bugün 5 yeni kelime.</p>}
 
       {d.doneToday ? (
-        <>
-          <p className="ok big">Bugünün oturumu tamam.</p>
-          <button className="primary" onClick={() => start('extra')}>
-            {d.remainingNew > 0 ? `Kalan ${d.remainingNew} öğeyi çalış` : 'Ekstra pratik'}
-          </button>
-        </>
-      ) : (
         <div className="start">
-          <button className="primary" onClick={() => start('deep')}>
-            Bugünü başlat · Derin
-            <span>15–20 dk</span>
+          <button className="primary" onClick={() => start('extra')}>
+            {d.remainingNew > 0 ? `+${d.remainingNew} kelime` : 'Ekstra pratik'}
           </button>
-          <button className="secondary" onClick={() => start('quick')}>
-            Hızlı · 5 dk
+        </div>
+      ) : (
+        <div className="mode-row" style={{ marginTop: 14 }}>
+          <button className="mode deep" onClick={() => start('deep')}>
+            <Icon name="play" size={30} />
+            Derin
+            <small>15–20 dk</small>
+          </button>
+          <button className="mode" onClick={() => start('quick')}>
+            <Icon name="bolt" size={30} />
+            Hızlı
+            <small>5 dk</small>
           </button>
         </div>
       )}
-      <p className="muted small center">{d.due} tekrar · {d.remainingNew} yeni öğe</p>
+      {d.focus && !d.doneToday && <p className="muted small center">{d.focus}</p>}
     </main>
   );
 }

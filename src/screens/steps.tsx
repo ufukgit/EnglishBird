@@ -1,9 +1,13 @@
-// Oturum adımları. Her adım tek bir görev gösterir ve bitince onDone ile sonucu döndürür.
-import { useEffect, useMemo, useState } from 'react';
+// Oturum adımları. Her adım tek bir görev gösterir; yönergeyi maskot kısa bir tepkiyle verir.
+import { useEffect, useMemo, useRef, useState } from 'react';
 import TalkButton from '../components/TalkButton';
+import Bird, { type BirdMood } from '../components/Bird';
+import Character, { propForRole } from '../components/Character';
+import Icon from '../components/Icon';
 import { getPattern, getWord } from '../lib/content';
 import { containsTarget, wordDiff } from '../lib/match';
 import { shuffle } from '../lib/day';
+import { sfx } from '../lib/sfx';
 import { speak, stopSpeaking, type Accent } from '../lib/voice';
 import type { HeardResult } from '../lib/voice';
 
@@ -22,15 +26,57 @@ interface Common {
 const ACCENTS: Accent[] = ['en-US', 'en-GB', 'en-AU', 'en-IN'];
 const otherAccent = (a: Accent) => ACCENTS[(ACCENTS.indexOf(a) + 1) % ACCENTS.length];
 
-function Listen({ text, accent, rate = 1, auto = true, label = 'Tekrar dinle' }: { text: string; accent: Accent; rate?: number; auto?: boolean; label?: string }) {
+// ---------------------------------------------------------------------------
+// Ortak parçalar
+
+function Coach({ mood = 'idle', say }: { mood?: BirdMood; say: string }) {
+  return <Bird mood={mood} size={72} say={say} />;
+}
+
+function ListenButtons({ text, accent, rate = 1, auto = true, slow = true }: { text: string; accent: Accent; rate?: number; auto?: boolean; slow?: boolean }) {
   useEffect(() => {
     if (auto) void speak(text, { accent, rate });
     return () => stopSpeaking();
   }, [text, accent, rate, auto]);
   return (
-    <button className="listen" onClick={() => void speak(text, { accent, rate })}>
-      🔊 {label}
-    </button>
+    <div className="listen-row">
+      <button className="round" style={{ width: 84, height: 84 }} aria-label="Dinle" onClick={() => void speak(text, { accent, rate })}>
+        <Icon name="speaker" size={40} />
+      </button>
+      {slow && (
+        <button className="round soft" style={{ width: 84, height: 84 }} aria-label="Yavaş dinle" onClick={() => void speak(text, { accent, rate: 0.7 })}>
+          <span className="speed">0.7×</span>
+        </button>
+      )}
+    </div>
+  );
+}
+
+function Continue({ onClick, good }: { onClick: () => void; good?: boolean }) {
+  return (
+    <div className="footer">
+      <button className={`primary${good === undefined ? '' : good ? ' go' : ' stop'}`} onClick={onClick}>
+        Devam
+      </button>
+    </div>
+  );
+}
+
+function Feedback({ good, title, children }: { good: boolean; title: string; children?: React.ReactNode }) {
+  const played = useRef(false);
+  useEffect(() => {
+    if (played.current) return;
+    played.current = true;
+    if (good) sfx.correct();
+    else sfx.wrong();
+  }, [good]);
+  return (
+    <div className={`feedback ${good ? 'good' : 'bad'}`}>
+      <div className="title">
+        <Icon name={good ? 'check' : 'close'} size={26} stroke={3} /> {title}
+      </div>
+      {children}
+    </div>
   );
 }
 
@@ -53,36 +99,16 @@ function hintOf(answer: string) {
     .join(' ');
 }
 
-// ---------------------------------------------------------------------------
-// Yeni öğeyi tanıtma
-
-export function IntroStep({ id, accent, onDone }: { id: string } & Common) {
-  const w = getWord(id)!;
-  useEffect(() => {
-    void (async () => {
-      await speak(w.text, { accent, rate: 0.9 });
-      await speak(w.examples[0], { accent });
-    })();
-    return () => stopSpeaking();
-  }, [w, accent]);
-  return (
-    <>
-      <p className="instr">Yeni öğe. Dinle ve anlamına bak.</p>
-      <p className="item-big">{w.text}</p>
-      <p className="tr">{w.tr}</p>
-      <p className="example">{w.examples[0]}</p>
-      <button className="listen" onClick={() => void speak(w.examples[0], { accent })}>
-        🔊 Tekrar dinle
-      </button>
-      <button className="primary" onClick={() => onDone({})}>
-        Devam
-      </button>
-    </>
-  );
+function useChoice(correctId: string) {
+  const [picked, setPicked] = useState<string | null>(null);
+  const pick = (o: string) => {
+    setPicked(o);
+    if (o === correctId) sfx.correct();
+    else sfx.wrong();
+  };
+  const cls = (o: string) => (picked ? (o === correctId ? 'opt right' : o === picked ? 'opt wrong' : 'opt') : 'opt');
+  return { picked, pick, cls };
 }
-
-// ---------------------------------------------------------------------------
-// 1. Tanıdı: cümleyi dinle, anlamını seç
 
 /** Cümlede kendisi de geçen çeldiricileri ayıkla (aksi halde iki doğru cevap olur) */
 function cleanDistractors(sentence: string, ids: string[]) {
@@ -92,36 +118,57 @@ function cleanDistractors(sentence: string, ids: string[]) {
   });
 }
 
+// ---------------------------------------------------------------------------
+// Yeni öğeyi tanıtma
+
+export function IntroStep({ id, accent, onDone }: { id: string } & Common) {
+  const w = getWord(id)!;
+  const [talking, setTalking] = useState(true);
+  useEffect(() => {
+    void (async () => {
+      setTalking(true);
+      await speak(w.text, { accent, rate: 0.9 });
+      await speak(w.examples[0], { accent });
+      setTalking(false);
+    })();
+    return () => stopSpeaking();
+  }, [w, accent]);
+  return (
+    <div className="step">
+      <Coach mood={talking ? 'talk' : 'idle'} say="Yeni!" />
+      <div className="card pop" style={{ textAlign: 'center' }}>
+        <p className="item-big">{w.text}</p>
+        <p className="tr">{w.tr}</p>
+      </div>
+      <p className="example">{w.examples[0]}</p>
+      <ListenButtons text={w.examples[0]} accent={accent} auto={false} />
+      <Continue onClick={() => onDone({})} />
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// 1. Tanıdı: cümleyi dinle, anlamını seç
+
 export function RecognizeStep({ id, distractors, accent, onDone }: { id: string; distractors: string[] } & Common) {
   const w = getWord(id)!;
   const sentence = w.examples[1] ?? w.examples[0];
   const options = useMemo(() => shuffle([id, ...cleanDistractors(sentence, distractors).slice(0, 2)]), [id, distractors, sentence]);
-  const [picked, setPicked] = useState<string | null>(null);
+  const { picked, pick, cls } = useChoice(id);
   return (
-    <>
-      <p className="instr">Dinle. Hangi anlam bu cümlede geçiyor?</p>
-      <Listen text={sentence} accent={accent} />
+    <div className="step">
+      <Coach mood={picked ? (picked === id ? 'happy' : 'sad') : 'listen'} say="Dinle. Hangisi?" />
+      <ListenButtons text={sentence} accent={accent} />
       <div className="options">
         {options.map((o) => (
-          <button
-            key={o}
-            className={picked ? (o === id ? 'opt right' : o === picked ? 'opt wrong' : 'opt') : 'opt'}
-            disabled={!!picked}
-            onClick={() => setPicked(o)}
-          >
+          <button key={o} className={cls(o)} disabled={!!picked} onClick={() => pick(o)}>
             {getWord(o)?.tr}
           </button>
         ))}
       </div>
-      {picked && (
-        <>
-          <p className="example">{sentence}</p>
-          <button className="primary" onClick={() => onDone({ correct: picked === id })}>
-            Devam
-          </button>
-        </>
-      )}
-    </>
+      {picked && <p className="example pop">{sentence}</p>}
+      {picked && <Continue good={picked === id} onClick={() => onDone({ correct: picked === id })} />}
+    </div>
   );
 }
 
@@ -142,21 +189,22 @@ export function RecallStep({ id, review, micMode, accent, onDone }: { id: string
     if (finished) void speak(task.en, { accent });
   }, [finished, task.en, accent]);
 
+  const mood: BirdMood = !finished ? 'think' : result?.ok ? 'happy' : 'sad';
   return (
-    <>
-      <p className="instr">{review ? 'Tekrar: ' : ''}İngilizce söyle.</p>
+    <div className="step">
+      <Coach mood={mood} say={review ? 'Hatırla! İngilizce?' : 'İngilizce söyle!'} />
       <p className="situation">{task.tr}</p>
-      {hint && !finished && <p className="hint">{hintOf(task.en)}</p>}
+      {hint && !finished && <p className="hint pop">{hintOf(task.en)}</p>}
       {!finished && (
         <>
           <TalkButton mode={micMode} onResult={setHeard} />
           <div className="row center">
             {!hint && (
-              <button className="ghost" onClick={() => setHint(true)}>
-                İpucu
+              <button className="chip" onClick={() => setHint(true)}>
+                <Icon name="bulb" size={18} /> İpucu
               </button>
             )}
-            <button className="ghost" onClick={() => setGaveUp(true)}>
+            <button className="chip" onClick={() => setGaveUp(true)}>
               Bilmiyorum
             </button>
           </div>
@@ -164,25 +212,19 @@ export function RecallStep({ id, review, micMode, accent, onDone }: { id: string
       )}
       {finished && (
         <>
-          {heard && (
-            <p className={result?.ok ? 'verdict ok' : 'verdict bad'}>
-              {result?.ok ? `“${w.text}” doğru yerde.` : heard.transcript ? `“${w.text}” duyulmadı.` : 'Ses alınamadı.'}
-            </p>
-          )}
-          {heard?.transcript && <p className="heard">Sen: {heard.transcript}</p>}
-          <Diff heard={heard?.transcript ?? ''} model={task.en} />
-          <button className="listen" onClick={() => void speak(task.en, { accent })}>
-            🔊 Dinle
-          </button>
-          {!result?.ok && !practice && (
-            <>
-              <p className="muted small">Şimdi bir kez sesli tekrar et.</p>
-              <TalkButton mode={micMode} onResult={setPractice} label="Tekrar et" />
-            </>
-          )}
-          {practice && <p className="heard">Tekrar: {practice.transcript || '—'}</p>}
-          <button
-            className="primary"
+          <Feedback good={!!result?.ok} title={result?.ok ? 'Doğru!' : heard?.transcript ? 'Tam değil' : gaveUp ? 'Şöyle:' : 'Duyamadım'}>
+            {heard?.transcript && <span className="you">Sen: {heard.transcript}</span>}
+            <Diff heard={heard?.transcript ?? ''} model={task.en} />
+          </Feedback>
+          <div className="row center">
+            <button className="round small soft" aria-label="Dinle" onClick={() => void speak(task.en, { accent })}>
+              <Icon name="speaker" size={24} />
+            </button>
+          </div>
+          {!result?.ok && !practice && <TalkButton mode={micMode} onResult={setPractice} label="Tekrar et" />}
+          {practice && <p className="interim">{practice.transcript || '—'}</p>}
+          <Continue
+            good={!!result?.ok}
             onClick={() =>
               onDone({
                 correct: !!result?.ok,
@@ -190,12 +232,10 @@ export function RecallStep({ id, review, micMode, accent, onDone }: { id: string
                 speakingMs: (heard?.durationMs ?? 0) + (practice?.durationMs ?? 0),
               })
             }
-          >
-            Devam
-          </button>
+          />
         </>
       )}
-    </>
+    </div>
   );
 }
 
@@ -206,33 +246,21 @@ export function CatchStep({ id, distractors, accent, onDone }: { id: string; dis
   const w = getWord(id)!;
   const sentence = w.examples[0];
   const options = useMemo(() => shuffle([id, ...cleanDistractors(sentence, distractors).slice(0, 3)]), [id, distractors, sentence]);
-  const [picked, setPicked] = useState<string | null>(null);
-  const acc = otherAccent(accent);
+  const { picked, pick, cls } = useChoice(id);
   return (
-    <>
-      <p className="instr">Hızlı konuşma. Hangisini duydun?</p>
-      <Listen text={sentence} accent={acc} rate={1.25} />
+    <div className="step">
+      <Coach mood={picked ? (picked === id ? 'happy' : 'sad') : 'listen'} say="Hızlı! Ne duydun?" />
+      <ListenButtons text={sentence} accent={otherAccent(accent)} rate={1.25} slow={false} />
       <div className="options">
         {options.map((o) => (
-          <button
-            key={o}
-            className={picked ? (o === id ? 'opt right' : o === picked ? 'opt wrong' : 'opt') : 'opt'}
-            disabled={!!picked}
-            onClick={() => setPicked(o)}
-          >
+          <button key={o} className={cls(o)} disabled={!!picked} onClick={() => pick(o)}>
             {getWord(o)?.text}
           </button>
         ))}
       </div>
-      {picked && (
-        <>
-          <p className="example">{sentence}</p>
-          <button className="primary" onClick={() => onDone({ correct: picked === id })}>
-            Devam
-          </button>
-        </>
-      )}
-    </>
+      {picked && <p className="example pop">{sentence}</p>}
+      {picked && <Continue good={picked === id} onClick={() => onDone({ correct: picked === id })} />}
+    </div>
   );
 }
 
@@ -254,42 +282,50 @@ export function UseStep({ id, micMode, accent, onDone }: { id: string } & Common
   const [heard, setHeard] = useState<HeardResult | null>(null);
   const result = heard ? containsTarget(heard.transcript, w.text) : null;
   return (
-    <>
-      <p className="instr">Boşluğu doldurarak cümlenin tamamını söyle.</p>
+    <div className="step">
+      <Coach mood={!heard ? 'think' : result?.ok ? 'happy' : 'sad'} say="Tamamla ve söyle!" />
       <p className="situation en">{blanked}</p>
-      <p className="tr small">{w.tr}</p>
+      <p className="tr center">{w.tr}</p>
       {!heard ? (
         <TalkButton mode={micMode} onResult={setHeard} />
       ) : (
         <>
-          <p className={result?.ok ? 'verdict ok' : 'verdict bad'}>{result?.ok ? 'Doğru kullandın.' : `“${w.text}” duyulmadı.`}</p>
-          {heard.transcript && <p className="heard">Sen: {heard.transcript}</p>}
-          <Diff heard={heard.transcript} model={sentence} />
-          <button className="listen" onClick={() => void speak(sentence, { accent })}>
-            🔊 Dinle
-          </button>
-          <button className="primary" onClick={() => onDone({ correct: !!result?.ok, speakingMs: heard.durationMs })}>
-            Devam
-          </button>
+          <Feedback good={!!result?.ok} title={result?.ok ? 'Harika!' : 'Tam değil'}>
+            {heard.transcript && <span className="you">Sen: {heard.transcript}</span>}
+            <Diff heard={heard.transcript} model={sentence} />
+          </Feedback>
+          <div className="row center">
+            <button className="round small soft" aria-label="Dinle" onClick={() => void speak(sentence, { accent })}>
+              <Icon name="speaker" size={24} />
+            </button>
+          </div>
+          <Continue good={!!result?.ok} onClick={() => onDone({ correct: !!result?.ok, speakingMs: heard.durationMs })} />
         </>
       )}
-    </>
+    </div>
   );
 }
 
 // ---------------------------------------------------------------------------
-// Günün kalıbı
+// Günün kalıbı: iki karakterli mini sahne
 
 export function PatternSceneStep({ patternId, accent, onDone, distractors }: { patternId: string; distractors: string[] } & Common) {
   const p = getPattern(patternId)!;
-  const [played, setPlayed] = useState(false);
-  const [picked, setPicked] = useState<string | null>(null);
+  const [speaker, setSpeaker] = useState<string | null>(null);
+  const [shown, setShown] = useState(0);
   const options = useMemo(() => shuffle([p.function, ...distractors.slice(0, 2)]), [p, distractors]);
+  const { picked, pick, cls } = useChoice(p.function);
+  const played = shown >= p.miniScene.length;
 
   const play = async () => {
     const accB = otherAccent(accent);
-    for (const l of p.miniScene) await speak(l.line, { accent: l.speaker === 'A' ? accent : accB });
-    setPlayed(true);
+    for (let i = 0; i < p.miniScene.length; i++) {
+      const l = p.miniScene[i];
+      setSpeaker(l.speaker);
+      setShown((n) => Math.max(n, i + 1));
+      await speak(l.line, { accent: l.speaker === 'A' ? accent : accB });
+    }
+    setSpeaker(null);
   };
   useEffect(() => {
     void play();
@@ -298,38 +334,30 @@ export function PatternSceneStep({ patternId, accent, onDone, distractors }: { p
   }, [patternId]);
 
   return (
-    <>
-      <p className="instr">Günün kalıbı. Dinle: B ne yapıyor?</p>
-      <button className="listen" onClick={() => void play()}>
-        🔊 Sahneyi dinle
-      </button>
-      {picked && (
-        <div className="scene">
-          {p.miniScene.map((l, i) => (
-            <p key={i}>
-              <b>{l.speaker}:</b> {l.line}
-            </p>
-          ))}
-        </div>
-      )}
+    <div className="step">
+      <Coach mood={picked ? (picked === p.function ? 'happy' : 'sad') : 'listen'} say="B ne yapıyor?" />
+      <div className="scene-stage">
+        <Character seed={`${patternId}-A`} talking={speaker === 'A'} size={84} />
+        <button className="round soft" aria-label="Tekrar dinle" onClick={() => void play()}>
+          <Icon name="speaker" size={28} />
+        </button>
+        <Character seed={`${patternId}-B`} talking={speaker === 'B'} size={84} flip />
+      </div>
+      {picked &&
+        p.miniScene.map((l, i) => (
+          <div key={i} className={`scene-line ${l.speaker === 'B' ? 'b' : 'a'}`}>
+            <div className="bubble">{l.line}</div>
+          </div>
+        ))}
       <div className="options">
         {options.map((o) => (
-          <button
-            key={o}
-            className={picked ? (o === p.function ? 'opt right' : o === picked ? 'opt wrong' : 'opt') : 'opt'}
-            disabled={!!picked || !played}
-            onClick={() => setPicked(o)}
-          >
+          <button key={o} className={cls(o)} disabled={!!picked || !played} onClick={() => pick(o)}>
             {o}
           </button>
         ))}
       </div>
-      {picked && (
-        <button className="primary" onClick={() => onDone({ correct: picked === p.function })}>
-          Devam
-        </button>
-      )}
-    </>
+      {picked && <Continue good={picked === p.function} onClick={() => onDone({ correct: picked === p.function })} />}
+    </div>
   );
 }
 
@@ -337,30 +365,32 @@ export function PatternCardStep({ patternId, accent, onDone }: { patternId: stri
   const p = getPattern(patternId)!;
   const reg = { casual: 'samimi', neutral: 'nötr', formal: 'resmi' }[p.register];
   return (
-    <>
-      <p className="item-big">{p.text}</p>
-      <p className="tr">
-        {p.function} · {reg}
-      </p>
-      <div className="card">
+    <div className="step">
+      <Coach mood="happy" say="Günün kalıbı!" />
+      <div className="pattern-card pop">
+        <div className="label">
+          {p.function} · {reg}
+        </div>
+        <div className="text">{p.text}</div>
+      </div>
+      <div className="options">
         {p.variations.map((v) => (
-          <p key={v}>
-            <button className="link" onClick={() => void speak(v.replace(/…/g, ''), { accent })}>
-              🔊
-            </button>{' '}
-            {v}
-          </p>
+          <button key={v} className="opt" onClick={() => void speak(v.replace(/…/g, ''), { accent })}>
+            <Icon name="speaker" size={18} /> {v}
+          </button>
         ))}
       </div>
       <div className="card">
-        <p className="bad">✗ {p.turkishMistake.wrong}</p>
-        <p className="ok">✓ {p.turkishMistake.right}</p>
+        <p className="bad" style={{ textDecoration: 'line-through', fontWeight: 700 }}>
+          {p.turkishMistake.wrong}
+        </p>
+        <p className="ok" style={{ fontWeight: 800 }}>
+          {p.turkishMistake.right}
+        </p>
         <p className="muted small">{p.turkishMistake.why}</p>
       </div>
-      <button className="primary" onClick={() => onDone({})}>
-        Devam
-      </button>
-    </>
+      <Continue onClick={() => onDone({})} />
+    </div>
   );
 }
 
@@ -369,22 +399,23 @@ export function PatternUseStep({ patternId, situation, micMode, onDone }: { patt
   const [heard, setHeard] = useState<HeardResult | null>(null);
   const ok = heard ? [p.text, ...p.variations].some((v) => containsTarget(heard.transcript, v).ok) : false;
   return (
-    <>
-      <p className="instr">Bu durumda kalıpla bir cümle kur.</p>
+    <div className="step">
+      <Coach mood={!heard ? 'think' : ok ? 'happy' : 'sad'} say="Kalıpla söyle!" />
       <p className="situation">{situation}</p>
-      <p className="muted small">{p.text}</p>
+      <div className="row center">
+        <span className="pill">{p.text}</span>
+      </div>
       {!heard ? (
         <TalkButton mode={micMode} onResult={setHeard} />
       ) : (
         <>
-          <p className={ok ? 'verdict ok' : 'verdict bad'}>{ok ? 'Kalıbı kullandın.' : 'Kalıp duyulmadı.'}</p>
-          <p className="heard">Sen: {heard.transcript || '—'}</p>
-          <button className="primary" onClick={() => onDone({ correct: ok, speakingMs: heard.durationMs })}>
-            Devam
-          </button>
+          <Feedback good={ok} title={ok ? 'Kalıbı kullandın!' : 'Kalıp duyulmadı'}>
+            <span className="you">Sen: {heard.transcript || '—'}</span>
+          </Feedback>
+          <Continue good={ok} onClick={() => onDone({ correct: ok, speakingMs: heard.durationMs })} />
         </>
       )}
-    </>
+    </div>
   );
 }
 
@@ -392,15 +423,13 @@ export function PatternUseStep({ patternId, situation, micMode, onDone }: { patt
 
 export function ScenarioPlaceholderStep({ onDone }: Common) {
   return (
-    <>
-      <p className="instr">Senaryo</p>
-      <div className="card">
-        <p>Yapay zekâ ile sesli senaryo, Worker kurulunca açılacak.</p>
-        <p className="muted small">Bugünün raporunda "serbest konuşma yok" yazacak.</p>
+    <div className="step">
+      <Coach mood="think" say="Senaryo yakında!" />
+      <div className="scene-stage" style={{ justifyContent: 'center', gap: 24 }}>
+        <Character seed="placeholder-barista" prop={propForRole('barista')} size={96} />
       </div>
-      <button className="primary" onClick={() => onDone({})}>
-        Devam
-      </button>
-    </>
+      <p className="muted center">Yapay zekâ ile sesli sohbet, kurulum bitince açılacak.</p>
+      <Continue onClick={() => onDone({})} />
+    </div>
   );
 }

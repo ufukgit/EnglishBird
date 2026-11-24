@@ -47,11 +47,17 @@ function ItemList({ items, accent }: { items: ItemState[]; accent: Accent }) {
           <div key={it.id} className="list-item" onClick={() => setOpen(open === it.id ? null : it.id)}>
             <div className="row between">
               <span className="big-ish">{text}</span>
-              <span className={`rung r${it.rung}`}>{RUNG_NAMES[it.rung]}</span>
+              <span className="dots" title={RUNG_NAMES[it.rung]}>
+                {[1, 2, 3, 4, 5, 6].map((n) => (
+                  <i key={n} className={n <= it.rung ? 'on' : ''} />
+                ))}
+              </span>
             </div>
             {open === it.id && (
               <div className="detail">
-                <p className="muted">{w?.tr ?? p?.function}</p>
+                <p className="muted">
+                  {w?.tr ?? p?.function} · <b>{RUNG_NAMES[it.rung]}</b>
+                </p>
                 {(w?.examples ?? p?.variations ?? []).map((e) => (
                   <p key={e}>
                     <button

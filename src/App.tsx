@@ -4,6 +4,7 @@ import Home from './screens/Home';
 import Session from './screens/Session';
 import Report from './screens/Report';
 import Library from './screens/Library';
+import Icon from './components/Icon';
 
 function useHash() {
   const [hash, setHash] = useState(location.hash || '#/');
@@ -39,12 +40,15 @@ export default function App() {
       </div>
       <nav className="tabs">
         <button aria-pressed={tab === 'home'} onClick={() => go('#/')}>
+          <Icon name="home" size={26} />
           Ana
         </button>
         <button aria-pressed={tab === 'report'} onClick={() => go('#/report')}>
+          <Icon name="chart" size={26} />
           Rapor
         </button>
         <button aria-pressed={tab === 'library'} onClick={() => go('#/library')}>
+          <Icon name="book" size={26} />
           Kütüphane
         </button>
       </nav>

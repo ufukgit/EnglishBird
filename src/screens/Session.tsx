@@ -4,6 +4,9 @@ import { allSessions, getSettings, putSession, type ExerciseKind, type ItemState
 import { formatDuration, sessionDay, shuffle } from '../lib/day';
 import { applyReview, dueItems, dueTomorrowCount, ensureItem, nextDueDate, getTodayPlan, markDayDone, markIntroduced, putItem, recordAttempt, scheduleFirstDay } from '../lib/srs';
 import { notifySessionDone } from '../lib/api';
+import { sfx } from '../lib/sfx';
+import Bird from '../components/Bird';
+import Icon from '../components/Icon';
 import {
   CatchStep,
   IntroStep,
@@ -112,7 +115,7 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
   const [settings, setSettings] = useState<Settings | null>(null);
   const [built, setBuilt] = useState<Built | null>(null);
   const [index, setIndex] = useState(0);
-  const [report, setReport] = useState<string[] | null>(null);
+  const [report, setReport] = useState<{ lines: string[]; talk: string; recall: string; up: number } | null>(null);
   const stats = useRef<Stats>({ speakingMs: 0, recallCorrect: 0, recallTotal: 0, rungUps: 0, helpUsed: 0, answered: 0, reviewed: 0, firstRecall: {}, patternUsed: false });
   const items = useRef(new Map<string, ItemState>());
   const startedAt = useRef(new Date().toISOString());
@@ -124,7 +127,12 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
     })();
   }, [kind]);
 
-  if (!settings || !built) return <p className="muted">Hazırlanıyor…</p>;
+  if (!settings || !built)
+    return (
+      <main className="session" style={{ justifyContent: 'center', alignItems: 'center' }}>
+        <Bird mood="think" size={120} />
+      </main>
+    );
 
   const step = built.steps[index];
 
@@ -209,7 +217,7 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
     lines.push(`Bugün ${formatDuration(todayMs)} konuştun${prevDay ? ` (önceki gün ${formatDuration(prevMs)})` : ''}.`);
     if (s.recallTotal) lines.push(`${s.recallTotal} öğenin ${s.recallCorrect} tanesini yardımsız söyledin.`);
     if (s.answered && s.helpUsed / s.answered > 0.4) lines.push(`Cevapların çoğunda ipucu kullandın (%${Math.round((s.helpUsed / s.answered) * 100)}).`);
-    else lines.push('Serbest konuşma yok: senaryo henüz açık değil.');
+    else lines.push('Bugün serbest sohbet yok (senaryo yakında).');
     const missed = built!.newIds.filter((id) => s.firstRecall[id] === false).map((id) => getWord(id)?.text);
     const nextDue = await nextDueDate();
     lines.push(
@@ -239,21 +247,48 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
     await putSession(rec);
     await markDayDone();
     void notifySessionDone(day);
-    setReport(rec.reportLines);
+    sfx.finish();
+    setReport({
+      lines: lines.slice(2, 4),
+      talk: formatDuration(todayMs),
+      recall: s.recallTotal ? `${s.recallCorrect}/${s.recallTotal}` : '—',
+      up: s.rungUps,
+    });
   }
 
   if (report) {
     return (
       <main className="session">
-        <p className="instr">Kapanış</p>
+        <div className="hero">
+          <Bird mood="happy" size={130} say="Bitti!" side="below" />
+        </div>
+        <div className="stats">
+          <div className="stat blue">
+            <Icon name="mic" size={26} />
+            <span className="v">{report.talk}</span>
+            <span className="k">konuştun</span>
+          </div>
+          <div className="stat mint">
+            <Icon name="brain" size={26} />
+            <span className="v">{report.recall}</span>
+            <span className="k">yardımsız hatırladın</span>
+          </div>
+          <div className="stat sun">
+            <Icon name="up" size={26} />
+            <span className="v">{report.up}</span>
+            <span className="k">basamak çıktı</span>
+          </div>
+        </div>
         <div className="card report">
-          {report.map((l) => (
+          {report.lines.map((l) => (
             <p key={l}>{l}</p>
           ))}
         </div>
-        <button className="primary" onClick={onExit}>
-          Bitir
-        </button>
+        <div className="footer">
+          <button className="primary go" onClick={onExit}>
+            Tamam
+          </button>
+        </div>
       </main>
     );
   }
@@ -264,13 +299,13 @@ export default function Session({ kind, onExit }: { kind: Kind; onExit: () => vo
     <main className="session">
       <div className="topbar">
         <button className="ghost" onClick={onExit} aria-label="Çık">
-          ✕
+          <Icon name="close" size={26} />
         </button>
         <div className="progress">
           <div style={{ width: `${Math.round((index / built.steps.length) * 100)}%` }} />
         </div>
       </div>
-      {index === 0 && <p className="muted small">Ses gelmezse sessiz modu kapat.</p>}
+      {index === 0 && <p className="muted small center">🔇 Ses yoksa sessiz modu kapat</p>}
       {step.t === 'review' &&
         (step.as === 'recall' ? <RecallStep key={key} id={step.id} review {...common} /> : <UseStep key={key} id={step.id} {...common} />)}
       {step.t === 'p-scene' && <PatternSceneStep key={key} patternId={step.id} distractors={step.distractors} {...common} />}

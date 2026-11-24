@@ -25,7 +25,7 @@ const SHOT = require('os').tmpdir() + '/';
     const seen = {};
     for (let i = 0; i < 150; i++) {
       await p.waitForTimeout(100);
-      if (await p.getByText('Kapanış').count()) break;
+      if (await p.locator('.stats').count()) break;
       const instr = (await p.locator('.instr').count()) ? await p.locator('.instr').first().textContent() : 'card';
       seen[instr] = (seen[instr] || 0) + 1;
       const talk = p.locator('.talk-btn').first();
@@ -39,8 +39,8 @@ const SHOT = require('os').tmpdir() + '/';
       if (await dev.count()) await dev.click();
     }
     console.log(btn, JSON.stringify(seen));
-    console.log(' closing:', await p.locator('.report').textContent().catch(() => 'NO CLOSING'));
-    await p.getByRole('button', { name: 'Bitir' }).click().catch(() => {});
+    console.log(' closing:', await p.locator('.stats').textContent().catch(() => 'NO CLOSING'));
+    await p.getByRole('button', { name: 'Tamam' }).click().catch(() => {});
   }
   async function rightIndex(p) {
     // sahnede/cümlede geçen seçeneği tahmin et: seçeneklerin metnini words.json ile eşleştirip örnek cümlelere bak
@@ -55,7 +55,7 @@ const SHOT = require('os').tmpdir() + '/';
   await p.addInitScript(() => {});
   await p.evaluate(() => {});
   await ctx.addInitScript(() => { const o = window.speechSynthesis.speak; window.speechSynthesis.speak = (u) => { window.__lastSpoken = u.text; o(u); }; });
-  await run(/Bugünü başlat/, true);
+  await run(/Derin/, true);
   await p.clock.setSystemTime(new Date('2026-11-28T20:00:00'));
   await run(/Hızlı/, true);
   await p.goto('http://localhost:4173/#/report'); await p.waitForTimeout(400);

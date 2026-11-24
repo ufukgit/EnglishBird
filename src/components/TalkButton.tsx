@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Listener, type HeardResult } from '../lib/voice';
+import Icon from './Icon';
 
 interface Props {
   mode: 'hold' | 'tap';
@@ -50,10 +51,13 @@ export default function TalkButton({ mode, onResult, disabled, label }: Props) {
 
   return (
     <div className="talk">
-      <button className={`talk-btn${listening ? ' on' : ''}`} disabled={disabled} {...handlers}>
-        {listening ? (mode === 'hold' ? 'Dinliyorum… bırak' : 'Dinliyorum… bitir') : (label ?? (mode === 'hold' ? 'Basılı tut ve konuş' : 'Dokun ve konuş'))}
-      </button>
       {listening && <p className="interim">{interim || '…'}</p>}
+      <button className={`talk-btn${listening ? ' on' : ''}`} disabled={disabled} aria-label={label ?? 'Konuş'} {...handlers}>
+        <Icon name="mic" size={52} stroke={2.2} />
+      </button>
+      <span className="talk-label">
+        {listening ? (mode === 'hold' ? 'Bırak' : 'Bitir') : (label ?? (mode === 'hold' ? 'Basılı tut' : 'Dokun'))}
+      </span>
     </div>
   );
 }

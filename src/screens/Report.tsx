@@ -16,6 +16,7 @@ export default function Report() {
   }, []);
 
   const last = sessions[0];
+  const total = rungs.reduce((a, b) => a + b, 0);
   const byDay = new Map<string, SessionRecord[]>();
   for (const s of sessions) byDay.set(s.day, [...(byDay.get(s.day) ?? []), s]);
   const days = [...byDay.entries()].slice(0, 14);
@@ -35,18 +36,21 @@ export default function Report() {
       )}
 
       <h2>Merdiven</h2>
-      <div className="card">
-        {([1, 2, 3, 4, 5, 6] as Rung[]).map((r) => (
+      <div className="card ladder">
+        {([6, 5, 4, 3, 2, 1] as Rung[]).map((r) => (
           <div key={r} className="ladder-row">
-            <span>{RUNG_NAMES[r]}</span>
-            <span className="bar">
-              <span style={{ width: `${Math.min(100, (rungs[r] ?? 0) * 3)}%` }} />
+            <span className="step-no">{r}</span>
+            <span>
+              <span className="name">{RUNG_NAMES[r]}</span>
+              <span className="bar">
+                <span style={{ width: `${Math.min(100, ((rungs[r] ?? 0) / Math.max(1, total)) * 100)}%` }} />
+              </span>
             </span>
             <span className="num">{rungs[r] ?? 0}</span>
           </div>
         ))}
-        <p className="muted small">Kullanabildiğin kelime 5. basamakta sayılır: senaryoda kendiliğinden kullanınca.</p>
       </div>
+      <p className="muted small">5. basamak = senaryoda kendiliğinden kullandın.</p>
 
       {days.length > 0 && (
         <>

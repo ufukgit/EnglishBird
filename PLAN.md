@@ -83,7 +83,11 @@ referansıdır, içeriği kopyalanmaz. Atıflar `CREDITS.md` dosyasındadır.
 - **Senaryo motoru:** katalog iskeleti (JSON) + AI'nın her oynanışta yeniden giydirmesi; 12 alan, 12 olay türü.
 - **CEFR:** konuşma ve dinleme ayrı, A1–C1, her bantta 3 alt basamak, hedef başarı %70–80.
 - **Rapor:** günlük 4 satırlık kart, haftalık rapor, haftalık habersiz test, zayıf yönden eyleme.
-- **Arayüz:** Ana, Oturum, Rapor, Kütüphane. Rozet/konfeti/puan/seri yok.
+- **Arayüz:** Ana, Oturum, Rapor, Kütüphane.
+- **Görsel dil (25.11.2026 kullanıcı kararı, dokümandaki "maskot yok" kuralını günceller):** renkli ve yuvarlak,
+  az metin, oyunsu. Var: kuş maskot (yönergeleri kısa tepkilerle verir, ruh hali: dinliyor/düşünüyor/sevindi/üzüldü),
+  senaryo ve sahne karakterleri, animasyonlar, ses efektleri (Web Audio, mikrofon açıkken çalmaz).
+  Hâlâ yok: rozet, puan, can, seri, konfeti — ilerleme yalnızca kanıtla gösterilir.
 
 ## 4. Mimari
 
